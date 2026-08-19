@@ -6,6 +6,7 @@ import axios from 'axios';
 import {tools as browser_tools} from './browser_tools.js';
 import {tools as scraper_tools} from './scraper/tools.js';
 import {tools as account_tools} from './account/tools.js';
+import {tools as browser_extra_tools} from './browser/extra_tools.js';
 import prompts from './prompts.js';
 import {GROUPS} from './tool_groups.js';
 import {parse_google_search_response} from './search_utils.js';
@@ -1308,6 +1309,9 @@ for (let tool of scraper_tools)
     addTool(tool);
 
 for (let tool of account_tools)
+    addTool(tool);
+
+for (let tool of browser_extra_tools)
     addTool(tool);
 
 console.error('Starting server...');

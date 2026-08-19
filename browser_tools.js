@@ -7,7 +7,7 @@ let browser_zone = process.env.BROWSER_ZONE || 'mcp_browser';
 
 let open_session;
 let open_session_country = null;
-const require_browser = async country=>{
+export const require_browser = async country=>{
     const normalized_country = country ? country.toLowerCase()
         : open_session_country;
 
@@ -22,6 +22,18 @@ const require_browser = async country=>{
         });
     }
     return open_session;
+};
+
+// Closes every open browser and forgets the session, so the next tool call
+// starts a fresh one. The module-local open_session is why this lives here
+// rather than alongside the tool that calls it.
+export const close_browser_sessions = async ()=>{
+    if (!open_session)
+        return false;
+    await open_session.close();
+    open_session = null;
+    open_session_country = null;
+    return true;
 };
 
 const calculate_cdp_endpoint = async country=>{

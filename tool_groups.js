@@ -76,6 +76,13 @@ export const GROUPS = {
             'scraping_browser_get_html',
             'scraping_browser_scroll',
             'scraping_browser_scroll_to_ref',
+            'scraping_browser_select_ref',
+            'scraping_browser_check_ref',
+            'scraping_browser_uncheck_ref',
+            'scraping_browser_hover_ref',
+            'scraping_browser_reload',
+            'scraping_browser_cookies',
+            'scraping_browser_close_session',
         ],
     },
     FINANCE: {
