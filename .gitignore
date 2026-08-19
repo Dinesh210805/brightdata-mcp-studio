@@ -1,6 +1,6 @@
 node_modules/
 reference/
-registry.json
 .env
 .mcp.json
+brightdata-mcp-studio/registry.json
 web/frontend/dist/

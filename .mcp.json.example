@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "brightdata-studio": {
+      "command": "node",
+      "args": ["brightdata-mcp-studio/server.js"],
+      "env": {
+        "API_TOKEN": "your-bright-data-api-key",
+        "PRO_MODE": "true"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+    "name": "brightdata-mcp-studio",
+    "version": "1.0.0",
+    "description": "Bright Data's MCP server, extended with the Scraper Studio lifecycle: build a scraper for any public site, detect when it breaks, repair it, and verify the repair.",
+    "type": "module",
+    "main": "./server.js",
+    "bin": {
+        "brightdata-mcp-studio": "./server.js"
+    },
+    "scripts": {
+        "start": "node server.js",
+        "test": "node --test"
+    },
+    "keywords": [
+        "mcp",
+        "brightdata"
+    ],
+    "author": "Bright Data",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/brightdata/brightdata-mcp.git"
+    },
+    "bugs": {
+        "url": "https://github.com/brightdata/brightdata-mcp/issues"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "1.21.2",
+        "axios": "^1.11.0",
+        "fastmcp": "^3.33.0",
+        "playwright": "^1.59.0",
+        "remark": "^15.0.1",
+        "strip-markdown": "^6.0.0",
+        "zod": "^3.24.2"
+    },
+    "files": [
+        "server.js",
+        "search_utils.js",
+        "search_dataset_schema.js",
+        "browser_tools.js",
+        "browser_session.js",
+        "aria_snapshot_filter.js",
+        "tool_groups.js",
+        "prompts.js"
+    ],
+    "mcpName": "io.github.brightdata/brightdata-mcp"
+}
