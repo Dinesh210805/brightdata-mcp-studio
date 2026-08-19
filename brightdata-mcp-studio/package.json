@@ -42,7 +42,12 @@
         "browser_session.js",
         "aria_snapshot_filter.js",
         "tool_groups.js",
-        "prompts.js"
+        "prompts.js",
+        "scraper/",
+        "account/",
+        "browser/",
+        "scripts/",
+        "web/"
     ],
     "mcpName": "io.github.brightdata/brightdata-mcp"
 }
