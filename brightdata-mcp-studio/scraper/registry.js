@@ -26,8 +26,16 @@
 //       heal_history:    [...],
 //   }
 import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 
-const DEFAULT_PATH = process.env.REGISTRY_PATH || 'registry.json';
+// Resolved against this file, not the working directory. MCP clients launch
+// the server from wherever the config lives, so a relative path would point
+// somewhere else and quietly load an empty registry - which reads as "no
+// scrapers exist" and rebuilds every one of them from scratch.
+const server_dir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
+const DEFAULT_PATH = process.env.REGISTRY_PATH
+    || path.join(server_dir, 'registry.json');
 
 // Scrapers are keyed by domain, not by full URL, so a request for any page on
 // a site finds the scraper built for that site.

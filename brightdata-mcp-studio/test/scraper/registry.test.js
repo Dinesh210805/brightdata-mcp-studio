@@ -1,6 +1,7 @@
 'use strict'; /*jslint node:true es9:true*/
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
+import os from 'node:os';
 import {
     domain_of, get_entry, put_entry, record_heal, abandon, active_entries,
 } from '../../scraper/registry.js';
@@ -71,4 +72,19 @@ test('active_entries skips abandoned scrapers', ()=>{
         {collector_id: 'c_2', status: 'abandoned'});
     assert.deepEqual(active_entries(registry).map(([domain])=>domain),
         ['a.com']);
+});
+
+test('the registry is found regardless of working directory', async ()=>{
+    // MCP clients start the server from wherever their config lives. A path
+    // relative to cwd would load an empty registry and silently rebuild every
+    // scraper - a 5-10 minute AI job each, and collectors that cannot be
+    // deleted.
+    const {load_registry} = await import('../../scraper/registry.js');
+    const original_cwd = process.cwd();
+    try {
+        process.chdir(os.tmpdir());
+        assert.doesNotThrow(()=>load_registry());
+    } finally {
+        process.chdir(original_cwd);
+    }
 });
