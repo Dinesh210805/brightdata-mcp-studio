@@ -4,6 +4,7 @@ import {FastMCP} from 'fastmcp';
 import {z} from 'zod';
 import axios from 'axios';
 import {tools as browser_tools} from './browser_tools.js';
+import {tools as scraper_tools} from './scraper/tools.js';
 import prompts from './prompts.js';
 import {GROUPS} from './tool_groups.js';
 import {parse_google_search_response} from './search_utils.js';
@@ -23,8 +24,13 @@ const base_timeout = process.env.BASE_TIMEOUT
     ? parseInt(process.env.BASE_TIMEOUT, 10) * 1000 : 0;
 const base_max_retries = Math.min(
     parseInt(process.env.BASE_MAX_RETRIES || '0', 10), 3);
+// Tools available without PRO_MODE. The Scraper Studio lifecycle is included
+// because it is the reason this fork exists - hiding it behind a flag would
+// mean a fresh install sees none of it.
 const pro_mode_tools = ['search_engine', 'scrape_as_markdown',
-    'search_engine_batch', 'scrape_batch', 'discover'];
+    'search_engine_batch', 'scrape_batch', 'discover',
+    'scraper_ensure', 'scraper_create', 'scraper_status', 'scraper_run',
+    'scraper_heal', 'scraper_approve', 'scraper_registry_list'];
 const tool_groups = process.env.GROUPS ?
     process.env.GROUPS.split(',').map(g=>g.trim().toLowerCase())
         .filter(Boolean) : [];
@@ -1287,6 +1293,9 @@ for (let {dataset_id, id, description, inputs, defaults = {},
 server.addPrompts(prompts);
 
 for (let tool of browser_tools)
+    addTool(tool);
+
+for (let tool of scraper_tools)
     addTool(tool);
 
 console.error('Starting server...');

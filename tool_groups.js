@@ -166,6 +166,22 @@ export const GROUPS = {
             'web_data_pypi_package',
         ],
     },
+    SCRAPER_STUDIO: {
+        id: 'scraper_studio',
+        name: 'Scraper Studio',
+        description: 'Build, run and self-heal custom scrapers for sites no '
+            +'pre-built extractor covers.',
+        tools: [
+            ...base_tools,
+            'scraper_ensure',
+            'scraper_create',
+            'scraper_status',
+            'scraper_run',
+            'scraper_heal',
+            'scraper_approve',
+            'scraper_registry_list',
+        ],
+    },
     CUSTOM: {
         id: 'custom',
         name: 'Custom',
