@@ -3,4 +3,9 @@ reference/
 .env
 .mcp.json
 brightdata-mcp-studio/registry.json
-web/frontend/dist/
+# (the old vanilla dashboard is gone; the app now lives in dashboard/)
+dashboard/.next/
+dashboard/node_modules/
+dashboard/.env.local
+.playwright-mcp/
+.serena/
