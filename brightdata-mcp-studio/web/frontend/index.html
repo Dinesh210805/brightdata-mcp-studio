@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bright Data MCP Studio — scrapers that repair themselves</title>
+<meta name="description" content="Bright Data's MCP server, extended with the
+    full Scraper Studio lifecycle: build a scraper for any public site, catch it
+    when it breaks, repair it, and verify the repair.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232b6cf6'/><circle cx='50' cy='50' r='16' fill='white'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="notice">
+    <span class="notice-dot"></span>
+    Hackathon submission dashboard — live data from our own deployment.
+    This view comes down after judging.
+</div>
+
+<header class="nav">
+    <a class="nav-mark" href="#top">
+        <span class="mark"></span>
+        Bright&nbsp;Data MCP Studio
+    </a>
+    <nav class="nav-links">
+        <a href="#registry">Registry</a>
+        <a href="#repairs">Repairs</a>
+        <a href="#connect">Connect</a>
+    </nav>
+</header>
+
+<main id="top">
+
+    <section class="hero">
+        <p class="eyebrow">Scraper Studio lifecycle, over MCP</p>
+        <h1>Scrapers that<br>repair themselves.</h1>
+        <p class="lede">
+            Every scraping tutorial ends when the scraper runs. This one starts
+            when it breaks. Point your coding agent at any public page — it
+            builds the scraper, notices when the site changes underneath it,
+            repairs it, and runs it again to prove the repair worked.
+        </p>
+        <p class="live" data-live>
+            <span class="live-dot"></span>
+            <span data-live-text>Reading live registry…</span>
+        </p>
+    </section>
+
+    <!-- The product is the structured data coming out. So that is the hero
+         image: one real record, pulled live, not a mockup. -->
+    <section class="shot" aria-labelledby="shot-h">
+        <h2 class="section-h" id="shot-h">This came back a moment ago.</h2>
+        <p class="section-p">
+            One record from the live registry, exactly as an agent receives it.
+        </p>
+        <div class="card record" data-record>
+            <p class="empty">Loading the latest record…</p>
+        </div>
+        <div class="schema" data-schema hidden>
+            <p class="schema-label">Fields under watch</p>
+            <ul class="chips" data-chips></ul>
+            <p class="schema-note">
+                If any of these stops coming back, the scraper is considered
+                broken and a repair starts on its own.
+            </p>
+        </div>
+    </section>
+
+    <section class="loop" aria-labelledby="loop-h">
+        <h2 class="section-h" id="loop-h">What happens on every run</h2>
+        <p class="section-p">
+            One call does all of it. The order matters, so it is worth being
+            precise about.
+        </p>
+        <ol class="steps">
+            <li>
+                <h3>Reuse what exists</h3>
+                <p>Known site? Use the scraper already built for it. Building
+                    one takes 5–10 minutes and only ever happens once per
+                    site.</p>
+            </li>
+            <li>
+                <h3>Run it</h3>
+                <p>Collect the page and return structured records.</p>
+            </li>
+            <li>
+                <h3>Check the data, not the status code</h3>
+                <p>A run that “succeeds” and returns rows of empty fields has
+                    still failed. Missing fields and empty-value ratios are what
+                    get measured.</p>
+            </li>
+            <li>
+                <h3>Describe the break, then repair</h3>
+                <p>The specific problem — which field went empty — becomes the
+                    instruction sent to Bright Data’s repair flow.</p>
+            </li>
+            <li>
+                <h3>Run again to verify</h3>
+                <p>The repair reports success when its AI job finishes, not when
+                    the data is correct. Without a second run, a repair that
+                    fixed nothing looks like a win.</p>
+            </li>
+            <li>
+                <h3>Rebuild once, if it is still wrong</h3>
+                <p>Capped at a single rebuild. There is no API to delete a
+                    collector, so every rebuild leaves a dead one behind
+                    forever.</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="stats" aria-label="System totals">
+        <dl data-stats>
+            <div><dt>Scrapers</dt><dd data-stat="scrapers">—</dd></div>
+            <div><dt>Rows last run</dt><dd data-stat="rows">—</dd></div>
+            <div><dt>Repairs</dt><dd data-stat="heals">—</dd></div>
+            <div><dt>Watching since</dt><dd data-stat="since">—</dd></div>
+        </dl>
+    </section>
+
+    <section class="block" id="registry" aria-labelledby="registry-h">
+        <h2 class="section-h" id="registry-h">Registry</h2>
+        <p class="section-p">
+            Bright Data has no API that lists the scrapers on your account. This
+            file is the only place the site&nbsp;→&nbsp;scraper mapping exists.
+            Open a row to see what it last returned.
+        </p>
+        <div class="card table-card">
+            <table class="table" data-registry>
+                <thead>
+                    <tr>
+                        <th>Site</th>
+                        <th>Collector</th>
+                        <th>Last run</th>
+                        <th class="num">Rows</th>
+                        <th>State</th>
+                    </tr>
+                </thead>
+                <tbody data-registry-body>
+                    <tr><td colspan="5" class="empty">Loading…</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="block" id="repairs" aria-labelledby="repairs-h">
+        <h2 class="section-h" id="repairs-h">Repair log</h2>
+        <p class="section-p">
+            Every repair attempt, newest first — what broke, what was sent to
+            fix it, and whether it held.
+        </p>
+        <div data-heals>
+            <p class="empty">Loading…</p>
+        </div>
+    </section>
+
+    <section class="block" id="proof" aria-labelledby="proof-h">
+        <h2 class="section-h" id="proof-h">Running with nobody watching</h2>
+        <p class="section-p">
+            A GitHub Actions cron runs the whole loop every six hours and
+            commits the result back. The commit history is the evidence — it
+            accrues whether or not anyone is at a keyboard.
+        </p>
+        <div class="card proof">
+            <p class="proof-line">
+                <span class="mono">0 */6 * * *</span>
+                <span class="proof-sep">·</span>
+                runs the registry, repairs what broke, commits what changed
+            </p>
+            <a class="link" data-runs-link href="#" target="_blank"
+                rel="noopener">View the run history →</a>
+        </div>
+    </section>
+
+    <section class="block" id="connect" aria-labelledby="connect-h">
+        <h2 class="section-h" id="connect-h">Connect it to your agent</h2>
+        <p class="section-p">
+            This dashboard only shows what happened. Everything that
+            <em>does</em> anything is an MCP tool — so it all runs from Claude
+            Code, Claude Desktop, or any MCP client. Add this, restart the
+            client, and ask it to scrape something.
+        </p>
+        <div class="card code-card">
+            <div class="code-head">
+                <span class="mono dim">.mcp.json</span>
+                <button class="copy" data-copy type="button">Copy</button>
+            </div>
+<pre class="code" data-config>{
+  "mcpServers": {
+    "brightdata-studio": {
+      "command": "npx",
+      "args": ["-y", "brightdata-mcp-studio"],
+      "env": {
+        "API_TOKEN": "your-bright-data-api-key"
+      }
+    }
+  }
+}</pre>
+        </div>
+        <p class="fineprint">
+            Your key stays on your machine and is sent straight to Bright Data.
+            Get one at Bright Data → Account settings → Add API key.
+        </p>
+    </section>
+
+</main>
+
+<footer class="foot">
+    <p>
+        A fork of Bright Data’s official MCP server, extended with the Scraper
+        Studio lifecycle. Built for Into the Scrape-Verse
+        (WeMakeDevs&nbsp;×&nbsp;Bright&nbsp;Data), August 2026.
+    </p>
+    <p class="dim">
+        Upstream server, browser tools and dataset tools are Bright Data’s, MIT
+        licensed. The lifecycle, registry, health checks and this dashboard are
+        ours. Built with AI assistance.
+    </p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

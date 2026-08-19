@@ -1,0 +1,55 @@
+name: Scheduled Scrape
+
+# Runs the scrapers with nobody watching. When a target site changes and the
+# data comes back wrong, ensure() repairs the scraper and runs it again in the
+# same job - so the run history below is the evidence that self-healing works
+# unattended, not just on demand.
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+# The default GITHUB_TOKEN is read-only. Without this the run succeeds and the
+# push at the end silently fails, losing the history this workflow exists for.
+permissions:
+  contents: write
+
+# A heal can take ten minutes. Overlapping runs would fight over registry.json.
+concurrency:
+  group: scheduled-scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: brightdata-mcp-studio
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run scrapers
+        env:
+          API_TOKEN: ${{ secrets.BRIGHTDATA_API_KEY }}
+        run: node scripts/cron.js
+
+      - name: Commit registry
+        if: always()
+        working-directory: .
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f brightdata-mcp-studio/registry.json
+          git diff --staged --quiet || git commit -m "chore: registry update [skip ci]"
+          git push
