@@ -18,6 +18,30 @@ Full design and task breakdown: [PLAN.md](PLAN.md). Original brief:
 
 ---
 
+## How to explain things to the user
+
+The user is a person, not a compiler. Default to plain language.
+
+- **Lead with what it means, not what it is.** "Scrapers break when a site
+  changes its layout" before "schema drift detection".
+- **Explain the why.** A change without a reason is noise. If you fixed
+  something, say what would have gone wrong.
+- **Short paragraphs and lists.** No walls of text. A reader should be able to
+  skim it and still get the point.
+- **Jargon needs a translation the first time.** "A collector ID — that's Bright
+  Data's name for one scraper you own."
+- **Say the honest thing plainly.** If something is broken, slow, risky, or a
+  guess, say so in one sentence. Do not bury it.
+- **Code goes in code blocks, not in prose.** Prose explains the idea; the block
+  shows the detail. Someone who skips the block should still follow along.
+- **Match the question.** A yes/no question gets a yes or no first. Do not
+  answer a small question with a design document.
+
+Aim for how a good senior engineer explains their work to a teammate over
+coffee: concrete, honest, no showing off.
+
+---
+
 ## Repository layout
 
 The fork **is** the root. Their files sit at the top level; ours sit beside them.
@@ -199,7 +223,7 @@ Never commit it. Never log it. Never include it in a tool response.
 ## Branches
 
 ```
-main                  everything: 85 tools, registry, dashboard, CI. THE SUBMISSION.
+main                  everything: 94 tools, registry, dashboard, CI. THE SUBMISSION.
 pr/scraper-lifecycle  branched from UPSTREAM main. Four stateless tools only.
 ```
 
@@ -224,6 +248,51 @@ Upstream is MIT. Keep their `LICENSE` and `CHANGELOG.md` untouched. The README
 must state plainly which files are theirs and which are ours — a judge should be
 able to tell in ten seconds. Disclose AI assistance in the README, as the
 hackathon rules require.
+
+---
+
+## Hackathon rules (verified from the official page, 2026-08-19)
+
+"Into the Scrape-Verse", WeMakeDevs x Bright Data, **Aug 17-23 2026**. Solo or
+up to 4 people. The submission form appears on the hackathon page before the
+deadline — check back for it.
+
+**Judged on six equally-weighted criteria:**
+
+1. Potential impact
+2. Creativity and innovation
+3. Technical excellence
+4. Use of Scraper Studio
+5. Reliability and self-healing
+6. Presentation
+
+Criteria 4 and 5 are this project's core. Criteria 1, 2, and 6 carry the same
+weight and are won by the README, the demo video, and the dashboard — not by
+more code.
+
+**Hard rules:**
+
+- **Scraper Studio is mandatory.** Every scraper must come from the custom
+  Scraper Studio flow. Never fall back to a pre-built `web_data_*` tool as the
+  primary source.
+- **Build for the long tail.** Do not target sites already covered by Bright
+  Data's 800+ pre-built scraper library. Amazon, LinkedIn, Instagram and friends
+  are off limits as demo targets — pick sites nothing pre-built covers.
+- **Public data only.** No login-walled sites, no paywalled content, no personal
+  data.
+- **Secrets stay out of the repo *and* out of the demo video.** Check the
+  terminal, the browser, and any config file visible on screen before recording.
+- **You must be able to explain every technical decision.** AI assistance is
+  allowed; not understanding your own submission is not.
+
+**Credits:** free tier is 5,000/month plus $50 for participants. The CI cron
+consumes credits on every run — 4 runs/day per domain at a 6-hour schedule, plus
+any heal. Keep the seeded registry small and check the balance with
+`budget_status` before the final demo.
+
+**Submission needs:** a repo a judge can clone and reproduce from, clear setup
+instructions, a demo video, a project description, sample structured output, and
+documentation of how Scraper Studio was used.
 
 ---
 
