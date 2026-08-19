@@ -1,0 +1,86 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.brightdata/brightdata-mcp",
+  "description": "Bright Data's Web MCP server enabling AI agents to search, extract & navigate the web",
+  "repository": {
+    "url": "https://github.com/brightdata/brightdata-mcp",
+    "source": "github"
+  },
+  "version": "2.9.4",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@brightdata/mcp",
+      "version": "2.9.4",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "API_TOKEN",
+          "description": "Your API key for Bright Data",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "WEB_UNLOCKER_ZONE",
+          "description": "Your unlocker zone name",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "BROWSER_ZONE",
+          "description": "Your browser zone name",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "PRO_MODE",
+          "description": "To enable PRO_MODE - set to true",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "boolean"
+        },
+        {
+          "name": "GROUPS",
+          "description": "Comma-separated tool group IDs (e.g., 'ecommerce,browser')",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "TOOLS",
+          "description": "Comma-separated tool names to enable",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "POLLING_TIMEOUT",
+          "description": "Polling timeout in seconds for web_data_* tools (default: 600)",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "number"
+        },
+        {
+          "name": "BASE_TIMEOUT",
+          "description": "Request timeout in seconds for base tools (search & scrape). No limit if unset",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "number"
+        },
+        {
+          "name": "BASE_MAX_RETRIES",
+          "description": "Max retries for base tools on transient errors (0-3, default: 0)",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "number"
+        }
+      ]
+    }
+  ]
+}
