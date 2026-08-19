@@ -140,6 +140,8 @@ export const GROUPS = {
             'search_engine_batch',
             'scrape_batch',
             'scrape_as_html',
+            'scrape_screenshot',
+            'scrape_metadata',
             'extract',
             'session_stats',
         ],
@@ -180,6 +182,16 @@ export const GROUPS = {
             'scraper_heal',
             'scraper_approve',
             'scraper_registry_list',
+        ],
+    },
+    ACCOUNT: {
+        id: 'account',
+        name: 'Account',
+        description: 'Zones, balance and spend for the Bright Data account.',
+        tools: [
+            ...base_tools,
+            'zones_list',
+            'budget_status',
         ],
     },
     CUSTOM: {

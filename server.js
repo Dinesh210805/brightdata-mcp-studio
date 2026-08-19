@@ -5,6 +5,7 @@ import {z} from 'zod';
 import axios from 'axios';
 import {tools as browser_tools} from './browser_tools.js';
 import {tools as scraper_tools} from './scraper/tools.js';
+import {tools as account_tools} from './account/tools.js';
 import prompts from './prompts.js';
 import {GROUPS} from './tool_groups.js';
 import {parse_google_search_response} from './search_utils.js';
@@ -30,7 +31,8 @@ const base_max_retries = Math.min(
 const pro_mode_tools = ['search_engine', 'scrape_as_markdown',
     'search_engine_batch', 'scrape_batch', 'discover',
     'scraper_ensure', 'scraper_create', 'scraper_status', 'scraper_run',
-    'scraper_heal', 'scraper_approve', 'scraper_registry_list'];
+    'scraper_heal', 'scraper_approve', 'scraper_registry_list',
+    'zones_list', 'budget_status', 'scrape_screenshot', 'scrape_metadata'];
 const tool_groups = process.env.GROUPS ?
     process.env.GROUPS.split(',').map(g=>g.trim().toLowerCase())
         .filter(Boolean) : [];
@@ -526,9 +528,16 @@ addTool({
             .describe('Only content updated from this date (YYYY-MM-DD)'),
         end_date: z.string().optional()
             .describe('Only content updated until this date (YYYY-MM-DD)'),
+        include_content: z.boolean().optional()
+            .describe('Also return each result\'s full page content as '
+                +'markdown, instead of just title, description and URL. '
+                +'Slower and much larger, so only use it when you need to '
+                +'read the pages rather than choose between them.'),
     }),
     execute: tool_fn('discover', async(data, ctx)=>{
         let body = {query: data.query, format: 'json'};
+        if (data.include_content)
+            body.include_content = true;
         if (data.intent)
             body.intent = data.intent;
         if (data.country)
@@ -1296,6 +1305,9 @@ for (let tool of browser_tools)
     addTool(tool);
 
 for (let tool of scraper_tools)
+    addTool(tool);
+
+for (let tool of account_tools)
     addTool(tool);
 
 console.error('Starting server...');
