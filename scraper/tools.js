@@ -16,19 +16,27 @@ import {classify_status} from './requests.js';
 
 const api_token = process.env.API_TOKEN;
 
-// A run can return thousands of records. Sending all of them back would bury
-// the conversation, so responses are truncated and say so.
-const MAX_RECORDS_IN_RESPONSE = 50;
+// A run can return hundreds of records, and every one of them costs the
+// calling agent context it may need for something else. Ten is enough to see
+// the shape of the data and judge whether it is right; callers that genuinely
+// need more can ask.
+const DEFAULT_RECORD_LIMIT = 10;
+const MAX_RECORD_LIMIT = 200;
 
 const json = value=>JSON.stringify(value, null, 2);
 
-const truncate_records = records=>{
-    if (!Array.isArray(records) || records.length <= MAX_RECORDS_IN_RESPONSE)
+const record_limit_schema = z.number().int().min(1).max(MAX_RECORD_LIMIT)
+    .optional().default(DEFAULT_RECORD_LIMIT)
+    .describe(`How many records to return (default ${DEFAULT_RECORD_LIMIT}, `
+        +`max ${MAX_RECORD_LIMIT}). The full row count is always reported.`);
+
+const truncate_records = (records, limit = DEFAULT_RECORD_LIMIT)=>{
+    if (!Array.isArray(records) || records.length <= limit)
         return {records};
     return {
-        records: records.slice(0, MAX_RECORDS_IN_RESPONSE),
-        truncated: `Showing ${MAX_RECORDS_IN_RESPONSE} of ${records.length} `
-            +'records.',
+        records: records.slice(0, limit),
+        truncated: `Showing ${limit} of ${records.length} records. Ask for a `
+            +'higher limit if you need more.',
     };
 };
 
@@ -52,8 +60,9 @@ const scraper_ensure = {
         description: z.string().max(500)
             .describe('What to extract, in plain English. For example: '
                 +'"product name, price and availability for each item"'),
+        limit: record_limit_schema,
     }),
-    execute: async ({url, description})=>{
+    execute: async ({url, description, limit})=>{
         const result = await ensure(api_token, url, description);
         return json({
             domain: result.domain,
@@ -65,7 +74,7 @@ const scraper_ensure = {
             problems: result.health.reasons,
             row_count: result.records?.length ?? 0,
             what_happened: result.trace,
-            ...truncate_records(result.records),
+            ...truncate_records(result.records, limit),
         });
     },
 };
@@ -146,13 +155,14 @@ const scraper_run = {
         collector_id: z.string()
             .describe('The collector_id of the scraper to run'),
         url: z.string().url().describe('The page to scrape'),
+        limit: record_limit_schema,
     }),
-    execute: async ({collector_id, url})=>{
+    execute: async ({collector_id, url, limit})=>{
         const records = await api.run_collector(api_token, collector_id, url);
         return json({
             collector_id,
             row_count: Array.isArray(records) ? records.length : 0,
-            ...truncate_records(records),
+            ...truncate_records(records, limit),
         });
     },
 };
