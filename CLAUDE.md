@@ -223,7 +223,7 @@ Never commit it. Never log it. Never include it in a tool response.
 ## Branches
 
 ```
-main                  everything: 94 tools, registry, dashboard, CI. THE SUBMISSION.
+main                  everything: 92 tools, registry, dashboard, CI. THE SUBMISSION.
 pr/scraper-lifecycle  branched from UPSTREAM main. Four stateless tools only.
 ```
 
