@@ -1,6 +1,6 @@
 {
     "name": "brightdata-mcp-studio",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Bright Data's MCP server, extended with the Scraper Studio lifecycle: build a scraper for any public site, detect when it breaks, repair it, and verify the repair.",
     "type": "module",
     "main": "./server.js",
@@ -9,7 +9,8 @@
     },
     "scripts": {
         "start": "node server.js",
-        "test": "node --test"
+        "test": "node --test",
+        "prepack": "node -e \"const fs=require('fs');for (const f of ['README.md','LICENSE']) fs.copyFileSync('../'+f, f)\""
     },
     "keywords": [
         "mcp",

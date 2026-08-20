@@ -45,20 +45,17 @@ No human in the loop.
 
 **Requirements:** Node 20+, a [Bright Data API key](https://brightdata.com/cp/setting).
 
-```bash
-git clone https://github.com/Dinesh210805/brightdata-mcp-studio.git
-cd brightdata-mcp-studio/brightdata-mcp-studio
-npm install
-```
-
-Add it to your MCP client (Claude Code, Claude Desktop, Cursor):
+Nothing to clone or install. Add this to your MCP client (Claude Code, Claude
+Desktop, Cursor) and `npx` fetches the
+[published package](https://www.npmjs.com/package/brightdata-mcp-studio) on
+first run:
 
 ```json
 {
   "mcpServers": {
     "brightdata-studio": {
-      "command": "node",
-      "args": ["brightdata-mcp-studio/server.js"],
+      "command": "npx",
+      "args": ["-y", "brightdata-mcp-studio"],
       "env": {
         "API_TOKEN": "your-bright-data-api-key",
         "PRO_MODE": "true"
@@ -68,7 +65,16 @@ Add it to your MCP client (Claude Code, Claude Desktop, Cursor):
 }
 ```
 
-There's a copy at [`.mcp.json.example`](.mcp.json.example). One environment
+To work on the code instead, clone it and point the client at your checkout —
+[`.mcp.json.example`](.mcp.json.example) has that variant:
+
+```bash
+git clone https://github.com/Dinesh210805/brightdata-mcp-studio.git
+cd brightdata-mcp-studio/brightdata-mcp-studio
+npm install
+```
+
+One environment
 variable, no login flow. `PRO_MODE` unlocks all 92 tools; without it you get the
 core 16, which still includes the whole Scraper Studio lifecycle.
 
@@ -194,7 +200,7 @@ brightdata-mcp-studio/
 │   └── tools.js        the 7 MCP tools
 ├── account/tools.js  ← ours: zones, budget, page formats
 ├── browser/          ← ours: the 7 missing browser actions
-└── test/scraper/     ← ours: 52 unit tests
+└── test/scraper/     ← ours: 57 unit tests
 ```
 
 We touched **76 lines** across three of their files — imports, tool
@@ -228,7 +234,7 @@ Stated plainly, because they're real:
 
 ```bash
 cd brightdata-mcp-studio
-npm test                 # 52 unit tests, no network required
+npm test                 # 73 tests: 57 ours, the rest upstream's
 ```
 
 The full design and task breakdown is in [`PLAN.md`](PLAN.md); conventions are

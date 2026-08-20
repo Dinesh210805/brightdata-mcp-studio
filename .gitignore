@@ -8,3 +8,6 @@ dashboard/node_modules/
 dashboard/.env.local
 .playwright-mcp/
 .serena/
+# Generated from the repo root by the prepack script - do not edit here.
+brightdata-mcp-studio/README.md
+brightdata-mcp-studio/LICENSE

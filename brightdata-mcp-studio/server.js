@@ -184,7 +184,7 @@ async function ensure_required_zones(){
 await ensure_required_zones();
 
 let server = new FastMCP({
-    name: 'Bright Data',
+    name: 'Bright Data MCP Studio',
     version: package_json.version,
 });
 let debug_stats = {tool_calls: {}, session_calls: 0, call_timestamps: []};
