@@ -2,6 +2,8 @@ import Link from 'next/link'
 import type { RegistryRow, HealEvent } from '@/lib/registry'
 import { Sparkline } from '@/components/ui/sparkline'
 import { RecordCard } from '@/components/record-card'
+import { DataTable } from '@/components/app/dataset'
+import type { Dataset } from '@/lib/data'
 import { ago, stamp } from '@/lib/format'
 
 // One scraper's whole life on a page.
@@ -14,6 +16,9 @@ interface DetailProps {
   row: RegistryRow
   heals: HealEvent[]
   back_href: string
+  // Absent until a run comes back healthy — only healthy runs are stored, so a
+  // brand new or currently drifting scraper legitimately has no file yet.
+  data: Dataset | null
 }
 
 function Fact({ label, children }: { label: string; children: React.ReactNode }) {
@@ -51,7 +56,7 @@ function Outcome({ heal }: { heal: HealEvent }) {
   )
 }
 
-export function Detail({ row, heals, back_href }: DetailProps) {
+export function Detail({ row, heals, back_href, data }: DetailProps) {
   const drifting = row.state === 'drifting'
 
   return (
@@ -156,16 +161,22 @@ export function Detail({ row, heals, back_href }: DetailProps) {
         </ul>
       </section>
 
-      {row.sample.length > 0 && (
-        <section className="mt-14">
-          <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
-            What it last returned
-          </h2>
-          <div className="mt-5">
-            <RecordCard record={row.sample[0]} />
-          </div>
-        </section>
-      )}
+      {/* The stored file supersedes the single-record preview when it exists.
+          Without one — a scraper that has never had a healthy run, or one
+          drifting right now — the registry's sample is the only look at what
+          came back, and on a broken scraper that is the interesting part. */}
+      {data
+        ? <DataTable data={data} domain={row.domain} />
+        : row.sample.length > 0 && (
+          <section className="mt-14">
+            <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+              What it last returned
+            </h2>
+            <div className="mt-5">
+              <RecordCard record={row.sample[0]} />
+            </div>
+          </section>
+        )}
 
       <section className="mt-14">
         <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">

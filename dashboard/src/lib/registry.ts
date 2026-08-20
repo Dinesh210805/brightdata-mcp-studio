@@ -7,6 +7,7 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import { raw_url, LOCAL_ROOT } from '@/lib/repo'
 
 export type ScrapedRecord = Record<string, unknown>
 
@@ -82,12 +83,10 @@ export interface Stats {
   last_run_at: string | null
 }
 
-const RAW_URL =
-  'https://raw.githubusercontent.com/Dinesh210805/brightdata-mcp-studio'
-  + '/main/brightdata-mcp-studio/registry.json'
+const RAW_URL = raw_url('registry.json')
 
 const LOCAL_PATH = path.join(
-  process.cwd(), '..', 'brightdata-mcp-studio', 'registry.json',
+  process.cwd(), ...LOCAL_ROOT, 'registry.json',
 )
 
 // Local file first so development shows runs the moment they finish. Deployed,
@@ -112,8 +111,9 @@ export async function load_registry(): Promise<Registry> {
 
 // Every scraped record echoes the trigger input back. The health check leaves
 // it out of the schema, so showing it as an extracted field would contradict
-// the model the rest of the project runs on.
-function without_input(record: ScrapedRecord): ScrapedRecord {
+// the model the rest of the project runs on. Exported because the stored data
+// files carry the same echo and must be stripped the same way.
+export function without_input(record: ScrapedRecord): ScrapedRecord {
   const { input: _input, ...fields } = record
   return fields
 }

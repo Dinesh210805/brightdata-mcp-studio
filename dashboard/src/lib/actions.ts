@@ -5,6 +5,8 @@
 // asks the reader to go and verify it; rendering the runs here shows them. The
 // endpoint is public, so this costs no token and no infrastructure.
 
+import { RUNS_API_URL } from '@/lib/repo'
+
 export interface WorkflowRun {
   id: number
   run_number: number
@@ -14,16 +16,10 @@ export interface WorkflowRun {
   html_url: string
 }
 
-const REPO = 'Dinesh210805/brightdata-mcp-studio'
-const WORKFLOW = 'scrape.yml'
-
-export const ACTIONS_URL =
-  `https://github.com/${REPO}/actions/workflows/${WORKFLOW}`
-export const COMMITS_URL = `https://github.com/${REPO}/commits/main`
+export { ACTIONS_URL, COMMITS_URL } from '@/lib/repo'
 
 export async function load_runs(limit = 20): Promise<WorkflowRun[]> {
-  const url = `https://api.github.com/repos/${REPO}/actions/workflows/`
-    + `${WORKFLOW}/runs?per_page=${limit}`
+  const url = `${RUNS_API_URL}?per_page=${limit}`
 
   try {
     const res = await fetch(url, {

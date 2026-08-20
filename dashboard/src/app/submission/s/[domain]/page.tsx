@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { Bar } from '@/components/app/bar'
 import { Detail } from '@/components/app/detail'
 import { load_registry, to_rows, to_stats } from '@/lib/registry'
+import { load_dataset } from '@/lib/data'
 
 export const revalidate = 60
 
@@ -16,6 +17,10 @@ export default async function PublicScraperPage(
   if (!row)
     notFound()
 
+  // After the guard on purpose: `row.domain` is a registry key we matched, not
+  // the raw URL segment, and it is used to build a filesystem path.
+  const data = await load_dataset(row.domain)
+
   return (
     <>
       <Bar
@@ -26,6 +31,7 @@ export default async function PublicScraperPage(
         row={row}
         heals={registry[row.domain]?.heal_history ?? []}
         back_href="/submission"
+        data={data}
       />
     </>
   )
