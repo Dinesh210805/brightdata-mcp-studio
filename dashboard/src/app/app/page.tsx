@@ -49,6 +49,7 @@ export default async function Overview() {
         verdict={verdict}
         summary={summarize(rows, stats)}
         rows_today={total_rows_today(rows)}
+        base="/app/s"
       />
 
       <main className="mx-auto max-w-6xl space-y-16 px-6 py-14 sm:space-y-20">
@@ -58,7 +59,7 @@ export default async function Overview() {
           <Connect has_key={false} api_key={null} last_sync={null} />
         )}
 
-        {rows.length > 0 && <Mosaic rows={rows} />}
+        {rows.length > 0 && <Mosaic rows={rows} base="/app/s" />}
 
         {rows.length > 0 && <Watch matrix={to_watch(rows)} />}
 

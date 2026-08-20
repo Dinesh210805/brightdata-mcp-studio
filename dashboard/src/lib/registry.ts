@@ -17,6 +17,10 @@ export interface HealEvent {
   auto_triggered?: boolean
   escalated?: boolean
   replaced_by?: string | null
+  // Set by scripts/induce-break.js. A repair log that hides how its breaks
+  // happened is worth less than one that admits it.
+  induced?: boolean
+  induced_field?: string
 }
 
 // One run. Written for every run, including the failed ones — the baseline

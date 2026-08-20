@@ -68,6 +68,8 @@ export type FeedEvent =
     status?: string
     escalated?: boolean
     replaced_by?: string | null
+    induced?: boolean
+    induced_field?: string
   }
 
 // Runs and repairs merged into one stream, because that is how they actually
@@ -95,6 +97,8 @@ export function to_feed(registry: Registry, limit = 40): FeedEvent[] {
         status: heal.status,
         escalated: heal.escalated,
         replaced_by: heal.replaced_by,
+        induced: heal.induced,
+        induced_field: heal.induced_field,
       })
     }
   }

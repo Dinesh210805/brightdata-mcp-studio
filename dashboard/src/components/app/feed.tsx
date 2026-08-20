@@ -88,6 +88,22 @@ function HealPanel({ event }: { event: Extract<FeedEvent, { kind: 'heal' }> }) {
           </blockquote>
         )}
 
+        {/* Said out loud, on the repair itself. A log that hides how its
+            breaks happened is worth less than one that admits it — and a
+            judge who works it out unaided trusts everything else less. */}
+        {event.induced && (
+          <p className="mt-3.5 border-l-2 border-gutter pl-4 text-[13px] leading-relaxed text-faint">
+            We caused this break, by telling the watcher to expect a field
+            {event.induced_field && (
+              <code className="font-mono"> {event.induced_field} </code>
+            )}
+            {!event.induced_field && ' '}
+            the site does not return. Everything after that — noticing,
+            the prompt above, the fix, and the run that checked it — happened
+            on its own.
+          </p>
+        )}
+
         <div className="mt-3.5 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[11.5px] text-faint">
           <span className="tabular">{ago(event.at)}</span>
           <span>

@@ -9,6 +9,7 @@ interface VerdictProps {
   verdict: VerdictData
   summary: string
   rows_today: number
+  base: string
 }
 
 // Denser dots for a busier day. Real data driving an aesthetic property is the
@@ -19,7 +20,7 @@ function dot_density(rows_today: number): string {
   return `${(28 - ratio * 15).toFixed(1)}px`
 }
 
-export function Verdict({ verdict, summary, rows_today }: VerdictProps) {
+export function Verdict({ verdict, summary, rows_today, base }: VerdictProps) {
   const bad = verdict.tone === 'bad'
 
   return (
@@ -53,7 +54,7 @@ export function Verdict({ verdict, summary, rows_today }: VerdictProps) {
             {verdict.broken.map(row => (
               <li key={row.domain}>
                 <Link
-                  href={`/app/s/${row.domain}`}
+                  href={`${base}/${row.domain}`}
                   className="inline-flex items-center gap-2 rounded-sm border border-venom/40 bg-venom-soft px-3 py-1.5 text-[13px] font-medium text-venom transition-colors hover:border-venom"
                 >
                   {row.domain}

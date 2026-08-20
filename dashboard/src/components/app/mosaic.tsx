@@ -99,14 +99,14 @@ function Meta({ row }: { row: RegistryRow }) {
   )
 }
 
-function FeatureCard({ row }: { row: RegistryRow }) {
+function FeatureCard({ row, base }: { row: RegistryRow; base: string }) {
   const record = row.sample[0]
   const preview = record ? Object.entries(record).slice(0, 4) : []
   const drifting = row.state === 'drifting'
 
   return (
     <Link
-      href={`/app/s/${row.domain}`}
+      href={`${base}/${row.domain}`}
       className={`group block p-6 transition-transform hover:-translate-y-0.5 sm:p-7
         ${drifting ? 'panel drift' : 'panel-loud'}`}
     >
@@ -157,12 +157,12 @@ function FeatureCard({ row }: { row: RegistryRow }) {
   )
 }
 
-function CompactCard({ row }: { row: RegistryRow }) {
+function CompactCard({ row, base }: { row: RegistryRow; base: string }) {
   const drifting = row.state === 'drifting'
 
   return (
     <Link
-      href={`/app/s/${row.domain}`}
+      href={`${base}/${row.domain}`}
       className={`panel group flex flex-col p-5 transition-colors hover:border-ink
         ${drifting ? 'drift' : ''}`}
     >
@@ -188,7 +188,9 @@ function CompactCard({ row }: { row: RegistryRow }) {
   )
 }
 
-export function Mosaic({ rows }: { rows: RegistryRow[] }) {
+// `base` differs by context: a judge on /submission must not be bounced to
+// a sign-in screen by clicking the biggest card on the page.
+export function Mosaic({ rows, base }: { rows: RegistryRow[]; base: string }) {
   const feature = pick_feature(rows)
   if (!feature)
     return null
@@ -207,12 +209,12 @@ export function Mosaic({ rows }: { rows: RegistryRow[] }) {
       </header>
 
       <div className="mt-5 grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
-        <FeatureCard row={feature} />
+        <FeatureCard row={feature} base={base} />
 
         {rest.length > 0 && (
           <div className="grid content-start gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
             {rest.map(row => (
-              <CompactCard key={row.domain} row={row} />
+              <CompactCard key={row.domain} row={row} base={base} />
             ))}
           </div>
         )}
