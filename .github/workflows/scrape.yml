@@ -51,11 +51,16 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add brightdata-mcp-studio/registry.json
+          # Absent only if every scraper failed. git add errors on a path that
+          # does not exist, which would fail the run for the wrong reason.
+          if [ -d brightdata-mcp-studio/data ]; then
+            git add brightdata-mcp-studio/data
+          fi
           if git diff --staged --quiet; then
             echo "Registry unchanged - nothing to commit"
             exit 0
           fi
-          git commit -m "chore: registry update [skip ci]"
+          git commit -m "chore: scraped data and registry update [skip ci]"
           # A commit landing on main mid-run would reject this push and lose the
           # run's history. Rebase on top of it and then push.
           git pull --rebase origin main

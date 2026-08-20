@@ -25,6 +25,7 @@ import {
     domain_of,
 } from './registry.js';
 import {check_health} from './health.js';
+import {save_run} from './store.js';
 import {classify_status} from './requests.js';
 
 // AI builds normally take 5-10 minutes. 15 gives slow ones room without
@@ -104,6 +105,7 @@ const default_deps = {
     run: api.run_collector,
     create: create_and_wait,
     heal: heal_and_save,
+    store: save_run,
 };
 
 const new_entry = (built, url, description)=>({
@@ -228,6 +230,11 @@ export const ensure = async (token, url, description, opts = {})=>{
             last_run_at: new Date().toISOString(),
             last_row_count: records.length,
         });
+        // Only good runs are kept. A consumer reading latest.json should never
+        // have to ask whether the data in it was any good.
+        const written = deps.store(url, records);
+        if (written)
+            trace.push(`Kept ${written.rows} rows in ${written.archive}`);
     }
 
     deps.save(registry);

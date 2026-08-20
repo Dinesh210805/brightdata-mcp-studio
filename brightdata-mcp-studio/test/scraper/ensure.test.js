@@ -23,6 +23,8 @@ const make_deps = overrides=>({
     run: async ()=>good,
     create: async ()=>({collector_id: 'c_new', name: 'rebuilt'}),
     heal: async ()=>{},
+    // Stubbed, or the loop writes real files into data/ on every test run.
+    store: ()=>null,
     ...overrides,
 });
 

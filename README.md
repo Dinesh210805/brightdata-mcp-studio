@@ -78,6 +78,15 @@ One environment
 variable, no login flow. `PRO_MODE` unlocks all 92 tools; without it you get the
 core 16, which still includes the whole Scraper Studio lifecycle.
 
+Two optional paths are worth setting if you installed with `npx`, because both
+default to the server's own folder — which lives inside `node_modules` and is
+wiped on reinstall:
+
+| Variable | What it holds | Why you care |
+|---|---|---|
+| `REGISTRY_PATH` | which scraper belongs to which site | no API can rebuild it |
+| `DATA_DIR` | the rows every run collected | your dataset |
+
 Then just ask:
 
 > *"Get me the top stories from news.ycombinator.com — title, points, author."*
