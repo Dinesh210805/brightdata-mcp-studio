@@ -238,3 +238,6 @@ body {
         transition-duration: .001ms !important;
     }
 }
+
+@keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(-8px); } }
+@keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }

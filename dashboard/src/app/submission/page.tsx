@@ -22,9 +22,10 @@ export const metadata = {
 
 const LIMITS = [
   {
-    h: 'Rebuilds orphan collectors',
-    p: 'Bright Data exposes no delete API. Every escalation leaves a dead '
-      + 'collector on the account forever, which is why it is capped at one.',
+    h: 'Escalation deletes the broken scraper',
+    p: 'Deletion is irreversible, so escalation is capped at one attempt. The '
+      + 'rebuild removes the collector it abandoned and the registry records '
+      + 'what was deleted.',
   },
   {
     h: 'Building a scraper takes 5–10 minutes',

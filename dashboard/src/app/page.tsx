@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Nav } from '@/components/nav'
 import { RecordCard } from '@/components/record-card'
+import { HeroGraphic } from '@/components/hero-graphic'
 import { load_registry, to_rows, to_stats } from '@/lib/registry'
 import { ago } from '@/lib/format'
 
@@ -18,13 +19,13 @@ const STEPS = [
   },
   {
     title: 'Check the data, not the status code',
-    body: 'A run that “succeeds” and returns rows of empty fields has still '
+    body: 'A run that "succeeds" and returns rows of empty fields has still '
       + 'failed. Missing fields and empty-value ratios are what get measured.',
   },
   {
     title: 'Describe the break, then repair',
     body: 'The specific problem — which field went empty — becomes the '
-      + 'instruction sent to Bright Data’s repair flow.',
+      + 'instruction sent to Bright Data\'s repair flow.',
   },
   {
     title: 'Run again to verify',
@@ -34,8 +35,9 @@ const STEPS = [
   },
   {
     title: 'Rebuild once, if it is still wrong',
-    body: 'Capped at a single rebuild. There is no API to delete a collector, '
-      + 'so every rebuild leaves a dead one behind forever.',
+    body: 'Capped at a single rebuild. The rebuild deletes the collector it '
+      + 'abandoned and records what was deleted, so the account never quietly '
+      + 'loses a scraper.',
   },
 ]
 
@@ -55,52 +57,60 @@ export default async function Home() {
       <Nav />
 
       {/* hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden border-b border-gutter">
         <div className="grid-field grid-fade absolute inset-0 -z-10" />
+        
+        <div className="mx-auto grid max-w-page items-center gap-12 px-6 pt-20 pb-20 sm:pt-28 sm:pb-28 lg:grid-cols-[1fr_480px]">
+          {/* left column — copy */}
+          <div>
+            <p className="rise font-mono text-micro tracking-[0.14em] text-web uppercase">
+              Scraper Studio lifecycle, over MCP
+            </p>
 
-        <div className="mx-auto max-w-4xl px-6 pt-24 pb-4 text-center sm:pt-32">
-          <p className="rise font-mono text-micro tracking-[0.14em] text-web uppercase">
-            Scraper Studio lifecycle, over MCP
-          </p>
+            <h1 className="rise mt-6 font-display text-[clamp(2.4rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.03em]">
+              Scrapers that
+              <br />
+              <em className="italic">repair themselves.</em>
+            </h1>
 
-          <h1 className="rise mt-7 font-display text-[clamp(2.9rem,8.5vw,6.6rem)] leading-[0.98] tracking-[-0.03em]">
-            Scrapers that
-            <br />
-            <em className="italic">repair themselves.</em>
-          </h1>
+            <p className="rise mt-6 max-w-[52ch] text-[clamp(1rem,1.7vw,1.3rem)] leading-relaxed text-muted">
+              Every scraping tutorial ends when the scraper runs. This one starts
+              when it breaks. Point your coding agent at any public page — it
+              builds the scraper, notices when the site changes underneath it,
+              repairs it, and runs it again to prove the repair worked.
+            </p>
 
-          <p className="rise mx-auto mt-7 max-w-[58ch] text-[clamp(1rem,1.7vw,1.4rem)] leading-relaxed text-muted">
-            Every scraping tutorial ends when the scraper runs. This one starts
-            when it breaks. Point your coding agent at any public page — it
-            builds the scraper, notices when the site changes underneath it,
-            repairs it, and runs it again to prove the repair worked.
-          </p>
+            <div className="rise mt-9 flex flex-wrap items-center gap-3">
+              <Link
+                href="/login"
+                className="rounded-full bg-ink px-6 py-3 text-lead font-medium text-white transition-opacity hover:opacity-85"
+              >
+                Connect your agent
+              </Link>
+              <Link
+                href="/submission"
+                className="rounded-full border border-gutter bg-surface px-6 py-3 text-lead transition-colors hover:border-ink"
+              >
+                See it running live →
+              </Link>
+            </div>
 
-          <div className="rise mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/login"
-              className="rounded-full bg-ink px-6 py-3 text-lead font-medium text-white transition-opacity hover:opacity-85"
-            >
-              Connect your agent
-            </Link>
-            <Link
-              href="/submission"
-              className="rounded-full border border-gutter bg-surface px-6 py-3 text-lead transition-colors hover:border-ink"
-            >
-              See it running live →
-            </Link>
+            {stats.scrapers > 0 && (
+              <p className="rise mt-8 inline-flex items-center gap-2.5 rounded-full border border-gutter bg-surface px-4 py-2 text-body text-muted">
+                <span className="h-1.5 w-1.5 rounded-full bg-verified pulse" />
+                {stats.scrapers} {stats.scrapers === 1 ? 'scraper' : 'scrapers'}
+                {' · '}
+                {stats.rows.toLocaleString()} rows
+                {' · '}
+                last run {ago(stats.last_run_at)}
+              </p>
+            )}
           </div>
 
-          {stats.scrapers > 0 && (
-            <p className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-gutter bg-surface px-4 py-2 text-body text-muted">
-              <span className="h-1.5 w-1.5 rounded-full bg-verified pulse" />
-              {stats.scrapers} {stats.scrapers === 1 ? 'scraper' : 'scrapers'}
-              {' · '}
-              {stats.rows.toLocaleString()} rows
-              {' · '}
-              last run {ago(stats.last_run_at)}
-            </p>
-          )}
+          {/* right column — logo graphic */}
+          <div className="rise mx-auto w-full max-w-[500px] lg:max-w-none">
+            <HeroGraphic />
+          </div>
         </div>
       </section>
 
