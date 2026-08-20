@@ -14,35 +14,35 @@
         ],
         "last_sample": [
             {
-                "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
-                "points": 105,
-                "author": "jggonz",
-                "product_page_url": "https://news.ycombinator.com/item?id=49367256",
+                "title": "Show HN: sce (Simple Console Editor)",
+                "points": 5,
+                "author": "ciprian_craciun",
+                "product_page_url": "https://news.ycombinator.com/item?id=49312999",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Casio F-B100W-1A",
-                "points": 416,
-                "author": "__fst__",
-                "product_page_url": "https://news.ycombinator.com/item?id=49362887",
+                "title": "Bitflash: A Tor-native revival of Bitcoin 0.1.0, mined on CPUs with RandomX",
+                "points": 5,
+                "author": "bitflash",
+                "product_page_url": "https://news.ycombinator.com/item?id=49378036",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "OpenRouter is joining Stripe",
-                "points": 891,
-                "author": "rvz",
-                "product_page_url": "https://news.ycombinator.com/item?id=49364559",
+                "title": "Launch HN: Vendo (YC S26) – Let users build features on top of your product",
+                "points": 24,
+                "author": "yousefh409",
+                "product_page_url": "https://news.ycombinator.com/item?id=49376038",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-20T12:46:22.944Z",
+        "last_run_at": "2026-08-20T18:39:37.402Z",
         "last_row_count": 59,
         "run_history": [
             {
@@ -88,6 +88,17 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-20T18:39:37.402Z",
+                "rows": 59,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ]
     },
@@ -106,28 +117,28 @@
         ],
         "last_sample": [
             {
-                "title": "Plain Text Accounting is Pretty Cool",
-                "score": 77,
-                "comment_count": 32,
-                "product_page_url": "https://lobste.rs/s/i4lxyt/plain_text_accounting_is_pretty_cool",
-                "input": {
-                    "url": "https://lobste.rs"
-                }
-            },
-            {
-                "title": "Parsing IP addresses in C# at crazy speeds",
-                "score": 3,
+                "title": "Going freestanding",
+                "score": 5,
                 "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/fboohk/parsing_ip_addresses_c_at_crazy_speeds",
+                "product_page_url": "https://lobste.rs/s/8cq6jl/going_freestanding",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "If this is true, the hyperscalers are toast",
-                "score": 3,
-                "comment_count": 1,
-                "product_page_url": "https://lobste.rs/s/xgxp9m/if_this_is_true_hyperscalers_are_toast",
+                "title": "SQLite for Everything",
+                "score": 34,
+                "comment_count": 18,
+                "product_page_url": "https://lobste.rs/s/gmherj/sqlite_for_everything",
+                "input": {
+                    "url": "https://lobste.rs"
+                }
+            },
+            {
+                "title": "Introducing Microlighter",
+                "score": 36,
+                "comment_count": 3,
+                "product_page_url": "https://lobste.rs/s/lxo74i/introducing_microlighter",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -206,10 +217,21 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-20T18:40:54.003Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-20T12:47:47.370Z",
-        "last_row_count": 124
+        "last_run_at": "2026-08-20T18:40:54.003Z",
+        "last_row_count": 125
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -226,28 +248,28 @@
         ],
         "last_sample": [
             {
-                "title": "Mr. Standfast by John Buchan",
-                "author": "Buchan, John, 1875-1940",
-                "download_count": 7032930,
-                "product_page_url": "https://www.gutenberg.org/ebooks/560",
+                "title": "The Confessions of St. Augustine by Saint of Hippo Augustine",
+                "author": "Augustine, of Hippo, Saint, 354-430",
+                "download_count": 8635830,
+                "product_page_url": "https://www.gutenberg.org/ebooks/3296",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "A Honeymoon in Space by George Chetwynd Griffith",
-                "author": "Griffith, George Chetwynd, 1857-1906",
-                "download_count": 9018830,
-                "product_page_url": "https://www.gutenberg.org/ebooks/19476",
+                "title": "Adventures of Sherlock Holmes by Arthur Conan Doyle",
+                "author": "Doyle, Arthur Conan, 1859-1930",
+                "download_count": 7253630,
+                "product_page_url": "https://www.gutenberg.org/ebooks/48320",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The Thirty-Nine Steps by John Buchan",
-                "author": "Buchan, John, 1875-1940",
-                "download_count": 7078630,
-                "product_page_url": "https://www.gutenberg.org/ebooks/558",
+                "title": "Sense and Sensibility by Jane Austen",
+                "author": "Austen, Jane, 1775-1817",
+                "download_count": 7369330,
+                "product_page_url": "https://www.gutenberg.org/ebooks/161",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -282,10 +304,21 @@
                 "rows": 1,
                 "healthy": false,
                 "fields": []
+            },
+            {
+                "at": "2026-08-20T18:45:04.670Z",
+                "rows": 147,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ],
-        "last_row_count": 103,
-        "last_run_at": "2026-08-20T12:08:00.216Z"
+        "last_row_count": 147,
+        "last_run_at": "2026-08-20T18:45:04.670Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -305,15 +338,29 @@
         ],
         "last_sample": [
             {
-                "job_title": "Agentic AI Scientist",
-                "company": "AstraZeneca",
-                "location": "Durham, North Carolina, USA",
+                "job_title": "Agentic Python Engineer",
+                "company": "Evaboot",
+                "location": "Remote, Remote/Worldwide, Remote/Worldwide",
                 "job_type": [
-                    "Cloud",
-                    "Machine Learning",
-                    "Numeric processing"
+                    "Back end",
+                    "Integration",
+                    "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8094/",
+                "product_page_url": "https://www.python.org/jobs/8125/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Senior Full-Stack Engineer [Full Time; 100% remote; US-only]",
+                "company": "Hive Collective",
+                "location": "Anywhere, Anywhere, USA",
+                "job_type": [
+                    "Back end",
+                    "Machine Learning",
+                    "Web"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8119/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -324,18 +371,6 @@
                 "location": "Miami Shores, FL, United States",
                 "job_type": [],
                 "product_page_url": "https://www.python.org/jobs/8116/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Lead Python Backend Engineer",
-                "company": "Reef Technologies",
-                "location": "Warsaw (fully remote), Poland",
-                "job_type": [
-                    "Back end"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8122/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -384,9 +419,23 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-20T18:45:15.095Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-20T12:48:23.207Z"
+        "last_run_at": "2026-08-20T18:45:15.095Z"
     }
 }
