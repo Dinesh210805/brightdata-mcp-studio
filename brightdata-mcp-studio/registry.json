@@ -14,35 +14,35 @@
         ],
         "last_sample": [
             {
-                "title": "Xorshift Generators",
-                "points": 91,
-                "author": "tobr",
-                "product_page_url": "https://news.ycombinator.com/item?id=49310128",
+                "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
+                "points": 105,
+                "author": "jggonz",
+                "product_page_url": "https://news.ycombinator.com/item?id=49367256",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Unsloth Dynamic 3.0 GGUFs",
-                "points": 286,
-                "author": "jonesy827",
-                "product_page_url": "https://news.ycombinator.com/item?id=49365443",
+                "title": "Casio F-B100W-1A",
+                "points": 416,
+                "author": "__fst__",
+                "product_page_url": "https://news.ycombinator.com/item?id=49362887",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Don't Paste the AI, please",
-                "points": 428,
-                "author": "pjerem",
-                "product_page_url": "https://news.ycombinator.com/item?id=49371857",
+                "title": "OpenRouter is joining Stripe",
+                "points": 891,
+                "author": "rvz",
+                "product_page_url": "https://news.ycombinator.com/item?id=49364559",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-20T11:41:03.577Z",
+        "last_run_at": "2026-08-20T12:46:22.944Z",
         "last_row_count": 59,
         "run_history": [
             {
@@ -77,6 +77,17 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-20T12:46:22.943Z",
+                "rows": 59,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ]
     },
@@ -95,28 +106,28 @@
         ],
         "last_sample": [
             {
-                "title": "Understanding the limitations of Pubsub systems",
-                "score": 7,
-                "comment_count": 3,
-                "product_page_url": "https://lobste.rs/s/psxjb4/understanding_limitations_pubsub",
+                "title": "Plain Text Accounting is Pretty Cool",
+                "score": 77,
+                "comment_count": 32,
+                "product_page_url": "https://lobste.rs/s/i4lxyt/plain_text_accounting_is_pretty_cool",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Rust Supply-Chain Attack: arrayref 0.3.10 and the proc-macro1 Typosquat",
-                "score": 6,
+                "title": "Parsing IP addresses in C# at crazy speeds",
+                "score": 3,
                 "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/dns8du/rust_supply_chain_attack_arrayref_0_3_10",
+                "product_page_url": "https://lobste.rs/s/fboohk/parsing_ip_addresses_c_at_crazy_speeds",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Sing-song: a speakable encoding for long numbers and keys",
-                "score": 13,
-                "comment_count": 20,
-                "product_page_url": "https://lobste.rs/s/wvwqro/sing_song_speakable_encoding_for_long",
+                "title": "If this is true, the hyperscalers are toast",
+                "score": 3,
+                "comment_count": 1,
+                "product_page_url": "https://lobste.rs/s/xgxp9m/if_this_is_true_hyperscalers_are_toast",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -184,10 +195,21 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-20T12:47:47.370Z",
+                "rows": 124,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-20T11:41:50.653Z",
-        "last_row_count": 125
+        "last_run_at": "2026-08-20T12:47:47.370Z",
+        "last_row_count": 124
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -254,6 +276,12 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-20T12:47:57.590Z",
+                "rows": 1,
+                "healthy": false,
+                "fields": []
             }
         ],
         "last_row_count": 103,
@@ -277,45 +305,37 @@
         ],
         "last_sample": [
             {
-                "job_title": "Computational Photonics Engineer",
-                "company": "LumiAIres Ltd",
-                "location": "Glasgow, Scotland, United Kingdom",
+                "job_title": "Agentic AI Scientist",
+                "company": "AstraZeneca",
+                "location": "Durham, North Carolina, USA",
                 "job_type": [
-                    "Image Processing",
-                    "Integration",
+                    "Cloud",
                     "Machine Learning",
-                    "Numeric processing",
-                    "Systems",
-                    "Testing"
+                    "Numeric processing"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8105/",
+                "product_page_url": "https://www.python.org/jobs/8094/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Senior Python Developer",
+                "job_title": "Senior Python Engineer",
                 "company": "Turing",
-                "location": "Remote, Remote, Remote",
-                "job_type": [
-                    "Back end",
-                    "Front end",
-                    "Machine Learning"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8103/",
+                "location": "Miami Shores, FL, United States",
+                "job_type": [],
+                "product_page_url": "https://www.python.org/jobs/8116/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Python Backend Engineer",
-                "company": "Constelli Signals",
-                "location": "Hyderabad, Telangana, India",
+                "job_title": "Lead Python Backend Engineer",
+                "company": "Reef Technologies",
+                "location": "Warsaw (fully remote), Poland",
                 "job_type": [
-                    "Back end",
-                    "Database"
+                    "Back end"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8120/",
+                "product_page_url": "https://www.python.org/jobs/8122/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -350,9 +370,23 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-20T12:48:23.207Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-20T12:08:11.000Z"
+        "last_run_at": "2026-08-20T12:48:23.207Z"
     }
 }
