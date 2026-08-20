@@ -36,9 +36,13 @@ export const build_ai_request = (url, description)=>({
     urls: [url],
 });
 
-// Healing reuses the same field name as creation: the prompt describing what
-// is broken arrives as `description`.
-export const build_heal_request = prompt=>({description: prompt});
+// Healing does NOT reuse creation's field name. The build endpoint takes
+// `description`; this one rejects it outright with
+// {"validation_errors":["\"description\" is not allowed"]} and takes `prompt`.
+// `custom_input` is required and empty for our case - we heal a collector that
+// already knows its own inputs. Shape confirmed against the CLI's
+// build_refactor_request in src/commands/scraper.ts.
+export const build_heal_request = prompt=>({prompt, custom_input: []});
 
 // Resumes a job stopped at the approval gate. `auto_save` persists the healed
 // template once the job finishes; the API ignores it on a reject, so we leave

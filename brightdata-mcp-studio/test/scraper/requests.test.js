@@ -29,9 +29,14 @@ test('build_ai_request wraps the single url in an array', ()=>{
         {description: 'title and price', urls: ['https://a.com']});
 });
 
-test('build_heal_request sends the prompt as the description', ()=>{
+test('build_heal_request sends prompt, not description', ()=>{
+    // The build endpoint takes `description`; this one rejects it with
+    // {"validation_errors":["\"description\" is not allowed"]}. A real
+    // lobste.rs break failed to heal because of exactly that, and this test
+    // asserted the wrong shape, so it held the bug in place instead of
+    // catching it. Shape taken from the CLI's build_refactor_request.
     assert.deepEqual(build_heal_request('price is null'),
-        {description: 'price is null'});
+        {prompt: 'price is null', custom_input: []});
 });
 
 test('build_resume_request sends auto_save only when approving', ()=>{
