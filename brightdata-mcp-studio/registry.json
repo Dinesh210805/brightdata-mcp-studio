@@ -1,358 +1,356 @@
 {
-    "news.ycombinator.com": {
-        "collector_id": "c_mszlsh29flg1gvzp8",
-        "name": "cli-scraper-1787114432",
-        "source_url": "https://news.ycombinator.com",
-        "description": "top stories: title, points, author",
-        "created_at": "2026-08-19T00:00:00Z",
-        "status": "active",
-        "schema_baseline": [
-            "author",
-            "points",
-            "product_page_url",
-            "title"
-        ],
-        "last_sample": [
-            {
-                "title": "Xorshift Generators",
-                "points": 91,
-                "author": "tobr",
-                "product_page_url": "https://news.ycombinator.com/item?id=49310128",
-                "input": {
-                    "url": "https://news.ycombinator.com"
-                }
-            },
-            {
-                "title": "Unsloth Dynamic 3.0 GGUFs",
-                "points": 286,
-                "author": "jonesy827",
-                "product_page_url": "https://news.ycombinator.com/item?id=49365443",
-                "input": {
-                    "url": "https://news.ycombinator.com"
-                }
-            },
-            {
-                "title": "Don't Paste the AI, please",
-                "points": 428,
-                "author": "pjerem",
-                "product_page_url": "https://news.ycombinator.com/item?id=49371857",
-                "input": {
-                    "url": "https://news.ycombinator.com"
-                }
-            }
-        ],
-        "heal_history": [],
-        "last_run_at": "2026-08-20T11:41:03.577Z",
-        "last_row_count": 59,
-        "run_history": [
-            {
-                "at": "2026-08-20T04:10:15.796Z",
-                "rows": 60,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "points",
-                    "product_page_url",
-                    "title"
-                ]
-            },
-            {
-                "at": "2026-08-20T09:49:59.233Z",
-                "rows": 60,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "points",
-                    "product_page_url",
-                    "title"
-                ]
-            },
-            {
-                "at": "2026-08-20T11:41:03.577Z",
-                "rows": 59,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "points",
-                    "product_page_url",
-                    "title"
-                ]
-            }
+  "news.ycombinator.com": {
+    "collector_id": "c_mszlsh29flg1gvzp8",
+    "name": "cli-scraper-1787114432",
+    "source_url": "https://news.ycombinator.com",
+    "description": "top stories: title, points, author",
+    "created_at": "2026-08-19T00:00:00Z",
+    "status": "active",
+    "schema_baseline": [
+      "author",
+      "points",
+      "product_page_url",
+      "title"
+    ],
+    "last_sample": [
+      {
+        "title": "Xorshift Generators",
+        "points": 91,
+        "author": "tobr",
+        "product_page_url": "https://news.ycombinator.com/item?id=49310128",
+        "input": {
+          "url": "https://news.ycombinator.com"
+        }
+      },
+      {
+        "title": "Unsloth Dynamic 3.0 GGUFs",
+        "points": 286,
+        "author": "jonesy827",
+        "product_page_url": "https://news.ycombinator.com/item?id=49365443",
+        "input": {
+          "url": "https://news.ycombinator.com"
+        }
+      },
+      {
+        "title": "Don't Paste the AI, please",
+        "points": 428,
+        "author": "pjerem",
+        "product_page_url": "https://news.ycombinator.com/item?id=49371857",
+        "input": {
+          "url": "https://news.ycombinator.com"
+        }
+      }
+    ],
+    "heal_history": [],
+    "last_run_at": "2026-08-20T11:41:03.577Z",
+    "last_row_count": 59,
+    "run_history": [
+      {
+        "at": "2026-08-20T04:10:15.796Z",
+        "rows": 60,
+        "healthy": true,
+        "fields": [
+          "author",
+          "points",
+          "product_page_url",
+          "title"
         ]
-    },
-    "lobste.rs": {
-        "collector_id": "c_mt10ecsz1x2ve37jkb",
-        "name": "studio-lobste-rs-1787199432880",
-        "source_url": "https://lobste.rs",
-        "description": "front page stories: title, score, author, comment count",
-        "created_at": "2026-08-20T04:23:00.391Z",
-        "status": "active",
-        "schema_baseline": [
-            "comment_count",
-            "product_page_url",
-            "score",
-            "title"
+      },
+      {
+        "at": "2026-08-20T09:49:59.233Z",
+        "rows": 60,
+        "healthy": true,
+        "fields": [
+          "author",
+          "points",
+          "product_page_url",
+          "title"
+        ]
+      },
+      {
+        "at": "2026-08-20T11:41:03.577Z",
+        "rows": 59,
+        "healthy": true,
+        "fields": [
+          "author",
+          "points",
+          "product_page_url",
+          "title"
+        ]
+      }
+    ]
+  },
+  "lobste.rs": {
+    "collector_id": "c_mt10ecsz1x2ve37jkb",
+    "name": "studio-lobste-rs-1787199432880",
+    "source_url": "https://lobste.rs",
+    "description": "front page stories: title, score, author, comment count",
+    "created_at": "2026-08-20T04:23:00.391Z",
+    "status": "active",
+    "schema_baseline": [
+      "comment_count",
+      "product_page_url",
+      "score",
+      "title"
+    ],
+    "last_sample": [
+      {
+        "title": "Understanding the limitations of Pubsub systems",
+        "score": 7,
+        "comment_count": 3,
+        "product_page_url": "https://lobste.rs/s/psxjb4/understanding_limitations_pubsub",
+        "input": {
+          "url": "https://lobste.rs"
+        }
+      },
+      {
+        "title": "Rust Supply-Chain Attack: arrayref 0.3.10 and the proc-macro1 Typosquat",
+        "score": 6,
+        "comment_count": 0,
+        "product_page_url": "https://lobste.rs/s/dns8du/rust_supply_chain_attack_arrayref_0_3_10",
+        "input": {
+          "url": "https://lobste.rs"
+        }
+      },
+      {
+        "title": "Sing-song: a speakable encoding for long numbers and keys",
+        "score": 13,
+        "comment_count": 20,
+        "product_page_url": "https://lobste.rs/s/wvwqro/sing_song_speakable_encoding_for_long",
+        "input": {
+          "url": "https://lobste.rs"
+        }
+      }
+    ],
+    "heal_history": [
+      {
+        "timestamp": "2026-08-20T04:17:12.880Z",
+        "auto_triggered": true,
+        "escalated": false,
+        "replaced_by": null,
+        "prompt": "The scraper is returning bad data. Problems found: Field \"title\" is empty in 96% of records. The page layout has most likely changed and the selectors need updating.",
+        "status": "failed"
+      },
+      {
+        "timestamp": "2026-08-20T04:23:00.391Z",
+        "auto_triggered": true,
+        "escalated": true,
+        "replaced_by": "c_mt10ecsz1x2ve37jkb",
+        "prompt": "Rebuilt after c_mt105fnt1wve9llorv could not be repaired",
+        "status": "escalated"
+      }
+    ],
+    "run_history": [
+      {
+        "at": "2026-08-20T04:17:11.748Z",
+        "rows": 113,
+        "healthy": false,
+        "fields": [
+          "comment_count",
+          "product_page_url",
+          "score",
+          "title"
+        ]
+      },
+      {
+        "at": "2026-08-20T04:24:29.495Z",
+        "rows": 125,
+        "healthy": true,
+        "fields": [
+          "comment_count",
+          "product_page_url",
+          "score",
+          "title"
+        ]
+      },
+      {
+        "at": "2026-08-20T09:51:01.750Z",
+        "rows": 125,
+        "healthy": true,
+        "fields": [
+          "comment_count",
+          "product_page_url",
+          "score",
+          "title"
+        ]
+      },
+      {
+        "at": "2026-08-20T11:41:50.653Z",
+        "rows": 125,
+        "healthy": true,
+        "fields": [
+          "comment_count",
+          "product_page_url",
+          "score",
+          "title"
+        ]
+      }
+    ],
+    "last_run_at": "2026-08-20T11:41:50.653Z",
+    "last_row_count": 125
+  },
+  "gutenberg.org": {
+    "collector_id": "c_mt10nqeb2bc4m2jl53",
+    "name": "studio-gutenberg-org-1787199869499",
+    "source_url": "https://www.gutenberg.org/browse/scores/top",
+    "description": "most downloaded books: title, author, download count",
+    "created_at": "2026-08-20T04:26:19.858Z",
+    "status": "active",
+    "schema_baseline": [
+      "author",
+      "download_count",
+      "product_page_url",
+      "title"
+    ],
+    "last_sample": [
+      {
+        "title": "Mr. Standfast by John Buchan",
+        "author": "Buchan, John, 1875-1940",
+        "download_count": 7032930,
+        "product_page_url": "https://www.gutenberg.org/ebooks/560",
+        "input": {
+          "url": "https://www.gutenberg.org/browse/scores/top"
+        }
+      },
+      {
+        "title": "A Honeymoon in Space by George Chetwynd Griffith",
+        "author": "Griffith, George Chetwynd, 1857-1906",
+        "download_count": 9018830,
+        "product_page_url": "https://www.gutenberg.org/ebooks/19476",
+        "input": {
+          "url": "https://www.gutenberg.org/browse/scores/top"
+        }
+      },
+      {
+        "title": "The Thirty-Nine Steps by John Buchan",
+        "author": "Buchan, John, 1875-1940",
+        "download_count": 7078630,
+        "product_page_url": "https://www.gutenberg.org/ebooks/558",
+        "input": {
+          "url": "https://www.gutenberg.org/browse/scores/top"
+        }
+      }
+    ],
+    "heal_history": [],
+    "run_history": [
+      {
+        "at": "2026-08-20T09:59:37.031Z",
+        "rows": 149,
+        "healthy": true,
+        "fields": [
+          "author",
+          "download_count",
+          "product_page_url",
+          "title"
+        ]
+      },
+      {
+        "at": "2026-08-20T12:08:00.216Z",
+        "rows": 103,
+        "healthy": true,
+        "fields": [
+          "author",
+          "download_count",
+          "product_page_url",
+          "title"
+        ]
+      }
+    ],
+    "last_row_count": 103,
+    "last_run_at": "2026-08-20T12:08:00.216Z"
+  },
+  "python.org": {
+    "collector_id": "c_mt10q9i21ucjl06trq",
+    "name": "studio-python-org-1787199987542",
+    "source_url": "https://www.python.org/jobs/",
+    "description": "job listings: job title, company, location, job type",
+    "created_at": "2026-08-20T04:28:48.352Z",
+    "status": "active",
+    "schema_baseline": [
+      "company",
+      "job_title",
+      "job_type",
+      "location",
+      "product_page_url"
+    ],
+    "last_sample": [
+      {
+        "job_title": "Computational Photonics Engineer",
+        "company": "LumiAIres Ltd",
+        "location": "Glasgow, Scotland, United Kingdom",
+        "job_type": [
+          "Image Processing",
+          "Integration",
+          "Machine Learning",
+          "Numeric processing",
+          "Systems",
+          "Testing"
         ],
-        "last_sample": [
-            {
-                "title": "Understanding the limitations of Pubsub systems",
-                "score": 7,
-                "comment_count": 3,
-                "product_page_url": "https://lobste.rs/s/psxjb4/understanding_limitations_pubsub",
-                "input": {
-                    "url": "https://lobste.rs"
-                }
-            },
-            {
-                "title": "Rust Supply-Chain Attack: arrayref 0.3.10 and the proc-macro1 Typosquat",
-                "score": 6,
-                "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/dns8du/rust_supply_chain_attack_arrayref_0_3_10",
-                "input": {
-                    "url": "https://lobste.rs"
-                }
-            },
-            {
-                "title": "Sing-song: a speakable encoding for long numbers and keys",
-                "score": 13,
-                "comment_count": 20,
-                "product_page_url": "https://lobste.rs/s/wvwqro/sing_song_speakable_encoding_for_long",
-                "input": {
-                    "url": "https://lobste.rs"
-                }
-            }
+        "product_page_url": "https://www.python.org/jobs/8105/",
+        "input": {
+          "url": "https://www.python.org/jobs/"
+        }
+      },
+      {
+        "job_title": "Senior Python Developer",
+        "company": "Turing",
+        "location": "Remote, Remote, Remote",
+        "job_type": [
+          "Back end",
+          "Front end",
+          "Machine Learning"
         ],
-        "heal_history": [
-            {
-                "timestamp": "2026-08-20T04:17:12.880Z",
-                "auto_triggered": true,
-                "escalated": false,
-                "replaced_by": null,
-                "prompt": "The scraper is returning bad data. Problems found: Field \"title\" is empty in 96% of records. The page layout has most likely changed and the selectors need updating.",
-                "status": "failed"
-            },
-            {
-                "timestamp": "2026-08-20T04:23:00.391Z",
-                "auto_triggered": true,
-                "escalated": true,
-                "replaced_by": "c_mt10ecsz1x2ve37jkb",
-                "prompt": "Rebuilt after c_mt105fnt1wve9llorv could not be repaired",
-                "status": "escalated"
-            }
+        "product_page_url": "https://www.python.org/jobs/8103/",
+        "input": {
+          "url": "https://www.python.org/jobs/"
+        }
+      },
+      {
+        "job_title": "Python Backend Engineer",
+        "company": "Constelli Signals",
+        "location": "Hyderabad, Telangana, India",
+        "job_type": [
+          "Back end",
+          "Database"
         ],
-        "run_history": [
-            {
-                "at": "2026-08-20T04:17:11.748Z",
-                "rows": 113,
-                "healthy": false,
-                "fields": [
-                    "comment_count",
-                    "product_page_url",
-                    "score",
-                    "title"
-                ]
-            },
-            {
-                "at": "2026-08-20T04:24:29.495Z",
-                "rows": 125,
-                "healthy": true,
-                "fields": [
-                    "comment_count",
-                    "product_page_url",
-                    "score",
-                    "title"
-                ]
-            },
-            {
-                "at": "2026-08-20T09:51:01.750Z",
-                "rows": 125,
-                "healthy": true,
-                "fields": [
-                    "comment_count",
-                    "product_page_url",
-                    "score",
-                    "title"
-                ]
-            },
-            {
-                "at": "2026-08-20T11:41:50.653Z",
-                "rows": 125,
-                "healthy": true,
-                "fields": [
-                    "comment_count",
-                    "product_page_url",
-                    "score",
-                    "title"
-                ]
-            }
-        ],
-        "last_run_at": "2026-08-20T11:41:50.653Z",
-        "last_row_count": 125
-    },
-    "gutenberg.org": {
-        "collector_id": "c_mt10nqeb2bc4m2jl53",
-        "name": "studio-gutenberg-org-1787199869499",
-        "source_url": "https://www.gutenberg.org/browse/scores/top",
-        "description": "most downloaded books: title, author, download count",
-        "created_at": "2026-08-20T04:26:19.858Z",
-        "status": "active",
-        "schema_baseline": [
-            "author",
-            "download_count",
-            "product_page_url",
-            "title"
-        ],
-        "last_sample": [
-            {
-                "title": "Mr. Standfast by John Buchan",
-                "author": "Buchan, John, 1875-1940",
-                "download_count": 7032930,
-                "product_page_url": "https://www.gutenberg.org/ebooks/560",
-                "input": {
-                    "url": "https://www.gutenberg.org/browse/scores/top"
-                }
-            },
-            {
-                "title": "A Honeymoon in Space by George Chetwynd Griffith",
-                "author": "Griffith, George Chetwynd, 1857-1906",
-                "download_count": 9018830,
-                "product_page_url": "https://www.gutenberg.org/ebooks/19476",
-                "input": {
-                    "url": "https://www.gutenberg.org/browse/scores/top"
-                }
-            },
-            {
-                "title": "The Thirty-Nine Steps by John Buchan",
-                "author": "Buchan, John, 1875-1940",
-                "download_count": 7078630,
-                "product_page_url": "https://www.gutenberg.org/ebooks/558",
-                "input": {
-                    "url": "https://www.gutenberg.org/browse/scores/top"
-                }
-            }
-        ],
-        "heal_history": [],
-        "run_history": [
-            {
-                "at": "2026-08-20T09:59:37.031Z",
-                "rows": 149,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "download_count",
-                    "product_page_url",
-                    "title"
-                ]
-            },
-            {
-                "at": "2026-08-20T12:08:00.216Z",
-                "rows": 103,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "download_count",
-                    "product_page_url",
-                    "title"
-                ]
-            }
-        ],
-        "last_row_count": 103,
-        "last_run_at": "2026-08-20T12:08:00.216Z"
-    },
-    "python.org": {
-        "collector_id": "c_mt10q9i21ucjl06trq",
-        "name": "studio-python-org-1787199987542",
-        "source_url": "https://www.python.org/jobs/",
-        "description": "job listings: job title, company, location, job type",
-        "created_at": "2026-08-20T04:28:48.352Z",
-        "status": "active",
-        "schema_baseline": [
-            "company",
-            "error",
-            "error_code",
-            "job_title",
-            "job_type",
-            "location",
-            "product_page_url"
-        ],
-        "last_sample": [
-            {
-                "job_title": "Computational Photonics Engineer",
-                "company": "LumiAIres Ltd",
-                "location": "Glasgow, Scotland, United Kingdom",
-                "job_type": [
-                    "Image Processing",
-                    "Integration",
-                    "Machine Learning",
-                    "Numeric processing",
-                    "Systems",
-                    "Testing"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8105/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Senior Python Developer",
-                "company": "Turing",
-                "location": "Remote, Remote, Remote",
-                "job_type": [
-                    "Back end",
-                    "Front end",
-                    "Machine Learning"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8103/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Python Backend Engineer",
-                "company": "Constelli Signals",
-                "location": "Hyderabad, Telangana, India",
-                "job_type": [
-                    "Back end",
-                    "Database"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8120/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            }
-        ],
-        "heal_history": [],
-        "run_history": [
-            {
-                "at": "2026-08-20T09:59:47.818Z",
-                "rows": 38,
-                "healthy": true,
-                "fields": [
-                    "company",
-                    "error",
-                    "error_code",
-                    "job_title",
-                    "job_type",
-                    "location",
-                    "product_page_url"
-                ]
-            },
-            {
-                "at": "2026-08-20T12:08:11.000Z",
-                "rows": 38,
-                "healthy": true,
-                "fields": [
-                    "company",
-                    "error",
-                    "error_code",
-                    "job_title",
-                    "job_type",
-                    "location",
-                    "product_page_url"
-                ]
-            }
-        ],
-        "last_row_count": 38,
-        "last_run_at": "2026-08-20T12:08:11.000Z"
-    }
+        "product_page_url": "https://www.python.org/jobs/8120/",
+        "input": {
+          "url": "https://www.python.org/jobs/"
+        }
+      }
+    ],
+    "heal_history": [],
+    "run_history": [
+      {
+        "at": "2026-08-20T09:59:47.818Z",
+        "rows": 38,
+        "healthy": true,
+        "fields": [
+          "company",
+          "error",
+          "error_code",
+          "job_title",
+          "job_type",
+          "location",
+          "product_page_url"
+        ]
+      },
+      {
+        "at": "2026-08-20T12:08:11.000Z",
+        "rows": 38,
+        "healthy": true,
+        "fields": [
+          "company",
+          "error",
+          "error_code",
+          "job_title",
+          "job_type",
+          "location",
+          "product_page_url"
+        ]
+      }
+    ],
+    "last_row_count": 38,
+    "last_run_at": "2026-08-20T12:08:11.000Z"
+  }
 }

@@ -39,9 +39,19 @@ const is_empty = value=>value == null || value === ''
 //
 // It is reported fatal rather than merely unhealthy because no rewrite of a
 // scraper can fix a suspended account, an expired plan or a blocked target.
-// Healing one would burn an AI job, fail, escalate, and permanently orphan a
-// collector - Bright Data has no delete API.
+// Healing one would burn an AI job, fail, and escalate - and the rebuild that
+// follows deletes the collector, so the whole detour costs a scraper that was
+// never the problem.
 const ERROR_FIELDS = ['error', 'error_code'];
+
+// Error fields are never part of a scraper's schema, even on a run that was
+// only partly bad. A page that 404s inside an otherwise good crawl arrives as
+// an error record next to real ones, and the run as a whole is fine - but if
+// `error` reaches the baseline, the scraper is from then on expected to keep
+// producing errors. The next clean run is missing them, reads as drift,
+// triggers a repair no rewrite can satisfy, and escalates into deleting a
+// collector that was working correctly.
+const NON_SCHEMA_FIELDS = [...IGNORED_FIELDS, ...ERROR_FIELDS];
 
 const is_error_envelope = records=>Array.isArray(records) && records.length > 0
     && records.every(record=>record && typeof record == 'object'
@@ -61,7 +71,7 @@ export const schema_of = records=>{
     {
         for (const key of Object.keys(record || {}))
         {
-            if (!IGNORED_FIELDS.includes(key))
+            if (!NON_SCHEMA_FIELDS.includes(key))
                 fields.add(key);
         }
     }

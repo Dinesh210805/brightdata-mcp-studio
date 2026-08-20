@@ -116,3 +116,29 @@ test('a real field called error is still treated as data', ()=>{
     assert.equal(result.healthy, true);
     assert.ok(!result.fatal);
 });
+
+test('a partly failed crawl does not put error fields in the baseline', ()=>{
+    // The dangerous case, and the one that actually happened: most pages
+    // crawled, a few 404'd. The run is good and must stay good - but if
+    // `error` reaches the baseline the scraper is then expected to keep
+    // producing errors, and the next clean run looks broken.
+    const records = [
+        {job_title: 'a', company: 'x'},
+        {job_title: 'b', company: 'y'},
+        {error: 'The navigation resulted in a dead page', error_code: 'dead_page'},
+    ];
+    const result = check_health(records, null);
+    assert.equal(result.healthy, true);
+    assert.ok(!result.fatal, 'a few dead pages are not an account problem');
+    assert.deepEqual(result.schema, ['company', 'job_title'],
+        'error fields must never become part of what the scraper owes');
+});
+
+test('a clean run is not drift against a baseline that saw dead pages', ()=>{
+    // The consequence of the test above. Before error fields were excluded
+    // this returned unhealthy, healing could not satisfy it, and escalation
+    // deleted a collector that was working.
+    const baseline = ['company', 'job_title'];
+    const result = check_health([{job_title: 'a', company: 'x'}], baseline);
+    assert.equal(result.healthy, true, 'a run with no failures is not a break');
+});
