@@ -194,7 +194,7 @@ export async function poll_device_flow(): Promise<FlowState> {
     if (error)
       return { status: 'failed', message: error.message }
 
-    revalidatePath('/dashboard')
+    revalidatePath('/app')
     return { status: 'done' }
   }
 

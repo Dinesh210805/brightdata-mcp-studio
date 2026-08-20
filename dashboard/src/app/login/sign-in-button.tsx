@@ -46,7 +46,7 @@ export function SignInButton() {
       </button>
 
       {error && (
-        <p className="mt-3 text-center text-[13.5px] text-ember">{error}</p>
+        <p className="mt-3 text-center text-[13.5px] text-venom">{error}</p>
       )}
     </>
   )

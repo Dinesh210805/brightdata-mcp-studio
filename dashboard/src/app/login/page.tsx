@@ -9,7 +9,7 @@ export const metadata = { title: 'Sign in — Bright Data MCP Studio' }
 export default async function Login() {
   const user = await current_user()
   if (user)
-    redirect('/dashboard')
+    redirect('/app')
 
   const configured = auth_configured()
 
@@ -31,11 +31,11 @@ export default async function Login() {
             </p>
           </div>
 
-          <div className="mt-10 rounded-card border border-line bg-surface p-7 shadow-card">
+          <div className="mt-10 rounded-sm border border-gutter bg-surface p-7 ">
             {configured ? (
               <SignInButton />
             ) : (
-              <div className="rounded-xl border border-dashed border-line px-5 py-6 text-center">
+              <div className="rounded-xl border border-dashed border-gutter px-5 py-6 text-center">
                 <p className="text-[15px] font-semibold">
                   Sign-in is not configured
                 </p>
@@ -49,7 +49,7 @@ export default async function Login() {
               </div>
             )}
 
-            <p className="mt-5 border-t border-line-soft pt-5 text-[13px] leading-relaxed text-faint">
+            <p className="mt-5 border-t border-gutter pt-5 text-[13px] leading-relaxed text-faint">
               Bright Data does not offer OAuth for third-party apps, so your
               Bright Data API key is pasted in once after signing in. It is
               stored against your account and sent only to Bright Data.
@@ -58,7 +58,7 @@ export default async function Login() {
 
           <p className="mt-7 text-center text-[14px] text-muted">
             Just here to judge?{' '}
-            <Link href="/submission" className="text-blue hover:underline">
+            <Link href="/submission" className="text-web hover:underline">
               The submission dashboard needs no account
             </Link>
             .

@@ -22,7 +22,7 @@ export function ApiKeyForm({ has_key }: { has_key: boolean }) {
           type="password"
           autoComplete="off"
           placeholder={has_key ? '••••••••••••••••' : 'Paste your key'}
-          className="min-w-0 flex-1 rounded-full border border-line bg-surface px-4 py-2.5 font-mono text-[13.5px] outline-none transition-colors focus:border-blue"
+          className="min-w-0 flex-1 rounded-full border border-gutter bg-surface px-4 py-2.5 font-mono text-[13.5px] outline-none transition-colors focus:border-web"
         />
         <button
           type="submit"
@@ -34,10 +34,10 @@ export function ApiKeyForm({ has_key }: { has_key: boolean }) {
       </div>
 
       {state?.error && (
-        <p className="mt-2.5 text-[13.5px] text-ember">{state.error}</p>
+        <p className="mt-2.5 text-[13.5px] text-venom">{state.error}</p>
       )}
       {state?.ok && (
-        <p className="mt-2.5 text-[13.5px] text-good">
+        <p className="mt-2.5 text-[13.5px] text-verified">
           Saved. Your config below is ready to paste.
         </p>
       )}

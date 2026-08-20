@@ -59,7 +59,7 @@ export default async function Home() {
         <div className="grid-field grid-fade absolute inset-0 -z-10" />
 
         <div className="mx-auto max-w-4xl px-6 pt-24 pb-4 text-center sm:pt-32">
-          <p className="rise font-mono text-[11.5px] tracking-[0.14em] text-blue uppercase">
+          <p className="rise font-mono text-[11.5px] tracking-[0.14em] text-web uppercase">
             Scraper Studio lifecycle, over MCP
           </p>
 
@@ -85,15 +85,15 @@ export default async function Home() {
             </Link>
             <Link
               href="/submission"
-              className="rounded-full border border-line bg-surface px-6 py-3 text-[15px] transition-colors hover:border-ink"
+              className="rounded-full border border-gutter bg-surface px-6 py-3 text-[15px] transition-colors hover:border-ink"
             >
               See it running live →
             </Link>
           </div>
 
           {stats.scrapers > 0 && (
-            <p className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-line bg-surface px-4 py-2 text-[13.5px] text-muted">
-              <span className="h-1.5 w-1.5 rounded-full bg-good breathe" />
+            <p className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-gutter bg-surface px-4 py-2 text-[13.5px] text-muted">
+              <span className="h-1.5 w-1.5 rounded-full bg-verified pulse" />
               {stats.scrapers} {stats.scrapers === 1 ? 'scraper' : 'scrapers'}
               {' · '}
               {stats.rows.toLocaleString()} rows
@@ -128,7 +128,7 @@ export default async function Home() {
                 {newest.schema_baseline.map(field => (
                   <li
                     key={field}
-                    className="rounded-full bg-blue-soft px-3 py-1.5 font-mono text-[12.5px] text-blue"
+                    className="rounded-full bg-web-soft px-3 py-1.5 font-mono text-[12.5px] text-web"
                   >
                     {field}
                   </li>
@@ -157,10 +157,10 @@ export default async function Home() {
           </div>
 
           <ol className="relative">
-            <span className="absolute top-2 bottom-2 left-[13px] w-px bg-line" />
+            <span className="absolute top-2 bottom-2 left-[13px] w-px bg-gutter" />
             {STEPS.map((step, i) => (
               <li key={step.title} className="relative pb-10 pl-12 last:pb-0">
-                <span className="absolute top-0 left-0 flex h-[27px] w-[27px] items-center justify-center rounded-full border border-line bg-surface font-mono text-[11px] text-blue">
+                <span className="absolute top-0 left-0 flex h-[27px] w-[27px] items-center justify-center rounded-full border border-gutter bg-surface font-mono text-[11px] text-web">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <h3 className="text-[17px] font-semibold tracking-[-0.018em]">
@@ -193,7 +193,7 @@ export default async function Home() {
         </Link>
       </section>
 
-      <footer className="border-t border-line">
+      <footer className="border-t border-gutter">
         <div className="mx-auto max-w-5xl px-6 py-10 text-[13.5px] text-muted">
           <p>
             A fork of Bright Data’s official MCP server, extended with the

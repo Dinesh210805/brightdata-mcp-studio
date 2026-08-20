@@ -70,14 +70,14 @@ export function DeviceFlowPanel({ has_key }: { has_key: boolean }) {
           type="button"
           onClick={begin}
           disabled={busy}
-          className="rounded-full border border-line px-4 py-2 text-[13.5px] font-medium text-ink transition-colors hover:border-ink disabled:opacity-50"
+          className="rounded-full border border-gutter px-4 py-2 text-[13.5px] font-medium text-ink transition-colors hover:border-ink disabled:opacity-50"
         >
           {busy ? 'Starting…' : has_key ? 'Sign in to replace your key' : 'Sign in with Bright Data'}
         </button>
       )}
 
       {pending && (
-        <div className="rounded-xl border border-line bg-raised p-5">
+        <div className="rounded-xl border border-gutter bg-raised p-5">
           <p className="text-[14px] leading-relaxed text-muted">
             Open the link below in a new tab, sign in, and approve the code.
           </p>
@@ -86,19 +86,19 @@ export function DeviceFlowPanel({ has_key }: { has_key: boolean }) {
             <span className="font-mono text-[13px] tracking-wider text-ink">
               {state.user_code}
             </span>
-            <span className="h-px flex-1 bg-line" />
+            <span className="h-px flex-1 bg-gutter" />
             <a
               href={state.verification_uri}
               target="_blank"
               rel="noreferrer"
-              className="text-[13.5px] text-blue underline"
+              className="text-[13.5px] text-web underline"
             >
               Open Bright Data
             </a>
           </div>
 
           <div className="mt-3 flex items-center gap-2">
-            <span className="breathe inline-block h-1.5 w-1.5 rounded-full bg-blue" />
+            <span className="pulse inline-block h-1.5 w-1.5 rounded-full bg-web" />
             <span className="text-[13px] text-muted">Waiting for you to approve…</span>
             <button
               type="button"
@@ -112,13 +112,13 @@ export function DeviceFlowPanel({ has_key }: { has_key: boolean }) {
       )}
 
       {state?.status === 'done' && (
-        <p className="text-[13.5px] text-good">
+        <p className="text-[13.5px] text-verified">
           Connected. Your key is saved — the config below is ready to paste.
         </p>
       )}
 
       {(state?.status === 'failed' || state?.status === 'expired') && (
-        <p className="text-[13.5px] text-ember">{state.message}</p>
+        <p className="text-[13.5px] text-venom">{state.message}</p>
       )}
     </div>
   )

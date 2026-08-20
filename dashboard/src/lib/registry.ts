@@ -19,6 +19,16 @@ export interface HealEvent {
   replaced_by?: string | null
 }
 
+// One run. Written for every run, including the failed ones — the baseline
+// fields below are only updated on a healthy run by design, so without this a
+// break would leave no trace and there would be nothing to plot.
+export interface RunPoint {
+  at: string
+  rows: number
+  healthy: boolean
+  fields: string[]
+}
+
 export interface RegistryEntry {
   collector_id: string
   name?: string
@@ -31,9 +41,15 @@ export interface RegistryEntry {
   last_run_at?: string
   last_row_count?: number
   heal_history?: HealEvent[]
+  run_history?: RunPoint[]
 }
 
 export type Registry = Record<string, RegistryEntry>
+
+// What the interface actually reacts to. `drifting` is the state the whole
+// product exists to catch: the run succeeded, the rows came back, and the
+// values are missing.
+export type ScraperState = 'healthy' | 'drifting' | 'abandoned'
 
 export interface RegistryRow {
   domain: string
@@ -41,17 +57,21 @@ export interface RegistryRow {
   description: string
   source_url: string
   status: RegistryEntry['status']
+  state: ScraperState
   created_at: string
   last_run_at: string | null
   last_row_count: number | null
   schema_baseline: string[]
+  missing_fields: string[]
   heal_count: number
+  runs: RunPoint[]
   sample: ScrapedRecord[]
 }
 
 export interface Stats {
   scrapers: number
   abandoned: number
+  drifting: number
   heals: number
   rows: number
   watching_since: string | null
@@ -94,20 +114,52 @@ function without_input(record: ScrapedRecord): ScrapedRecord {
   return fields
 }
 
+function state_of(entry: RegistryEntry, runs: RunPoint[]): ScraperState {
+  if (entry.status === 'abandoned')
+    return 'abandoned'
+  const last = runs.at(-1)
+  // No runs yet is not a fault — a scraper built a minute ago has nothing to
+  // be wrong about.
+  if (!last)
+    return 'healthy'
+  return last.healthy ? 'healthy' : 'drifting'
+}
+
+// Which baseline fields stopped coming back on the most recent run. This is
+// the specific answer to "what broke", and it is what the field chips strike
+// through in the mosaic.
+function missing_on_last_run(
+  baseline: string[],
+  runs: RunPoint[],
+): string[] {
+  const last = runs.at(-1)
+  if (!last || last.healthy)
+    return []
+  return baseline.filter(field => !last.fields.includes(field))
+}
+
 export function to_rows(registry: Registry): RegistryRow[] {
-  return Object.entries(registry).map(([domain, entry]) => ({
-    domain,
-    collector_id: entry.collector_id,
-    description: entry.description,
-    source_url: entry.source_url,
-    status: entry.status,
-    created_at: entry.created_at,
-    last_run_at: entry.last_run_at ?? null,
-    last_row_count: entry.last_row_count ?? null,
-    schema_baseline: entry.schema_baseline ?? [],
-    heal_count: (entry.heal_history ?? []).length,
-    sample: (entry.last_sample ?? []).map(without_input),
-  }))
+  return Object.entries(registry).map(([domain, entry]) => {
+    const runs = entry.run_history ?? []
+    const baseline = entry.schema_baseline ?? []
+
+    return {
+      domain,
+      collector_id: entry.collector_id,
+      description: entry.description,
+      source_url: entry.source_url,
+      status: entry.status,
+      state: state_of(entry, runs),
+      created_at: entry.created_at,
+      last_run_at: entry.last_run_at ?? runs.at(-1)?.at ?? null,
+      last_row_count: entry.last_row_count ?? runs.at(-1)?.rows ?? null,
+      schema_baseline: baseline,
+      missing_fields: missing_on_last_run(baseline, runs),
+      heal_count: (entry.heal_history ?? []).length,
+      runs,
+      sample: (entry.last_sample ?? []).map(without_input),
+    }
+  })
 }
 
 // Flattened across sites so the dashboard shows one repair timeline for the
@@ -120,16 +172,17 @@ export function to_heals(registry: Registry): (HealEvent & { domain: string })[]
 }
 
 export function to_stats(registry: Registry): Stats {
-  const entries = Object.values(registry)
-  const active = entries.filter(e => e.status !== 'abandoned')
-  const created = active.map(e => e.created_at).filter(Boolean).sort()
-  const runs = active.map(e => e.last_run_at).filter(Boolean).sort() as string[]
+  const rows = to_rows(registry)
+  const active = rows.filter(r => r.state !== 'abandoned')
+  const created = active.map(r => r.created_at).filter(Boolean).sort()
+  const runs = active.map(r => r.last_run_at).filter(Boolean).sort() as string[]
 
   return {
     scrapers: active.length,
-    abandoned: entries.length - active.length,
-    heals: entries.reduce((n, e) => n + (e.heal_history ?? []).length, 0),
-    rows: active.reduce((n, e) => n + (e.last_row_count ?? 0), 0),
+    abandoned: rows.length - active.length,
+    drifting: active.filter(r => r.state === 'drifting').length,
+    heals: rows.reduce((n, r) => n + r.heal_count, 0),
+    rows: active.reduce((n, r) => n + (r.last_row_count ?? 0), 0),
     watching_since: created[0] ?? null,
     last_run_at: runs[runs.length - 1] ?? null,
   }

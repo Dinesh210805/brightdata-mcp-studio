@@ -1,24 +1,20 @@
 import type { Metadata } from 'next'
-import { Instrument_Serif, Instrument_Sans, JetBrains_Mono } from 'next/font/google'
+import { Archivo, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-// A designed trio rather than one neutral face: the serif carries the
-// headlines, the sans carries everything you read, and the mono carries
-// machine truth — collector ids, timestamps, field names.
-const serif_display = Instrument_Serif({
-  weight: '400',
-  style: ['normal', 'italic'],
+// Two families, not three. Archivo is variable across weight, so the whole
+// page is one voice with an enormous range inside it — 900 at -0.04em for a
+// verdict that has to be read from across a room, 400 for the paragraph under
+// it. A superfamily used this way reads as designed; three unrelated faces
+// read as chosen from a list.
+const archivo = Archivo({
   subsets: ['latin'],
-  variable: '--font-serif-display',
+  variable: '--font-archivo',
   display: 'swap',
 })
 
-const sans_ui = Instrument_Sans({
-  subsets: ['latin'],
-  variable: '--font-sans-ui',
-  display: 'swap',
-})
-
+// Machine truth stays monospaced: collector ids, timestamps, field names, row
+// counts. If a value came from a machine it is set in this.
 const mono_data = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-mono-data',
@@ -38,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${serif_display.variable} ${sans_ui.variable} ${mono_data.variable} antialiased`}
+        className={`${archivo.variable} ${mono_data.variable} antialiased`}
       >
         {children}
       </body>

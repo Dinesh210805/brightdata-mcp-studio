@@ -17,16 +17,16 @@ export function RecordCard({ record }: { record: ScrapedRecord }) {
 
   if (!fields.length) {
     return (
-      <div className="rounded-card border border-line bg-surface p-10 text-center text-[15px] text-faint shadow-card">
+      <div className="rounded-sm border border-gutter bg-surface p-10 text-center text-[15px] text-faint ">
         No sample recorded yet.
       </div>
     )
   }
 
   return (
-    <div className="overflow-hidden rounded-card border border-line bg-surface shadow-lift">
-      <div className="flex items-center gap-2 border-b border-line-soft px-6 py-3">
-        <span className="h-1.5 w-1.5 rounded-full bg-good breathe" />
+    <div className="overflow-hidden rounded-sm border border-gutter bg-surface ">
+      <div className="flex items-center gap-2 border-b border-gutter px-6 py-3">
+        <span className="h-1.5 w-1.5 rounded-full bg-verified pulse" />
         <span className="font-mono text-[11.5px] tracking-wide text-faint uppercase">
           one record, exactly as an agent receives it
         </span>
@@ -37,7 +37,7 @@ export function RecordCard({ record }: { record: ScrapedRecord }) {
           <div
             key={key}
             className={`grid gap-2 py-4 sm:grid-cols-[128px_1fr] sm:gap-6 sm:py-[18px] ${
-              i < fields.length - 1 ? 'border-b border-line-soft' : ''
+              i < fields.length - 1 ? 'border-b border-gutter' : ''
             }`}
           >
             <dt className="font-mono text-[12px] break-words text-faint">{key}</dt>

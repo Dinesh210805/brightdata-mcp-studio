@@ -1,43 +1,48 @@
 @import "tailwindcss";
 
 /* Bright Data MCP Studio
-   Quiet, precise, generous. Colour is meaning, never decoration:
-   blue marks operational state, ember marks a repair, and nothing else
-   is coloured at all. */
+   ----------------------
+   Warm off-white, comic-panel structure, and four borrowed devices that each
+   carry exactly one meaning:
+
+     halftone   density = how much data moved
+     offset     chromatic aberration = this scraper is drifting
+     gutter     hard white space between panels = hierarchy
+     web line   the connective spine of anything chronological
+
+   A device used decoratively is a bug. Colour is meaning, never ornament:
+   web is structure and live state, venom is a break, verified is a repair
+   that held. Nothing else on the page is coloured at all. */
 
 @theme {
-    --color-paper:      #fcfcfd;
+    --color-paper:      #faf8f4;
     --color-surface:    #ffffff;
-    --color-raised:     #f7f7f9;
-    --color-ink:        #0d0d11;
-    --color-muted:      #5d5d68;
-    --color-faint:      #8e8e99;
-    --color-line:       #e7e7ec;
-    --color-line-soft:  #f1f1f5;
+    --color-raised:     #f4f1ea;
+    --color-ink:        #0b0b0f;
+    --color-muted:      #55555f;
+    --color-faint:      #8a8a95;
+    --color-gutter:     #edeae3;
+    --color-hairline:   #dcd7cc;
 
-    --color-blue:       #2b6cf6;
-    --color-blue-soft:  #eef3ff;
-    --color-ember:      #c2461a;
-    --color-ember-soft: #fdf0ea;
-    --color-good:       #07734d;
-    --color-good-soft:  #e8f5ef;
+    --color-web:        #1b4fd8;
+    --color-web-soft:   #e9eefc;
+    --color-venom:      #d6183b;
+    --color-venom-soft: #fdecef;
+    --color-verified:   #0a7a4f;
+    --color-verified-soft: #e6f4ed;
 
-    --font-display: var(--font-serif-display), Georgia, serif;
-    --font-sans: var(--font-sans-ui), -apple-system, BlinkMacSystemFont,
+    --font-display: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+    --font-sans: var(--font-archivo), -apple-system, BlinkMacSystemFont,
         "Segoe UI", sans-serif;
     --font-mono: var(--font-mono-data), ui-monospace, Menlo, monospace;
 
-    --radius-card: 20px;
-
-    --shadow-card: 0 1px 2px rgb(13 13 17 / 0.04),
-        0 12px 32px -12px rgb(13 13 17 / 0.10);
-    --shadow-lift: 0 2px 6px rgb(13 13 17 / 0.05),
-        0 24px 60px -20px rgb(13 13 17 / 0.16);
+    /* Tight. The 20px radius of the previous build is the single most
+       template-looking value in web software. */
+    --radius-panel: 4px;
 }
 
 html {
     -webkit-text-size-adjust: 100%;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -49,51 +54,152 @@ body {
 }
 
 ::selection {
-    background: var(--color-blue);
-    color: #fff;
+    background: var(--color-ink);
+    color: var(--color-paper);
 }
 
 :focus-visible {
-    outline: 2px solid var(--color-blue);
+    outline: 2px solid var(--color-web);
     outline-offset: 3px;
-    border-radius: 6px;
+    border-radius: 2px;
 }
 
-/* The page sits on a faint engineering grid. It reads as instrument panel
-   rather than marketing page, and it is the only ornament anywhere. */
-.grid-field {
-    background-image:
-        linear-gradient(to right, rgb(13 13 17 / 0.028) 1px, transparent 1px),
-        linear-gradient(to bottom, rgb(13 13 17 / 0.028) 1px, transparent 1px);
-    background-size: 64px 64px;
+/* ── Panels ───────────────────────────────────────────────────────────────
+   Two weights, and only two. The quiet one is the default; the loud one is
+   rationed to at most a couple of elements per screen, which is the only
+   reason it still reads as emphasis. */
+
+.panel {
+    background: var(--color-surface);
+    border: 1px solid var(--color-gutter);
+    border-radius: var(--radius-panel);
 }
 
-.grid-fade {
-    mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 35%,
-        transparent 78%);
+.panel-loud {
+    background: var(--color-surface);
+    border: 1.5px solid var(--color-ink);
+    border-radius: var(--radius-panel);
+    box-shadow: 4px 4px 0 var(--color-ink);
 }
 
-/* Numerals in tables must align vertically or the eye cannot compare them. */
+/* ── Halftone ─────────────────────────────────────────────────────────────
+   Ben-Day dots as a data channel. --dot-density is set inline from real row
+   counts, so a busy day is visibly denser rather than being described as
+   denser in a caption. */
+
+.halftone {
+    --dot-density: 22px;
+    --dot-size: 1.1px;
+    --dot-ink: rgb(11 11 15 / 0.16);
+    background-image: radial-gradient(var(--dot-ink) var(--dot-size),
+        transparent var(--dot-size));
+    background-size: var(--dot-density) var(--dot-density);
+}
+
+.halftone-fade {
+    mask-image: radial-gradient(ellipse 85% 70% at 50% 0%, #000 30%,
+        transparent 76%);
+}
+
+/* ── Chromatic offset ─────────────────────────────────────────────────────
+   Reserved for one meaning: the data has gone out of register, so the
+   interface does too. Never decorative, never on anything healthy. */
+
+.drift {
+    position: relative;
+    animation: drift-shift 2.4s steps(2, end) infinite;
+}
+
+.drift::before,
+.drift::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border: 1.5px solid;
+    border-radius: var(--radius-panel);
+    pointer-events: none;
+}
+
+.drift::before {
+    border-color: var(--color-venom);
+    transform: translate(-2px, -1px);
+    opacity: .5;
+    mix-blend-mode: multiply;
+}
+
+.drift::after {
+    border-color: #14b3d6;
+    transform: translate(2px, 1px);
+    opacity: .5;
+    mix-blend-mode: multiply;
+}
+
+@keyframes drift-shift {
+    0%, 100% { transform: translate(0, 0); }
+    50%      { transform: translate(.6px, -.4px); }
+}
+
+/* Text version, for the verdict line when something is broken. */
+.drift-text {
+    text-shadow: -2px -1px 0 rgb(214 24 59 / .32),
+        2px 1px 0 rgb(20 179 214 / .32);
+}
+
+/* ── Web lines ────────────────────────────────────────────────────────────
+   The spine of anything chronological, and the rule under the app bar. It
+   goes slack and out of register when a scraper is broken. */
+
+.web-strand {
+    height: 1px;
+    background: var(--color-hairline);
+}
+
+.web-strand-alert {
+    height: 1px;
+    background: linear-gradient(to right,
+        var(--color-hairline) 0%,
+        var(--color-venom) 30%,
+        var(--color-hairline) 60%,
+        var(--color-venom) 85%,
+        var(--color-hairline) 100%);
+}
+
+/* ── Numerals ─────────────────────────────────────────────────────────────
+   Figures in a column must align or the eye cannot compare them. */
+
 .tabular {
     font-variant-numeric: tabular-nums;
 }
 
-@keyframes breathe {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50%      { opacity: .4; transform: scale(.8); }
-}
-
-.breathe {
-    animation: breathe 2.8s ease-in-out infinite;
-}
+/* ── Motion ───────────────────────────────────────────────────────────────
+   Motion shows a state change or it does not ship. Compositor-friendly
+   properties only. */
 
 @keyframes rise {
-    from { opacity: 0; transform: translateY(16px); }
+    from { opacity: 0; transform: translateY(14px); }
     to   { opacity: 1; transform: none; }
 }
 
 .rise {
-    animation: rise .7s cubic-bezier(.16, 1, .3, 1) both;
+    animation: rise .6s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+@keyframes draw-in {
+    from { clip-path: inset(0 100% 0 0); }
+    to   { clip-path: inset(0 0 0 0); }
+}
+
+.draw-in {
+    animation: draw-in .8s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: .35; transform: scale(.75); }
+}
+
+.pulse {
+    animation: pulse 2.6s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

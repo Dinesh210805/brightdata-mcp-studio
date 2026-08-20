@@ -64,7 +64,7 @@ export async function save_api_key(
   if (error)
     return { error: error.message }
 
-  revalidatePath('/dashboard')
+  revalidatePath('/app')
   return { ok: true }
 }
 
