@@ -14,39 +14,50 @@
         ],
         "last_sample": [
             {
-                "title": "Manabu Kosaka's Handmade Paper Sculptures",
-                "points": 68,
-                "author": "surprisetalk",
-                "product_page_url": "https://news.ycombinator.com/item?id=49362001",
+                "title": "A faster way to calculate the day of the week",
+                "points": 147,
+                "author": "gavide",
+                "product_page_url": "https://news.ycombinator.com/item?id=49323795",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "DFlash 2: Keep Drafting Parallel",
-                "points": 77,
-                "author": "mike-the-brain",
-                "product_page_url": "https://news.ycombinator.com/item?id=49366792",
+                "title": "Google has stopped pushing Git tags for some Android source code",
+                "points": 557,
+                "author": "Animux",
+                "product_page_url": "https://news.ycombinator.com/item?id=49364745",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
-                "points": 58,
-                "author": "jggonz",
-                "product_page_url": "https://news.ycombinator.com/item?id=49367256",
+                "title": "A joke domain purchase turned in geopolitical warfare",
+                "points": 904,
+                "author": "kareiva",
+                "product_page_url": "https://news.ycombinator.com/item?id=49360015",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-20T04:10:15.797Z",
+        "last_run_at": "2026-08-20T09:49:59.234Z",
         "last_row_count": 60,
         "run_history": [
             {
                 "at": "2026-08-20T04:10:15.796Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
+            },
+            {
+                "at": "2026-08-20T09:49:59.233Z",
                 "rows": 60,
                 "healthy": true,
                 "fields": [
@@ -73,28 +84,28 @@
         ],
         "last_sample": [
             {
-                "title": "Fixing a bricked AMD 7040 series Framework 13” laptop with $20 tools",
-                "score": 64,
-                "comment_count": 12,
-                "product_page_url": "https://lobste.rs/s/phisnd/fixing_bricked_amd_7040_series_framework",
+                "title": "Mastodon 5.0: Laying the foundation",
+                "score": 67,
+                "comment_count": 20,
+                "product_page_url": "https://lobste.rs/s/m0okh1/mastodon_5_0_laying_foundation",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Go 1.27 is released",
-                "score": 44,
-                "comment_count": 3,
-                "product_page_url": "https://lobste.rs/s/smrw3n/go_1_27_is_released",
+                "title": "Bun 1.4 Rust rewrite is not looking good",
+                "score": 98,
+                "comment_count": 87,
+                "product_page_url": "https://lobste.rs/s/caubyr/bun_1_4_rust_rewrite_is_not_looking_good",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Why I still hand write my commit messages",
-                "score": 29,
-                "comment_count": 16,
-                "product_page_url": "https://lobste.rs/s/kj1bvt/why_i_still_hand_write_my_commit_messages",
+                "title": "Reclaim the terminal",
+                "score": 18,
+                "comment_count": 5,
+                "product_page_url": "https://lobste.rs/s/7v1wvd/reclaim_terminal",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -140,9 +151,20 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-20T09:51:01.750Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-20T04:24:29.495Z",
+        "last_run_at": "2026-08-20T09:51:01.750Z",
         "last_row_count": 125
     },
     "gutenberg.org": {
@@ -152,11 +174,57 @@
         "description": "most downloaded books: title, author, download count",
         "created_at": "2026-08-20T04:26:19.858Z",
         "status": "active",
-        "schema_baseline": null,
-        "last_sample": null,
+        "schema_baseline": [
+            "author",
+            "download_count",
+            "product_page_url",
+            "title"
+        ],
+        "last_sample": [
+            {
+                "title": "The Samurai Strategy by Thomas Hoover",
+                "author": "Hoover, Thomas, 1941-",
+                "download_count": 6956130,
+                "product_page_url": "https://www.gutenberg.org/ebooks/34323",
+                "input": {
+                    "url": "https://www.gutenberg.org/browse/scores/top"
+                }
+            },
+            {
+                "title": "I am a woman by Ann Bannon",
+                "author": "Bannon, Ann, 1932-",
+                "download_count": 7661730,
+                "product_page_url": "https://www.gutenberg.org/ebooks/76178",
+                "input": {
+                    "url": "https://www.gutenberg.org/browse/scores/top"
+                }
+            },
+            {
+                "title": "The case-book of Sherlock Holmes by Arthur Conan Doyle",
+                "author": "Doyle, Arthur Conan, 1859-1930",
+                "download_count": 7161130,
+                "product_page_url": "https://www.gutenberg.org/ebooks/69700",
+                "input": {
+                    "url": "https://www.gutenberg.org/browse/scores/top"
+                }
+            }
+        ],
         "heal_history": [],
-        "run_history": [],
-        "last_row_count": null
+        "run_history": [
+            {
+                "at": "2026-08-20T09:59:37.031Z",
+                "rows": 149,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ]
+            }
+        ],
+        "last_row_count": 149,
+        "last_run_at": "2026-08-20T09:59:37.031Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -165,10 +233,74 @@
         "description": "job listings: job title, company, location, job type",
         "created_at": "2026-08-20T04:28:48.352Z",
         "status": "active",
-        "schema_baseline": null,
-        "last_sample": null,
+        "schema_baseline": [
+            "company",
+            "error",
+            "error_code",
+            "job_title",
+            "job_type",
+            "location",
+            "product_page_url"
+        ],
+        "last_sample": [
+            {
+                "job_title": "Senior Python Developer",
+                "company": "Turing",
+                "location": "Remote, Remote, Remote",
+                "job_type": [
+                    "Back end",
+                    "Front end",
+                    "Machine Learning"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8103/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Lead Python Backend Engineer",
+                "company": "Reef Technologies",
+                "location": "Warsaw (fully remote), Poland",
+                "job_type": [
+                    "Back end"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8122/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Python Backend Engineer",
+                "company": "Constelli Signals",
+                "location": "Hyderabad, Telangana, India",
+                "job_type": [
+                    "Back end",
+                    "Database"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8120/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            }
+        ],
         "heal_history": [],
-        "run_history": [],
-        "last_row_count": null
+        "run_history": [
+            {
+                "at": "2026-08-20T09:59:47.818Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
+            }
+        ],
+        "last_row_count": 38,
+        "last_run_at": "2026-08-20T09:59:47.818Z"
     }
 }
