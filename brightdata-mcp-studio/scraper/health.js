@@ -28,6 +28,27 @@ const EMPTY_RATIO_THRESHOLD = 0.9;
 const is_empty = value=>value == null || value === ''
     || Array.isArray(value) && value.length == 0;
 
+// Bright Data reports a failed crawl as a record describing the failure rather
+// than as an HTTP error, so it arrives here looking like data.
+//
+// Left alone it reads as a perfectly healthy run whose fields happen to be
+// `error` and `error_code` - and on a first run those become the baseline, so
+// the scraper is then "healthy" forever while returning nothing but the error.
+// This is not hypothetical: an account suspension mid-seed did exactly that to
+// two scrapers.
+//
+// It is reported fatal rather than merely unhealthy because no rewrite of a
+// scraper can fix a suspended account, an expired plan or a blocked target.
+// Healing one would burn an AI job, fail, escalate, and permanently orphan a
+// collector - Bright Data has no delete API.
+const ERROR_FIELDS = ['error', 'error_code'];
+
+const is_error_envelope = records=>Array.isArray(records) && records.length > 0
+    && records.every(record=>record && typeof record == 'object'
+        && ERROR_FIELDS.some(field=>field in record)
+        && Object.keys(record).every(key=>
+            ERROR_FIELDS.includes(key) || IGNORED_FIELDS.includes(key)));
+
 // The set of fields a run actually produced, sorted so two runs can be
 // compared directly.
 export const schema_of = records=>{
@@ -58,6 +79,16 @@ export const check_health = (records, baseline)=>{
 
     if (!Array.isArray(records) || records.length == 0)
         return {healthy: false, reasons: ['Run returned no records'], schema};
+
+    // Checked before anything else, and with an empty schema, so a crawler
+    // error can never be mistaken for data or written back as a baseline.
+    if (is_error_envelope(records))
+    {
+        const {error, error_code} = records[0];
+        return {healthy: false, fatal: true, schema: [],
+            reasons: [`Bright Data could not crawl the page: `
+                +`${error || error_code}`]};
+    }
 
     // A field that is empty in every record never appears in the schema at
     // all, so with no baseline the loop below would have nothing to look at

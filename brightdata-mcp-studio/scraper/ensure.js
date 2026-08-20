@@ -151,7 +151,12 @@ export const ensure = async (token, url, description, opts = {})=>{
     let healed = false;
     let escalated = false;
 
-    if (!health.healthy && auto_heal)
+    // A fatal result is an account or target problem, not a scraper problem.
+    // Rewriting the scraper cannot fix it, and trying would burn an AI job,
+    // fail, escalate, and orphan a collector that can never be deleted.
+    if (health.fatal)
+        trace.push(`Not repairable: ${health.reasons.join('; ')}`);
+    else if (!health.healthy && auto_heal)
     {
         healed = true;
         const prompt = build_heal_prompt(health.reasons);

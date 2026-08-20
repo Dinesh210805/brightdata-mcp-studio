@@ -86,3 +86,33 @@ test('a new extra field does not count as breakage', ()=>{
         [{title: 'A', price: '$1', stock: 3}], ['price', 'title']);
     assert.equal(res.healthy, true);
 });
+
+test('a crawler error is not data, and never becomes a baseline', ()=>{
+    // Bright Data reports a failed crawl as a record describing the failure.
+    // With no baseline, its fields would otherwise be adopted as the baseline
+    // and the scraper would read as healthy forever while returning nothing
+    // but the error. An account suspension did exactly this to two scrapers.
+    const records = [{
+        error: 'Crawler error: Your account is currently suspended',
+        error_code: 'account_suspended',
+        input: {url: 'https://a.com'},
+    }];
+
+    const result = check_health(records, null);
+    assert.equal(result.healthy, false);
+    assert.equal(result.fatal, true, 'no scraper rewrite can fix an account');
+    assert.deepEqual(result.schema, [], 'must not poison the baseline');
+    assert.match(result.reasons[0], /could not crawl/i);
+});
+
+test('a real field called error is still treated as data', ()=>{
+    // Precision matters here: a page that legitimately extracts an `error`
+    // column alongside real fields is data, not a crawler failure.
+    const records = [
+        {title: 'a', error: 'none'},
+        {title: 'b', error: 'none'},
+    ];
+    const result = check_health(records, null);
+    assert.equal(result.healthy, true);
+    assert.ok(!result.fatal);
+});
