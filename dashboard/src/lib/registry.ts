@@ -191,3 +191,20 @@ export function to_stats(registry: Registry): Stats {
     last_run_at: runs[runs.length - 1] ?? null,
   }
 }
+
+// Every collector id this account has ever owned, mapped to the site it was
+// built for. Includes the ones a rebuild replaced: a dead collector still
+// costs a slot on the account, and knowing what it used to scrape is the
+// difference between "orphan we made" and "something else entirely".
+export function to_owned_collectors(registry: Registry): Map<string, string> {
+  const owned = new Map<string, string>()
+  for (const [domain, entry] of Object.entries(registry)) {
+    if (entry.collector_id)
+      owned.set(entry.collector_id, domain)
+    for (const heal of entry.heal_history ?? []) {
+      if (heal.replaced_by)
+        owned.set(heal.replaced_by, domain)
+    }
+  }
+  return owned
+}

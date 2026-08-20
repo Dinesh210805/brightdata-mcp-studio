@@ -8,7 +8,9 @@ import { Machine } from '@/components/app/machine'
 import { Connect } from '@/components/app/connect'
 import { auth_configured, current_user } from '@/lib/supabase/server'
 import { get_profile } from '@/lib/profile'
-import { load_registry, to_rows, to_stats } from '@/lib/registry'
+import { load_registry, to_rows, to_stats, to_owned_collectors } from '@/lib/registry'
+import { load_collectors, to_collector_view } from '@/lib/collectors'
+import { Collectors } from '@/components/app/collectors'
 import { to_verdict, to_feed, to_watch, summarize, total_rows_today } from '@/lib/derive'
 import { load_runs, next_cron_run } from '@/lib/actions'
 import { load_balance } from '@/lib/balance'
@@ -31,10 +33,11 @@ export default async function Overview() {
   const profile = await get_profile()
   const api_key = profile?.brightdata_key ?? null
 
-  const [registry, runs, balance] = await Promise.all([
+  const [registry, runs, balance, collectors] = await Promise.all([
     load_registry(),
     load_runs(),
     load_balance(api_key),
+    load_collectors(api_key),
   ])
 
   const rows = to_rows(registry)
@@ -64,6 +67,15 @@ export default async function Overview() {
         {rows.length > 0 && <Watch matrix={to_watch(rows)} />}
 
         <Feed events={to_feed(registry)} />
+
+        {/* Only with a key of their own - this is a live call to Bright Data
+            on the signed-in person's behalf, not something we can fake. */}
+        {collectors && (
+          <Collectors
+            collectors={to_collector_view(collectors,
+              to_owned_collectors(registry))}
+          />
+        )}
 
         <Machine
           runs={runs}
