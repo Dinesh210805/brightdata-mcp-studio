@@ -8,6 +8,7 @@ import {tools as scraper_tools} from './scraper/tools.js';
 import {tools as account_tools} from './account/tools.js';
 import {tools as browser_extra_tools} from './browser/extra_tools.js';
 import prompts from './prompts.js';
+import studio_instructions from './scraper/instructions.js';
 import {GROUPS} from './tool_groups.js';
 import {parse_google_search_response} from './search_utils.js';
 import {dataset_id_schema, filter_schema, metadata_to_fields, FILTER_OPERATORS}
@@ -186,6 +187,7 @@ await ensure_required_zones();
 let server = new FastMCP({
     name: 'Bright Data MCP Studio',
     version: package_json.version,
+    instructions: studio_instructions,
 });
 let debug_stats = {tool_calls: {}, session_calls: 0, call_timestamps: []};
 
