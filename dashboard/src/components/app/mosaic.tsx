@@ -123,7 +123,9 @@ function FeatureCard({ row }: { row: RegistryRow }) {
       <div className="mt-6">
         <Sparkline runs={row.runs} />
         <p className="mt-1.5 font-mono text-[10.5px] tracking-[0.08em] text-faint uppercase">
-          last {row.runs.length || 0} runs
+          {row.runs.length === 1
+            ? 'first run — no trend yet'
+            : `last ${row.runs.length} runs`}
         </p>
       </div>
 

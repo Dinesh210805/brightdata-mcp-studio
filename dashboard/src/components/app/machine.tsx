@@ -54,17 +54,28 @@ export function Machine({ runs, next_run, balance }: MachineProps) {
         <code className="font-mono text-[12px] text-white/45">0 */6 * * *</code>
       </div>
 
+      {/* Only stats we actually have. A row of em-dashes reads as broken, and
+          a number nobody can source is worse than an absent one. */}
       <dl className="mt-7 grid gap-7 sm:grid-cols-3">
         <Stat label="Next run">
           <Countdown target={next_run} />
         </Stat>
-        <Stat label="Recent runs green">
-          {runs.length ? `${green}/${runs.length}` : '—'}
-        </Stat>
-        <Stat label="Bright Data balance">
-          {balance === null ? '—' : `$${balance.toFixed(2)}`}
-        </Stat>
+        {runs.length > 0 && (
+          <Stat label="Recent runs green">{`${green}/${runs.length}`}</Stat>
+        )}
+        {balance !== null && (
+          <Stat label="Bright Data balance">{`$${balance.toFixed(2)}`}</Stat>
+        )}
       </dl>
+
+      {/* Say why it is empty rather than showing an empty wall. An unexplained
+          blank reads as broken; this reads as not started. */}
+      {runs.length === 0 && (
+        <p className="mt-7 max-w-[58ch] font-mono text-[12px] leading-relaxed text-white/45">
+          No workflow runs to show yet. The cron reports here as soon as the
+          repository is public and GitHub Actions has run it once.
+        </p>
+      )}
 
       {/* The wall of checks. Each one is a real workflow run and links to its
           own log, so a reader who doubts it can click straight through. */}
