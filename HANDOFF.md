@@ -74,7 +74,7 @@ Note: **1.0.0 is published; the repo is at 1.0.1 and has NOT been published.**
 1.0.1 contains the corrected server display name and the new README. Publishing
 is a manual step the user must run (`npm publish --access public`).
 
-### 5. Data storage — CODE DONE, NOT YET CONFIRMED ON REAL DATA
+### 5. Data storage — WORKS, CONFIRMED ON REAL DATA
 
 Added 2026-08-20 in `6393ec8`. Previously every run collected hundreds of rows
 and kept only 3 (the registry's `last_sample`, meant as a UI preview). Now
@@ -88,16 +88,21 @@ brightdata-mcp-studio/data/<domain>/<timestamp>.json kept - the history
 Wired into `ensure()` rather than `cron.js`, so a direct `scraper_ensure` call
 persists too — storage is a property of the product, not of our schedule.
 
-**OPEN ITEM:** a CI run (`32364638655`) was dispatched to generate the first
-real data and was still running when the session ended. Check it:
+Confirmed by run `32364638655`: 325 rows kept across four sites (59, 125, 103,
+38), committed by the bot as `9f1d6a4`, and publicly readable with no auth:
 
 ```bash
-gh run view 32364638655 -R Dinesh210805/brightdata-mcp-studio
-ls brightdata-mcp-studio/data
+curl https://raw.githubusercontent.com/Dinesh210805/brightdata-mcp-studio/main/brightdata-mcp-studio/data/python.org/latest.json
 ```
 
-If `data/` exists and contains JSON, feature 5 is confirmed. If the run failed,
-read the log before assuming the code is wrong — see "Network" below.
+That public URL is the point of storing it this way. Anything that can make an
+HTTP request can consume the pipeline without an API or a key.
+
+**One site is very slow.** That run took 31 minutes, and 26 of them were
+`gutenberg.org` alone. Not a hang — `run_collector` gives the fast path 600s,
+then falls back to batch mode with a 3600s budget. Nothing is logged when that
+happens, so a slow site is indistinguishable from a wedged one. See the
+logging item under "Not built yet".
 
 ---
 
@@ -146,6 +151,8 @@ in the account permanently. So this bug also leaks collectors.
 
 | Missing | What it means | Size |
 |---|---|---|
+| Progress logging during a run | `cron.js` only prints after a site finishes, so a slow site looks identical to a hung one. A 26-minute `gutenberg.org` looked like a crash. Print when a site *starts*, and when it falls back to batch mode or begins a repair. | ~20 min |
+| A demo site we control | `induce-break.js` breaks a scraper by demanding a field the page does not have — **which no repair can ever fix**, so it always fails and escalates. To show a repair *succeeding*, the break must move data rather than remove it, which needs a page we can redesign on purpose. | ~1 hr |
 | Deliberate scraper editing | No way to say "also collect X" on purpose. The rewrite capability exists (it is what repairs use) but is only ever triggered automatically. | small |
 | Multiple scrapers per website | One slot per domain. This is what makes the bug above unavoidable rather than just unhandled. | medium |
 | Agent-created schedules | The 6-hour cron is a YAML file a human wrote. The agent cannot set one up. | medium |
@@ -376,14 +383,39 @@ project, not something to implement.
 
 ## Still outstanding from this session
 
-1. **Confirm CI run `32364638655`** produced `data/` — it was mid-flight at
-   session end
-2. **Publish 1.0.1 to npm** — the repo has fixes the published 1.0.0 lacks
+1. **Publish 1.0.1 to npm** — the repo has fixes the published 1.0.0 lacks
    (server display name, README). User must run `npm publish --access public`
-3. **Fix the reuse bug** — Step 1 above
-4. **Demo video** — not started. A full sixth of the judging score.
-5. **Sample structured output** in the README — an explicit submission
+2. **Fix the reuse bug** — Step 1 above
+3. **Demo video** — not started. A full sixth of the judging score.
+4. **Sample structured output** in the README — an explicit submission
    requirement, and `data/` now provides it for free
+
+### About demonstrating self-healing
+
+Read this before planning a demo. As of 2026-08-20 there has been exactly
+**one** break in the system's whole history, on `lobste.rs`:
+
+```
+04:17  ran      -> 113 rows, "title" empty in 96% of them
+04:17  repaired -> FAILED
+04:23  rebuilt from scratch
+04:24  ran      -> 125 rows, healthy
+09:51  ran      -> 125 rows, still healthy
+```
+
+So detection works, recovery works, verification works — but the **repair step
+itself has never once succeeded.** What saved it was the rebuild fallback.
+
+Claim "it detects breakage, recovers on its own and verifies the fix". Do not
+claim "Bright Data's AI repairs the scraper", because the one time it tried, it
+did not.
+
+This is also the strongest argument for the design: had the loop trusted the
+repair's own success report instead of running again to check, `lobste.rs`
+would still be returning blank titles today.
+
+To demo a repair that *succeeds*, you need a break where the data is still on
+the page but has moved — see the demo-site row under "Not built yet".
 
 ---
 
