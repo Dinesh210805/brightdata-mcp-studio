@@ -15,13 +15,14 @@
         "mcp",
         "brightdata"
     ],
-    "author": "Bright Data",
+    "author": "Dinesh",
     "repository": {
         "type": "git",
-        "url": "https://github.com/brightdata/brightdata-mcp.git"
+        "url": "https://github.com/Dinesh210805/brightdata-mcp-studio.git"
     },
+    "homepage": "https://github.com/Dinesh210805/brightdata-mcp-studio",
     "bugs": {
-        "url": "https://github.com/brightdata/brightdata-mcp/issues"
+        "url": "https://github.com/Dinesh210805/brightdata-mcp-studio/issues"
     },
     "license": "MIT",
     "dependencies": {
@@ -47,5 +48,5 @@
         "browser/",
         "scripts/"
     ],
-    "mcpName": "io.github.brightdata/brightdata-mcp"
+    "mcpName": "io.github.dinesh210805/brightdata-mcp-studio"
 }

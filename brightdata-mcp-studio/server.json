@@ -3,7 +3,7 @@
   "name": "io.github.dinesh210805/brightdata-mcp-studio",
   "description": "Bright Data's MCP server, extended with the Scraper Studio lifecycle: build a scraper for any public site, detect when it breaks, repair it, and verify the repair.",
   "repository": {
-    "url": "https://github.com/brightdata/brightdata-mcp",
+    "url": "https://github.com/Dinesh210805/brightdata-mcp-studio",
     "source": "github"
   },
   "version": "1.0.0",
