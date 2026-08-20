@@ -161,23 +161,6 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
         </ul>
       </section>
 
-      {/* The stored file supersedes the single-record preview when it exists.
-          Without one — a scraper that has never had a healthy run, or one
-          drifting right now — the registry's sample is the only look at what
-          came back, and on a broken scraper that is the interesting part. */}
-      {data
-        ? <DataTable data={data} domain={row.domain} />
-        : row.sample.length > 0 && (
-          <section className="mt-14">
-            <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
-              What it last returned
-            </h2>
-            <div className="mt-5">
-              <RecordCard record={row.sample[0]} />
-            </div>
-          </section>
-        )}
-
       <section className="mt-14">
         <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
           Repair history
@@ -213,6 +196,23 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
           </ol>
         )}
       </section>
+
+      {/* The stored file supersedes the single-record preview when it exists.
+          Without one — a scraper that has never had a healthy run, or one
+          drifting right now — the registry's sample is the only look at what
+          came back, and on a broken scraper that is the interesting part. */}
+      {data
+        ? <DataTable data={data} domain={row.domain} />
+        : row.sample.length > 0 && (
+          <section className="mt-14">
+            <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+              What it last returned
+            </h2>
+            <div className="mt-5">
+              <RecordCard record={row.sample[0]} />
+            </div>
+          </section>
+        )}
 
       <section className="mt-14 border-t border-gutter pt-6">
         <p className="font-mono text-[11.5px] text-faint">
