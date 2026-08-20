@@ -10,6 +10,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    # The server package lives in a subfolder, so npm has to run there.
+    # Without this, every step fails on a missing package.json at the repo root.
+    defaults:
+      run:
+        working-directory: brightdata-mcp-studio
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -20,7 +26,7 @@ jobs:
           node-version: "22"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run tests
         run: npm test

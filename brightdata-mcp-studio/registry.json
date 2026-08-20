@@ -1,0 +1,174 @@
+{
+    "news.ycombinator.com": {
+        "collector_id": "c_mszlsh29flg1gvzp8",
+        "name": "cli-scraper-1787114432",
+        "source_url": "https://news.ycombinator.com",
+        "description": "top stories: title, points, author",
+        "created_at": "2026-08-19T00:00:00Z",
+        "status": "active",
+        "schema_baseline": [
+            "author",
+            "points",
+            "product_page_url",
+            "title"
+        ],
+        "last_sample": [
+            {
+                "title": "Manabu Kosaka's Handmade Paper Sculptures",
+                "points": 68,
+                "author": "surprisetalk",
+                "product_page_url": "https://news.ycombinator.com/item?id=49362001",
+                "input": {
+                    "url": "https://news.ycombinator.com"
+                }
+            },
+            {
+                "title": "DFlash 2: Keep Drafting Parallel",
+                "points": 77,
+                "author": "mike-the-brain",
+                "product_page_url": "https://news.ycombinator.com/item?id=49366792",
+                "input": {
+                    "url": "https://news.ycombinator.com"
+                }
+            },
+            {
+                "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
+                "points": 58,
+                "author": "jggonz",
+                "product_page_url": "https://news.ycombinator.com/item?id=49367256",
+                "input": {
+                    "url": "https://news.ycombinator.com"
+                }
+            }
+        ],
+        "heal_history": [],
+        "last_run_at": "2026-08-20T04:10:15.797Z",
+        "last_row_count": 60,
+        "run_history": [
+            {
+                "at": "2026-08-20T04:10:15.796Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
+            }
+        ]
+    },
+    "lobste.rs": {
+        "collector_id": "c_mt10ecsz1x2ve37jkb",
+        "name": "studio-lobste-rs-1787199432880",
+        "source_url": "https://lobste.rs",
+        "description": "front page stories: title, score, author, comment count",
+        "created_at": "2026-08-20T04:23:00.391Z",
+        "status": "active",
+        "schema_baseline": [
+            "comment_count",
+            "product_page_url",
+            "score",
+            "title"
+        ],
+        "last_sample": [
+            {
+                "title": "Fixing a bricked AMD 7040 series Framework 13” laptop with $20 tools",
+                "score": 64,
+                "comment_count": 12,
+                "product_page_url": "https://lobste.rs/s/phisnd/fixing_bricked_amd_7040_series_framework",
+                "input": {
+                    "url": "https://lobste.rs"
+                }
+            },
+            {
+                "title": "Go 1.27 is released",
+                "score": 44,
+                "comment_count": 3,
+                "product_page_url": "https://lobste.rs/s/smrw3n/go_1_27_is_released",
+                "input": {
+                    "url": "https://lobste.rs"
+                }
+            },
+            {
+                "title": "Why I still hand write my commit messages",
+                "score": 29,
+                "comment_count": 16,
+                "product_page_url": "https://lobste.rs/s/kj1bvt/why_i_still_hand_write_my_commit_messages",
+                "input": {
+                    "url": "https://lobste.rs"
+                }
+            }
+        ],
+        "heal_history": [
+            {
+                "timestamp": "2026-08-20T04:17:12.880Z",
+                "auto_triggered": true,
+                "escalated": false,
+                "replaced_by": null,
+                "prompt": "The scraper is returning bad data. Problems found: Field \"title\" is empty in 96% of records. The page layout has most likely changed and the selectors need updating.",
+                "status": "failed"
+            },
+            {
+                "timestamp": "2026-08-20T04:23:00.391Z",
+                "auto_triggered": true,
+                "escalated": true,
+                "replaced_by": "c_mt10ecsz1x2ve37jkb",
+                "prompt": "Rebuilt after c_mt105fnt1wve9llorv could not be repaired",
+                "status": "escalated"
+            }
+        ],
+        "run_history": [
+            {
+                "at": "2026-08-20T04:17:11.748Z",
+                "rows": 113,
+                "healthy": false,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
+            },
+            {
+                "at": "2026-08-20T04:24:29.495Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
+            }
+        ],
+        "last_run_at": "2026-08-20T04:24:29.495Z",
+        "last_row_count": 125
+    },
+    "gutenberg.org": {
+        "collector_id": "c_mt10nqeb2bc4m2jl53",
+        "name": "studio-gutenberg-org-1787199869499",
+        "source_url": "https://www.gutenberg.org/browse/scores/top",
+        "description": "most downloaded books: title, author, download count",
+        "created_at": "2026-08-20T04:26:19.858Z",
+        "status": "active",
+        "schema_baseline": null,
+        "last_sample": null,
+        "heal_history": [],
+        "run_history": [],
+        "last_row_count": null
+    },
+    "python.org": {
+        "collector_id": "c_mt10q9i21ucjl06trq",
+        "name": "studio-python-org-1787199987542",
+        "source_url": "https://www.python.org/jobs/",
+        "description": "job listings: job title, company, location, job type",
+        "created_at": "2026-08-20T04:28:48.352Z",
+        "status": "active",
+        "schema_baseline": null,
+        "last_sample": null,
+        "heal_history": [],
+        "run_history": [],
+        "last_row_count": null
+    }
+}

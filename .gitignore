@@ -2,7 +2,6 @@ node_modules/
 reference/
 .env
 .mcp.json
-brightdata-mcp-studio/registry.json
 # (the old vanilla dashboard is gone; the app now lives in dashboard/)
 dashboard/.next/
 dashboard/node_modules/
