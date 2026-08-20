@@ -3,7 +3,8 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import os from 'node:os';
 import {
-    domain_of, get_entry, put_entry, record_heal, abandon, active_entries,
+    domain_of, get_entry, put_entry, record_heal, record_run, abandon,
+    active_entries,
 } from '../../scraper/registry.js';
 
 test('domain_of ignores scheme, www, port, case and path', ()=>{
@@ -87,4 +88,37 @@ test('the registry is found regardless of working directory', async ()=>{
     } finally {
         process.chdir(original_cwd);
     }
+});
+
+test('record_run keeps failed runs, not just good ones', ()=>{
+    // The broken run is the interesting point on the graph. Baseline fields
+    // are deliberately only written on a healthy run, so if the history
+    // dropped failures too, a break would leave no trace anywhere.
+    let registry = put_entry({}, 'https://a.com',
+        {collector_id: 'c_1', status: 'active'});
+    registry = record_run(registry, 'https://a.com',
+        {rows: 60, healthy: true, fields: ['title']});
+    registry = record_run(registry, 'https://a.com',
+        {rows: 60, healthy: false, fields: []});
+
+    const history = get_entry(registry, 'https://a.com').run_history;
+    assert.equal(history.length, 2);
+    assert.deepEqual(history.map(r=>r.healthy), [true, false]);
+    assert.ok(history[0].at, 'each run is timestamped');
+});
+
+test('record_run caps history so the registry stays readable', ()=>{
+    let registry = put_entry({}, 'https://a.com',
+        {collector_id: 'c_1', status: 'active'});
+    for (let i = 0; i<35; i++)
+    {
+        registry = record_run(registry, 'https://a.com',
+            {rows: i, healthy: true, fields: []});
+    }
+
+    const history = get_entry(registry, 'https://a.com').run_history;
+    assert.equal(history.length, 30);
+    // The cap drops the oldest, never the newest.
+    assert.equal(history.at(-1).rows, 34);
+    assert.equal(history[0].rows, 5);
 });

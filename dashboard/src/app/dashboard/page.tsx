@@ -5,8 +5,14 @@ import { McpConfig } from '@/components/mcp-config'
 import { auth_configured, current_user } from '@/lib/supabase/server'
 import { get_profile, sign_out } from '@/lib/profile'
 import { ApiKeyForm } from './api-key-form'
+import { DeviceFlowPanel } from './device-flow'
 
 export const metadata = { title: 'Your scrapers — Bright Data MCP Studio' }
+
+// This page renders the signed-in person's Bright Data key into the config
+// block. Rendering it per request means it can never be served from a cache
+// built for somebody else.
+export const dynamic = 'force-dynamic'
 
 export default async function Dashboard() {
   if (!auth_configured()) {
@@ -81,6 +87,13 @@ export default async function Dashboard() {
             nothing left to edit by hand.
           </p>
           <ApiKeyForm has_key={has_key} />
+
+          <div className="mt-6 border-t border-line-soft pt-5">
+            <p className="text-[13px] font-medium text-muted">
+              No key handy? Sign in to Bright Data and we will fetch it for you.
+            </p>
+            <DeviceFlowPanel has_key={has_key} />
+          </div>
         </section>
 
         {/* step two: the config */}

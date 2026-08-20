@@ -71,6 +71,26 @@ const update_entry = (registry, url, changes)=>{
     return {...registry, [domain]: {...entry, ...changes}};
 };
 
+// How many runs to keep per domain. Enough to draw a trend and to still show
+// the break after a few days of six-hourly runs; small enough that the
+// registry stays a file a person can read.
+const RUN_HISTORY_LIMIT = 30;
+
+// Appends one run to a domain's history - every run, not just the good ones.
+// A broken run is the single most interesting point on the graph, and it is
+// the one the baseline fields below deliberately refuse to record.
+export const record_run = (registry, url, {rows, healthy, fields})=>{
+    const existing = get_entry(registry, url)?.run_history || [];
+    return update_entry(registry, url, {
+        run_history: [...existing, {
+            at: new Date().toISOString(),
+            rows,
+            healthy,
+            fields,
+        }].slice(-RUN_HISTORY_LIMIT),
+    });
+};
+
 // Appends one attempt to a domain's repair log. Keeping the full history -
 // prompt, outcome, whether it escalated - is what lets the dashboard show what
 // actually happened to a scraper over time.

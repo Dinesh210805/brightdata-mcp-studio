@@ -20,7 +20,8 @@
 // quietly fill the account with orphans.
 import * as api from './api.js';
 import {
-    load_registry, save_registry, get_entry, put_entry, record_heal, abandon,
+    load_registry, save_registry, get_entry, put_entry, record_heal,
+    record_run, abandon,
     domain_of,
 } from './registry.js';
 import {check_health} from './health.js';
@@ -87,6 +88,15 @@ const build_heal_prompt = reasons=>
     `The scraper is returning bad data. Problems found: ${reasons.join('; ')}. `
     +'The page layout has most likely changed and the selectors need updating.';
 
+// Every run gets a history point, including the ones that came back wrong.
+// The baseline fields below are updated only on a good run, on purpose - so
+// without this the break itself would leave no trace anywhere.
+const note_run = (registry, url, records, health)=>record_run(registry, url, {
+    rows: records?.length ?? 0,
+    healthy: health.healthy,
+    fields: health.schema,
+});
+
 // Swappable so tests can drive the loop without network or disk access.
 const default_deps = {
     load: load_registry,
@@ -106,6 +116,7 @@ const new_entry = (built, url, description)=>({
     schema_baseline: null,
     last_sample: null,
     heal_history: [],
+    run_history: [],
 });
 
 export const ensure = async (token, url, description, opts = {})=>{
@@ -134,6 +145,7 @@ export const ensure = async (token, url, description, opts = {})=>{
 
     let records = await deps.run(token, entry.collector_id, url);
     let health = check_health(records, entry.schema_baseline);
+    registry = note_run(registry, url, records, health);
     trace.push(`Ran it: ${records?.length ?? 0} rows`);
 
     let healed = false;
@@ -150,6 +162,7 @@ export const ensure = async (token, url, description, opts = {})=>{
             await deps.heal(token, entry.collector_id, prompt);
             records = await deps.run(token, entry.collector_id, url);
             health = check_health(records, entry.schema_baseline);
+            registry = note_run(registry, url, records, health);
             trace.push(health.healthy
                 ? 'Repaired and verified - data looks right again'
                 : `Still wrong after repair: ${health.reasons.join('; ')}`);
@@ -170,14 +183,16 @@ export const ensure = async (token, url, description, opts = {})=>{
                 +'scratch');
 
             registry = abandon(registry, url);
-            // The replacement inherits the old entry's repair history. Losing
-            // it here would erase the record of why the rebuild happened,
-            // which is the one thing worth keeping.
-            const history_so_far = get_entry(registry, url).heal_history;
+            // The replacement inherits both histories. Losing the repair log
+            // would erase the record of why the rebuild happened, and losing
+            // the run log would cut the graph exactly at the break - which is
+            // the part worth looking at.
+            const {heal_history, run_history} = get_entry(registry, url);
             entry = {
                 ...new_entry(await deps.create(token, url, description, opts),
                     url, description),
-                heal_history: history_so_far,
+                heal_history,
+                run_history,
             };
             registry = put_entry(registry, url, entry);
             registry = record_heal(registry, url, {
@@ -189,6 +204,7 @@ export const ensure = async (token, url, description, opts = {})=>{
 
             records = await deps.run(token, entry.collector_id, url);
             health = check_health(records, null);
+            registry = note_run(registry, url, records, health);
             trace.push(`Rebuilt as ${entry.collector_id}: `
                 +(health.healthy ? 'working' : health.reasons.join('; ')));
         }
