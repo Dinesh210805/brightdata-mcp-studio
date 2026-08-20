@@ -48,7 +48,7 @@ function RunRow({ event }: { event: Extract<FeedEvent, { kind: 'run' }> }) {
   return (
     <li className="relative pb-5 pl-7">
       <Node tone={event.healthy ? 'quiet' : 'bad'} />
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 font-mono text-[12.5px]">
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 font-mono text-meta">
         <span className="w-[62px] shrink-0 text-faint tabular">
           {ago(event.at)}
         </span>
@@ -71,10 +71,10 @@ function HealPanel({ event }: { event: Extract<FeedEvent, { kind: 'heal' }> }) {
       <Node tone="loud" />
       <div className="panel-loud p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <h3 className="font-display text-[15.5px] font-[800] tracking-[-0.02em]">
+          <h3 className="font-display text-lead font-[800] tracking-[-0.02em]">
             {event.domain}
           </h3>
-          <span className={`rounded-sm px-2.5 py-1 text-[11.5px] font-semibold ${outcome.chip}`}>
+          <span className={`rounded-sm px-2.5 py-1 text-micro font-semibold ${outcome.chip}`}>
             {outcome.label}
           </span>
         </div>
@@ -83,7 +83,7 @@ function HealPanel({ event }: { event: Extract<FeedEvent, { kind: 'heal' }> }) {
             went empty, so quoting it is the clearest possible evidence that
             nothing here was written by a human after the fact. */}
         {event.prompt && (
-          <blockquote className="mt-3.5 border-l-2 border-ink/15 pl-4 text-[14px] leading-relaxed text-muted">
+          <blockquote className="mt-3.5 border-l-2 border-ink/15 pl-4 text-read leading-relaxed text-muted">
             {event.prompt}
           </blockquote>
         )}
@@ -92,7 +92,7 @@ function HealPanel({ event }: { event: Extract<FeedEvent, { kind: 'heal' }> }) {
             breaks happened is worth less than one that admits it — and a
             judge who works it out unaided trusts everything else less. */}
         {event.induced && (
-          <p className="mt-3.5 border-l-2 border-gutter pl-4 text-[13px] leading-relaxed text-faint">
+          <p className="mt-3.5 border-l-2 border-gutter pl-4 text-body leading-relaxed text-faint">
             We caused this break, by telling the watcher to expect a field
             {event.induced_field && (
               <code className="font-mono"> {event.induced_field} </code>
@@ -104,7 +104,7 @@ function HealPanel({ event }: { event: Extract<FeedEvent, { kind: 'heal' }> }) {
           </p>
         )}
 
-        <div className="mt-3.5 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[11.5px] text-faint">
+        <div className="mt-3.5 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-micro text-faint">
           <span className="tabular">{ago(event.at)}</span>
           <span>
             {event.status === 'resolved'
@@ -122,18 +122,18 @@ export function Feed({ events }: { events: FeedEvent[] }) {
   return (
     <section>
       <header className="flex items-baseline justify-between gap-4">
-        <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+        <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
           While you were away
         </h2>
-        <span className="font-mono text-[11.5px] text-faint tabular">
+        <span className="font-mono text-micro text-faint tabular">
           {events.length} events
         </span>
       </header>
 
       {events.length === 0 ? (
         <div className="panel mt-5 px-6 py-10 text-center">
-          <p className="text-[15px] font-semibold">Nothing has happened yet.</p>
-          <p className="mx-auto mt-1.5 max-w-[46ch] text-[14px] text-muted">
+          <p className="text-lead font-semibold">Nothing has happened yet.</p>
+          <p className="mx-auto mt-1.5 max-w-[46ch] text-read text-muted">
             Runs and repairs land here the moment they happen.
           </p>
         </div>

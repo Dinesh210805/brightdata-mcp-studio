@@ -10,7 +10,7 @@ export function ApiKeyForm({ has_key }: { has_key: boolean }) {
     <form action={action} className="mt-5">
       <label
         htmlFor="api_key"
-        className="block text-[13px] font-medium text-muted"
+        className="block text-body font-medium text-muted"
       >
         {has_key ? 'Replace your Bright Data API key' : 'Bright Data API key'}
       </label>
@@ -22,27 +22,27 @@ export function ApiKeyForm({ has_key }: { has_key: boolean }) {
           type="password"
           autoComplete="off"
           placeholder={has_key ? '••••••••••••••••' : 'Paste your key'}
-          className="min-w-0 flex-1 rounded-full border border-gutter bg-surface px-4 py-2.5 font-mono text-[13.5px] outline-none transition-colors focus:border-web"
+          className="min-w-0 flex-1 rounded-full border border-gutter bg-surface px-4 py-2.5 font-mono text-body outline-none transition-colors focus:border-web"
         />
         <button
           type="submit"
           disabled={pending}
-          className="rounded-full bg-ink px-5 py-2.5 text-[14px] font-medium text-white transition-opacity hover:opacity-85 disabled:opacity-50"
+          className="rounded-full bg-ink px-5 py-2.5 text-read font-medium text-white transition-opacity hover:opacity-85 disabled:opacity-50"
         >
           {pending ? 'Saving…' : has_key ? 'Replace' : 'Save key'}
         </button>
       </div>
 
       {state?.error && (
-        <p className="mt-2.5 text-[13.5px] text-venom">{state.error}</p>
+        <p className="mt-2.5 text-body text-venom">{state.error}</p>
       )}
       {state?.ok && (
-        <p className="mt-2.5 text-[13.5px] text-verified">
+        <p className="mt-2.5 text-body text-verified">
           Saved. Your config below is ready to paste.
         </p>
       )}
 
-      <p className="mt-3 text-[13px] leading-relaxed text-faint">
+      <p className="mt-3 text-body leading-relaxed text-faint">
         Get one at Bright Data → Account settings → Add API key. It is stored
         against your account with row-level security and is sent only to Bright
         Data.

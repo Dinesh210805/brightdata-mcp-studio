@@ -52,7 +52,7 @@ export default async function Overview() {
         base="/app/s"
       />
 
-      <main className="mx-auto max-w-6xl space-y-16 px-6 py-14 sm:space-y-20">
+      <main className="mx-auto max-w-page space-y-16 px-6 py-14 sm:space-y-20">
         {/* Setup first only while there is setup left to do. Once the agent is
             talking to us this collapses to a single line at the bottom. */}
         {!api_key && (

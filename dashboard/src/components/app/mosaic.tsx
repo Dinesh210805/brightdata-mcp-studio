@@ -48,7 +48,7 @@ function StateLabel({ row }: { row: RegistryRow }) {
   }[row.state]
 
   return (
-    <span className={`inline-flex items-center gap-2 text-[12.5px] font-medium ${tone}`}>
+    <span className={`inline-flex items-center gap-2 text-meta font-medium ${tone}`}>
       <StateDot state={row.state} />
       {text}
     </span>
@@ -69,7 +69,7 @@ function Fields({ row, limit }: { row: RegistryRow; limit?: number }) {
         return (
           <li
             key={field}
-            className={`rounded-sm px-2 py-1 font-mono text-[11.5px] ${
+            className={`rounded-sm px-2 py-1 font-mono text-micro ${
               gone
                 ? 'bg-venom-soft text-venom line-through decoration-venom/60'
                 : 'bg-raised text-muted'
@@ -80,7 +80,7 @@ function Fields({ row, limit }: { row: RegistryRow; limit?: number }) {
         )
       })}
       {hidden > 0 && (
-        <li className="px-1 py-1 font-mono text-[11.5px] text-faint">
+        <li className="px-1 py-1 font-mono text-micro text-faint">
           +{hidden}
         </li>
       )}
@@ -90,7 +90,7 @@ function Fields({ row, limit }: { row: RegistryRow; limit?: number }) {
 
 function Meta({ row }: { row: RegistryRow }) {
   return (
-    <div className="flex items-center justify-between gap-4 border-t border-gutter pt-3 font-mono text-[11.5px] text-faint">
+    <div className="flex items-center justify-between gap-4 border-t border-gutter pt-3 font-mono text-micro text-faint">
       <span className="tabular">
         {row.last_row_count ?? '—'} rows · {ago(row.last_run_at)}
       </span>
@@ -112,17 +112,17 @@ function FeatureCard({ row, base }: { row: RegistryRow; base: string }) {
     >
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h3 className="font-display text-[clamp(1.35rem,2.6vw,1.85rem)] font-[800] tracking-[-0.03em]">
+          <h3 className="font-display text-[clamp(1.35rem,2.6vw,2.2rem)] font-[800] tracking-[-0.03em]">
             {row.domain}
           </h3>
-          <p className="mt-1 text-[14px] text-muted">{row.description}</p>
+          <p className="mt-1 text-read text-muted">{row.description}</p>
         </div>
         <StateLabel row={row} />
       </div>
 
       <div className="mt-6">
         <Sparkline runs={row.runs} />
-        <p className="mt-1.5 font-mono text-[10.5px] tracking-[0.08em] text-faint uppercase">
+        <p className="mt-1.5 font-mono text-micro tracking-[0.08em] text-faint uppercase">
           {row.runs.length === 1
             ? 'first run — no trend yet'
             : `last ${row.runs.length} runs`}
@@ -139,10 +139,10 @@ function FeatureCard({ row, base }: { row: RegistryRow; base: string }) {
         <dl className="mt-6 grid gap-x-6 gap-y-2 border-t border-gutter pt-5 sm:grid-cols-2">
           {preview.map(([key, value]) => (
             <div key={key} className="min-w-0">
-              <dt className="font-mono text-[10.5px] tracking-[0.06em] text-faint uppercase">
+              <dt className="font-mono text-micro tracking-[0.06em] text-faint uppercase">
                 {key}
               </dt>
-              <dd className="mt-0.5 truncate text-[14px]">
+              <dd className="mt-0.5 truncate text-read">
                 {value === null || value === undefined ? '—' : String(value)}
               </dd>
             </div>
@@ -167,7 +167,7 @@ function CompactCard({ row, base }: { row: RegistryRow; base: string }) {
         ${drifting ? 'drift' : ''}`}
     >
       <div className="flex items-start justify-between gap-3">
-        <h3 className="font-display text-[15.5px] font-[700] tracking-[-0.02em]">
+        <h3 className="font-display text-lead font-[700] tracking-[-0.02em]">
           {row.domain}
         </h3>
         <StateDot state={row.state} />
@@ -200,10 +200,10 @@ export function Mosaic({ rows, base }: { rows: RegistryRow[]; base: string }) {
   return (
     <section>
       <header className="flex items-baseline justify-between gap-4">
-        <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+        <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
           Scrapers
         </h2>
-        <span className="font-mono text-[11.5px] text-faint tabular">
+        <span className="font-mono text-micro text-faint tabular">
           {rows.filter(r => r.state !== 'abandoned').length} active
         </span>
       </header>

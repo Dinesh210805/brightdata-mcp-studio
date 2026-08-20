@@ -32,10 +32,10 @@ function Stat({
 }) {
   return (
     <div>
-      <dt className="font-mono text-[10.5px] tracking-[0.12em] text-white/40 uppercase">
+      <dt className="font-mono text-micro tracking-[0.12em] text-white/40 uppercase">
         {label}
       </dt>
-      <dd className="mt-2 font-mono text-[18px] text-white tabular">
+      <dd className="mt-2 font-mono text-head text-white tabular">
         {children}
       </dd>
     </div>
@@ -48,10 +48,10 @@ export function Machine({ runs, next_run, balance }: MachineProps) {
   return (
     <section className="rounded-sm bg-ink px-6 py-8 sm:px-8">
       <div className="flex flex-wrap items-baseline justify-between gap-4">
-        <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-white/45 uppercase">
+        <h2 className="font-display text-body font-[700] tracking-[0.14em] text-white/45 uppercase">
           Running with nobody watching
         </h2>
-        <code className="font-mono text-[12px] text-white/45">0 */6 * * *</code>
+        <code className="font-mono text-meta text-white/45">0 */6 * * *</code>
       </div>
 
       {/* Only stats we actually have. A row of em-dashes reads as broken, and
@@ -71,7 +71,7 @@ export function Machine({ runs, next_run, balance }: MachineProps) {
       {/* Say why it is empty rather than showing an empty wall. An unexplained
           blank reads as broken; this reads as not started. */}
       {runs.length === 0 && (
-        <p className="mt-7 max-w-[58ch] font-mono text-[12px] leading-relaxed text-white/45">
+        <p className="mt-7 max-w-[58ch] font-mono text-meta leading-relaxed text-white/45">
           No workflow runs to show yet. The cron reports here as soon as the
           repository is public and GitHub Actions has run it once.
         </p>
@@ -94,13 +94,13 @@ export function Machine({ runs, next_run, balance }: MachineProps) {
               />
             ))}
           </div>
-          <p className="mt-3 font-mono text-[11px] text-white/35">
+          <p className="mt-3 font-mono text-micro text-white/35">
             oldest → newest · every bar is one unattended run
           </p>
         </div>
       )}
 
-      <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-white/10 pt-5 font-mono text-[12px]">
+      <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-white/10 pt-5 font-mono text-meta">
         <a
           className="text-white/60 underline-offset-4 hover:text-white hover:underline"
           href={ACTIONS_URL}

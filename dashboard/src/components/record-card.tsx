@@ -6,10 +6,10 @@ import type { ScrapedRecord } from '@/lib/registry'
 
 function value_class(value: unknown): string {
   if (typeof value === 'number')
-    return 'font-mono text-[15px] tabular'
+    return 'font-mono text-lead tabular'
   if (typeof value === 'string' && /^https?:\/\//.test(value))
-    return 'font-mono text-[12.5px] text-muted break-all'
-  return 'text-[17px] tracking-[-0.012em]'
+    return 'font-mono text-meta text-muted break-all'
+  return 'text-sub tracking-[-0.012em]'
 }
 
 export function RecordCard({ record }: { record: ScrapedRecord }) {
@@ -17,7 +17,7 @@ export function RecordCard({ record }: { record: ScrapedRecord }) {
 
   if (!fields.length) {
     return (
-      <div className="rounded-sm border border-gutter bg-surface p-10 text-center text-[15px] text-faint ">
+      <div className="rounded-sm border border-gutter bg-surface p-10 text-center text-lead text-faint ">
         No sample recorded yet.
       </div>
     )
@@ -27,7 +27,7 @@ export function RecordCard({ record }: { record: ScrapedRecord }) {
     <div className="overflow-hidden rounded-sm border border-gutter bg-surface ">
       <div className="flex items-center gap-2 border-b border-gutter px-6 py-3">
         <span className="h-1.5 w-1.5 rounded-full bg-verified pulse" />
-        <span className="font-mono text-[11.5px] tracking-wide text-faint uppercase">
+        <span className="font-mono text-micro tracking-wide text-faint uppercase">
           one record, exactly as an agent receives it
         </span>
       </div>
@@ -40,7 +40,7 @@ export function RecordCard({ record }: { record: ScrapedRecord }) {
               i < fields.length - 1 ? 'border-b border-gutter' : ''
             }`}
           >
-            <dt className="font-mono text-[12px] break-words text-faint">{key}</dt>
+            <dt className="font-mono text-meta break-words text-faint">{key}</dt>
             <dd className={value_class(value)}>
               {value === null || value === undefined ? '—' : String(value)}
             </dd>

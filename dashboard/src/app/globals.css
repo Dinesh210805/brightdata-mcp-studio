@@ -39,6 +39,34 @@
     /* Tight. The 20px radius of the previous build is the single most
        template-looking value in web software. */
     --radius-panel: 4px;
+
+    /* ── Type scale ───────────────────────────────────────────────────────
+       Seven steps, all fluid. Replaces fourteen hardcoded pixel values that
+       included 11px, 11.5px, 12px and 12.5px as four separate decisions -
+       differences nobody can see, and a scale nobody could hold in their head.
+
+       Every step is pinned to its old value at 1440px, the width this was
+       designed at, and grows to about 127% of it by 2560px. Below 1440 the
+       clamp floor holds, so laptops and phones render exactly what they
+       rendered before. Only large displays change, which is the whole
+       complaint: fixed pixels do not grow, but the empty space around them
+       does, so the interface shrinks as the monitor improves. */
+    --text-micro: clamp(11px,   7.2px + 0.265vw, 14px);
+    --text-meta:  clamp(12px,   7.8px + 0.290vw, 15.2px);
+    --text-body:  clamp(13px,   8.5px + 0.313vw, 16.5px);
+    --text-read:  clamp(14px,   9.1px + 0.340vw, 17.8px);
+    --text-lead:  clamp(15px,   9.8px + 0.362vw, 19px);
+    --text-sub:   clamp(16.5px, 10.8px + 0.400vw, 21px);
+    --text-head:  clamp(18px,  11.8px + 0.430vw, 22.9px);
+
+    /* ── Measure ──────────────────────────────────────────────────────────
+       The page cap grows too, but far less than the viewport does. A table
+       row stretched across 2560px is harder to read than a narrow one, not
+       easier - the eye loses the row on the way back. 1152px at 1440,
+       1600px at 2560, and it is a max-width, so narrow screens are
+       unaffected. */
+    --container-page: clamp(1152px, 576px + 40vw, 1600px);
+    --container-column: clamp(1024px, 512px + 35.5vw, 1400px);
 }
 
 html {
@@ -88,7 +116,7 @@ body {
    denser in a caption. */
 
 .halftone {
-    --dot-density: 22px;
+    --dot-density: clamp(22px, 14.4px + 0.53vw, 28px);
     --dot-size: 1.1px;
     --dot-ink: rgb(11 11 15 / 0.16);
     background-image: radial-gradient(var(--dot-ink) var(--dot-size),

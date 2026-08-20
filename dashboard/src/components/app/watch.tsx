@@ -32,31 +32,31 @@ export function Watch({ matrix }: { matrix: WatchMatrix }) {
   return (
     <section>
       <header className="flex items-baseline justify-between gap-4">
-        <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+        <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
           Under watch
         </h2>
-        <span className="font-mono text-[11.5px] text-faint tabular">
+        <span className="font-mono text-micro text-faint tabular">
           {matrix.fields.length} fields
         </span>
       </header>
 
-      <p className="mt-3 max-w-[64ch] text-[14px] leading-relaxed text-muted">
+      <p className="mt-3 max-w-[64ch] text-read leading-relaxed text-muted">
         A run that returns the right number of rows with the values missing has
         still failed. These are the fields each scraper is expected to produce
         — when one stops coming back, a repair starts on its own.
       </p>
 
       <div className="mt-6 overflow-x-auto">
-        <table className="w-full min-w-[560px] border-collapse font-mono text-[12px]">
+        <table className="w-full min-w-[560px] border-collapse font-mono text-meta">
           <thead>
             <tr>
-              <th className="sticky left-0 bg-paper py-2 pr-6 text-left text-[10.5px] font-medium tracking-[0.08em] text-faint uppercase">
+              <th className="sticky left-0 bg-paper py-2 pr-6 text-left text-micro font-medium tracking-[0.08em] text-faint uppercase">
                 Site
               </th>
               {matrix.fields.map(field => (
                 <th
                   key={field}
-                  className="px-2 pb-2 text-center align-bottom text-[11px] font-normal text-faint"
+                  className="px-2 pb-2 text-center align-bottom text-micro font-normal text-faint"
                 >
                   {/* Vertical field names keep the columns tight enough that
                       the grid stays scannable as fields accumulate. */}
@@ -84,7 +84,7 @@ export function Watch({ matrix }: { matrix: WatchMatrix }) {
         </table>
       </div>
 
-      <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] text-faint">
+      <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2 font-mono text-micro text-faint">
         <li className="flex items-center gap-2">
           <Mark cell="present" /> present on the last run
         </li>

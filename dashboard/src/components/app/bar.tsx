@@ -25,7 +25,7 @@ const LINKS = [
 export function Bar({ alert = false, email, readonly_notice }: BarProps) {
   return (
     <header className="sticky top-0 z-30 bg-paper/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-6 px-6">
+      <div className="mx-auto flex h-14 max-w-page items-center justify-between gap-6 px-6">
         <Link
           href={readonly_notice ? '/' : '/app'}
           className="flex items-center gap-2.5"
@@ -37,17 +37,17 @@ export function Bar({ alert = false, email, readonly_notice }: BarProps) {
               <path d="M8 4.2 11.8 8 8 11.8 4.2 8Z" />
             </g>
           </svg>
-          <span className="font-display text-[14.5px] font-[800] tracking-[-0.02em]">
+          <span className="font-display text-read font-[800] tracking-[-0.02em]">
             Studio
           </span>
         </Link>
 
         {readonly_notice ? (
-          <span className="font-mono text-[11.5px] text-faint">
+          <span className="font-mono text-micro text-faint">
             {readonly_notice}
           </span>
         ) : (
-          <nav className="flex items-center gap-1 text-[13.5px]">
+          <nav className="flex items-center gap-1 text-body">
             {LINKS.map(link => (
               <Link
                 key={link.href}
@@ -58,7 +58,7 @@ export function Bar({ alert = false, email, readonly_notice }: BarProps) {
               </Link>
             ))}
             {email && (
-              <span className="ml-2 hidden font-mono text-[11.5px] text-faint sm:inline">
+              <span className="ml-2 hidden font-mono text-micro text-faint sm:inline">
                 {email}
               </span>
             )}

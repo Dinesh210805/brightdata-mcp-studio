@@ -53,7 +53,7 @@ export default async function Submission() {
 
   return (
     <>
-      <div className="flex flex-wrap items-center justify-center gap-2.5 bg-ink px-5 py-2.5 text-center text-[13px] text-white/85">
+      <div className="flex flex-wrap items-center justify-center gap-2.5 bg-ink px-5 py-2.5 text-center text-body text-white/85">
         <span className="pulse h-1.5 w-1.5 shrink-0 rounded-full bg-venom" />
         Hackathon submission — live data from our own deployment, no account
         needed.
@@ -71,8 +71,8 @@ export default async function Submission() {
         base="/submission/s"
       />
 
-      <main className="mx-auto max-w-6xl space-y-16 px-6 py-14 sm:space-y-20">
-        <p className="max-w-[62ch] text-[16px] leading-relaxed text-muted">
+      <main className="mx-auto max-w-page space-y-16 px-6 py-14 sm:space-y-20">
+        <p className="max-w-[62ch] text-sub leading-relaxed text-muted">
           Nothing here is seeded or mocked. Every row came from a real run
           against a live site, and every repair below started on its own.
         </p>
@@ -89,19 +89,19 @@ export default async function Submission() {
         />
 
         <section>
-          <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+          <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
             What does not work yet
           </h2>
-          <p className="mt-3 max-w-[62ch] text-[14px] text-muted">
+          <p className="mt-3 max-w-[62ch] text-read text-muted">
             Judging this fairly means knowing the edges, so here they are.
           </p>
           <ul className="mt-6 grid gap-px overflow-hidden rounded-sm border border-gutter bg-gutter sm:grid-cols-2">
             {LIMITS.map(item => (
               <li key={item.h} className="bg-surface px-6 py-6">
-                <h3 className="font-display text-[15px] font-[700] tracking-[-0.015em]">
+                <h3 className="font-display text-lead font-[700] tracking-[-0.015em]">
                   {item.h}
                 </h3>
-                <p className="mt-2 text-[14px] leading-relaxed text-muted">
+                <p className="mt-2 text-read leading-relaxed text-muted">
                   {item.p}
                 </p>
               </li>
@@ -109,7 +109,7 @@ export default async function Submission() {
           </ul>
         </section>
 
-        <div className="border-t border-gutter pt-8 text-[14px]">
+        <div className="border-t border-gutter pt-8 text-read">
           <Link href="/" className="text-web hover:underline">
             ← Back to the product
           </Link>

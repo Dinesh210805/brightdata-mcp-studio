@@ -59,17 +59,17 @@ export default async function Home() {
         <div className="grid-field grid-fade absolute inset-0 -z-10" />
 
         <div className="mx-auto max-w-4xl px-6 pt-24 pb-4 text-center sm:pt-32">
-          <p className="rise font-mono text-[11.5px] tracking-[0.14em] text-web uppercase">
+          <p className="rise font-mono text-micro tracking-[0.14em] text-web uppercase">
             Scraper Studio lifecycle, over MCP
           </p>
 
-          <h1 className="rise mt-7 font-display text-[clamp(2.9rem,8.5vw,5.6rem)] leading-[0.98] tracking-[-0.03em]">
+          <h1 className="rise mt-7 font-display text-[clamp(2.9rem,8.5vw,6.6rem)] leading-[0.98] tracking-[-0.03em]">
             Scrapers that
             <br />
             <em className="italic">repair themselves.</em>
           </h1>
 
-          <p className="rise mx-auto mt-7 max-w-[58ch] text-[clamp(1rem,1.7vw,1.2rem)] leading-relaxed text-muted">
+          <p className="rise mx-auto mt-7 max-w-[58ch] text-[clamp(1rem,1.7vw,1.4rem)] leading-relaxed text-muted">
             Every scraping tutorial ends when the scraper runs. This one starts
             when it breaks. Point your coding agent at any public page — it
             builds the scraper, notices when the site changes underneath it,
@@ -79,20 +79,20 @@ export default async function Home() {
           <div className="rise mt-9 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/login"
-              className="rounded-full bg-ink px-6 py-3 text-[15px] font-medium text-white transition-opacity hover:opacity-85"
+              className="rounded-full bg-ink px-6 py-3 text-lead font-medium text-white transition-opacity hover:opacity-85"
             >
               Connect your agent
             </Link>
             <Link
               href="/submission"
-              className="rounded-full border border-gutter bg-surface px-6 py-3 text-[15px] transition-colors hover:border-ink"
+              className="rounded-full border border-gutter bg-surface px-6 py-3 text-lead transition-colors hover:border-ink"
             >
               See it running live →
             </Link>
           </div>
 
           {stats.scrapers > 0 && (
-            <p className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-gutter bg-surface px-4 py-2 text-[13.5px] text-muted">
+            <p className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-gutter bg-surface px-4 py-2 text-body text-muted">
               <span className="h-1.5 w-1.5 rounded-full bg-verified pulse" />
               {stats.scrapers} {stats.scrapers === 1 ? 'scraper' : 'scrapers'}
               {' · '}
@@ -108,10 +108,10 @@ export default async function Home() {
       {record && (
         <section className="mx-auto mt-20 max-w-3xl px-6 sm:mt-28">
           <div className="text-center">
-            <h2 className="font-display text-[clamp(1.9rem,4vw,2.6rem)] tracking-[-0.02em]">
+            <h2 className="font-display text-[clamp(1.9rem,4vw,3.05rem)] tracking-[-0.02em]">
               This came back a moment ago.
             </h2>
-            <p className="mx-auto mt-3 max-w-[52ch] text-[16px] text-muted">
+            <p className="mx-auto mt-3 max-w-[52ch] text-sub text-muted">
               Pulled live from {newest.domain} by the scheduled run — not a
               mockup.
             </p>
@@ -123,18 +123,18 @@ export default async function Home() {
 
           {newest.schema_baseline.length > 0 && (
             <div className="mt-9 text-center">
-              <p className="text-[13px] text-faint">Fields under watch</p>
+              <p className="text-body text-faint">Fields under watch</p>
               <ul className="mt-3 flex flex-wrap justify-center gap-2">
                 {newest.schema_baseline.map(field => (
                   <li
                     key={field}
-                    className="rounded-full bg-web-soft px-3 py-1.5 font-mono text-[12.5px] text-web"
+                    className="rounded-full bg-web-soft px-3 py-1.5 font-mono text-meta text-web"
                   >
                     {field}
                   </li>
                 ))}
               </ul>
-              <p className="mx-auto mt-4 max-w-[48ch] text-[13.5px] text-faint">
+              <p className="mx-auto mt-4 max-w-[48ch] text-body text-faint">
                 If any of these stops coming back, the scraper is considered
                 broken and a repair starts on its own.
               </p>
@@ -144,13 +144,13 @@ export default async function Home() {
       )}
 
       {/* the loop */}
-      <section className="mx-auto mt-28 max-w-5xl px-6 sm:mt-36">
+      <section className="mx-auto mt-28 max-w-column px-6 sm:mt-36">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,340px)_1fr] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <h2 className="font-display text-[clamp(1.9rem,4vw,2.6rem)] leading-[1.08] tracking-[-0.02em]">
+            <h2 className="font-display text-[clamp(1.9rem,4vw,3.05rem)] leading-[1.08] tracking-[-0.02em]">
               What happens on every run
             </h2>
-            <p className="mt-4 text-[16px] text-muted">
+            <p className="mt-4 text-sub text-muted">
               One call does all of it. The order matters, so it is worth being
               precise about.
             </p>
@@ -160,13 +160,13 @@ export default async function Home() {
             <span className="absolute top-2 bottom-2 left-[13px] w-px bg-gutter" />
             {STEPS.map((step, i) => (
               <li key={step.title} className="relative pb-10 pl-12 last:pb-0">
-                <span className="absolute top-0 left-0 flex h-[27px] w-[27px] items-center justify-center rounded-full border border-gutter bg-surface font-mono text-[11px] text-web">
+                <span className="absolute top-0 left-0 flex h-[27px] w-[27px] items-center justify-center rounded-full border border-gutter bg-surface font-mono text-micro text-web">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <h3 className="text-[17px] font-semibold tracking-[-0.018em]">
+                <h3 className="text-sub font-semibold tracking-[-0.018em]">
                   {step.title}
                 </h3>
-                <p className="mt-2 max-w-[54ch] text-[15px] leading-relaxed text-muted">
+                <p className="mt-2 max-w-[54ch] text-lead leading-relaxed text-muted">
                   {step.body}
                 </p>
               </li>
@@ -177,24 +177,24 @@ export default async function Home() {
 
       {/* close */}
       <section className="mx-auto mt-28 max-w-3xl px-6 pb-28 text-center sm:mt-36">
-        <h2 className="font-display text-[clamp(1.9rem,4vw,2.6rem)] tracking-[-0.02em]">
+        <h2 className="font-display text-[clamp(1.9rem,4vw,3.05rem)] tracking-[-0.02em]">
           It all runs from your agent.
         </h2>
-        <p className="mx-auto mt-4 max-w-[52ch] text-[16px] text-muted">
+        <p className="mx-auto mt-4 max-w-[52ch] text-sub text-muted">
           The dashboard only shows what happened. Everything that does anything
           is an MCP tool, so it works from Claude Code, Claude Desktop, or any
           MCP client.
         </p>
         <Link
           href="/login"
-          className="mt-8 inline-block rounded-full bg-ink px-6 py-3 text-[15px] font-medium text-white transition-opacity hover:opacity-85"
+          className="mt-8 inline-block rounded-full bg-ink px-6 py-3 text-lead font-medium text-white transition-opacity hover:opacity-85"
         >
           Get your config
         </Link>
       </section>
 
       <footer className="border-t border-gutter">
-        <div className="mx-auto max-w-5xl px-6 py-10 text-[13.5px] text-muted">
+        <div className="mx-auto max-w-column px-6 py-10 text-body text-muted">
           <p>
             A fork of Bright Data’s official MCP server, extended with the
             Scraper Studio lifecycle. Built for Into the Scrape-Verse

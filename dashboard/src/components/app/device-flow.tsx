@@ -70,7 +70,7 @@ export function DeviceFlowPanel({ has_key }: { has_key: boolean }) {
           type="button"
           onClick={begin}
           disabled={busy}
-          className="rounded-full border border-gutter px-4 py-2 text-[13.5px] font-medium text-ink transition-colors hover:border-ink disabled:opacity-50"
+          className="rounded-full border border-gutter px-4 py-2 text-body font-medium text-ink transition-colors hover:border-ink disabled:opacity-50"
         >
           {busy ? 'Starting…' : has_key ? 'Sign in to replace your key' : 'Sign in with Bright Data'}
         </button>
@@ -78,12 +78,12 @@ export function DeviceFlowPanel({ has_key }: { has_key: boolean }) {
 
       {pending && (
         <div className="rounded-xl border border-gutter bg-raised p-5">
-          <p className="text-[14px] leading-relaxed text-muted">
+          <p className="text-read leading-relaxed text-muted">
             Open the link below in a new tab, sign in, and approve the code.
           </p>
 
           <div className="mt-3 flex items-center gap-3">
-            <span className="font-mono text-[13px] tracking-wider text-ink">
+            <span className="font-mono text-body tracking-wider text-ink">
               {state.user_code}
             </span>
             <span className="h-px flex-1 bg-gutter" />
@@ -91,7 +91,7 @@ export function DeviceFlowPanel({ has_key }: { has_key: boolean }) {
               href={state.verification_uri}
               target="_blank"
               rel="noreferrer"
-              className="text-[13.5px] text-web underline"
+              className="text-body text-web underline"
             >
               Open Bright Data
             </a>
@@ -99,11 +99,11 @@ export function DeviceFlowPanel({ has_key }: { has_key: boolean }) {
 
           <div className="mt-3 flex items-center gap-2">
             <span className="pulse inline-block h-1.5 w-1.5 rounded-full bg-web" />
-            <span className="text-[13px] text-muted">Waiting for you to approve…</span>
+            <span className="text-body text-muted">Waiting for you to approve…</span>
             <button
               type="button"
               onClick={cancel}
-              className="ml-auto text-[13px] text-faint underline hover:text-ink"
+              className="ml-auto text-body text-faint underline hover:text-ink"
             >
               Cancel
             </button>
@@ -112,13 +112,13 @@ export function DeviceFlowPanel({ has_key }: { has_key: boolean }) {
       )}
 
       {state?.status === 'done' && (
-        <p className="text-[13.5px] text-verified">
+        <p className="text-body text-verified">
           Connected. Your key is saved — the config below is ready to paste.
         </p>
       )}
 
       {(state?.status === 'failed' || state?.status === 'expired') && (
-        <p className="text-[13.5px] text-venom">{state.message}</p>
+        <p className="text-body text-venom">{state.message}</p>
       )}
     </div>
   )

@@ -24,10 +24,10 @@ interface DetailProps {
 function Fact({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <dt className="font-mono text-[10.5px] tracking-[0.1em] text-faint uppercase">
+      <dt className="font-mono text-micro tracking-[0.1em] text-faint uppercase">
         {label}
       </dt>
-      <dd className="mt-1.5 font-mono text-[13px] text-ink tabular">
+      <dd className="mt-1.5 font-mono text-body text-ink tabular">
         {children}
       </dd>
     </div>
@@ -37,20 +37,20 @@ function Fact({ label, children }: { label: string; children: React.ReactNode })
 function Outcome({ heal }: { heal: HealEvent }) {
   if (heal.escalated || heal.status === 'escalated') {
     return (
-      <span className="rounded-sm bg-venom-soft px-2.5 py-1 text-[11.5px] font-semibold text-venom">
+      <span className="rounded-sm bg-venom-soft px-2.5 py-1 text-micro font-semibold text-venom">
         Rebuilt from scratch
       </span>
     )
   }
   if (heal.status === 'resolved') {
     return (
-      <span className="rounded-sm bg-verified-soft px-2.5 py-1 text-[11.5px] font-semibold text-verified">
+      <span className="rounded-sm bg-verified-soft px-2.5 py-1 text-micro font-semibold text-verified">
         Repaired and verified
       </span>
     )
   }
   return (
-    <span className="rounded-sm bg-venom-soft px-2.5 py-1 text-[11.5px] font-semibold text-venom">
+    <span className="rounded-sm bg-venom-soft px-2.5 py-1 text-micro font-semibold text-venom">
       Repair {heal.status ?? 'failed'}
     </span>
   )
@@ -60,11 +60,11 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
   const drifting = row.state === 'drifting'
 
   return (
-    <main className="mx-auto max-w-5xl px-6 pb-24">
+    <main className="mx-auto max-w-column px-6 pb-24">
       <div className="pt-8">
         <Link
           href={back_href}
-          className="font-mono text-[12px] text-faint hover:text-ink"
+          className="font-mono text-meta text-faint hover:text-ink"
         >
           ← all scrapers
         </Link>
@@ -74,16 +74,16 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
             <h1
-              className={`font-display text-[clamp(2rem,5.5vw,3.4rem)] leading-[1] font-[900] tracking-[-0.04em]
+              className={`font-display text-[clamp(2rem,5.5vw,4rem)] leading-[1] font-[900] tracking-[-0.04em]
                 ${drifting ? 'text-venom drift-text' : ''}`}
             >
               {row.domain}
             </h1>
-            <p className="mt-2.5 text-[16px] text-muted">{row.description}</p>
+            <p className="mt-2.5 text-sub text-muted">{row.description}</p>
           </div>
 
           <span
-            className={`rounded-sm px-3 py-1.5 text-[12.5px] font-semibold ${
+            className={`rounded-sm px-3 py-1.5 text-meta font-semibold ${
               drifting
                 ? 'bg-venom-soft text-venom'
                 : row.state === 'abandoned'
@@ -110,14 +110,14 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
           rows with the values gone — so the markers are what carry the story
           and the field list underneath is what explains it. */}
       <section className="mt-14">
-        <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+        <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
           Rows per run
         </h2>
         <div className={`mt-5 p-6 ${drifting ? 'panel drift' : 'panel'}`}>
           <div className="h-20">
             <Sparkline runs={row.runs} className="!h-20" />
           </div>
-          <div className="mt-4 flex flex-wrap justify-between gap-3 border-t border-gutter pt-4 font-mono text-[11.5px] text-faint">
+          <div className="mt-4 flex flex-wrap justify-between gap-3 border-t border-gutter pt-4 font-mono text-micro text-faint">
             <span>
               {row.runs.length} {row.runs.length === 1 ? 'run' : 'runs'} recorded
             </span>
@@ -129,10 +129,10 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
       </section>
 
       <section className="mt-14">
-        <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+        <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
           Fields under watch
         </h2>
-        <p className="mt-3 max-w-[60ch] text-[14px] leading-relaxed text-muted">
+        <p className="mt-3 max-w-[60ch] text-read leading-relaxed text-muted">
           The shape of the last good run. If one of these stops coming back,
           that is what triggers a repair — and what gets described in the
           repair prompt.
@@ -143,7 +143,7 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
             return (
               <li
                 key={field}
-                className={`rounded-sm px-3 py-1.5 font-mono text-[12.5px] ${
+                className={`rounded-sm px-3 py-1.5 font-mono text-meta ${
                   gone
                     ? 'bg-venom-soft text-venom line-through decoration-venom/60'
                     : 'bg-raised text-muted'
@@ -154,7 +154,7 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
             )
           })}
           {!row.schema_baseline.length && (
-            <li className="font-mono text-[12.5px] text-faint">
+            <li className="font-mono text-meta text-faint">
               no baseline yet — it is set by the first good run
             </li>
           )}
@@ -162,12 +162,12 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
       </section>
 
       <section className="mt-14">
-        <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+        <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
           Repair history
         </h2>
 
         {heals.length === 0 ? (
-          <p className="mt-4 max-w-[58ch] text-[14.5px] leading-relaxed text-muted">
+          <p className="mt-4 max-w-[58ch] text-read leading-relaxed text-muted">
             This scraper has never needed repair. Every run so far returned the
             fields it was supposed to.
           </p>
@@ -176,18 +176,18 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
             {heals.map((heal, i) => (
               <li key={`${heal.timestamp}-${i}`} className="panel-loud p-5">
                 <div className="flex flex-wrap items-center justify-between gap-3">
-                  <span className="font-mono text-[12px] text-faint tabular">
+                  <span className="font-mono text-meta text-faint tabular">
                     {stamp(heal.timestamp)}
                   </span>
                   <Outcome heal={heal} />
                 </div>
                 {heal.prompt && (
-                  <blockquote className="mt-3.5 border-l-2 border-ink/15 pl-4 text-[14px] leading-relaxed text-muted">
+                  <blockquote className="mt-3.5 border-l-2 border-ink/15 pl-4 text-read leading-relaxed text-muted">
                     {heal.prompt}
                   </blockquote>
                 )}
                 {heal.replaced_by && (
-                  <p className="mt-3 font-mono text-[11.5px] text-faint">
+                  <p className="mt-3 font-mono text-micro text-faint">
                     replaced by {heal.replaced_by}
                   </p>
                 )}
@@ -205,7 +205,7 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
         ? <DataTable data={data} domain={row.domain} />
         : row.sample.length > 0 && (
           <section className="mt-14">
-            <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+            <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
               What it last returned
             </h2>
             <div className="mt-5">
@@ -215,7 +215,7 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
         )}
 
       <section className="mt-14 border-t border-gutter pt-6">
-        <p className="font-mono text-[11.5px] text-faint">
+        <p className="font-mono text-micro text-faint">
           source ·{' '}
           <a
             href={row.source_url}
@@ -226,7 +226,7 @@ export function Detail({ row, heals, back_href, data }: DetailProps) {
             {row.source_url}
           </a>
         </p>
-        <p className="mt-2 max-w-[62ch] text-[13px] leading-relaxed text-faint">
+        <p className="mt-2 max-w-[62ch] text-body leading-relaxed text-faint">
           Running and repairing this scraper on demand happens through your
           coding agent today — <code className="font-mono">scraper_run</code>{' '}
           and <code className="font-mono">scraper_heal</code>. Buttons here are

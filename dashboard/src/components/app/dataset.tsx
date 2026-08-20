@@ -38,12 +38,12 @@ function Cell({ value }: { value: unknown }) {
     return (
       <span className="flex flex-wrap gap-1">
         {shown.map((item, i) => (
-          <span key={i} className="rounded-sm bg-raised px-1.5 py-0.5 text-[11.5px] text-muted">
+          <span key={i} className="rounded-sm bg-raised px-1.5 py-0.5 text-micro text-muted">
             {String(item)}
           </span>
         ))}
         {value.length > shown.length && (
-          <span className="px-1 py-0.5 text-[11.5px] text-faint">
+          <span className="px-1 py-0.5 text-micro text-faint">
             +{value.length - shown.length}
           </span>
         )}
@@ -52,7 +52,7 @@ function Cell({ value }: { value: unknown }) {
   }
 
   if (typeof value === 'object')
-    return <span className="font-mono text-[11.5px] text-muted">{JSON.stringify(value)}</span>
+    return <span className="font-mono text-micro text-muted">{JSON.stringify(value)}</span>
 
   const text = String(value)
   if (/^https?:\/\//.test(text)) {
@@ -61,7 +61,7 @@ function Cell({ value }: { value: unknown }) {
         href={text}
         target="_blank"
         rel="noopener nofollow"
-        className="font-mono text-[11.5px] text-web underline-offset-4 hover:underline"
+        className="font-mono text-micro text-web underline-offset-4 hover:underline"
       >
         {text.replace(/^https?:\/\/(www\.)?/, '')}
       </a>
@@ -77,19 +77,19 @@ export function DataTable({ data, domain }: { data: Dataset; domain: string }) {
 
   return (
     <section className="mt-14">
-      <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+      <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
         The data it collected
       </h2>
-      <p className="mt-3 max-w-[62ch] text-[14px] leading-relaxed text-muted">
+      <p className="mt-3 max-w-[62ch] text-read leading-relaxed text-muted">
         Every healthy run overwrites{' '}
-        <code className="font-mono text-[13px]">data/{domain}/latest.json</code>{' '}
+        <code className="font-mono text-body">data/{domain}/latest.json</code>{' '}
         in the repo and keeps a timestamped copy beside it. The file below is
         public: no key, no API, nothing to sign into.
       </p>
 
       <div className="panel mt-5 overflow-hidden">
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-gutter px-5 py-3">
-          <span className="flex items-center gap-2 font-mono text-[11.5px] tracking-wide text-faint uppercase">
+          <span className="flex items-center gap-2 font-mono text-micro tracking-wide text-faint uppercase">
             <span className="h-1.5 w-1.5 rounded-full bg-verified pulse" />
             {data.total} {data.total === 1 ? 'row' : 'rows'} · {columns.length} fields
           </span>
@@ -97,20 +97,20 @@ export function DataTable({ data, domain }: { data: Dataset; domain: string }) {
             href={data.url}
             target="_blank"
             rel="noopener"
-            className="font-mono text-[11.5px] text-web underline-offset-4 hover:underline"
+            className="font-mono text-micro text-web underline-offset-4 hover:underline"
           >
             latest.json ↗
           </a>
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse text-[13.5px]">
+          <table className="w-full border-collapse text-body">
             <thead>
               <tr className="border-b border-gutter">
                 {columns.map(column => (
                   <th
                     key={column}
-                    className="px-5 py-3 text-left font-mono text-[11px] font-normal tracking-[0.08em] whitespace-nowrap text-faint uppercase"
+                    className="px-5 py-3 text-left font-mono text-micro font-normal tracking-[0.08em] whitespace-nowrap text-faint uppercase"
                   >
                     {column}
                   </th>
@@ -138,7 +138,7 @@ export function DataTable({ data, domain }: { data: Dataset; domain: string }) {
         </div>
 
         {withheld > 0 && (
-          <div className="border-t border-gutter px-5 py-3 font-mono text-[11.5px] text-faint">
+          <div className="border-t border-gutter px-5 py-3 font-mono text-micro text-faint">
             showing the first {data.records.length} ·{' '}
             <a
               href={data.url}

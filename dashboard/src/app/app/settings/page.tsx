@@ -27,17 +27,17 @@ export default async function Settings() {
       <main className="mx-auto max-w-3xl space-y-12 px-6 pt-14 pb-24">
         <header className="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <h1 className="font-display text-[clamp(1.8rem,4.5vw,2.6rem)] leading-[1] font-[900] tracking-[-0.04em]">
+            <h1 className="font-display text-[clamp(1.8rem,4.5vw,3.05rem)] leading-[1] font-[900] tracking-[-0.04em]">
               Settings
             </h1>
-            <p className="mt-2.5 font-mono text-[12.5px] text-faint">
+            <p className="mt-2.5 font-mono text-meta text-faint">
               {profile?.email ?? user.email}
             </p>
           </div>
           <form action={sign_out}>
             <button
               type="submit"
-              className="rounded-sm border border-gutter px-4 py-2 text-[13.5px] text-muted transition-colors hover:border-ink hover:text-ink"
+              className="rounded-sm border border-gutter px-4 py-2 text-body text-muted transition-colors hover:border-ink hover:text-ink"
             >
               Sign out
             </button>
@@ -45,18 +45,18 @@ export default async function Settings() {
         </header>
 
         <section>
-          <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+          <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
             Bright Data connection
           </h2>
           <div className="panel mt-5 p-6">
             <DeviceFlowPanel has_key={has_key} />
             <details className="mt-4">
-              <summary className="cursor-pointer text-[13px] text-faint hover:text-ink">
+              <summary className="cursor-pointer text-body text-faint hover:text-ink">
                 or paste an API key instead
               </summary>
               <ApiKeyForm has_key={has_key} />
             </details>
-            <p className="mt-5 border-t border-gutter pt-5 text-[13px] leading-relaxed text-faint">
+            <p className="mt-5 border-t border-gutter pt-5 text-body leading-relaxed text-faint">
               Your key is stored against your account with row-level security
               and is sent only to Bright Data. It never appears in a tool
               response or a log.
@@ -65,7 +65,7 @@ export default async function Settings() {
         </section>
 
         <section>
-          <h2 className="font-display text-[13px] font-[700] tracking-[0.14em] text-faint uppercase">
+          <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
             Your MCP config
           </h2>
           <div className="mt-5">

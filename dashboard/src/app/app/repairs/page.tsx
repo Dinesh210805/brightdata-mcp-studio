@@ -25,10 +25,10 @@ export default async function Repairs() {
       <Bar alert={stats.drifting > 0} />
 
       <main className="mx-auto max-w-4xl px-6 pt-14 pb-24">
-        <h1 className="font-display text-[clamp(2rem,5vw,3rem)] leading-[1] font-[900] tracking-[-0.04em]">
+        <h1 className="font-display text-[clamp(2rem,5vw,3.55rem)] leading-[1] font-[900] tracking-[-0.04em]">
           Every repair, in full.
         </h1>
-        <p className="mt-4 max-w-[60ch] text-[16px] leading-relaxed text-muted">
+        <p className="mt-4 max-w-[60ch] text-sub leading-relaxed text-muted">
           What broke, the exact words sent to Bright Data to fix it, and
           whether a second run proved the fix held. A repair reports success
           when its AI job finishes, not when the data is correct — so the
