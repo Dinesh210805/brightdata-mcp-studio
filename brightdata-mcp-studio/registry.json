@@ -14,36 +14,36 @@
         ],
         "last_sample": [
             {
-                "title": "A faster way to calculate the day of the week",
-                "points": 147,
-                "author": "gavide",
-                "product_page_url": "https://news.ycombinator.com/item?id=49323795",
+                "title": "Xorshift Generators",
+                "points": 91,
+                "author": "tobr",
+                "product_page_url": "https://news.ycombinator.com/item?id=49310128",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Google has stopped pushing Git tags for some Android source code",
-                "points": 557,
-                "author": "Animux",
-                "product_page_url": "https://news.ycombinator.com/item?id=49364745",
+                "title": "Unsloth Dynamic 3.0 GGUFs",
+                "points": 286,
+                "author": "jonesy827",
+                "product_page_url": "https://news.ycombinator.com/item?id=49365443",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "A joke domain purchase turned in geopolitical warfare",
-                "points": 904,
-                "author": "kareiva",
-                "product_page_url": "https://news.ycombinator.com/item?id=49360015",
+                "title": "Don't Paste the AI, please",
+                "points": 428,
+                "author": "pjerem",
+                "product_page_url": "https://news.ycombinator.com/item?id=49371857",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-20T09:49:59.234Z",
-        "last_row_count": 60,
+        "last_run_at": "2026-08-20T11:41:03.577Z",
+        "last_row_count": 59,
         "run_history": [
             {
                 "at": "2026-08-20T04:10:15.796Z",
@@ -59,6 +59,17 @@
             {
                 "at": "2026-08-20T09:49:59.233Z",
                 "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
+            },
+            {
+                "at": "2026-08-20T11:41:03.577Z",
+                "rows": 59,
                 "healthy": true,
                 "fields": [
                     "author",
@@ -84,28 +95,28 @@
         ],
         "last_sample": [
             {
-                "title": "Mastodon 5.0: Laying the foundation",
-                "score": 67,
+                "title": "Understanding the limitations of Pubsub systems",
+                "score": 7,
+                "comment_count": 3,
+                "product_page_url": "https://lobste.rs/s/psxjb4/understanding_limitations_pubsub",
+                "input": {
+                    "url": "https://lobste.rs"
+                }
+            },
+            {
+                "title": "Rust Supply-Chain Attack: arrayref 0.3.10 and the proc-macro1 Typosquat",
+                "score": 6,
+                "comment_count": 0,
+                "product_page_url": "https://lobste.rs/s/dns8du/rust_supply_chain_attack_arrayref_0_3_10",
+                "input": {
+                    "url": "https://lobste.rs"
+                }
+            },
+            {
+                "title": "Sing-song: a speakable encoding for long numbers and keys",
+                "score": 13,
                 "comment_count": 20,
-                "product_page_url": "https://lobste.rs/s/m0okh1/mastodon_5_0_laying_foundation",
-                "input": {
-                    "url": "https://lobste.rs"
-                }
-            },
-            {
-                "title": "Bun 1.4 Rust rewrite is not looking good",
-                "score": 98,
-                "comment_count": 87,
-                "product_page_url": "https://lobste.rs/s/caubyr/bun_1_4_rust_rewrite_is_not_looking_good",
-                "input": {
-                    "url": "https://lobste.rs"
-                }
-            },
-            {
-                "title": "Reclaim the terminal",
-                "score": 18,
-                "comment_count": 5,
-                "product_page_url": "https://lobste.rs/s/7v1wvd/reclaim_terminal",
+                "product_page_url": "https://lobste.rs/s/wvwqro/sing_song_speakable_encoding_for_long",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -162,9 +173,20 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-20T11:41:50.653Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-20T09:51:01.750Z",
+        "last_run_at": "2026-08-20T11:41:50.653Z",
         "last_row_count": 125
     },
     "gutenberg.org": {
@@ -182,28 +204,28 @@
         ],
         "last_sample": [
             {
-                "title": "The Samurai Strategy by Thomas Hoover",
-                "author": "Hoover, Thomas, 1941-",
-                "download_count": 6956130,
-                "product_page_url": "https://www.gutenberg.org/ebooks/34323",
+                "title": "Mr. Standfast by John Buchan",
+                "author": "Buchan, John, 1875-1940",
+                "download_count": 7032930,
+                "product_page_url": "https://www.gutenberg.org/ebooks/560",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "I am a woman by Ann Bannon",
-                "author": "Bannon, Ann, 1932-",
-                "download_count": 7661730,
-                "product_page_url": "https://www.gutenberg.org/ebooks/76178",
+                "title": "A Honeymoon in Space by George Chetwynd Griffith",
+                "author": "Griffith, George Chetwynd, 1857-1906",
+                "download_count": 9018830,
+                "product_page_url": "https://www.gutenberg.org/ebooks/19476",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The case-book of Sherlock Holmes by Arthur Conan Doyle",
-                "author": "Doyle, Arthur Conan, 1859-1930",
-                "download_count": 7161130,
-                "product_page_url": "https://www.gutenberg.org/ebooks/69700",
+                "title": "The Thirty-Nine Steps by John Buchan",
+                "author": "Buchan, John, 1875-1940",
+                "download_count": 7078630,
+                "product_page_url": "https://www.gutenberg.org/ebooks/558",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -221,10 +243,21 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-20T12:08:00.216Z",
+                "rows": 103,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ],
-        "last_row_count": 149,
-        "last_run_at": "2026-08-20T09:59:37.031Z"
+        "last_row_count": 103,
+        "last_run_at": "2026-08-20T12:08:00.216Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -244,6 +277,23 @@
         ],
         "last_sample": [
             {
+                "job_title": "Computational Photonics Engineer",
+                "company": "LumiAIres Ltd",
+                "location": "Glasgow, Scotland, United Kingdom",
+                "job_type": [
+                    "Image Processing",
+                    "Integration",
+                    "Machine Learning",
+                    "Numeric processing",
+                    "Systems",
+                    "Testing"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8105/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
                 "job_title": "Senior Python Developer",
                 "company": "Turing",
                 "location": "Remote, Remote, Remote",
@@ -253,18 +303,6 @@
                     "Machine Learning"
                 ],
                 "product_page_url": "https://www.python.org/jobs/8103/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Lead Python Backend Engineer",
-                "company": "Reef Technologies",
-                "location": "Warsaw (fully remote), Poland",
-                "job_type": [
-                    "Back end"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8122/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -298,9 +336,23 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-20T12:08:11.000Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-20T09:59:47.818Z"
+        "last_run_at": "2026-08-20T12:08:11.000Z"
     }
 }
