@@ -163,16 +163,22 @@ GET  /dca/collectors/{id}/automate_template/progress   -> poll
 The instant ID from call one is why `scraper_create` can return without
 blocking for ten minutes.
 
-**There is no delete API.** Bright Data does not expose programmatic collector
-deletion. Every escalation orphans a collector permanently. Cap escalation at
-one attempt and record abandoned IDs in the registry.
+**Deleting a collector is irreversible.** `DELETE /dca/collector/{id}` removes
+a scraper from the account for good, and the docs warn about exactly that. Only
+ever delete IDs our own failed-escalation flow abandoned — never anything else
+in the account. The registry records what was deleted, so the account never
+quietly loses a scraper. Escalation stays capped at one attempt.
 
 **Heal does not verify itself.** It reports success when the AI job finishes,
 not when the data is correct. Always re-run and re-check after healing.
 
-**There is no list-collectors API.** `registry.json` is the only place the
-domain to collector mapping exists anywhere. Losing it means losing every
-scraper.
+**The account can list collectors; the registry maps them to sites.**
+`GET /dca/collectors_list` returns every collector in the account, but it only
+knows the id, name, active state and output schema — not which site a scraper
+targets or what fields it extracts. `registry.json` is the only place that
+domain -> collector mapping exists anywhere, so losing it still means losing
+every scraper. The list endpoint is how you discover orphans the registry has
+lost track of.
 
 ---
 
@@ -189,6 +195,8 @@ All authenticated with `Authorization: Bearer ${API_TOKEN}`, base
 | Heal | POST | `/dca/collectors/{id}/refactor_template` |
 | Heal progress | GET | `/dca/collectors/{id}/refactor_template/progress` |
 | Approve / reject | POST | `/dca/collectors/{id}/resume_automation_job` |
+| List collectors | GET | `/dca/collectors_list?search=` |
+| Delete collector | DELETE | `/dca/collector/{id}` |
 | Run (async) | POST | `/dca/trigger_immediate`, poll `/dca/get_result` |
 | Run (sync, 1 URL) | POST | `/dca/crawl` |
 | Run (batch) | POST | `/dca/trigger`, poll `/dca/dataset` |
@@ -198,6 +206,12 @@ Statuses: `done` = success · `pending_answer` = **awaiting approval** ·
 
 Approve payload: `{message: true, auto_save: true}`.
 Reject payload: `{message: false}` — `auto_save` is ignored on reject, so omit it.
+
+`GET /dca/collectors_list` returns `{total, offset, limit, data}` where each
+entry is `{id, name, active, last_run, deliver, output_schema}`; `?search=`
+filters by name. `DELETE /dca/collector/{id}` takes no body and answers with
+plain text `OK`, not JSON — read it as text, and pass an optional `?reason=`
+for audit. It is irreversible.
 
 None of these endpoints use zones.
 

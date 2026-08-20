@@ -142,8 +142,9 @@ to still return correct job listings.
 
 ### Extra danger
 
-There is **no delete API** at Bright Data. Every escalation orphans a collector
-in the account permanently. So this bug also leaks collectors.
+Deleting a collector is irreversible. Escalation deletes the collector it
+abandoned, so a rebuild loop here could destroy scrapers; escalation stays
+capped at one attempt.
 
 ---
 
@@ -229,8 +230,8 @@ The real fix for the bug. The registry needs to hold several entries per
 domain, keyed by purpose.
 
 **Be careful.** `registry.json` is the only record anywhere of which collector
-belongs to which site — Bright Data has no list-collectors API. Losing or
-corrupting it means losing every scraper. So:
+belongs to which site — Bright Data can list your collectors, but not what each
+one targets. Losing or corrupting it means losing every scraper. So:
 
 - Write a migration that converts the current one-entry-per-domain shape
 - Keep reading the old shape (do not break existing installs)
@@ -321,8 +322,9 @@ takes `prompt` and rejects `description` outright. Already handled in
 **AI jobs cannot run in parallel.** Bright Data returns 429. Runs must be
 serialized. The cron does this deliberately.
 
-**There is no delete API.** Every escalation orphans a collector forever. That
-is why escalation is capped at one attempt.
+**Deleting a collector is irreversible.** Escalation deletes the collector it
+abandoned, so the cap at one attempt also caps how many scrapers a single break
+can destroy.
 
 **A failed crawl arrives as data, not as an error.** Bright Data returns a
 record describing the failure. On a first run those `{error, error_code}` fields

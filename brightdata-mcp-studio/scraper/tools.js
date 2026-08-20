@@ -255,9 +255,9 @@ const scraper_registry_list = {
     name: 'scraper_registry_list',
     description: 'List every custom scraper built through this server: which '
         +'site each one covers, when it was built, when it last ran, and how '
-        +'many times it has needed repair. Bright Data has no API to list '
-        +'your collectors, so this local registry is the only record of which '
-        +'scraper belongs to which site.',
+        +'many times it has needed repair. Bright Data can list the collectors '
+        +'in your account, but it cannot say which site each one targets - '
+        +'this local registry is the only record of that mapping.',
     annotations: {
         title: 'List Scrapers',
         readOnlyHint: true,

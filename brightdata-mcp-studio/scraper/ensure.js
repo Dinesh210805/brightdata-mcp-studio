@@ -15,13 +15,13 @@
 // reports success when its AI job finishes, not when the data is correct - so
 // without running again we would happily report a repair that fixed nothing.
 //
-// Escalation is capped at one attempt. There is no API to delete a collector,
-// so every rebuild leaves a dead one in the account forever. A loop here would
-// quietly fill the account with orphans.
+// Escalation is capped at one attempt. Each rebuild abandons and then deletes
+// the broken collector - deletion is irreversible, so a loop here would not
+// just burn credits, it would destroy scrapers.
 import * as api from './api.js';
 import {
     load_registry, save_registry, get_entry, put_entry, record_heal,
-    record_run, abandon,
+    record_run, record_cleanup, abandon,
     domain_of,
 } from './registry.js';
 import {check_health} from './health.js';
@@ -105,6 +105,7 @@ const default_deps = {
     run: api.run_collector,
     create: create_and_wait,
     heal: heal_and_save,
+    remove: api.delete_collector,
     store: save_run,
 };
 
@@ -143,7 +144,13 @@ export const ensure = async (token, url, description, opts = {})=>{
         trace.push(`Built ${entry.collector_id}`);
     }
     else
+    {
+        if (entry.description !== description)
+        {
+            throw new Error(`There is already a scraper for ${domain_of(url)}, built for "${entry.description}". You asked for "${description}". Create a second scraper, or repeat the original description to reuse this one.`);
+        }
         trace.push(`Found an existing scraper - reusing ${entry.collector_id}`);
+    }
 
     let records = await deps.run(token, entry.collector_id, url);
     let health = check_health(records, entry.schema_baseline);
@@ -155,7 +162,7 @@ export const ensure = async (token, url, description, opts = {})=>{
 
     // A fatal result is an account or target problem, not a scraper problem.
     // Rewriting the scraper cannot fix it, and trying would burn an AI job,
-    // fail, escalate, and orphan a collector that can never be deleted.
+    // fail, and escalate - deleting a collector that was never the problem.
     if (health.fatal)
         trace.push(`Not repairable: ${health.reasons.join('; ')}`);
     else if (!health.healthy && auto_heal)
@@ -194,12 +201,13 @@ export const ensure = async (token, url, description, opts = {})=>{
             // would erase the record of why the rebuild happened, and losing
             // the run log would cut the graph exactly at the break - which is
             // the part worth looking at.
-            const {heal_history, run_history} = get_entry(registry, url);
+            const {heal_history, run_history, cleanups} = get_entry(registry, url);
             entry = {
                 ...new_entry(await deps.create(token, url, description, opts),
                     url, description),
                 heal_history,
                 run_history,
+                cleanups,
             };
             registry = put_entry(registry, url, entry);
             registry = record_heal(registry, url, {
@@ -208,6 +216,28 @@ export const ensure = async (token, url, description, opts = {})=>{
                 escalated: true,
                 replaced_by: entry.collector_id,
             });
+
+            // The abandoned collector is ours - this flow created or repaired
+            // it - so deleting it is safe and keeps the account from filling
+            // with dead scrapers. Deletion is irreversible, so the cleanup is
+            // recorded in the registry even after the API forgets the ID.
+            let orphan_deleted = false;
+            let delete_error = null;
+            try {
+                await deps.remove(token, abandoned_id);
+                orphan_deleted = true;
+            } catch(e){
+                delete_error = e.message;
+            }
+            registry = record_cleanup(registry, url, {
+                collector_id: abandoned_id,
+                deleted: orphan_deleted,
+                error: delete_error,
+            });
+            trace.push(orphan_deleted
+                ? `Deleted the abandoned scraper ${abandoned_id}`
+                : `Could not delete the abandoned scraper ${abandoned_id}: `
+                    +delete_error);
 
             records = await deps.run(token, entry.collector_id, url);
             health = check_health(records, null);

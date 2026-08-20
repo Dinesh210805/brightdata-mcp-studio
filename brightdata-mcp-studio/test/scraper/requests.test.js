@@ -3,7 +3,8 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {
     build_collector_request, build_ai_request, build_heal_request,
-    build_resume_request, classify_status,
+    build_resume_request, classify_status, build_collectors_list_path,
+    build_delete_collector_path,
 } from '../../scraper/requests.js';
 
 test('build_collector_request fills in a stub delivery webhook', ()=>{
@@ -62,4 +63,26 @@ test('classify_status treats an unreadable response as still running', ()=>{
     assert.equal(classify_status({}), 'running');
     assert.equal(classify_status(null), 'running');
     assert.equal(classify_status(undefined), 'running');
+});
+
+test('build_collectors_list_path omits search when there is none', ()=>{
+    assert.equal(build_collectors_list_path(), '/dca/collectors_list');
+    assert.equal(build_collectors_list_path(''), '/dca/collectors_list');
+    assert.equal(build_collectors_list_path(undefined), '/dca/collectors_list');
+});
+
+test('build_collectors_list_path encodes the search term', ()=>{
+    assert.equal(build_collectors_list_path('amazon'),
+        '/dca/collectors_list?search=amazon');
+    assert.equal(build_collectors_list_path('my scraper'),
+        '/dca/collectors_list?search=my%20scraper');
+});
+
+test('build_delete_collector_path targets one collector by id', ()=>{
+    assert.equal(build_delete_collector_path('c_abc123'),
+        '/dca/collector/c_abc123');
+    assert.equal(build_delete_collector_path('c_abc123', 'orphan'),
+        '/dca/collector/c_abc123?reason=orphan');
+    assert.equal(build_delete_collector_path('c_abc123', 'no longer needed'),
+        '/dca/collector/c_abc123?reason=no%20longer%20needed');
 });

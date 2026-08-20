@@ -23,6 +23,7 @@ const make_deps = overrides=>({
     run: async ()=>good,
     create: async ()=>({collector_id: 'c_new', name: 'rebuilt'}),
     heal: async ()=>{},
+    remove: async ()=>{},
     // Stubbed, or the loop writes real files into data/ on every test run.
     store: ()=>null,
     ...overrides,
@@ -93,11 +94,55 @@ test('data still broken after healing triggers one rebuild', async ()=>{
     });
     assert.equal(res.escalated, true);
     assert.equal(res.collector_id, 'c_new');
-    // Exactly one rebuild. Each one orphans a collector permanently, so this
-    // must never loop.
+    // Exactly one rebuild. Each one deletes the collector it abandoned, so
+    // this must never loop.
     assert.equal(creates, 1);
     assert.equal(res.health.healthy, false);
 });
+
+test('escalation deletes the abandoned collector and records it', async ()=>{
+    let deleted_ids = [];
+    let saved = null;
+    const res = await ensure('token', 'https://a.com', 'title, price', {
+        deps: make_deps({
+            run: async ()=>broken,
+            remove: async (token, id)=>{ deleted_ids.push(id); },
+            save: registry=>{ saved = registry; },
+        }),
+    });
+
+    // The old collector is ours (this flow healed and gave up on it), so
+    // deleting it is safe, and the deletion is written into the registry.
+    assert.deepEqual(deleted_ids, ['c_1']);
+    const cleanup = saved['a.com'].cleanups.at(-1);
+    assert.equal(cleanup.collector_id, 'c_1');
+    assert.equal(cleanup.deleted, true);
+    assert.ok(cleanup.timestamp);
+    assert.match(res_trace(res), /Deleted the abandoned scraper c_1/);
+});
+
+test('a failed deletion is recorded and does not break the rebuild', async ()=>{
+    let saved = null;
+    const res = await ensure('token', 'https://a.com', 'title, price', {
+        deps: make_deps({
+            run: async ()=>broken,
+            remove: async ()=>{ throw new Error('network down'); },
+            save: registry=>{ saved = registry; },
+        }),
+    });
+
+    // The rebuild still completes and the failure is on the record, so the
+    // orphan is never silently forgotten.
+    assert.equal(res.escalated, true);
+    assert.equal(res.collector_id, 'c_new');
+    const cleanup = saved['a.com'].cleanups.at(-1);
+    assert.equal(cleanup.collector_id, 'c_1');
+    assert.equal(cleanup.deleted, false);
+    assert.equal(cleanup.error, 'network down');
+    assert.match(res_trace(res), /Could not delete the abandoned scraper c_1/);
+});
+
+const res_trace = res=>res.trace.join(' ');
 
 test('a rebuild that works is reported healthy', async ()=>{
     let runs = 0;
@@ -165,3 +210,11 @@ test('the trace explains what happened in order', async ()=>{
     assert.match(res.trace[0], /reusing c_1/i);
     assert.match(res.trace[1], /1 row/i);
 });
+
+test('asking for a different description throws instead of destroying the scraper', async ()=>{
+    await assert.rejects(
+        ensure('token', 'https://a.com', 'different description', {deps: make_deps()}),
+        /There is already a scraper for a.com, built for "title, price"/
+    );
+});
+

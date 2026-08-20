@@ -32,8 +32,8 @@ Express (dashboard) · GitHub Actions (cron)
   load.
 - AI jobs (create, heal) must be serialized. Retry 429 four times, 30s to 240s
   exponential backoff.
-- Escalation is capped at **one** regeneration. There is no delete API; every
-  escalation permanently orphans a collector.
+- Escalation is capped at **one** regeneration. Each regeneration deletes the
+  collector it abandoned, and deletion is irreversible.
 - `reference/` is read-only and gitignored.
 - Only public web data. No login-gated, paywalled, or personal data.
 - Never log, commit, or return `API_TOKEN`.
@@ -1293,8 +1293,8 @@ export const ensure = async (token, url, description, opts = {})=>{
             status: health.healthy ? 'resolved' : 'failed',
         });
 
-        // One escalation only. There is no delete API, so each regeneration
-        // permanently orphans the old collector.
+        // One escalation only. Each regeneration deletes the old collector, and
+        // deletion is irreversible.
         if (!health.healthy)
         {
             trace.push('Still broken — escalating to a fresh scraper');
@@ -1753,7 +1753,7 @@ Required content:
 - How Bright Data Scraper Studio is used — a hackathon submission requirement
 - Setup: `API_TOKEN`, MCP client config, dashboard
 - The self-healing flow, with the escalation path
-- Honest limitations: no delete API means escalation orphans collectors; create
+- Honest limitations: escalation deletes the collector it abandons; create
   takes 5-10 minutes; the registry is single-account
 - Link to the upstream PR
 - **AI disclosure**, as the hackathon rules require

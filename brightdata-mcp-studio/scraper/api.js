@@ -18,7 +18,8 @@
 import axios from 'axios';
 import {
     build_collector_request, build_ai_request, build_heal_request,
-    build_resume_request,
+    build_resume_request, build_collectors_list_path,
+    build_delete_collector_path,
 } from './requests.js';
 
 const BASE_URL = 'https://api.brightdata.com';
@@ -187,6 +188,37 @@ export const resume_job = (token, collector_id, {approve, auto_save})=>
     request(token, 'POST',
         `/dca/collectors/${collector_id}/resume_automation_job`,
         build_resume_request(approve, auto_save));
+
+// --- Inventory and cleanup --------------------------------------------------
+
+// Lists every collector in the account. Unlike the registry, this knows
+// nothing about which site a scraper targets - it is the account's raw view,
+// useful for finding orphans the registry has lost track of.
+export const list_collectors = (token, {search} = {})=>
+    request(token, 'GET', build_collectors_list_path(search));
+
+// Permanently removes one collector. The API answers with plain text "OK",
+// not JSON, so this returns the raw string. Only callers deleting collectors
+// our own escalation flow abandoned should ever use it.
+export const delete_collector = async (token, collector_id, {reason} = {})=>{
+    const path = build_delete_collector_path(collector_id, reason);
+    let res;
+    try {
+        res = await axios({
+            url: `${BASE_URL}${path}`,
+            method: 'DELETE',
+            headers: {authorization: `Bearer ${token}`},
+        });
+    } catch(e){
+        // A collector that is already gone is as good as deleted, so a 404
+        // counts as success and keeps the cleanup idempotent.
+        if (e.response?.status == 404)
+            return 'OK';
+        const detail = e.response?.data || e.message;
+        throw new Error(`DELETE ${path} failed: ${detail}`);
+    }
+    return res.data;
+};
 
 // --- Running ---------------------------------------------------------------
 

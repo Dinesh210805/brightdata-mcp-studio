@@ -1,9 +1,10 @@
 'use strict'; /*jslint node:true es9:true*/
 // The registry maps a website to the scraper we built for it.
 //
-// This matters more than it looks: Bright Data has no API to list the
-// collectors on your account. registry.json is the only place the
-// domain -> collector_id mapping exists anywhere. Lose it and every scraper
+// This matters more than it looks: the account can list its collectors
+// (GET /dca/collectors_list), but that tells you the id and name of each, not
+// which site it targets or what it extracts. registry.json is the only place
+// the domain -> collector_id mapping exists anywhere. Lose it and every scraper
 // you own becomes an anonymous ID you can no longer match to a site.
 //
 // Every function that changes the registry returns a new object rather than
@@ -24,6 +25,7 @@
 //       last_run_at:     '2026-08-19T10:04:00Z',
 //       last_row_count:  35,
 //       heal_history:    [...],
+//       cleanups:        [...],               // orphans this site's escalations deleted
 //   }
 import fs from 'node:fs';
 import path from 'node:path';
@@ -107,9 +109,22 @@ export const record_heal = (registry, url, event)=>{
     });
 };
 
-// Marks a scraper as dead without removing it. Bright Data exposes no way to
-// delete a collector, so the ID stays in the account forever - recording it is
-// the only way to know which orphans are ours.
+// Appends one cleanup to a domain's record. Escalation deletes the collector
+// it abandoned and records it here, so the account never quietly loses a
+// scraper - the registry keeps the proof of what was deleted and when.
+export const record_cleanup = (registry, url, event)=>{
+    const existing = get_entry(registry, url)?.cleanups || [];
+    return update_entry(registry, url, {
+        cleanups: [...existing, {
+            timestamp: new Date().toISOString(),
+            ...event,
+        }],
+    });
+};
+
+// Marks a scraper as dead without removing it. The ID stays in the account
+// until the escalation flow deletes it; recording it here (and in the heal
+// history) is what tells us which orphans are ours to clean up.
 export const abandon = (registry, url)=>
     update_entry(registry, url, {status: 'abandoned'});
 

@@ -3,8 +3,8 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import os from 'node:os';
 import {
-    domain_of, get_entry, put_entry, record_heal, record_run, abandon,
-    active_entries,
+    domain_of, get_entry, put_entry, record_heal, record_run, record_cleanup,
+    abandon, active_entries,
 } from '../../scraper/registry.js';
 
 test('domain_of ignores scheme, www, port, case and path', ()=>{
@@ -54,12 +54,37 @@ test('record_heal fills in defaults but lets the caller override them', ()=>{
 });
 
 test('abandon marks the entry but keeps the old collector id', ()=>{
-    // There is no delete API, so an abandoned collector still exists in the
-    // account. Keeping the id is the only record that it is ours.
+    // The id stays on the entry until the escalation flow deletes the
+    // collector; keeping it is the record that it is ours to clean up.
     const r0 = put_entry({}, 'https://a.com', {collector_id: 'c_1'});
     const r1 = abandon(r0, 'https://a.com');
     assert.equal(r1['a.com'].status, 'abandoned');
     assert.equal(r1['a.com'].collector_id, 'c_1');
+});
+
+test('record_cleanup appends without touching the original', ()=>{
+    const r0 = put_entry({}, 'https://a.com',
+        {collector_id: 'c_1', cleanups: []});
+    const r1 = record_cleanup(r0, 'https://a.com',
+        {collector_id: 'c_1', deleted: true});
+    assert.equal(r0['a.com'].cleanups.length, 0);
+    assert.equal(r1['a.com'].cleanups.length, 1);
+    assert.equal(r1['a.com'].cleanups[0].collector_id, 'c_1');
+    assert.equal(r1['a.com'].cleanups[0].deleted, true);
+});
+
+test('record_cleanup timestamps each cleanup and keeps failures', ()=>{
+    let registry = put_entry({}, 'https://a.com', {collector_id: 'c_1'});
+    registry = record_cleanup(registry, 'https://a.com',
+        {collector_id: 'c_1', deleted: false, error: 'network down'});
+    registry = record_cleanup(registry, 'https://a.com',
+        {collector_id: 'c_1', deleted: true});
+
+    const cleanups = get_entry(registry, 'https://a.com').cleanups;
+    assert.equal(cleanups.length, 2);
+    assert.equal(cleanups[0].deleted, false);
+    assert.equal(cleanups[0].error, 'network down');
+    assert.ok(cleanups.every(c=>c.timestamp), 'each cleanup is timestamped');
 });
 
 test('updating a domain with no entry fails loudly', ()=>{
@@ -78,8 +103,8 @@ test('active_entries skips abandoned scrapers', ()=>{
 test('the registry is found regardless of working directory', async ()=>{
     // MCP clients start the server from wherever their config lives. A path
     // relative to cwd would load an empty registry and silently rebuild every
-    // scraper - a 5-10 minute AI job each, and collectors that cannot be
-    // deleted.
+    // scraper - a 5-10 minute AI job each, duplicating collectors that are
+    // still in the account.
     const {load_registry} = await import('../../scraper/registry.js');
     const original_cwd = process.cwd();
     try {

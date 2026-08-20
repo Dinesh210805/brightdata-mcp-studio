@@ -52,6 +52,19 @@ export const build_resume_request = (approve, auto_save)=>
         ? {message: true, auto_save: true}
         : {message: approve};
 
+// The list endpoint takes an optional search term that filters by name.
+// Omitting it returns every collector in the account.
+export const build_collectors_list_path = search=>
+    `/dca/collectors_list${search
+        ? `?search=${encodeURIComponent(search)}` : ''}`;
+
+// Deletion is irreversible, so the only safe callers are paths deleting
+// collectors our own flow abandoned. `reason` is optional and goes on the
+// query string for audit.
+export const build_delete_collector_path = (collector_id, reason)=>
+    `/dca/collector/${encodeURIComponent(collector_id)}${reason
+        ? `?reason=${encodeURIComponent(reason)}` : ''}`;
+
 // Collapses the API's status vocabulary into the four outcomes a caller cares
 // about. Anything unrecognised - including an empty or missing response - is
 // 'running', so a slow or briefly-empty progress endpoint does not abort a

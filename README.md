@@ -227,12 +227,13 @@ Stated plainly, because they're real:
 
 - **Building a scraper takes 5–10 minutes.** That's Bright Data's AI, not us.
   Reusing one takes seconds, which is why the registry matters.
-- **Escalation orphans a collector.** Bright Data exposes no delete API, so a
-  rebuilt scraper leaves the old one in your account permanently. Escalation is
-  capped at one attempt for exactly this reason, and abandoned IDs are recorded.
+- **Escalation deletes the broken collector.** Deletion is irreversible, so
+  escalation is capped at one attempt. The rebuild removes the old scraper it
+  abandoned, and the registry records what was deleted.
 - **The registry is single-account.** `registry.json` is a local file. It's also
-  the *only* record of which scraper belongs to which site — there's no
-  list-collectors API — so losing it means losing track of every scraper.
+  the *only* record of which scraper belongs to which site — Bright Data can
+  list your collectors, but not what each one targets — so losing it means
+  losing track of every scraper.
 - **Health detection uses two checks, not three.** Schema drift and empty-field
   ratio. Row-count anomaly detection was deliberately left out: it needs a
   baseline of many runs to mean anything and fires spuriously before then.
