@@ -14,35 +14,35 @@
         ],
         "last_sample": [
             {
-                "title": "Show HN: sce (Simple Console Editor)",
-                "points": 5,
-                "author": "ciprian_craciun",
-                "product_page_url": "https://news.ycombinator.com/item?id=49312999",
+                "title": "Mojo is now open source",
+                "points": 338,
+                "author": "visheshdembla",
+                "product_page_url": "https://news.ycombinator.com/item?id=49348079",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Bitflash: A Tor-native revival of Bitcoin 0.1.0, mined on CPUs with RandomX",
-                "points": 5,
-                "author": "bitflash",
-                "product_page_url": "https://news.ycombinator.com/item?id=49378036",
+                "title": "Why aren't smart people happier? (2022)",
+                "points": 80,
+                "author": "rafaelc",
+                "product_page_url": "https://news.ycombinator.com/item?id=49378446",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Launch HN: Vendo (YC S26) – Let users build features on top of your product",
-                "points": 24,
-                "author": "yousefh409",
-                "product_page_url": "https://news.ycombinator.com/item?id=49376038",
+                "title": "Consumer Rights Wiki",
+                "points": 209,
+                "author": "gregsadetsky",
+                "product_page_url": "https://news.ycombinator.com/item?id=49378243",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-20T18:39:37.402Z",
+        "last_run_at": "2026-08-21T01:09:58.932Z",
         "last_row_count": 59,
         "run_history": [
             {
@@ -99,6 +99,17 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T01:09:58.932Z",
+                "rows": 59,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ]
     },
@@ -117,28 +128,28 @@
         ],
         "last_sample": [
             {
-                "title": "Going freestanding",
-                "score": 5,
-                "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/8cq6jl/going_freestanding",
+                "title": "Zero-Knowledge Proofs Aren’t Age Verification Silver Bullets",
+                "score": 7,
+                "comment_count": 2,
+                "product_page_url": "https://lobste.rs/s/yigyaq/zero_knowledge_proofs_aren_t_age",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "SQLite for Everything",
-                "score": 34,
-                "comment_count": 18,
-                "product_page_url": "https://lobste.rs/s/gmherj/sqlite_for_everything",
+                "title": "X.Org Server 26.1 RC1 Prepares For First Feature Release In Five Years",
+                "score": 14,
+                "comment_count": 2,
+                "product_page_url": "https://lobste.rs/s/exrno8/x_org_server_26_1_rc1_prepares_for_first",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Introducing Microlighter",
-                "score": 36,
-                "comment_count": 3,
-                "product_page_url": "https://lobste.rs/s/lxo74i/introducing_microlighter",
+                "title": "Decoding Magic School Lunar's Save Game Format",
+                "score": 2,
+                "comment_count": 1,
+                "product_page_url": "https://lobste.rs/s/ygsics/decoding_magic_school_lunar_s_save_game",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -228,10 +239,21 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T01:11:06.931Z",
+                "rows": 124,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-20T18:40:54.003Z",
-        "last_row_count": 125
+        "last_run_at": "2026-08-21T01:11:06.931Z",
+        "last_row_count": 124
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -248,28 +270,28 @@
         ],
         "last_sample": [
             {
-                "title": "The Confessions of St. Augustine by Saint of Hippo Augustine",
-                "author": "Augustine, of Hippo, Saint, 354-430",
-                "download_count": 8635830,
-                "product_page_url": "https://www.gutenberg.org/ebooks/3296",
+                "title": "Poirot Investigates by Agatha Christie",
+                "author": "Christie, Agatha, 1890-1976",
+                "download_count": 7176230,
+                "product_page_url": "https://www.gutenberg.org/ebooks/61262",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Adventures of Sherlock Holmes by Arthur Conan Doyle",
-                "author": "Doyle, Arthur Conan, 1859-1930",
-                "download_count": 7253630,
-                "product_page_url": "https://www.gutenberg.org/ebooks/48320",
+                "title": "King Arthur and the Knights of the Round Table by Sir Thomas Malory",
+                "author": "Malory, Thomas, Sir, -1471",
+                "download_count": 8659230,
+                "product_page_url": "https://www.gutenberg.org/ebooks/36462",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Sense and Sensibility by Jane Austen",
-                "author": "Austen, Jane, 1775-1817",
-                "download_count": 7369330,
-                "product_page_url": "https://www.gutenberg.org/ebooks/161",
+                "title": "The Seven Dials mystery by Agatha Christie",
+                "author": "Christie, Agatha, 1890-1976",
+                "download_count": 6948830,
+                "product_page_url": "https://www.gutenberg.org/ebooks/75288",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -315,10 +337,21 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T01:13:47.239Z",
+                "rows": 147,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ],
         "last_row_count": 147,
-        "last_run_at": "2026-08-20T18:45:04.670Z"
+        "last_run_at": "2026-08-21T01:13:47.239Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -338,15 +371,14 @@
         ],
         "last_sample": [
             {
-                "job_title": "Agentic Python Engineer",
-                "company": "Evaboot",
-                "location": "Remote, Remote/Worldwide, Remote/Worldwide",
+                "job_title": "Senior AI-Augmented Full Stack Developer",
+                "company": "SureSwift Capital",
+                "location": "Victoria, Canada",
                 "job_type": [
                     "Back end",
-                    "Integration",
-                    "Machine Learning"
+                    "Front end"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8125/",
+                "product_page_url": "https://www.python.org/jobs/8110/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -366,11 +398,16 @@
                 }
             },
             {
-                "job_title": "Senior Python Engineer",
-                "company": "Turing",
-                "location": "Miami Shores, FL, United States",
-                "job_type": [],
-                "product_page_url": "https://www.python.org/jobs/8116/",
+                "job_title": "Full-Stack Engineer",
+                "company": "AIDAR",
+                "location": "Hamburg, Germany",
+                "job_type": [
+                    "Back end",
+                    "Database",
+                    "Front end",
+                    "Machine Learning"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8108/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -433,9 +470,23 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-21T01:13:58.042Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-20T18:45:15.095Z"
+        "last_run_at": "2026-08-21T01:13:58.042Z"
     }
 }
