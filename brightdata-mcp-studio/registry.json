@@ -14,35 +14,35 @@
         ],
         "last_sample": [
             {
-                "title": "Captain Zilog",
-                "points": 42,
-                "author": "rbanffy",
-                "product_page_url": "https://news.ycombinator.com/item?id=49329919",
+                "title": "Kino: A high-performance Ractor web server for Ruby 4.0",
+                "points": 12,
+                "author": "ksec",
+                "product_page_url": "https://news.ycombinator.com/item?id=49386383",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Speeding Up (Small) Ruby Hashes",
-                "points": 45,
-                "author": "arto",
-                "product_page_url": "https://news.ycombinator.com/item?id=49295112",
+                "title": "The Religious Experience of Philip K. Dick by R. Crumb (1986)",
+                "points": 62,
+                "author": "wise_blood",
+                "product_page_url": "https://news.ycombinator.com/item?id=49384224",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Codex on AWS bedrock bug causing 10x charges",
-                "points": 94,
-                "author": "TheP1000",
-                "product_page_url": "https://news.ycombinator.com/item?id=49383326",
+                "title": "TigerBeetle Core System Architecture: Deconstructing Performance Engineering",
+                "points": 29,
+                "author": "ksec",
+                "product_page_url": "https://news.ycombinator.com/item?id=49386659",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-21T06:46:43.773Z",
+        "last_run_at": "2026-08-21T12:43:05.289Z",
         "last_row_count": 59,
         "run_history": [
             {
@@ -121,6 +121,17 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T12:43:05.289Z",
+                "rows": 59,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ]
     },
@@ -139,28 +150,28 @@
         ],
         "last_sample": [
             {
-                "title": "Bringing Primary Constructors to Dart",
-                "score": 1,
-                "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/khphqe/bringing_primary_constructors_dart",
+                "title": "Emacs 31.1 will release on 8/24",
+                "score": 27,
+                "comment_count": 1,
+                "product_page_url": "https://lobste.rs/s/ikhwaz/emacs_31_1_will_release_on_8_24",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Going freestanding",
-                "score": 10,
-                "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/8cq6jl/going_freestanding",
+                "title": "Reclaim the terminal",
+                "score": 47,
+                "comment_count": 15,
+                "product_page_url": "https://lobste.rs/s/7v1wvd/reclaim_terminal",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Open-sourcing OpenPubkey SSH (OPKSSH): integrating single sign-on with SSH",
-                "score": 12,
-                "comment_count": 5,
-                "product_page_url": "https://lobste.rs/s/n7kpm6/open_sourcing_openpubkey_ssh_opkssh",
+                "title": "If this is true, the hyperscalers are toast",
+                "score": 22,
+                "comment_count": 25,
+                "product_page_url": "https://lobste.rs/s/xgxp9m/if_this_is_true_hyperscalers_are_toast",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -272,9 +283,20 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T12:47:27.640Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-21T06:47:46.378Z",
+        "last_run_at": "2026-08-21T12:47:27.640Z",
         "last_row_count": 125
     },
     "gutenberg.org": {
@@ -292,28 +314,28 @@
         ],
         "last_sample": [
             {
-                "title": "Paul Clifford — Complete by Baron Edward Bulwer Lytton Lytton",
-                "author": "Lytton, Edward Bulwer Lytton, Baron, 1803-1873",
-                "download_count": 6931530,
-                "product_page_url": "https://www.gutenberg.org/ebooks/7735",
+                "title": "The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar by Maurice Leblanc",
+                "author": "Leblanc, Maurice, 1864-1941",
+                "download_count": 10289330,
+                "product_page_url": "https://www.gutenberg.org/ebooks/6133",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The case-book of Sherlock Holmes by Arthur Conan Doyle",
-                "author": "Doyle, Arthur Conan, 1859-1930",
-                "download_count": 7144730,
-                "product_page_url": "https://www.gutenberg.org/ebooks/69700",
+                "title": "The Red Lily — Complete by Anatole France",
+                "author": "France, Anatole, 1844-1924",
+                "download_count": 7087430,
+                "product_page_url": "https://www.gutenberg.org/ebooks/3922",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Tales of Terror and Mystery by Arthur Conan Doyle",
-                "author": "Doyle, Arthur Conan, 1859-1930",
-                "download_count": 6974330,
-                "product_page_url": "https://www.gutenberg.org/ebooks/537",
+                "title": "The Man in the Brown Suit by Agatha Christie",
+                "author": "Christie, Agatha, 1890-1976",
+                "download_count": 6899630,
+                "product_page_url": "https://www.gutenberg.org/ebooks/61168",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -381,10 +403,21 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T12:49:46.292Z",
+                "rows": 143,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ],
-        "last_row_count": 147,
-        "last_run_at": "2026-08-21T06:51:25.765Z"
+        "last_row_count": 143,
+        "last_run_at": "2026-08-21T12:49:46.292Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -404,21 +437,18 @@
         ],
         "last_sample": [
             {
-                "job_title": "Senior Python/DevOps Engineer (100% Remote - USA Only)",
-                "company": "Six Feet Up",
-                "location": "100% Remote, USA Only",
+                "job_title": "Computational Photonics Engineer",
+                "company": "LumiAIres Ltd",
+                "location": "Glasgow, Scotland, United Kingdom",
                 "job_type": [
-                    "Back end",
-                    "Big Data",
-                    "Cloud",
-                    "Database",
-                    "Evangelism",
-                    "Finance",
-                    "Front end",
-                    "Lead",
-                    "Machine Learning"
+                    "Image Processing",
+                    "Integration",
+                    "Machine Learning",
+                    "Numeric processing",
+                    "Systems",
+                    "Testing"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8113/",
+                "product_page_url": "https://www.python.org/jobs/8105/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -434,18 +464,18 @@
                 }
             },
             {
-                "job_title": "Python / DevOps Engineer for Private Voice-AI Setup",
-                "company": "JB Martyn",
-                "location": "Illinois, Chicago, United States",
+                "job_title": "Data Acquisition & Infrastructure Engineer",
+                "company": "Iconic Art AI",
+                "location": "Montreal, QC, Canada",
                 "job_type": [
                     "Back end",
+                    "Big Data",
                     "Cloud",
-                    "Machine Learning",
-                    "Operations",
-                    "Text Processing",
-                    "Web"
+                    "Database",
+                    "Image Processing",
+                    "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8093/",
+                "product_page_url": "https://www.python.org/jobs/8097/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -536,9 +566,23 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-21T12:49:51.408Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-21T06:51:31.119Z"
+        "last_run_at": "2026-08-21T12:49:51.408Z"
     }
 }
