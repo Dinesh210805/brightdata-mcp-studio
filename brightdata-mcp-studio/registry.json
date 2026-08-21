@@ -14,35 +14,35 @@
         ],
         "last_sample": [
             {
-                "title": "Mojo is now open source",
-                "points": 338,
-                "author": "visheshdembla",
-                "product_page_url": "https://news.ycombinator.com/item?id=49348079",
+                "title": "Captain Zilog",
+                "points": 42,
+                "author": "rbanffy",
+                "product_page_url": "https://news.ycombinator.com/item?id=49329919",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Why aren't smart people happier? (2022)",
-                "points": 80,
-                "author": "rafaelc",
-                "product_page_url": "https://news.ycombinator.com/item?id=49378446",
+                "title": "Speeding Up (Small) Ruby Hashes",
+                "points": 45,
+                "author": "arto",
+                "product_page_url": "https://news.ycombinator.com/item?id=49295112",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Consumer Rights Wiki",
-                "points": 209,
-                "author": "gregsadetsky",
-                "product_page_url": "https://news.ycombinator.com/item?id=49378243",
+                "title": "Codex on AWS bedrock bug causing 10x charges",
+                "points": 94,
+                "author": "TheP1000",
+                "product_page_url": "https://news.ycombinator.com/item?id=49383326",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-21T01:09:58.932Z",
+        "last_run_at": "2026-08-21T06:46:43.773Z",
         "last_row_count": 59,
         "run_history": [
             {
@@ -110,6 +110,17 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T06:46:43.773Z",
+                "rows": 59,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ]
     },
@@ -128,28 +139,28 @@
         ],
         "last_sample": [
             {
-                "title": "Zero-Knowledge Proofs Aren’t Age Verification Silver Bullets",
-                "score": 7,
-                "comment_count": 2,
-                "product_page_url": "https://lobste.rs/s/yigyaq/zero_knowledge_proofs_aren_t_age",
+                "title": "Bringing Primary Constructors to Dart",
+                "score": 1,
+                "comment_count": 0,
+                "product_page_url": "https://lobste.rs/s/khphqe/bringing_primary_constructors_dart",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "X.Org Server 26.1 RC1 Prepares For First Feature Release In Five Years",
-                "score": 14,
-                "comment_count": 2,
-                "product_page_url": "https://lobste.rs/s/exrno8/x_org_server_26_1_rc1_prepares_for_first",
+                "title": "Going freestanding",
+                "score": 10,
+                "comment_count": 0,
+                "product_page_url": "https://lobste.rs/s/8cq6jl/going_freestanding",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Decoding Magic School Lunar's Save Game Format",
-                "score": 2,
-                "comment_count": 1,
-                "product_page_url": "https://lobste.rs/s/ygsics/decoding_magic_school_lunar_s_save_game",
+                "title": "Open-sourcing OpenPubkey SSH (OPKSSH): integrating single sign-on with SSH",
+                "score": 12,
+                "comment_count": 5,
+                "product_page_url": "https://lobste.rs/s/n7kpm6/open_sourcing_openpubkey_ssh_opkssh",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -250,10 +261,21 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T06:47:46.378Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-21T01:11:06.931Z",
-        "last_row_count": 124
+        "last_run_at": "2026-08-21T06:47:46.378Z",
+        "last_row_count": 125
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -270,28 +292,28 @@
         ],
         "last_sample": [
             {
-                "title": "Poirot Investigates by Agatha Christie",
-                "author": "Christie, Agatha, 1890-1976",
-                "download_count": 7176230,
-                "product_page_url": "https://www.gutenberg.org/ebooks/61262",
+                "title": "Paul Clifford — Complete by Baron Edward Bulwer Lytton Lytton",
+                "author": "Lytton, Edward Bulwer Lytton, Baron, 1803-1873",
+                "download_count": 6931530,
+                "product_page_url": "https://www.gutenberg.org/ebooks/7735",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "King Arthur and the Knights of the Round Table by Sir Thomas Malory",
-                "author": "Malory, Thomas, Sir, -1471",
-                "download_count": 8659230,
-                "product_page_url": "https://www.gutenberg.org/ebooks/36462",
+                "title": "The case-book of Sherlock Holmes by Arthur Conan Doyle",
+                "author": "Doyle, Arthur Conan, 1859-1930",
+                "download_count": 7144730,
+                "product_page_url": "https://www.gutenberg.org/ebooks/69700",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The Seven Dials mystery by Agatha Christie",
-                "author": "Christie, Agatha, 1890-1976",
-                "download_count": 6948830,
-                "product_page_url": "https://www.gutenberg.org/ebooks/75288",
+                "title": "Tales of Terror and Mystery by Arthur Conan Doyle",
+                "author": "Doyle, Arthur Conan, 1859-1930",
+                "download_count": 6974330,
+                "product_page_url": "https://www.gutenberg.org/ebooks/537",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -348,10 +370,21 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T06:51:25.765Z",
+                "rows": 147,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ],
         "last_row_count": 147,
-        "last_run_at": "2026-08-21T01:13:47.239Z"
+        "last_run_at": "2026-08-21T06:51:25.765Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -371,43 +404,48 @@
         ],
         "last_sample": [
             {
-                "job_title": "Senior AI-Augmented Full Stack Developer",
-                "company": "SureSwift Capital",
-                "location": "Victoria, Canada",
+                "job_title": "Senior Python/DevOps Engineer (100% Remote - USA Only)",
+                "company": "Six Feet Up",
+                "location": "100% Remote, USA Only",
                 "job_type": [
                     "Back end",
-                    "Front end"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8110/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Senior Full-Stack Engineer [Full Time; 100% remote; US-only]",
-                "company": "Hive Collective",
-                "location": "Anywhere, Anywhere, USA",
-                "job_type": [
-                    "Back end",
-                    "Machine Learning",
-                    "Web"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8119/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Full-Stack Engineer",
-                "company": "AIDAR",
-                "location": "Hamburg, Germany",
-                "job_type": [
-                    "Back end",
+                    "Big Data",
+                    "Cloud",
                     "Database",
+                    "Evangelism",
+                    "Finance",
                     "Front end",
+                    "Lead",
                     "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8108/",
+                "product_page_url": "https://www.python.org/jobs/8113/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Python Developer",
+                "company": "Micro1",
+                "location": "Miami Shores, FL, United States",
+                "job_type": [],
+                "product_page_url": "https://www.python.org/jobs/8118/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Python / DevOps Engineer for Private Voice-AI Setup",
+                "company": "JB Martyn",
+                "location": "Illinois, Chicago, United States",
+                "job_type": [
+                    "Back end",
+                    "Cloud",
+                    "Machine Learning",
+                    "Operations",
+                    "Text Processing",
+                    "Web"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8093/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -484,9 +522,23 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-21T06:51:31.119Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-21T01:13:58.042Z"
+        "last_run_at": "2026-08-21T06:51:31.119Z"
     }
 }
