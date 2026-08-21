@@ -14,36 +14,36 @@
         ],
         "last_sample": [
             {
-                "title": "Kino: A high-performance Ractor web server for Ruby 4.0",
-                "points": 12,
-                "author": "ksec",
-                "product_page_url": "https://news.ycombinator.com/item?id=49386383",
+                "title": "Rebuilding our Electron meeting-recording engine in Swift",
+                "points": 22,
+                "author": "arguiot",
+                "product_page_url": "https://news.ycombinator.com/item?id=49391389",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "The Religious Experience of Philip K. Dick by R. Crumb (1986)",
-                "points": 62,
-                "author": "wise_blood",
-                "product_page_url": "https://news.ycombinator.com/item?id=49384224",
+                "title": "How we made a text-to-speech model respond in sub-50 ms",
+                "points": 28,
+                "author": "toebee",
+                "product_page_url": "https://news.ycombinator.com/item?id=49389952",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "TigerBeetle Core System Architecture: Deconstructing Performance Engineering",
-                "points": 29,
-                "author": "ksec",
-                "product_page_url": "https://news.ycombinator.com/item?id=49386659",
+                "title": "What happens when a GPU reads memory",
+                "points": 37,
+                "author": "ibobev",
+                "product_page_url": "https://news.ycombinator.com/item?id=49390308",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-21T12:43:05.289Z",
-        "last_row_count": 59,
+        "last_run_at": "2026-08-21T18:33:55.858Z",
+        "last_row_count": 60,
         "run_history": [
             {
                 "at": "2026-08-20T04:10:15.796Z",
@@ -132,6 +132,17 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T18:33:55.858Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ]
     },
@@ -150,28 +161,28 @@
         ],
         "last_sample": [
             {
-                "title": "Emacs 31.1 will release on 8/24",
-                "score": 27,
-                "comment_count": 1,
-                "product_page_url": "https://lobste.rs/s/ikhwaz/emacs_31_1_will_release_on_8_24",
+                "title": "The road to ACID transactions in Cassandra 6",
+                "score": 7,
+                "comment_count": 0,
+                "product_page_url": "https://lobste.rs/s/c9xng0/road_acid_transactions_cassandra_6",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Reclaim the terminal",
-                "score": 47,
-                "comment_count": 15,
-                "product_page_url": "https://lobste.rs/s/7v1wvd/reclaim_terminal",
+                "title": "Japan tried to build an operating system for the entire world, then the US government intervened",
+                "score": 33,
+                "comment_count": 3,
+                "product_page_url": "https://lobste.rs/s/mfo0fd/japan_tried_build_operating_system_for",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "If this is true, the hyperscalers are toast",
-                "score": 22,
-                "comment_count": 25,
-                "product_page_url": "https://lobste.rs/s/xgxp9m/if_this_is_true_hyperscalers_are_toast",
+                "title": "How a joke domain purchase turned into geopolitical warfare",
+                "score": 129,
+                "comment_count": 6,
+                "product_page_url": "https://lobste.rs/s/sfi9te/how_joke_domain_purchase_turned_into",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -294,10 +305,21 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T18:35:25.776Z",
+                "rows": 124,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-21T12:47:27.640Z",
-        "last_row_count": 125
+        "last_run_at": "2026-08-21T18:35:25.776Z",
+        "last_row_count": 124
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -314,28 +336,28 @@
         ],
         "last_sample": [
             {
-                "title": "The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar by Maurice Leblanc",
-                "author": "Leblanc, Maurice, 1864-1941",
-                "download_count": 10289330,
-                "product_page_url": "https://www.gutenberg.org/ebooks/6133",
+                "title": "Sonnets from the Portuguese by Elizabeth Barrett Browning",
+                "author": "Browning, Elizabeth Barrett, 1806-1861",
+                "download_count": 7104830,
+                "product_page_url": "https://www.gutenberg.org/ebooks/2002",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The Red Lily — Complete by Anatole France",
-                "author": "France, Anatole, 1844-1924",
-                "download_count": 7087430,
-                "product_page_url": "https://www.gutenberg.org/ebooks/3922",
+                "title": "The House on the Borderland by William Hope Hodgson",
+                "author": "Hodgson, William Hope, 1877-1918",
+                "download_count": 6842430,
+                "product_page_url": "https://www.gutenberg.org/ebooks/10002",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The Man in the Brown Suit by Agatha Christie",
-                "author": "Christie, Agatha, 1890-1976",
-                "download_count": 6899630,
-                "product_page_url": "https://www.gutenberg.org/ebooks/61168",
+                "title": "The Green Mummy by Fergus Hume",
+                "author": "Hume, Fergus, 1859-1932",
+                "download_count": 12398330,
+                "product_page_url": "https://www.gutenberg.org/ebooks/2868",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -414,10 +436,21 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-21T18:37:20.131Z",
+                "rows": 143,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ],
         "last_row_count": 143,
-        "last_run_at": "2026-08-21T12:49:46.292Z"
+        "last_run_at": "2026-08-21T18:37:20.131Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -454,11 +487,13 @@
                 }
             },
             {
-                "job_title": "Python Developer",
-                "company": "Micro1",
-                "location": "Miami Shores, FL, United States",
-                "job_type": [],
-                "product_page_url": "https://www.python.org/jobs/8118/",
+                "job_title": "Senior Python Backend Engineer",
+                "company": "Reef Technologies",
+                "location": "Warsaw (fully remote), Poland",
+                "job_type": [
+                    "Back end"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8121/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -580,9 +615,23 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-21T18:37:46.734Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-21T12:49:51.408Z"
+        "last_run_at": "2026-08-21T18:37:46.735Z"
     }
 }
