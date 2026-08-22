@@ -14,35 +14,33 @@
         ],
         "last_sample": [
             {
-                "title": "Rebuilding our Electron meeting-recording engine in Swift",
-                "points": 22,
-                "author": "arguiot",
-                "product_page_url": "https://news.ycombinator.com/item?id=49391389",
+                "title": "SalesPatriot (YC W25) Is Hiring Forward Deployed Engineers",
+                "product_page_url": "https://news.ycombinator.com/item?id=49393733",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "How we made a text-to-speech model respond in sub-50 ms",
-                "points": 28,
-                "author": "toebee",
-                "product_page_url": "https://news.ycombinator.com/item?id=49389952",
+                "title": "People of ACM – Russ Cox",
+                "points": 88,
+                "author": "signa11",
+                "product_page_url": "https://news.ycombinator.com/item?id=49327408",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "What happens when a GPU reads memory",
-                "points": 37,
-                "author": "ibobev",
-                "product_page_url": "https://news.ycombinator.com/item?id=49390308",
+                "title": "Tumble Forth – from assembly to OS with C compiler",
+                "points": 53,
+                "author": "vicek22",
+                "product_page_url": "https://news.ycombinator.com/item?id=49392465",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-21T18:33:55.858Z",
+        "last_run_at": "2026-08-22T01:04:25.081Z",
         "last_row_count": 60,
         "run_history": [
             {
@@ -143,6 +141,17 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-22T01:04:25.081Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ]
     },
@@ -161,28 +170,28 @@
         ],
         "last_sample": [
             {
-                "title": "The road to ACID transactions in Cassandra 6",
-                "score": 7,
-                "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/c9xng0/road_acid_transactions_cassandra_6",
-                "input": {
-                    "url": "https://lobste.rs"
-                }
-            },
-            {
                 "title": "Japan tried to build an operating system for the entire world, then the US government intervened",
-                "score": 33,
-                "comment_count": 3,
+                "score": 57,
+                "comment_count": 8,
                 "product_page_url": "https://lobste.rs/s/mfo0fd/japan_tried_build_operating_system_for",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "How a joke domain purchase turned into geopolitical warfare",
-                "score": 129,
-                "comment_count": 6,
-                "product_page_url": "https://lobste.rs/s/sfi9te/how_joke_domain_purchase_turned_into",
+                "title": "Announcing Rust 1.98.0",
+                "score": 62,
+                "comment_count": 14,
+                "product_page_url": "https://lobste.rs/s/hbjeir/announcing_rust_1_98_0",
+                "input": {
+                    "url": "https://lobste.rs"
+                }
+            },
+            {
+                "title": "Felony Bench: Be AI, Do Crime",
+                "score": 27,
+                "comment_count": 2,
+                "product_page_url": "https://lobste.rs/s/pywde0/felony_bench_be_ai_do_crime",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -316,10 +325,21 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-22T01:05:41.441Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-21T18:35:25.776Z",
-        "last_row_count": 124
+        "last_run_at": "2026-08-22T01:05:41.441Z",
+        "last_row_count": 125
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -336,28 +356,28 @@
         ],
         "last_sample": [
             {
-                "title": "Sonnets from the Portuguese by Elizabeth Barrett Browning",
-                "author": "Browning, Elizabeth Barrett, 1806-1861",
-                "download_count": 7104830,
-                "product_page_url": "https://www.gutenberg.org/ebooks/2002",
+                "title": "The Return of Sherlock Holmes by Arthur Conan Doyle",
+                "author": "Doyle, Arthur Conan, 1859-1930",
+                "download_count": 7029930,
+                "product_page_url": "https://www.gutenberg.org/ebooks/221",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The House on the Borderland by William Hope Hodgson",
-                "author": "Hodgson, William Hope, 1877-1918",
-                "download_count": 6842430,
-                "product_page_url": "https://www.gutenberg.org/ebooks/10002",
+                "title": "The Adventures of Sherlock Holmes by Arthur Conan Doyle",
+                "author": "Doyle, Arthur Conan, 1859-1930",
+                "download_count": 12507930,
+                "product_page_url": "https://www.gutenberg.org/ebooks/1661",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The Green Mummy by Fergus Hume",
-                "author": "Hume, Fergus, 1859-1932",
-                "download_count": 12398330,
-                "product_page_url": "https://www.gutenberg.org/ebooks/2868",
+                "title": "Thuvia, maid of Mars by Edgar Rice Burroughs",
+                "author": "Burroughs, Edgar Rice, 1875-1950",
+                "download_count": 8612330,
+                "product_page_url": "https://www.gutenberg.org/ebooks/72",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -447,10 +467,21 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-22T01:16:05.227Z",
+                "rows": 134,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ],
-        "last_row_count": 143,
-        "last_run_at": "2026-08-21T18:37:20.131Z"
+        "last_row_count": 134,
+        "last_run_at": "2026-08-22T01:16:05.227Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -487,30 +518,32 @@
                 }
             },
             {
-                "job_title": "Senior Python Backend Engineer",
-                "company": "Reef Technologies",
-                "location": "Warsaw (fully remote), Poland",
+                "job_title": "Python / DevOps Engineer for Private Voice-AI Setup",
+                "company": "JB Martyn",
+                "location": "Illinois, Chicago, United States",
                 "job_type": [
-                    "Back end"
+                    "Back end",
+                    "Cloud",
+                    "Machine Learning",
+                    "Operations",
+                    "Text Processing",
+                    "Web"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8121/",
+                "product_page_url": "https://www.python.org/jobs/8093/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Data Acquisition & Infrastructure Engineer",
-                "company": "Iconic Art AI",
-                "location": "Montreal, QC, Canada",
+                "job_title": "Senior Python Developer",
+                "company": "Turing",
+                "location": "Remote, Remote, Remote",
                 "job_type": [
                     "Back end",
-                    "Big Data",
-                    "Cloud",
-                    "Database",
-                    "Image Processing",
+                    "Front end",
                     "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8097/",
+                "product_page_url": "https://www.python.org/jobs/8103/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -629,9 +662,23 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-22T01:16:10.465Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-21T18:37:46.735Z"
+        "last_run_at": "2026-08-22T01:16:10.465Z"
     }
 }
