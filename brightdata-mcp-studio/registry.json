@@ -14,33 +14,35 @@
         ],
         "last_sample": [
             {
-                "title": "SalesPatriot (YC W25) Is Hiring Forward Deployed Engineers",
-                "product_page_url": "https://news.ycombinator.com/item?id=49393733",
+                "title": "OTel isn't going well (and I made a spreadsheet about it)",
+                "points": 82,
+                "author": "hn_acker",
+                "product_page_url": "https://news.ycombinator.com/item?id=49391553",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "People of ACM – Russ Cox",
-                "points": 88,
-                "author": "signa11",
-                "product_page_url": "https://news.ycombinator.com/item?id=49327408",
+                "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
+                "points": 494,
+                "author": "gavide",
+                "product_page_url": "https://news.ycombinator.com/item?id=49387570",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Tumble Forth – from assembly to OS with C compiler",
-                "points": 53,
-                "author": "vicek22",
-                "product_page_url": "https://news.ycombinator.com/item?id=49392465",
+                "title": "Ozone: The fault is not in our trees, but in ourselves",
+                "points": 19,
+                "author": "gumby",
+                "product_page_url": "https://news.ycombinator.com/item?id=49381542",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-22T01:04:25.081Z",
+        "last_run_at": "2026-08-22T06:37:16.073Z",
         "last_row_count": 60,
         "run_history": [
             {
@@ -152,6 +154,17 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-22T06:37:16.072Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ]
     },
@@ -170,28 +183,28 @@
         ],
         "last_sample": [
             {
-                "title": "Japan tried to build an operating system for the entire world, then the US government intervened",
-                "score": 57,
-                "comment_count": 8,
-                "product_page_url": "https://lobste.rs/s/mfo0fd/japan_tried_build_operating_system_for",
+                "title": "rust-glancer: An alternative LSP for Rust with focus on low memory usage",
+                "score": 13,
+                "comment_count": 6,
+                "product_page_url": "https://lobste.rs/s/am0xtj/rust_glancer_alternative_lsp_for_rust",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Announcing Rust 1.98.0",
-                "score": 62,
-                "comment_count": 14,
-                "product_page_url": "https://lobste.rs/s/hbjeir/announcing_rust_1_98_0",
+                "title": "The cool things of Gleam",
+                "score": 1,
+                "comment_count": 0,
+                "product_page_url": "https://lobste.rs/s/lzgbrv/cool_things_gleam",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Felony Bench: Be AI, Do Crime",
-                "score": 27,
-                "comment_count": 2,
-                "product_page_url": "https://lobste.rs/s/pywde0/felony_bench_be_ai_do_crime",
+                "title": "Exim 4.100 released",
+                "score": 5,
+                "comment_count": 0,
+                "product_page_url": "https://lobste.rs/s/pdx6jg/exim_4_100_released",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -336,9 +349,20 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-22T06:38:33.636Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-22T01:05:41.441Z",
+        "last_run_at": "2026-08-22T06:38:33.636Z",
         "last_row_count": 125
     },
     "gutenberg.org": {
@@ -478,6 +502,12 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-22T06:40:22.860Z",
+                "rows": 1,
+                "healthy": false,
+                "fields": []
             }
         ],
         "last_row_count": 134,
@@ -501,49 +531,42 @@
         ],
         "last_sample": [
             {
-                "job_title": "Computational Photonics Engineer",
-                "company": "LumiAIres Ltd",
-                "location": "Glasgow, Scotland, United Kingdom",
-                "job_type": [
-                    "Image Processing",
-                    "Integration",
-                    "Machine Learning",
-                    "Numeric processing",
-                    "Systems",
-                    "Testing"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8105/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Python / DevOps Engineer for Private Voice-AI Setup",
-                "company": "JB Martyn",
-                "location": "Illinois, Chicago, United States",
+                "job_title": "Full-Stack Engineer",
+                "company": "AIDAR",
+                "location": "Hamburg, Germany",
                 "job_type": [
                     "Back end",
-                    "Cloud",
-                    "Machine Learning",
-                    "Operations",
-                    "Text Processing",
-                    "Web"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8093/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Senior Python Developer",
-                "company": "Turing",
-                "location": "Remote, Remote, Remote",
-                "job_type": [
-                    "Back end",
+                    "Database",
                     "Front end",
                     "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8103/",
+                "product_page_url": "https://www.python.org/jobs/8108/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Senior Python Engineer",
+                "company": "EPAM",
+                "location": "Worldwide, Worldwide, Worldwide",
+                "job_type": [
+                    "Back end",
+                    "Machine Learning"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8107/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Senior AI-Augmented Full Stack Developer",
+                "company": "SureSwift Capital",
+                "location": "Victoria, Canada",
+                "job_type": [
+                    "Back end",
+                    "Front end"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8110/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -676,9 +699,23 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-22T06:40:28.315Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-22T01:16:10.465Z"
+        "last_run_at": "2026-08-22T06:40:28.315Z"
     }
 }
