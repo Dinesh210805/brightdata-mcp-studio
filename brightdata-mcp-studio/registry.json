@@ -14,35 +14,35 @@
         ],
         "last_sample": [
             {
-                "title": "Z80–The 1970s Microprocessor Still Alive",
-                "points": 31,
-                "author": "asdefghyk",
-                "product_page_url": "https://news.ycombinator.com/item?id=49398158",
+                "title": "Hister – A private, full content search index that you control",
+                "points": 18,
+                "author": "auraham",
+                "product_page_url": "https://news.ycombinator.com/item?id=49351802",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
-                "points": 96,
-                "author": "gmays",
-                "product_page_url": "https://news.ycombinator.com/item?id=49380303",
+                "title": "Learning about \"The Unix Time-Sharing System\"",
+                "points": 14,
+                "author": "gwynforthewyn",
+                "product_page_url": "https://news.ycombinator.com/item?id=49401122",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "OTel isn’t going well",
-                "points": 145,
-                "author": "hn_acker",
-                "product_page_url": "https://news.ycombinator.com/item?id=49391553",
+                "title": "typ.ing",
+                "points": 17,
+                "author": "bookofjoe",
+                "product_page_url": "https://news.ycombinator.com/item?id=49346854",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-22T12:33:10.589Z",
+        "last_run_at": "2026-08-22T18:26:21.863Z",
         "last_row_count": 60,
         "run_history": [
             {
@@ -176,6 +176,17 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-22T18:26:21.863Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ]
     },
@@ -194,28 +205,28 @@
         ],
         "last_sample": [
             {
-                "title": "Compile-Time Improvements in LLVM 23",
-                "score": 7,
-                "comment_count": 1,
-                "product_page_url": "https://lobste.rs/s/ku4v3b/compile_time_improvements_llvm_23",
-                "input": {
-                    "url": "https://lobste.rs"
-                }
-            },
-            {
-                "title": "The road to ACID transactions in Cassandra 6",
-                "score": 12,
+                "title": "An arcade fighting game over SSH",
+                "score": 1,
                 "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/c9xng0/road_acid_transactions_cassandra_6",
+                "product_page_url": "https://lobste.rs/s/ssw0gv/arcade_fighting_game_over_ssh",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Music theory for programmers",
-                "score": 28,
-                "comment_count": 27,
-                "product_page_url": "https://lobste.rs/s/zcgvtz/music_theory_for_programmers",
+                "title": "Robot comment classifier",
+                "score": 2,
+                "comment_count": 2,
+                "product_page_url": "https://lobste.rs/s/ilfiqa/robot_comment_classifier",
+                "input": {
+                    "url": "https://lobste.rs"
+                }
+            },
+            {
+                "title": "Enabling the next-generation trait solver on nightly",
+                "score": 95,
+                "comment_count": 20,
+                "product_page_url": "https://lobste.rs/s/3giezs/enabling_next_generation_trait_solver_on",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -382,10 +393,21 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-22T18:29:32.751Z",
+                "rows": 124,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-22T12:35:48.565Z",
-        "last_row_count": 125
+        "last_run_at": "2026-08-22T18:29:32.751Z",
+        "last_row_count": 124
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -402,28 +424,28 @@
         ],
         "last_sample": [
             {
-                "title": "The Mysterious Affair at Styles by Agatha Christie",
-                "author": "Christie, Agatha, 1890-1976",
-                "download_count": 7417230,
-                "product_page_url": "https://www.gutenberg.org/ebooks/863",
+                "title": "Life Blood by Thomas Hoover",
+                "author": "Hoover, Thomas, 1941-",
+                "download_count": 6598330,
+                "product_page_url": "https://www.gutenberg.org/ebooks/34318",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "A pair of blue eyes by Thomas Hardy",
-                "author": "Hardy, Thomas, 1840-1928",
-                "download_count": 7202030,
-                "product_page_url": "https://www.gutenberg.org/ebooks/224",
+                "title": "The Dunwich horror by H. P. Lovecraft",
+                "author": "Lovecraft, H. P. (Howard Phillips), 1890-1937",
+                "download_count": 6677230,
+                "product_page_url": "https://www.gutenberg.org/ebooks/50133",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The Count of Monte Cristo by Alexandre Dumas and Auguste Maquet",
-                "author": "Dumas, Alexandre, 1802-1870",
-                "download_count": 7871830,
-                "product_page_url": "https://www.gutenberg.org/ebooks/1184",
+                "title": "The Adventures of Roderick Random by T. Smollett",
+                "author": "Smollett, T. (Tobias), 1721-1771",
+                "download_count": 4479930,
+                "product_page_url": "https://www.gutenberg.org/ebooks/4085",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -541,10 +563,21 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-22T18:31:21.009Z",
+                "rows": 143,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ],
         "last_row_count": 143,
-        "last_run_at": "2026-08-22T12:39:07.501Z"
+        "last_run_at": "2026-08-22T18:31:21.009Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -564,38 +597,38 @@
         ],
         "last_sample": [
             {
-                "job_title": "Python Developer",
-                "company": "Micro1",
+                "job_title": "Senior Python Engineer",
+                "company": "Turing",
                 "location": "Miami Shores, FL, United States",
                 "job_type": [],
-                "product_page_url": "https://www.python.org/jobs/8118/",
+                "product_page_url": "https://www.python.org/jobs/8116/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Agentic AI Scientist",
-                "company": "AstraZeneca",
-                "location": "Durham, North Carolina, USA",
+                "job_title": "Senior Full-Stack Engineer [Full Time; 100% remote; US-only]",
+                "company": "Hive Collective",
+                "location": "Anywhere, Anywhere, USA",
                 "job_type": [
-                    "Cloud",
+                    "Back end",
                     "Machine Learning",
-                    "Numeric processing"
+                    "Web"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8094/",
+                "product_page_url": "https://www.python.org/jobs/8119/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Senior AI-Augmented Full Stack Developer",
-                "company": "SureSwift Capital",
-                "location": "Victoria, Canada",
+                "job_title": "Python Developer",
+                "company": "Micro1",
+                "location": "Remote, Remote, Anywhere",
                 "job_type": [
                     "Back end",
                     "Front end"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8110/",
+                "product_page_url": "https://www.python.org/jobs/8101/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -756,9 +789,23 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-22T18:31:26.553Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-22T12:39:12.838Z"
+        "last_run_at": "2026-08-22T18:31:26.553Z"
     }
 }
