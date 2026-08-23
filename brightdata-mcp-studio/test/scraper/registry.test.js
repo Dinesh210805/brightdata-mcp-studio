@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import os from 'node:os';
 import {
     domain_of, get_entry, put_entry, record_heal, record_run, record_cleanup,
-    abandon, active_entries,
+    abandon, active_entries, is_locked, acquire_lock, release_lock,
 } from '../../scraper/registry.js';
 
 test('domain_of ignores scheme, www, port, case and path', ()=>{
@@ -130,6 +130,59 @@ test('record_run keeps failed runs, not just good ones', ()=>{
     assert.equal(history.length, 2);
     assert.deepEqual(history.map(r=>r.healthy), [true, false]);
     assert.ok(history[0].at, 'each run is timestamped');
+});
+
+test('is_locked is false with no lock at all', ()=>{
+    assert.equal(is_locked({collector_id: 'c_1'}), false);
+});
+
+test('is_locked is true for a lock taken moments ago', ()=>{
+    assert.equal(is_locked({locked_at: new Date().toISOString()}), true);
+});
+
+test('is_locked is false once the lock is stale', ()=>{
+    const stale = new Date(Date.now()-21*60*1000).toISOString();
+    assert.equal(is_locked({locked_at: stale}), false);
+});
+
+test('acquire_lock sets locked_at without touching status', ()=>{
+    const r0 = put_entry({}, 'https://a.com',
+        {collector_id: 'c_1', status: 'active'});
+    const r1 = acquire_lock(r0, 'https://a.com');
+    assert.ok(r1['a.com'].locked_at);
+    assert.equal(r1['a.com'].status, 'active');
+    assert.equal(r1['a.com'].collector_id, 'c_1');
+});
+
+test('acquire_lock throws on an entry that is already locked', ()=>{
+    const r0 = put_entry({}, 'https://a.com',
+        {collector_id: 'c_1', locked_at: new Date().toISOString()});
+    assert.throws(()=>acquire_lock(r0, 'https://a.com'), /already being healed/i);
+});
+
+test('acquire_lock succeeds over a stale lock', ()=>{
+    const stale = new Date(Date.now()-21*60*1000).toISOString();
+    const r0 = put_entry({}, 'https://a.com',
+        {collector_id: 'c_1', locked_at: stale});
+    const r1 = acquire_lock(r0, 'https://a.com');
+    assert.notEqual(r1['a.com'].locked_at, stale);
+});
+
+test('acquire_lock is a no-op when there is no entry yet', ()=>{
+    assert.deepEqual(acquire_lock({}, 'https://new.com'), {});
+});
+
+test('release_lock clears the lock and sets the final status', ()=>{
+    const r0 = put_entry({}, 'https://a.com',
+        {collector_id: 'c_1', locked_at: new Date().toISOString()});
+    const r1 = release_lock(r0, 'https://a.com', 'abandoned');
+    assert.equal(r1['a.com'].locked_at, undefined);
+    assert.equal(r1['a.com'].status, 'abandoned');
+    assert.equal(r1['a.com'].collector_id, 'c_1');
+});
+
+test('release_lock is a no-op when there is no entry', ()=>{
+    assert.deepEqual(release_lock({}, 'https://new.com', 'active'), {});
 });
 
 test('record_run caps history so the registry stays readable', ()=>{

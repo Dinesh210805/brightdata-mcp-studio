@@ -130,3 +130,45 @@ export const abandon = (registry, url)=>
 
 export const active_entries = registry=>
     Object.entries(registry).filter(([, entry])=>entry.status != 'abandoned');
+
+// --- Heal lock ---------------------------------------------------------
+//
+// Escalation deletes the collector it abandons, and that delete is
+// irreversible - so the fast health-check path, a manual trigger, and the
+// six-hourly cron must never be allowed to heal the same domain at once.
+//
+// The lock lives on its own field (locked_at), not on `status`. `status`
+// already carries real meaning elsewhere ('abandoned' is what tells ensure()
+// a collector is dead and a fresh one is needed) - overloading it with a
+// transient 'healing' value would make a locked, abandoned entry look
+// reusable the moment it's locked. Keeping the lock separate means it can be
+// acquired and released without disturbing that decision at all.
+//
+// A held lock is trusted for LOCK_STALE_MS and then treated as gone. Without
+// that, a crashed process would leave a domain locked forever.
+const LOCK_STALE_MS = 20*60*1000;
+
+export const is_locked = entry=>Boolean(entry?.locked_at)
+    && Date.now()-new Date(entry.locked_at).getTime() < LOCK_STALE_MS;
+
+// A missing entry has nothing to protect yet - the race this guards against
+// is two callers healing the same *existing* collector, not two callers
+// creating the same new one - so this is a no-op rather than an error.
+export const acquire_lock = (registry, url)=>{
+    const domain = domain_of(url);
+    const entry = registry[domain];
+    if (!entry)
+        return registry;
+    if (is_locked(entry))
+        throw new Error(`${domain} is already being healed`);
+    return {...registry, [domain]: {...entry, locked_at: new Date().toISOString()}};
+};
+
+export const release_lock = (registry, url, final_status)=>{
+    const domain = domain_of(url);
+    const entry = registry[domain];
+    if (!entry)
+        return registry;
+    const {locked_at, ...rest} = entry;
+    return {...registry, [domain]: {...rest, status: final_status}};
+};
