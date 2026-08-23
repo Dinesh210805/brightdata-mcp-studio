@@ -14,36 +14,36 @@
         ],
         "last_sample": [
             {
-                "title": "Xorshift Generators",
-                "points": 91,
-                "author": "tobr",
-                "product_page_url": "https://news.ycombinator.com/item?id=49310128",
+                "title": "Show HN: Public Muscriptor Instance (latest, most powerful Audio-to-MIDI model)",
+                "points": 50,
+                "author": "jardy",
+                "product_page_url": "https://news.ycombinator.com/item?id=49389846",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Unsloth Dynamic 3.0 GGUFs",
-                "points": 286,
-                "author": "jonesy827",
-                "product_page_url": "https://news.ycombinator.com/item?id=49365443",
+                "title": "I set a trap for a book-marketing scammer (2025)",
+                "points": 56,
+                "author": "rznicolet",
+                "product_page_url": "https://news.ycombinator.com/item?id=49402181",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Don't Paste the AI, please",
-                "points": 428,
-                "author": "pjerem",
-                "product_page_url": "https://news.ycombinator.com/item?id=49371857",
+                "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+                "points": 174,
+                "author": "olalonde",
+                "product_page_url": "https://news.ycombinator.com/item?id=49387959",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-20T11:41:03.577Z",
-        "last_row_count": 59,
+        "last_run_at": "2026-08-23T12:35:20.290Z",
+        "last_row_count": 60,
         "run_history": [
             {
                 "at": "2026-08-20T04:10:15.796Z",
@@ -89,9 +89,93 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T12:35:20.289Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
+            },
+            {
+                "at": "2026-08-23T12:56:09.365Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T13:38:44.181Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T14:03:11.296Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T14:43:32.620Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T15:03:46.229Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T15:40:49.446Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
             }
         ],
-        "last_checked_at": "2026-08-23T07:36:17.179Z"
+        "last_checked_at": "2026-08-23T15:40:49.445Z"
     },
     "lobste.rs": {
         "collector_id": "c_mt10ecsz1x2ve37jkb",
@@ -108,28 +192,28 @@
         ],
         "last_sample": [
             {
-                "title": "Understanding the limitations of Pubsub systems",
+                "title": "Robot comment classifier",
                 "score": 7,
-                "comment_count": 3,
-                "product_page_url": "https://lobste.rs/s/psxjb4/understanding_limitations_pubsub",
+                "comment_count": 5,
+                "product_page_url": "https://lobste.rs/s/ilfiqa/robot_comment_classifier",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Rust Supply-Chain Attack: arrayref 0.3.10 and the proc-macro1 Typosquat",
-                "score": 6,
-                "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/dns8du/rust_supply_chain_attack_arrayref_0_3_10",
+                "title": "Linus Torvalds uses AI to debug an Intel GPU driver bug",
+                "score": 24,
+                "comment_count": 18,
+                "product_page_url": "https://lobste.rs/s/eyaz5f/linus_torvalds_uses_ai_debug_intel_gpu",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Sing-song: a speakable encoding for long numbers and keys",
-                "score": 13,
-                "comment_count": 20,
-                "product_page_url": "https://lobste.rs/s/wvwqro/sing_song_speakable_encoding_for_long",
+                "title": "A 2026 Survey of Rust GUI Libraries",
+                "score": 28,
+                "comment_count": 21,
+                "product_page_url": "https://lobste.rs/s/83yugk/2026_survey_rust_gui_libraries",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -209,11 +293,95 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T12:36:26.974Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "ensure"
+            },
+            {
+                "at": "2026-08-23T12:57:15.163Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T13:39:49.798Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T14:04:46.917Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T14:44:39.967Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T15:04:43.466Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T15:41:55.608Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "fast_check"
             }
         ],
-        "last_run_at": "2026-08-20T11:41:50.653Z",
+        "last_run_at": "2026-08-23T12:36:26.974Z",
         "last_row_count": 125,
-        "last_checked_at": "2026-08-23T07:38:32.861Z"
+        "last_checked_at": "2026-08-23T15:41:55.608Z"
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -230,28 +398,28 @@
         ],
         "last_sample": [
             {
-                "title": "Mr. Standfast by John Buchan",
-                "author": "Buchan, John, 1875-1940",
-                "download_count": 7032930,
-                "product_page_url": "https://www.gutenberg.org/ebooks/560",
+                "title": "Eloisa : or, A series of original letters by Jean-Jacques Rousseau",
+                "author": "Rousseau, Jean-Jacques, 1712-1778",
+                "download_count": 9312230,
+                "product_page_url": "https://www.gutenberg.org/ebooks/76639",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "A Honeymoon in Space by George Chetwynd Griffith",
-                "author": "Griffith, George Chetwynd, 1857-1906",
-                "download_count": 9018830,
-                "product_page_url": "https://www.gutenberg.org/ebooks/19476",
+                "title": "The Love Letters of Mary Wollstonecraft to Gilbert Imlay by Mary Wollstonecraft",
+                "author": "Wollstonecraft, Mary, 1759-1797",
+                "download_count": 10538230,
+                "product_page_url": "https://www.gutenberg.org/ebooks/34413",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The Thirty-Nine Steps by John Buchan",
-                "author": "Buchan, John, 1875-1940",
-                "download_count": 7078630,
-                "product_page_url": "https://www.gutenberg.org/ebooks/558",
+                "title": "Pride and Prejudice by Jane Austen",
+                "author": "Austen, Jane, 1775-1817",
+                "download_count": 21469230,
+                "product_page_url": "https://www.gutenberg.org/ebooks/1342",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -292,11 +460,95 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T12:38:34.764Z",
+                "rows": 143,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
+            },
+            {
+                "at": "2026-08-23T13:00:01.607Z",
+                "rows": 196,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T13:42:46.218Z",
+                "rows": 196,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T14:06:57.572Z",
+                "rows": 196,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T14:46:27.986Z",
+                "rows": 196,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T15:07:02.843Z",
+                "rows": 196,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T15:44:46.858Z",
+                "rows": 196,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
             }
         ],
-        "last_row_count": 103,
-        "last_run_at": "2026-08-20T12:08:00.216Z",
-        "last_checked_at": "2026-08-23T07:43:14.483Z"
+        "last_row_count": 143,
+        "last_run_at": "2026-08-23T12:38:34.764Z",
+        "last_checked_at": "2026-08-23T15:44:46.858Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -314,45 +566,44 @@
         ],
         "last_sample": [
             {
-                "job_title": "Computational Photonics Engineer",
-                "company": "LumiAIres Ltd",
-                "location": "Glasgow, Scotland, United Kingdom",
+                "job_title": "Senior Data Engineer (100% Remote - USA Only)",
+                "company": "Six Feet Up",
+                "location": "100% Remote, USA",
                 "job_type": [
-                    "Image Processing",
-                    "Integration",
-                    "Machine Learning",
-                    "Numeric processing",
-                    "Systems",
-                    "Testing"
+                    "Back end",
+                    "Big Data",
+                    "Cloud",
+                    "Database",
+                    "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8105/",
+                "product_page_url": "https://www.python.org/jobs/8095/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Senior Python Developer",
-                "company": "Turing",
-                "location": "Remote, Remote, Remote",
+                "job_title": "Full-Stack Engineer",
+                "company": "AIDAR",
+                "location": "Hamburg, Germany",
                 "job_type": [
                     "Back end",
+                    "Database",
                     "Front end",
                     "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8103/",
+                "product_page_url": "https://www.python.org/jobs/8108/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Python Backend Engineer",
-                "company": "Constelli Signals",
-                "location": "Hyderabad, Telangana, India",
+                "job_title": "Senior Python Backend Engineer",
+                "company": "Reef Technologies",
+                "location": "Warsaw (fully remote), Poland",
                 "job_type": [
-                    "Back end",
-                    "Database"
+                    "Back end"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8120/",
+                "product_page_url": "https://www.python.org/jobs/8121/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -400,11 +651,102 @@
                     "product_page_url"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T12:38:45.522Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "ensure"
+            },
+            {
+                "at": "2026-08-23T13:00:22.024Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T13:42:51.314Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T14:07:08.377Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T14:46:33.477Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T15:07:13.610Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T15:44:52.001Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "fast_check"
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-20T12:08:11.000Z",
-        "last_checked_at": "2026-08-23T07:43:28.310Z"
+        "last_run_at": "2026-08-23T12:38:45.522Z",
+        "last_checked_at": "2026-08-23T15:44:52.001Z"
     },
     "producthunt.com": {
         "collector_id": "c_mt5g0w2v22o0ro7nzf",
@@ -421,17 +763,19 @@
         ],
         "last_sample": [
             {
-                "product_name": "KanaSensei",
-                "tagline": "Read Japanese kana in two weeks",
-                "product_page_url": "https://www.producthunt.com/products/kanasensei",
+                "product_name": "Aximote",
+                "tagline": "Your car data, finally in your pocket",
+                "upvote_count": 6,
+                "product_page_url": "https://www.producthunt.com/products/aximote",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
             },
             {
-                "product_name": "Local Music Organizer for Mac",
-                "tagline": "Ultimate toolkit for local Apple Music library maintenance",
-                "product_page_url": "https://www.producthunt.com/products/local-music-organizer-for-mac",
+                "product_name": "FetchSandbox",
+                "tagline": "API integration testing that remembers what breaks",
+                "upvote_count": 5,
+                "product_page_url": "https://www.producthunt.com/products/fetchsandbox",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -439,7 +783,7 @@
             {
                 "product_name": "Construct Computer",
                 "tagline": "Your AI coworker gets a computer. You get your day back.",
-                "upvote_count": 6,
+                "upvote_count": 8,
                 "product_page_url": "https://www.producthunt.com/products/construct-computer",
                 "input": {
                     "url": "https://www.producthunt.com"
@@ -509,10 +853,94 @@
                     "upvote_count"
                 ],
                 "source": "ensure"
+            },
+            {
+                "at": "2026-08-23T12:39:21.966Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "ensure"
+            },
+            {
+                "at": "2026-08-23T13:00:57.599Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T13:43:41.871Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T14:07:40.142Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T14:47:04.884Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T15:07:50.498Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T15:45:42.416Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "fast_check"
             }
         ],
-        "last_run_at": "2026-08-23T07:46:34.868Z",
+        "last_run_at": "2026-08-23T12:39:21.966Z",
         "last_row_count": 3,
-        "last_checked_at": "2026-08-23T07:46:34.867Z"
+        "last_checked_at": "2026-08-23T15:45:42.416Z"
     }
 }
