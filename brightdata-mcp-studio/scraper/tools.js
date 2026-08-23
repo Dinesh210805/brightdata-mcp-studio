@@ -11,6 +11,7 @@
 import {z} from 'zod';
 import * as api from './api.js';
 import {ensure, create_and_wait, heal_and_save} from './ensure.js';
+import {fast_check} from './fast_check.js';
 import {load_registry} from './registry.js';
 import {classify_status} from './requests.js';
 
@@ -283,6 +284,53 @@ const scraper_registry_list = {
     },
 };
 
+const scraper_check_now = {
+    name: 'scraper_check_now',
+    description: 'Fast, on-demand check for whether a known scraper is still '
+        +'returning good data - a real scrape and a data check, no AI job, so '
+        +'it costs a fraction of scraper_ensure. Use this to check a site '
+        +'right now instead of waiting for the 6-hourly schedule. If the data '
+        +'looks wrong it automatically escalates to a full repair (the same '
+        +'thing scraper_ensure does) and reports that outcome too. If another '
+        +'check or repair is already running for this domain, it reports '
+        +'that instead of starting a second one.',
+    annotations: {
+        title: 'Check Scraper Health Now',
+        readOnlyHint: false,
+        openWorldHint: true,
+    },
+    parameters: z.object({
+        url: z.string().url()
+            .describe('The page whose scraper should be checked. Must '
+                +'already have a scraper - this does not build one.'),
+    }),
+    execute: async ({url})=>{
+        const result = await fast_check(api_token, url);
+        if (result.skipped)
+        {
+            return json({
+                url,
+                skipped: true,
+                reason: result.reason,
+                next_step: 'A check or repair for this domain is already in '
+                    +'progress. Try again in a few minutes.',
+            });
+        }
+        return json({
+            url,
+            healthy: result.healthy,
+            problems: result.reasons,
+            repaired: Boolean(result.escalated_to_heal && result.healed),
+            rebuilt_from_scratch: Boolean(result.escalated_to_heal
+                && result.escalated),
+            what_happened: result.trace ?? (result.healthy
+                ? ['Checked - data looks right, no repair needed.']
+                : ['No registry entry for this domain yet - nothing to '
+                    +'check. Use scraper_ensure to build one.']),
+        });
+    },
+};
+
 export const tools = [
     scraper_ensure,
     scraper_create,
@@ -291,4 +339,5 @@ export const tools = [
     scraper_heal,
     scraper_approve,
     scraper_registry_list,
+    scraper_check_now,
 ];

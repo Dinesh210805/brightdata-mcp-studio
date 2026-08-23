@@ -189,6 +189,7 @@ export const GROUPS = {
             'scraper_heal',
             'scraper_approve',
             'scraper_registry_list',
+            'scraper_check_now',
         ],
     },
     ACCOUNT: {
