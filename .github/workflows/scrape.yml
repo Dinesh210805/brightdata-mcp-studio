@@ -9,6 +9,13 @@ on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
+    inputs:
+      domain:
+        description: >-
+          Check one domain right now instead of running the full schedule
+          (e.g. news.ycombinator.com). Leave empty to run every scraper, same
+          as the schedule does.
+        required: false
 
 # The default GITHUB_TOKEN is read-only. Without this the run succeeds and the
 # push at the end silently fails, losing the history this workflow exists for.
@@ -39,7 +46,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run scrapers
+      - name: Check one domain now
+        if: ${{ github.event.inputs.domain != '' }}
+        env:
+          API_TOKEN: ${{ secrets.BRIGHTDATA_API_KEY }}
+        run: node scripts/check-now.js "${{ github.event.inputs.domain }}"
+
+      - name: Run every scraper
+        if: ${{ github.event.inputs.domain == '' }}
         env:
           API_TOKEN: ${{ secrets.BRIGHTDATA_API_KEY }}
         run: node scripts/cron.js

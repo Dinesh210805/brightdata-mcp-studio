@@ -31,6 +31,17 @@ for (const [domain, entry] of entries)
 {
     try {
         const result = await ensure(token, entry.source_url, entry.description);
+
+        // A locked domain means the fast health-check path or a manual
+        // trigger is already healing it. That is the lock doing its job, not
+        // a fault - counting it as a failure would turn the build red for
+        // exactly the case this exists to prevent.
+        if (result.skipped)
+        {
+            console.log(`${domain}: skipped - ${result.reason}`);
+            continue;
+        }
+
         for (const line of result.trace)
             console.log(`${domain}: ${line}`);
 
