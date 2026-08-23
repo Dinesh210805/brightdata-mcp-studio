@@ -22,7 +22,7 @@ import * as api from './api.js';
 import {
     load_registry, save_registry, get_entry, put_entry, record_heal,
     record_run, record_cleanup, abandon,
-    domain_of,
+    domain_of, is_locked, acquire_lock, release_lock,
 } from './registry.js';
 import {check_health} from './health.js';
 import {save_run} from './store.js';
@@ -122,12 +122,14 @@ const new_entry = (built, url, description)=>({
     run_history: [],
 });
 
-export const ensure = async (token, url, description, opts = {})=>{
-    const deps = {...default_deps, ...opts.deps};
+// The full reuse/create/run/heal/verify/escalate loop, operating on a
+// registry the caller has already loaded (and, for an existing entry,
+// already locked). Split out so `ensure()` below can wrap it with the heal
+// lock without duplicating any of this logic.
+const perform_ensure = async (token, url, description, opts, deps, registry)=>{
     const auto_heal = opts.auto_heal !== false;
     const trace = [];
 
-    let registry = deps.load();
     let entry = get_entry(registry, url);
     let created = false;
 
@@ -270,13 +272,59 @@ export const ensure = async (token, url, description, opts = {})=>{
     deps.save(registry);
 
     return {
-        domain: domain_of(url),
-        collector_id: get_entry(registry, url).collector_id,
-        created,
-        healed,
-        escalated,
-        health,
-        records,
-        trace,
+        registry,
+        result: {
+            domain: domain_of(url),
+            collector_id: get_entry(registry, url).collector_id,
+            created,
+            healed,
+            escalated,
+            health,
+            records,
+            trace,
+        },
     };
+};
+
+// Wraps perform_ensure with the heal lock. Escalation deletes the collector
+// it abandons - irreversible - so the fast health-check path, a manual
+// trigger, and the six-hourly cron must never heal the same domain at once.
+//
+// A domain found already locked is not an error - it is one of those three
+// callers finding the domain busy, which is the point of the lock - so it
+// returns {skipped: true} rather than throwing or waiting.
+export const ensure = async (token, url, description, opts = {})=>{
+    const deps = {...default_deps, ...opts.deps};
+    const domain = domain_of(url);
+
+    let registry = deps.load();
+    const pre_entry = get_entry(registry, url);
+
+    if (pre_entry && is_locked(pre_entry))
+        return {domain, skipped: true, reason: 'locked'};
+
+    registry = acquire_lock(registry, url);
+    // Saved immediately, before any slow work starts, so a concurrent caller
+    // loading the registry mid-heal sees the lock rather than a stale copy.
+    deps.save(registry);
+
+    // If nothing below finishes cleanly, the domain goes back to whatever it
+    // was before - an unfinished attempt should never look like a verdict.
+    let final_status = pre_entry?.status ?? 'active';
+
+    try {
+        const outcome = await perform_ensure(
+            token, url, description, opts, deps, registry);
+        registry = outcome.registry;
+        // Escalation that is still broken after the one rebuild it is allowed
+        // needs a person, not another automatic attempt on the next tick -
+        // marking it abandoned is what stops the fast path, the cron, and a
+        // manual trigger from re-escalating (and re-deleting) it forever.
+        final_status = outcome.result.escalated && !outcome.result.health.healthy
+            ? 'abandoned' : 'active';
+        return outcome.result;
+    } finally {
+        registry = release_lock(registry, url, final_status);
+        deps.save(registry);
+    }
 };

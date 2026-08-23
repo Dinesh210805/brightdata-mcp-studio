@@ -144,6 +144,64 @@ test('a failed deletion is recorded and does not break the rebuild', async ()=>{
 
 const res_trace = res=>res.trace.join(' ');
 
+test('a domain already being healed is skipped, not retried', async ()=>{
+    let ran = false;
+    const res = await ensure('token', 'https://a.com', 'title, price', {
+        deps: make_deps({
+            load: ()=>({'a.com': {
+                ...existing_entry, locked_at: new Date().toISOString(),
+            }}),
+            run: async ()=>{ ran = true; return good; },
+        }),
+    });
+    assert.equal(res.skipped, true);
+    assert.equal(res.reason, 'locked');
+    assert.equal(ran, false);
+});
+
+test('a stale lock does not block a new run', async ()=>{
+    const stale = new Date(Date.now()-21*60*1000).toISOString();
+    const res = await ensure('token', 'https://a.com', 'title, price', {
+        deps: make_deps({
+            load: ()=>({'a.com': {...existing_entry, locked_at: stale}}),
+        }),
+    });
+    assert.equal(res.skipped, undefined);
+    assert.equal(res.health.healthy, true);
+});
+
+test('the lock is released even when the run throws', async ()=>{
+    let saved = null;
+    await assert.rejects(ensure('token', 'https://a.com', 'title, price', {
+        deps: make_deps({
+            save: registry=>{ saved = registry; },
+            run: async ()=>{ throw new Error('network down'); },
+        }),
+    }));
+    assert.equal(saved['a.com'].locked_at, undefined);
+});
+
+test('a successful run releases the lock with status active', async ()=>{
+    let saved = null;
+    await ensure('token', 'https://a.com', 'title, price', {
+        deps: make_deps({save: registry=>{ saved = registry; }}),
+    });
+    assert.equal(saved['a.com'].locked_at, undefined);
+    assert.equal(saved['a.com'].status, 'active');
+});
+
+test('a rebuild that is still broken releases the lock as abandoned', async ()=>{
+    let saved = null;
+    await ensure('token', 'https://a.com', 'title, price', {
+        deps: make_deps({
+            run: async ()=>broken,
+            save: registry=>{ saved = registry; },
+        }),
+    });
+    assert.equal(saved['a.com'].locked_at, undefined);
+    assert.equal(saved['a.com'].status, 'abandoned');
+});
+
 test('a rebuild that works is reported healthy', async ()=>{
     let runs = 0;
     const res = await ensure('token', 'https://a.com', 'title, price', {
