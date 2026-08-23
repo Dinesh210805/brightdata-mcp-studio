@@ -1,0 +1,531 @@
+[
+  {
+    "title": "Captain Zilog",
+    "points": 42,
+    "author": "rbanffy",
+    "product_page_url": "https://news.ycombinator.com/item?id=49329919",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Speeding Up (Small) Ruby Hashes",
+    "points": 45,
+    "author": "arto",
+    "product_page_url": "https://news.ycombinator.com/item?id=49295112",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Codex on AWS bedrock bug causing 10x charges",
+    "points": 94,
+    "author": "TheP1000",
+    "product_page_url": "https://news.ycombinator.com/item?id=49383326",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Git at any scale",
+    "points": 319,
+    "author": "meetpateltech",
+    "product_page_url": "https://news.ycombinator.com/item?id=49348141",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Anti-AI fonts are useless and harmful",
+    "points": 144,
+    "author": "speckx",
+    "product_page_url": "https://news.ycombinator.com/item?id=49375719",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Every Model Cheats",
+    "points": 94,
+    "author": "vga805",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374635",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "I should have loved biology (2020)",
+    "points": 246,
+    "author": "tyre",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377853",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Ox Alpha",
+    "points": 91,
+    "author": "mtokmak06",
+    "product_page_url": "https://news.ycombinator.com/item?id=49381896",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Project Cybersyn (2022)",
+    "points": 58,
+    "author": "cassepipe",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377739",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "HTML Can Do That",
+    "points": 698,
+    "author": "encyclopedism",
+    "product_page_url": "https://news.ycombinator.com/item?id=49362689",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "CIA funding helped keep NeXT afloat in the 80s",
+    "points": 387,
+    "author": "EwanG",
+    "product_page_url": "https://news.ycombinator.com/item?id=49368886",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Malicious Rust crate Arrayref runs a build-time payload",
+    "points": 462,
+    "author": "abhisek",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374269",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+    "points": 259,
+    "author": "Cider9986",
+    "product_page_url": "https://news.ycombinator.com/item?id=49383026",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "The August 17 outage",
+    "points": 445,
+    "author": "0xedb",
+    "product_page_url": "https://news.ycombinator.com/item?id=49378957",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "I like 'em thick: an apology to my English teachers",
+    "points": 671,
+    "author": "Ariarule",
+    "product_page_url": "https://news.ycombinator.com/item?id=49347543",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Linux 7.2",
+    "points": 231,
+    "author": "mariuz",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376265",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Version Control for Everything",
+    "points": 5,
+    "author": "evakhoury",
+    "product_page_url": "https://news.ycombinator.com/item?id=49336358",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Japan tried to build an operating system for the world, the US intervened",
+    "points": 28,
+    "author": "rdmuser",
+    "product_page_url": "https://news.ycombinator.com/item?id=49384180",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "SpacetimeDB: A Short Technical Review",
+    "points": 81,
+    "author": "hurrrr",
+    "product_page_url": "https://news.ycombinator.com/item?id=49378933",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Make a 6-Tesla-class high-temperature superconducting dipole magnet at 4.2 K",
+    "points": 32,
+    "author": "supermagnet",
+    "product_page_url": "https://news.ycombinator.com/item?id=49304409",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Huzzah – a novel approach to coding with AI",
+    "points": 280,
+    "author": "danielvaughn",
+    "product_page_url": "https://news.ycombinator.com/item?id=49378768",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Consumer Rights Wiki",
+    "points": 264,
+    "author": "gregsadetsky",
+    "product_page_url": "https://news.ycombinator.com/item?id=49378243",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
+    "points": 231,
+    "author": "Bluestein",
+    "product_page_url": "https://news.ycombinator.com/item?id=49375996",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Aaron Swartz was prosecuted for scraping, while Meta does it without consequence",
+    "points": 1361,
+    "author": "speckx",
+    "product_page_url": "https://news.ycombinator.com/item?id=49379550",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces",
+    "points": 223,
+    "author": "nunodonato",
+    "product_page_url": "https://news.ycombinator.com/item?id=49360140",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "The Religious Experience of Philip K. Dick by R. Crumb (1986)",
+    "points": 12,
+    "author": "wise_blood",
+    "product_page_url": "https://news.ycombinator.com/item?id=49384224",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "How to compromise your system with a job interview",
+    "points": 149,
+    "author": "codedge",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376332",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "There's no such thing as a small software team anymore",
+    "points": 71,
+    "author": "mooreslaw",
+    "product_page_url": "https://news.ycombinator.com/item?id=49382152",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Why aren't smart people happier? (2022)",
+    "points": 144,
+    "author": "rafaelc",
+    "product_page_url": "https://news.ycombinator.com/item?id=49378446",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Ameliorate",
+    "points": 27,
+    "author": "hakkikonu",
+    "product_page_url": "https://news.ycombinator.com/item?id=49380128",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Orbital Construction Pioneers",
+    "points": 7,
+    "author": "pmcjones",
+    "product_page_url": "https://news.ycombinator.com/item?id=49382809",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Nearly 1,400 live streams from Japan",
+    "points": 120,
+    "author": "pajop",
+    "product_page_url": "https://news.ycombinator.com/item?id=49336772",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Detecting scraper bots through scroll behaviour",
+    "points": 35,
+    "author": "theanonymousone",
+    "product_page_url": "https://news.ycombinator.com/item?id=49381311",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: ParqDB – Vector search in the browser from Parquet over HTTP\"",
+    "points": 12,
+    "author": "petrizhang",
+    "product_page_url": "https://news.ycombinator.com/item?id=49382022",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Turns are Better than Radians (2022)",
+    "points": 337,
+    "author": "mayoff",
+    "product_page_url": "https://news.ycombinator.com/item?id=49369408",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Scientists Release Biggest 2D Map of the Universe",
+    "points": 19,
+    "author": "gmays",
+    "product_page_url": "https://news.ycombinator.com/item?id=49380671",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "DiffusionGemma Technical Report",
+    "points": 146,
+    "author": "gmays",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374287",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Open-source Stripe Connect alternative",
+    "points": 69,
+    "author": "tinyprojects",
+    "product_page_url": "https://news.ycombinator.com/item?id=49375244",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Copyright does not protect AI-generated content in EU",
+    "points": 167,
+    "author": "u1hcw9nx",
+    "product_page_url": "https://news.ycombinator.com/item?id=49382041",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Sixtyfour (YC P25) Is Hiring",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377248",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Hard Problems and Heuristic Answers",
+    "points": 5,
+    "author": "Anon84",
+    "product_page_url": "https://news.ycombinator.com/item?id=49330622",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Early-life stress leaves a 'scar' inside brain cells",
+    "points": 31,
+    "author": "gmays",
+    "product_page_url": "https://news.ycombinator.com/item?id=49380303",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "An elliptic curve of rank ≥ 30",
+    "points": 93,
+    "author": "robinhouston",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374873",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Generic Methods in Go 1.27",
+    "points": 62,
+    "author": "EspressoGPT",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376211",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Tidal Cycles – Live coding music with Algorithmic patterns",
+    "points": 63,
+    "author": "gjvc",
+    "product_page_url": "https://news.ycombinator.com/item?id=49378950",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Artificial Intelligence Policy",
+    "points": 35,
+    "author": "hackerBanana",
+    "product_page_url": "https://news.ycombinator.com/item?id=49382614",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Check if any of the $656M in unclaimed royalties at The MLC is yours",
+    "points": 71,
+    "author": "knaught",
+    "product_page_url": "https://news.ycombinator.com/item?id=49375237",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Hacking with Claude on a $27 smart watch",
+    "points": 92,
+    "author": "speckx",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374772",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: We chased a weather balloon across Montana and never found it",
+    "points": 55,
+    "author": "radeeyate",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377660",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "A faster way to calculate the day of the week",
+    "points": 251,
+    "author": "gavide",
+    "product_page_url": "https://news.ycombinator.com/item?id=49323795",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Slack Code",
+    "points": 68,
+    "author": "trollied",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374965",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "The Citizen Developer",
+    "points": 53,
+    "author": "metal13",
+    "product_page_url": "https://news.ycombinator.com/item?id=49380491",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Mojo is now open source",
+    "points": 392,
+    "author": "visheshdembla",
+    "product_page_url": "https://news.ycombinator.com/item?id=49348079",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Xorg-server 26.1.0 rc1",
+    "points": 121,
+    "author": "st_goliath",
+    "product_page_url": "https://news.ycombinator.com/item?id=49373932",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Watching TikTok and Instagram deactivates the cognitive control network: Study",
+    "points": 325,
+    "author": "Akasci",
+    "product_page_url": "https://news.ycombinator.com/item?id=49378630",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
+    "points": 543,
+    "author": "simedw",
+    "product_page_url": "https://news.ycombinator.com/item?id=49373456",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Windows brings out the Rorschach test in everyone (2003)",
+    "points": 342,
+    "author": "luu",
+    "product_page_url": "https://news.ycombinator.com/item?id=49371006",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Sol loves to cheat",
+    "points": 235,
+    "author": "jumploops",
+    "product_page_url": "https://news.ycombinator.com/item?id=49348189",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "OpenRouter is joining Stripe",
+    "points": 945,
+    "author": "rvz",
+    "product_page_url": "https://news.ycombinator.com/item?id=49364559",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  }
+]

@@ -1,0 +1,540 @@
+[
+  {
+    "title": "One night in Uzbekistan: Why was this one data point so influential?",
+    "points": 75,
+    "author": "paulpauper",
+    "product_page_url": "https://news.ycombinator.com/item?id=49392536",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Hister – A private, full content search index that you control",
+    "points": 225,
+    "author": "auraham",
+    "product_page_url": "https://news.ycombinator.com/item?id=49351802",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Rust Glancer: Rust LSP using 100x less RAM",
+    "points": 394,
+    "author": "matklad",
+    "product_page_url": "https://news.ycombinator.com/item?id=49393052",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: terminal-code – VS Code inside the terminal",
+    "points": 71,
+    "author": "robpruzan",
+    "product_page_url": "https://news.ycombinator.com/item?id=49364296",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
+    "points": 295,
+    "author": "jemoka",
+    "product_page_url": "https://news.ycombinator.com/item?id=49400408",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Munder Difflin – Agent harness to run an office of your clones",
+    "points": 248,
+    "author": "simonpure",
+    "product_page_url": "https://news.ycombinator.com/item?id=49398152",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Canada will match US tariffs 'dollar for dollar' as trade talks break down",
+    "points": 477,
+    "author": "tartoran",
+    "product_page_url": "https://news.ycombinator.com/item?id=49397074",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "AI has failed to win people's trust. Its makers? less trusted",
+    "points": 12,
+    "author": "billybuckwheat",
+    "product_page_url": "https://news.ycombinator.com/item?id=49404869",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
+    "points": 163,
+    "author": "matthieu_bl",
+    "product_page_url": "https://news.ycombinator.com/item?id=49401549",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Z80 – The 1970s Microprocessor Still Alive (2021)",
+    "points": 114,
+    "author": "asdefghyk",
+    "product_page_url": "https://news.ycombinator.com/item?id=49398158",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Public Muscriptor Instance (latest, most powerful Audio-to-MIDI model)",
+    "points": 20,
+    "author": "jardy",
+    "product_page_url": "https://news.ycombinator.com/item?id=49389846",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Make your logo extra bright on HDR screens",
+    "points": 48,
+    "author": "telecuda",
+    "product_page_url": "https://news.ycombinator.com/item?id=49402521",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Scientists release biggest 2D map of the universe",
+    "points": 252,
+    "author": "NKosmatos",
+    "product_page_url": "https://news.ycombinator.com/item?id=49392200",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Autolith: A programming agent with a live runtime",
+    "points": 109,
+    "author": "vismit2000",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376197",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Zig’s Io.Threaded is neat",
+    "points": 146,
+    "author": "chilipepperhott",
+    "product_page_url": "https://news.ycombinator.com/item?id=49388694",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Kobo can run apps now",
+    "points": 640,
+    "author": "thepoet",
+    "product_page_url": "https://news.ycombinator.com/item?id=49390427",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Stop Making TUIs",
+    "points": 380,
+    "author": "underdeserver",
+    "product_page_url": "https://news.ycombinator.com/item?id=49384210",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "How we made a text-to-speech model respond in sub-50 ms",
+    "points": 165,
+    "author": "toebee",
+    "product_page_url": "https://news.ycombinator.com/item?id=49389952",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "SalesPatriot (YC W25) Is Hiring Forward Deployed Engineers",
+    "product_page_url": "https://news.ycombinator.com/item?id=49393733",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Why your local LLM feels dumber than it is",
+    "points": 170,
+    "author": "felineflock",
+    "product_page_url": "https://news.ycombinator.com/item?id=49402232",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+    "points": 78,
+    "author": "dariusmonsef",
+    "product_page_url": "https://news.ycombinator.com/item?id=49394827",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Why it might be time to rethink the human family tree",
+    "points": 55,
+    "author": "Anon84",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377316",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "typ.ing",
+    "points": 171,
+    "author": "bookofjoe",
+    "product_page_url": "https://news.ycombinator.com/item?id=49346854",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "A Kantian Critique of \"Sorry\" by Justin Bieber",
+    "points": 194,
+    "author": "altmanaltman",
+    "product_page_url": "https://news.ycombinator.com/item?id=49399524",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Guess which of these LLM outputs is watermarked",
+    "points": 63,
+    "author": "gfysfm",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374729",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "ProgramBench Vetted: Reverse Engineering from a Runnable Binary",
+    "points": 23,
+    "author": "rigelbm",
+    "product_page_url": "https://news.ycombinator.com/item?id=49375176",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "NetBSD and my life (2005)",
+    "points": 93,
+    "author": "gnyeki",
+    "product_page_url": "https://news.ycombinator.com/item?id=49402781",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Thinking in Python by Bruce Eckel",
+    "points": 45,
+    "author": "pjacotg",
+    "product_page_url": "https://news.ycombinator.com/item?id=49402202",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "ATProto spaces: A new extension to ATProto that enables non-public data",
+    "points": 107,
+    "author": "grappler",
+    "product_page_url": "https://news.ycombinator.com/item?id=49379732",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "MiniageOS: \"Dumbphone\" Version of LineageOS",
+    "points": 37,
+    "author": "ashenke",
+    "product_page_url": "https://news.ycombinator.com/item?id=49370284",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+    "points": 105,
+    "author": "olalonde",
+    "product_page_url": "https://news.ycombinator.com/item?id=49387959",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "RF Cafe",
+    "points": 146,
+    "author": "gregsadetsky",
+    "product_page_url": "https://news.ycombinator.com/item?id=49355659",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Conway's Game of Life in real life",
+    "points": 35,
+    "author": "surprisetalk",
+    "product_page_url": "https://news.ycombinator.com/item?id=49373822",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "A week of using Codex more than Claude",
+    "points": 122,
+    "author": "speckx",
+    "product_page_url": "https://news.ycombinator.com/item?id=49393051",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "New MCP Roadmap",
+    "points": 173,
+    "author": "pentagrama",
+    "product_page_url": "https://news.ycombinator.com/item?id=49399591",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "What's in a PowerPoint File?",
+    "points": 53,
+    "author": "danielochoa0620",
+    "product_page_url": "https://news.ycombinator.com/item?id=49360643",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "NanoGPT Speedrun Frontier",
+    "points": 42,
+    "author": "stared",
+    "product_page_url": "https://news.ycombinator.com/item?id=49404380",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Felony charges for citizen deleting phone data at US Border",
+    "points": 1049,
+    "author": "floathub",
+    "product_page_url": "https://news.ycombinator.com/item?id=49386895",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "A Friendly Introduction to Racket",
+    "points": 186,
+    "author": "signa11",
+    "product_page_url": "https://news.ycombinator.com/item?id=49399898",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Ameliorate",
+    "points": 79,
+    "author": "hakkikonu",
+    "product_page_url": "https://news.ycombinator.com/item?id=49380128",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Everyone says assembly is untyped—everyone is wrong",
+    "points": 146,
+    "author": "adamrezich",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376769",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "OTel isn’t going well",
+    "points": 215,
+    "author": "hn_acker",
+    "product_page_url": "https://news.ycombinator.com/item?id=49391553",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Mythic's analog compute-in-memory architecture",
+    "points": 46,
+    "author": "janandonly",
+    "product_page_url": "https://news.ycombinator.com/item?id=49352470",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "The war on data centres is a bit fake",
+    "points": 20,
+    "author": "edward",
+    "product_page_url": "https://news.ycombinator.com/item?id=49401082",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "How Thailand Resisted Colonization",
+    "points": 120,
+    "author": "karakoram",
+    "product_page_url": "https://news.ycombinator.com/item?id=49392099",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
+    "points": 137,
+    "author": "gmays",
+    "product_page_url": "https://news.ycombinator.com/item?id=49380303",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "A New Kind of Science by Stephen Wolfram: Monster Raving Egomania",
+    "points": 14,
+    "author": "maxall4",
+    "product_page_url": "https://news.ycombinator.com/item?id=49404282",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Anonymous age verification with passkey-powered encryption",
+    "points": 36,
+    "author": "mikeysight",
+    "product_page_url": "https://news.ycombinator.com/item?id=49361478",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Dynamical dark energy and the week that broke cosmology",
+    "points": 40,
+    "author": "rznicolet",
+    "product_page_url": "https://news.ycombinator.com/item?id=49381991",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Felony Bench",
+    "points": 818,
+    "author": "colinprince",
+    "product_page_url": "https://news.ycombinator.com/item?id=49389430",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "AI boosted homework scores, then exam scores dropped: study",
+    "points": 370,
+    "author": "dash2",
+    "product_page_url": "https://news.ycombinator.com/item?id=49357530",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Rotation via Double Reflection",
+    "points": 53,
+    "author": "laszlokorte",
+    "product_page_url": "https://news.ycombinator.com/item?id=49391168",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Zcomplete – Shell Typo Correction",
+    "points": 15,
+    "author": "omarfakih",
+    "product_page_url": "https://news.ycombinator.com/item?id=49392677",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "People of ACM – Russ Cox",
+    "points": 166,
+    "author": "signa11",
+    "product_page_url": "https://news.ycombinator.com/item?id=49327408",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "The Creation of Abulafia",
+    "points": 27,
+    "author": "saulpw",
+    "product_page_url": "https://news.ycombinator.com/item?id=49393537",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "There's no reason for software to be slow anymore",
+    "points": 620,
+    "author": "Jach",
+    "product_page_url": "https://news.ycombinator.com/item?id=49395628",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
+    "points": 200,
+    "author": "sbulaev",
+    "product_page_url": "https://news.ycombinator.com/item?id=49398904",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "US Military newspaper editor voices censorship fears after being fired",
+    "points": 6,
+    "author": "tartoran",
+    "product_page_url": "https://news.ycombinator.com/item?id=49405110",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "hdiutil is deprecated in macOS 27 Golden Gate",
+    "points": 158,
+    "author": "zdw",
+    "product_page_url": "https://news.ycombinator.com/item?id=49402741",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Scrap",
+    "points": 304,
+    "author": "tosh",
+    "product_page_url": "https://news.ycombinator.com/item?id=49402189",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  }
+]

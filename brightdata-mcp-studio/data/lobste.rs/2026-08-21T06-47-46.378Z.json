@@ -1,0 +1,1127 @@
+[
+  {
+    "title": "Bringing Primary Constructors to Dart",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/khphqe/bringing_primary_constructors_dart",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Going freestanding",
+    "score": 10,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/8cq6jl/going_freestanding",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Open-sourcing OpenPubkey SSH (OPKSSH): integrating single sign-on with SSH",
+    "score": 12,
+    "comment_count": 5,
+    "product_page_url": "https://lobste.rs/s/n7kpm6/open_sourcing_openpubkey_ssh_opkssh",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "HTML Can Do That",
+    "score": 212,
+    "comment_count": 53,
+    "product_page_url": "https://lobste.rs/s/5gcd3t/html_can_do",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "If this is true, the hyperscalers are toast",
+    "score": 19,
+    "comment_count": 19,
+    "product_page_url": "https://lobste.rs/s/xgxp9m/if_this_is_true_hyperscalers_are_toast",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Emacs 31.1 will release on 8/24",
+    "score": 16,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/ikhwaz/emacs_31_1_will_release_on_8_24",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Announcing Rust 1.98.0",
+    "score": 17,
+    "comment_count": 3,
+    "product_page_url": "https://lobste.rs/s/hbjeir/announcing_rust_1_98_0",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Survival Guide for a Censored Internet",
+    "score": 4,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/pfnai9/survival_guide_for_censored_internet",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Supply chain attack on arrayref",
+    "score": 73,
+    "comment_count": 43,
+    "product_page_url": "https://lobste.rs/s/dns8du/supply_chain_attack_on_arrayref",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Zero-Knowledge Proofs Aren’t Age Verification Silver Bullets",
+    "score": 9,
+    "comment_count": 4,
+    "product_page_url": "https://lobste.rs/s/yigyaq/zero_knowledge_proofs_aren_t_age",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Opus is a minimal, statically-scoped Lisp dialect based on the semantics of f-expressions (the Kernel language)",
+    "score": 15,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/0rggrb/opus_is_minimal_statically_scoped_lisp",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "AliExpress keeps multipoint Bluetooth headphones active with WebAudio fingerprinting",
+    "score": 34,
+    "comment_count": 6,
+    "product_page_url": "https://lobste.rs/s/b0olmy/aliexpress_keeps_multipoint_bluetooth",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Btrfs Snapshot Integration in KDE",
+    "score": 4,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/umey8v/btrfs_snapshot_integration_kde",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "How a joke domain purchase turned into geopolitical warfare",
+    "score": 91,
+    "comment_count": 3,
+    "product_page_url": "https://lobste.rs/s/sfi9te/how_joke_domain_purchase_turned_into",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Bun 1.4",
+    "score": 62,
+    "comment_count": 80,
+    "product_page_url": "https://lobste.rs/s/eesu8d/bun_1_4",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Decoding Magic School Lunar's Save Game Format",
+    "score": 3,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/ygsics/decoding_magic_school_lunar_s_save_game",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Go 1.27 is released",
+    "score": 74,
+    "comment_count": 6,
+    "product_page_url": "https://lobste.rs/s/smrw3n/go_1_27_is_released",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Why compiling Rust to WebAssembly is slow",
+    "score": 28,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/vcqcgl/why_compiling_rust_webassembly_is_slow",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Everyone Says Assembly Is Untyped—Everyone Is Wrong",
+    "score": 40,
+    "comment_count": 8,
+    "product_page_url": "https://lobste.rs/s/wphnca/everyone_says_assembly_is_untyped",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "X.Org Server 26.1 RC1 Prepares For First Feature Release In Five Years",
+    "score": 15,
+    "comment_count": 2,
+    "product_page_url": "https://lobste.rs/s/exrno8/x_org_server_26_1_rc1_prepares_for_first",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "What Zig felt like, coming from Rust",
+    "score": 59,
+    "comment_count": 24,
+    "product_page_url": "https://lobste.rs/s/oaybfe/what_zig_felt_like_coming_from_rust",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Sing-song: a speakable encoding for long numbers and keys",
+    "score": 27,
+    "comment_count": 27,
+    "product_page_url": "https://lobste.rs/s/wvwqro/sing_song_speakable_encoding_for_long",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Plain Text Accounting is Pretty Cool",
+    "score": 97,
+    "comment_count": 43,
+    "product_page_url": "https://lobste.rs/s/i4lxyt/plain_text_accounting_is_pretty_cool",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Reverse-engineering Find My People to stalk ̶m̶y̶ ̶e̶x̶ a friend, cause I can",
+    "score": 19,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/ope7za/reverse_engineering_find_my_people_stalk",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Reclaim the terminal",
+    "score": 44,
+    "comment_count": 15,
+    "product_page_url": "https://lobste.rs/s/7v1wvd/reclaim_terminal",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Quake Shareware, a CD-ROM just a little too full",
+    "score": 41,
+    "comment_count": 7,
+    "product_page_url": "https://lobste.rs/s/j5xjf2/quake_shareware_cd_rom_just_little_too",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "GPU Offload in Rust: Portable, Safe, and Fast",
+    "score": 6,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/agafnk/gpu_offload_rust_portable_safe_fast",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility",
+    "score": 56,
+    "comment_count": 52,
+    "product_page_url": "https://lobste.rs/s/flcpeu/we_tracked_shipment_rare_books_it_ended_at",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "R7RS: Portable Guide",
+    "score": 4,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/7fyyej/r7rs_portable_guide",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Help from the Github Security Lab",
+    "score": 4,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/zkoid7/help_from_github_security_lab",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Hyper-Customized One-Off Software for Cheap",
+    "score": 2,
+    "comment_count": 2,
+    "product_page_url": "https://lobste.rs/s/tmlrxs/hyper_customized_one_off_software_for",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "dgit: Git forge on Durable Objects",
+    "score": 6,
+    "comment_count": 4,
+    "product_page_url": "https://lobste.rs/s/vbaang/dgit_git_forge_on_durable_objects",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "But what is cross-entropy? | Compression is Intelligence Part 2 - YouTube",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/ctbbjj/what_is_cross_entropy_compression_is",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Actual Budget",
+    "score": 16,
+    "comment_count": 8,
+    "product_page_url": "https://lobste.rs/s/tfjoxv/actual_budget",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "If You Have Users, You Have to Market Your Programming Language",
+    "score": 7,
+    "comment_count": 4,
+    "product_page_url": "https://lobste.rs/s/rg0rlr/if_you_have_users_you_have_market_your",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Biboumi – XMPP gateway to IRC",
+    "score": 23,
+    "comment_count": 8,
+    "product_page_url": "https://lobste.rs/s/ih4bmy/biboumi_xmpp_gateway_irc",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Mathematics in the age of AI (Terence Tao)",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/qbpcwv/mathematics_age_ai_terence_tao",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "A Preview of DuckDB v2.0",
+    "score": 61,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/wya4zt/preview_duckdb_v2_0",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Notes: Scratch, The Programming Language",
+    "score": 2,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/hivadd/notes_scratch_programming_language",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "os8088, A Mac-style GUI OS for the IBM PC XT",
+    "score": 3,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/tayev3/os8088_mac_style_gui_os_for_ibm_pc_xt",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Experiment in reducing target directory size on nightly",
+    "score": 14,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/omsqyf/experiment_reducing_target_directory",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Incident Report for GitHub outage on 2026-08-17",
+    "score": 11,
+    "comment_count": 7,
+    "product_page_url": "https://lobste.rs/s/ljhgcd/incident_report_for_github_outage_on_2026",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Bypassing Signature Verification in U-Boot SPL",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/luokuk/bypassing_signature_verification_u_boot",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "KCL part 3, look and feel",
+    "score": 2,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/kry26x/kcl_part_3_look_feel",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Odin's New Inline Assembly Templates",
+    "score": 24,
+    "comment_count": 4,
+    "product_page_url": "https://lobste.rs/s/loltt2/odin_s_new_inline_assembly_templates",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Raiders of the Lost Array: vibe-coding a macOS driver (and companion app) for my orphaned Drobo",
+    "score": 0,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/ikcb2a/raiders_lost_array_vibe_coding_macos",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "The Design and Evolution of io_uring",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/3cahzo/design_evolution_io_uring",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "GitHub has alternatives, but no replacement",
+    "score": 62,
+    "comment_count": 68,
+    "product_page_url": "https://lobste.rs/s/izrwdc/github_has_alternatives_no_replacement",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Alibaba's TSMC-Built 5nm RISC-V Chip, XuanTie C950, Now Runs Qwen-3.8 27B Model Natively, Unlocking Massive Vertical Integration Tailwinds",
+    "score": 9,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/5kw58e/alibaba_s_tsmc_built_5nm_risc_v_chip",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Palomar – a registry of Lean verified mathematics",
+    "score": 4,
+    "comment_count": 4,
+    "product_page_url": "https://lobste.rs/s/rjxezi/palomar_registry_lean_verified",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Declarative systems and sources of truth",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/tuhmlb/declarative_systems_sources_truth",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Ormolu: One refactor that fixed everything",
+    "score": 4,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/wdpdrr/ormolu_one_refactor_fixed_everything",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Organizing in Layer 8 – Building Tech in Democratic Socialists of America",
+    "score": 5,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/aqwiot/organizing_layer_8_building_tech",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "C++26: std::polymorphic",
+    "score": 2,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/fut1p0/c_26_std_polymorphic",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "What if Maintainer Burnout Isn't Burnout",
+    "score": 5,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/zev1z8/what_if_maintainer_burnout_isn_t_burnout",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Does it make sense to switch to a Github Alternative ?",
+    "score": 80,
+    "comment_count": 89,
+    "product_page_url": "https://lobste.rs/s/0zdh32/does_it_make_sense_switch_github",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "How Bluesky draws its logo on screenshots",
+    "score": 94,
+    "comment_count": 10,
+    "product_page_url": "https://lobste.rs/s/05ocit/how_bluesky_draws_its_logo_on_screenshots",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Analysis of Virtual.1",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/pazacq/analysis_virtual_1",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Shading Motion",
+    "score": 12,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/8vihvm/shading_motion",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "The benchmarkpocalypse",
+    "score": 21,
+    "comment_count": 11,
+    "product_page_url": "https://lobste.rs/s/wlofzl/benchmarkpocalypse",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "AI;DR (AI; Didn’t Read)",
+    "score": 35,
+    "comment_count": 11,
+    "product_page_url": "https://lobste.rs/s/fx9pic/ai_dr_ai_didn_t_read",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Rethinking Database Programming",
+    "score": 78,
+    "comment_count": 33,
+    "product_page_url": "https://lobste.rs/s/ykq7ym/rethinking_database_programming",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Selective Applicative Functors",
+    "score": 12,
+    "comment_count": 3,
+    "product_page_url": "https://lobste.rs/s/jin8t5/selective_applicative_functors",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Rooting the Cadillac Part 1: Lay of the Land",
+    "score": 5,
+    "comment_count": 2,
+    "product_page_url": "https://lobste.rs/s/34m4fl/rooting_cadillac_part_1_lay_land",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "The Data Copy That Lies",
+    "score": 6,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/riwtej/data_copy_lies",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Liquid Types as a behavioural sandbox for agents",
+    "score": 3,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/9oy4ao/liquid_types_as_behavioural_sandbox_for",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "AscendNPU-IR: MLIR for Ascend",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/zpk6cj/ascendnpu_ir_mlir_for_ascend",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Using the railway network as a flatbed scanner",
+    "score": 72,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/n7i1jn/using_railway_network_as_flatbed_scanner",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "SimpleEnglish: make LLMs write docs in ASD-STE100 like AirBus manuals",
+    "score": 5,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/psaq5a/simpleenglish_make_llms_write_docs_asd",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "AI didn't erase the junior's value. It increased it",
+    "score": 1,
+    "comment_count": 2,
+    "product_page_url": "https://lobste.rs/s/otifxs/ai_didn_t_erase_junior_s_value_it_increased",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Parsing IP addresses in C# at crazy speeds",
+    "score": 4,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/fboohk/parsing_ip_addresses_c_at_crazy_speeds",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Fairphone 6 + PostmarketOS working main camera",
+    "score": 21,
+    "comment_count": 10,
+    "product_page_url": "https://lobste.rs/s/hisxut/fairphone_6_postmarketos_working_main",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "CSS: the bomb inside your inbox",
+    "score": 57,
+    "comment_count": 12,
+    "product_page_url": "https://lobste.rs/s/qo7eyx/css_bomb_inside_your_inbox",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "The August 17 outage, and the work ahead",
+    "score": 3,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/cflfsl/august_17_outage_work_ahead",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Rewriting in Rust: Performance, Failures, 2026 Reality Check",
+    "score": 3,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/bmdiuz/rewriting_rust_performance_failures",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Why I still hand write my commit messages",
+    "score": 43,
+    "comment_count": 16,
+    "product_page_url": "https://lobste.rs/s/kj1bvt/why_i_still_hand_write_my_commit_messages",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "a filename when none exists",
+    "score": 26,
+    "comment_count": 15,
+    "product_page_url": "https://lobste.rs/s/xftgtd/filename_when_none_exists",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Keep the monolith, but split the workloads (2023)",
+    "score": 1,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/dmweja/keep_monolith_split_workloads_2023",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Bun 1.4 Rust rewrite is not looking good",
+    "score": 113,
+    "comment_count": 91,
+    "product_page_url": "https://lobste.rs/s/caubyr/bun_1_4_rust_rewrite_is_not_looking_good",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "A Personal Computer For Children Of All Cultures (2019)",
+    "score": 7,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/ikeag0/personal_computer_for_children_all",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "raylib examples in Jolt",
+    "score": 2,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/qoosh8/raylib_examples_jolt",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Ahab: Hermeticity Analyzer for Bazel",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/lt0cqn/ahab_hermeticity_analyzer_for_bazel",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Packing Malware in Rosetta 2",
+    "score": 6,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/ppvyr1/packing_malware_rosetta_2",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "20× the CI traffic without getting slower: How we rebuilt Git serving at Datadog",
+    "score": 3,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/q8whub/20x_ci_traffic_without_getting_slower_how",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "The Idea Processor, or “What is the use case?”",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/fsd1mf/idea_processor_what_is_use_case",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "How I developed an Am29000 C compiler and web browser",
+    "score": 9,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/sfiihp/how_i_developed_am29000_c_compiler_web",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Double-double: 31 digits of precision without leaving the FPU",
+    "score": 5,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/mxnn9v/double_double_31_digits_precision",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "When str.lower() is a security vulnerability in Python",
+    "score": 17,
+    "comment_count": 4,
+    "product_page_url": "https://lobste.rs/s/ap9w8i/when_str_lower_is_security_vulnerability",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "How to fix Claude 5's token vomit",
+    "score": 1,
+    "comment_count": 2,
+    "product_page_url": "https://lobste.rs/s/juekuk/how_fix_claude_5_s_token_vomit",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Understanding the limitations of Pubsub systems",
+    "score": 13,
+    "comment_count": 3,
+    "product_page_url": "https://lobste.rs/s/psxjb4/understanding_limitations_pubsub",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "capri: Type-safe, atomic Gleam bindings for Khepri, the modern distributed database for the BEAM",
+    "score": 8,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/3tbpsd/capri_type_safe_atomic_gleam_bindings_for",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Introducing Microlighter",
+    "score": 36,
+    "comment_count": 5,
+    "product_page_url": "https://lobste.rs/s/lxo74i/introducing_microlighter",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Protobuf Explained",
+    "score": 2,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/3gfkxs/protobuf_explained",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Open Source Is Not a Virtue: It’s an Ownership Model",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/xmitkl/open_source_is_not_virtue_it_s_ownership",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Mastodon 5.0: Laying the foundation",
+    "score": 76,
+    "comment_count": 21,
+    "product_page_url": "https://lobste.rs/s/m0okh1/mastodon_5_0_laying_foundation",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Three ways to smuggle SQLite into Nix",
+    "score": 4,
+    "comment_count": 3,
+    "product_page_url": "https://lobste.rs/s/fot6le/three_ways_smuggle_sqlite_into_nix",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Ploopy A+ (external trackball)",
+    "score": 47,
+    "comment_count": 10,
+    "product_page_url": "https://lobste.rs/s/vpmzvx/ploopy_external_trackball",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Solo: a .so loader for static Linux binaries",
+    "score": 23,
+    "comment_count": 18,
+    "product_page_url": "https://lobste.rs/s/dajsxn/solo_so_loader_for_static_linux_binaries",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "NASA's System Modeling Language, FPP",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/mlishw/nasa_s_system_modeling_language_fpp",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "SQLite for Everything",
+    "score": 39,
+    "comment_count": 18,
+    "product_page_url": "https://lobste.rs/s/gmherj/sqlite_for_everything",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Mojo is now open source",
+    "score": 74,
+    "comment_count": 15,
+    "product_page_url": "https://lobste.rs/s/01lxuf/mojo_is_now_open_source",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Things I want in a modern relational query language",
+    "score": 18,
+    "comment_count": 10,
+    "product_page_url": "https://lobste.rs/s/p5lkok/things_i_want_modern_relational_query",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Designing Icons & Graphics For the Original Mac",
+    "score": 20,
+    "comment_count": 2,
+    "product_page_url": "https://lobste.rs/s/l5rmvg/designing_icons_graphics_for_original",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "GitHub, autoscaling, and the component substitution fallacy",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/xfkmst/github_autoscaling_component",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "On the Capacity, Performance, and Reliability of microSD Cards",
+    "score": 9,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/yaoves/on_capacity_performance_reliability",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Easy to use Entity Component System (ECS) crafted with Odin",
+    "score": 2,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/hdef54/easy_use_entity_component_system_ecs",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Pitfalls of Benchmarking on Modern Systems",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/8mjvrb/pitfalls_benchmarking_on_modern_systems",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Go 1.27 Release Notes",
+    "score": 11,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/q0wkpe/go_1_27_release_notes",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Opinions About Compiler Building",
+    "score": 8,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/vt7qpp/opinions_about_compiler_building",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Bongard Problems",
+    "score": 3,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/q6atrp/bongard_problems",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "The people vs the AI overlords",
+    "score": 8,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/dtvslf/people_vs_ai_overlords",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "How I browse the Web with uBlock (Hard Mode)",
+    "score": 80,
+    "comment_count": 24,
+    "product_page_url": "https://lobste.rs/s/nsywuo/how_i_browse_web_with_ublock_hard_mode",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Geolocating Random Islet Image Using Geometry & CUDA GPU Programming",
+    "score": 8,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/th7q3y/geolocating_random_islet_image_using",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Extreme Programming: A Gentle Introduction",
+    "score": 9,
+    "comment_count": 2,
+    "product_page_url": "https://lobste.rs/s/qmx2sh/extreme_programming_gentle",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Poisoned Postgres connection pools",
+    "score": 2,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/d52jy6/poisoned_postgres_connection_pools",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Fixing a bricked AMD 7040 series Framework 13” laptop with $20 tools",
+    "score": 66,
+    "comment_count": 14,
+    "product_page_url": "https://lobste.rs/s/phisnd/fixing_bricked_amd_7040_series_framework",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Cultivating a robust and efficient quantum-safe HTTPS",
+    "score": 5,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/iqqi1q/cultivating_robust_efficient_quantum",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "What software do you use daily in 2026?",
+    "score": 88,
+    "comment_count": 171,
+    "product_page_url": "https://lobste.rs/s/ttxwdz/what_software_do_you_use_daily_2026",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Goroutines 101: A basic walkthrough",
+    "score": 1,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/ixxtwz/goroutines_101_basic_walkthrough",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Open Source & Security",
+    "score": 2,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/xbbyw5/open_source_security",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Exploring Arrows for sequencing effects (2025)",
+    "score": 3,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/hgsfda/exploring_arrows_for_sequencing_effects",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Fargate Is Not Firecracker (2024)",
+    "score": 15,
+    "comment_count": 1,
+    "product_page_url": "https://lobste.rs/s/qrbu3o/fargate_is_not_firecracker_2024",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "WikiWaves",
+    "score": 2,
+    "comment_count": 0,
+    "product_page_url": "https://lobste.rs/s/fv8blr/wikiwaves",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Proposal to prohibit vibe coded projects from being hosted on SourceHut",
+    "score": 4,
+    "comment_count": 7,
+    "product_page_url": "https://lobste.rs/s/5jq8hz/proposal_prohibit_vibe_coded_projects",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  },
+  {
+    "title": "Kakoune code editor",
+    "score": 47,
+    "comment_count": 28,
+    "product_page_url": "https://lobste.rs/s/3dqrwr/kakoune_code_editor",
+    "input": {
+      "url": "https://lobste.rs"
+    }
+  }
+]

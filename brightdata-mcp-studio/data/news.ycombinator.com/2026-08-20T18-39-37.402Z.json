@@ -1,0 +1,531 @@
+[
+  {
+    "title": "Show HN: sce (Simple Console Editor)",
+    "points": 5,
+    "author": "ciprian_craciun",
+    "product_page_url": "https://news.ycombinator.com/item?id=49312999",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Bitflash: A Tor-native revival of Bitcoin 0.1.0, mined on CPUs with RandomX",
+    "points": 5,
+    "author": "bitflash",
+    "product_page_url": "https://news.ycombinator.com/item?id=49378036",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Launch HN: Vendo (YC S26) – Let users build features on top of your product",
+    "points": 24,
+    "author": "yousefh409",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376038",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "CIA funding helped keep NeXT afloat in the 80s",
+    "points": 206,
+    "author": "EwanG",
+    "product_page_url": "https://news.ycombinator.com/item?id=49368886",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
+    "points": 369,
+    "author": "simedw",
+    "product_page_url": "https://news.ycombinator.com/item?id=49373456",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Omacosy – Omarchy-style tiling desktop for macOS, no SIP",
+    "points": 12,
+    "author": "paulsp",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374830",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "An elliptic curve of rank ≥ 30",
+    "points": 65,
+    "author": "robinhouston",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374873",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "How to compromise your system with a job interview",
+    "points": 58,
+    "author": "codedge",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376332",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Check if any of the $656M in unclaimed royalties at The MLC is yours",
+    "points": 47,
+    "author": "knaught",
+    "product_page_url": "https://news.ycombinator.com/item?id=49375237",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "HTML Can Do That",
+    "points": 333,
+    "author": "encyclopedism",
+    "product_page_url": "https://news.ycombinator.com/item?id=49362689",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Git at any scale",
+    "points": 178,
+    "author": "meetpateltech",
+    "product_page_url": "https://news.ycombinator.com/item?id=49348141",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Clean up Claude 5's token vomit with a separate LLM",
+    "points": 107,
+    "author": "Bluestein",
+    "product_page_url": "https://news.ycombinator.com/item?id=49375996",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "URL shortener links stored in your ATProto PDS",
+    "points": 12,
+    "author": "jcbhmr",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377535",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Sixtyfour (YC P25) Is Hiring",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377248",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "I should have loved biology",
+    "points": 18,
+    "author": "tyre",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377853",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Open-source Stripe Connect alternative",
+    "points": 38,
+    "author": "tinyprojects",
+    "product_page_url": "https://news.ycombinator.com/item?id=49375244",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Windows brings out the Rorschach test in everyone (2003)",
+    "points": 324,
+    "author": "luu",
+    "product_page_url": "https://news.ycombinator.com/item?id=49371006",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Xorg-server 26.1.0 rc1",
+    "points": 84,
+    "author": "st_goliath",
+    "product_page_url": "https://news.ycombinator.com/item?id=49373932",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Generic Methods in Go 1.27",
+    "points": 42,
+    "author": "EspressoGPT",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376211",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "I like 'em thick: an apology to my English teachers",
+    "points": 308,
+    "author": "Ariarule",
+    "product_page_url": "https://news.ycombinator.com/item?id=49347543",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Mojo is now open source",
+    "points": 258,
+    "author": "visheshdembla",
+    "product_page_url": "https://news.ycombinator.com/item?id=49348079",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Hacking with Claude on a $27 Smart Watch",
+    "points": 59,
+    "author": "speckx",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374772",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: We chased a weather balloon across Montana and never found it",
+    "points": 23,
+    "author": "radeeyate",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377660",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Optimizing things in the USSR (2016)",
+    "points": 9,
+    "author": "cassepipe",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377923",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "A theory for decades of C vulnerabilities",
+    "points": 32,
+    "author": "SilentLambda",
+    "product_page_url": "https://news.ycombinator.com/item?id=49328812",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Every Model Cheats",
+    "points": 51,
+    "author": "vga805",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374635",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Linux 7.2",
+    "points": 71,
+    "author": "mariuz",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376265",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Zellij 0.45.0: nested sessions, Kitty graphics, a fresh UI",
+    "points": 33,
+    "author": "peterhajas",
+    "product_page_url": "https://news.ycombinator.com/item?id=49373884",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Project Cybersyn",
+    "points": 6,
+    "author": "cassepipe",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377739",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "DiffusionGemma Technical Report",
+    "points": 106,
+    "author": "gmays",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374287",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "AI at Home Part 2: Multi-GPU Drifting",
+    "points": 5,
+    "author": "timmmmmmay",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377155",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Turns are Better than Radians (2022)",
+    "points": 321,
+    "author": "mayoff",
+    "product_page_url": "https://news.ycombinator.com/item?id=49369408",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Meta's Internal Research",
+    "points": 7,
+    "author": "throw0101d",
+    "product_page_url": "https://news.ycombinator.com/item?id=49375439",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "The Depth of Wiles's Proof of Fermat's Last Theorem",
+    "points": 3,
+    "author": "root-parent",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377196",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Theory of Fluids Enters the 21st Century",
+    "points": 54,
+    "author": "librasteve",
+    "product_page_url": "https://news.ycombinator.com/item?id=49333091",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Sol loves to cheat",
+    "points": 224,
+    "author": "jumploops",
+    "product_page_url": "https://news.ycombinator.com/item?id=49348189",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Malicious Rust crate Arrayref runs a build-time payload",
+    "points": 285,
+    "author": "abhisek",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374269",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Webmux: Like Tmux, but for the Browser",
+    "points": 5,
+    "author": "luu",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376971",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Nearly 1,400 live streams from Japan",
+    "points": 81,
+    "author": "pajop",
+    "product_page_url": "https://news.ycombinator.com/item?id=49336772",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "The Foothills of Bay Area House Party – By Scott Alexander",
+    "points": 10,
+    "author": "haritha1313",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377880",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "An American Mosaic (interactive map of ancestry census data)",
+    "points": 25,
+    "author": "cckolon",
+    "product_page_url": "https://news.ycombinator.com/item?id=49321515",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Risk Engineering",
+    "points": 62,
+    "author": "throwaw12",
+    "product_page_url": "https://news.ycombinator.com/item?id=49372661",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Double-double: 31 digits of precision without leaving the FPU",
+    "points": 32,
+    "author": "iliketrains",
+    "product_page_url": "https://news.ycombinator.com/item?id=49322868",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Anti-AI fonts are useless and harmful",
+    "points": 60,
+    "author": "speckx",
+    "product_page_url": "https://news.ycombinator.com/item?id=49375719",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Don't paste the AI, please",
+    "points": 958,
+    "author": "pjerem",
+    "product_page_url": "https://news.ycombinator.com/item?id=49371857",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "CI jobs artifacts should not be difficult",
+    "points": 17,
+    "author": "melezhik",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374503",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "OpenRouter is joining Stripe",
+    "points": 936,
+    "author": "rvz",
+    "product_page_url": "https://news.ycombinator.com/item?id=49364559",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Manabu Kosaka's Handmade Paper Sculptures",
+    "points": 179,
+    "author": "surprisetalk",
+    "product_page_url": "https://news.ycombinator.com/item?id=49362001",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Why It Might Be Time to Rethink the Human Family Tree",
+    "points": 3,
+    "author": "Anon84",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377316",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "A faster way to calculate the day of the week",
+    "points": 235,
+    "author": "gavide",
+    "product_page_url": "https://news.ycombinator.com/item?id=49323795",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Stwipe Acquires OpenWouter",
+    "points": 186,
+    "author": "eatonphil",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374738",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Bun 1.4",
+    "points": 181,
+    "author": "meetpateltech",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374797",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Router by Ramp",
+    "points": 93,
+    "author": "zackfield",
+    "product_page_url": "https://news.ycombinator.com/item?id=49366067",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Why the Ocean Cleanup hasn't solved the plastic pollution crisis",
+    "points": 80,
+    "author": "sohkamyung",
+    "product_page_url": "https://news.ycombinator.com/item?id=49374036",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "AI didn't erase the junior engineer's value, it increased it it",
+    "points": 65,
+    "author": "franciscomt",
+    "product_page_url": "https://news.ycombinator.com/item?id=49373269",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces",
+    "points": 146,
+    "author": "nunodonato",
+    "product_page_url": "https://news.ycombinator.com/item?id=49360140",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Could AIs Become Conscious?",
+    "points": 14,
+    "author": "andsoitis",
+    "product_page_url": "https://news.ycombinator.com/item?id=49375390",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
+    "points": 45,
+    "author": "leanderjanssen",
+    "product_page_url": "https://news.ycombinator.com/item?id=49372994",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Everyone Says Assembly Is Untyped–Everyone Is Wrong",
+    "points": 4,
+    "author": "adamrezich",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376769",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  }
+]

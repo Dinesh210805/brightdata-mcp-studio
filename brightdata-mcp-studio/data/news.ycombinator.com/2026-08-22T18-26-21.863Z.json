@@ -1,0 +1,540 @@
+[
+  {
+    "title": "Hister – A private, full content search index that you control",
+    "points": 18,
+    "author": "auraham",
+    "product_page_url": "https://news.ycombinator.com/item?id=49351802",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Learning about \"The Unix Time-Sharing System\"",
+    "points": 14,
+    "author": "gwynforthewyn",
+    "product_page_url": "https://news.ycombinator.com/item?id=49401122",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "typ.ing",
+    "points": 17,
+    "author": "bookofjoe",
+    "product_page_url": "https://news.ycombinator.com/item?id=49346854",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Dynamical dark energy and the week that broke cosmology",
+    "points": 17,
+    "author": "rznicolet",
+    "product_page_url": "https://news.ycombinator.com/item?id=49381991",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
+    "points": 125,
+    "author": "jemoka",
+    "product_page_url": "https://news.ycombinator.com/item?id=49400408",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
+    "points": 50,
+    "author": "matthieu_bl",
+    "product_page_url": "https://news.ycombinator.com/item?id=49401549",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Zig’s Io.Threaded is neat",
+    "points": 137,
+    "author": "chilipepperhott",
+    "product_page_url": "https://news.ycombinator.com/item?id=49388694",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Rust Glancer: Rust LSP using 100x less RAM",
+    "points": 370,
+    "author": "matklad",
+    "product_page_url": "https://news.ycombinator.com/item?id=49393052",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Felony Bench",
+    "points": 806,
+    "author": "colinprince",
+    "product_page_url": "https://news.ycombinator.com/item?id=49389430",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Scientists release biggest 2D map of the universe",
+    "points": 247,
+    "author": "NKosmatos",
+    "product_page_url": "https://news.ycombinator.com/item?id=49392200",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
+    "points": 176,
+    "author": "sbulaev",
+    "product_page_url": "https://news.ycombinator.com/item?id=49398904",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Munder Difflin – Agent harness to run an office of your clones",
+    "points": 199,
+    "author": "simonpure",
+    "product_page_url": "https://news.ycombinator.com/item?id=49398152",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Kagi added a setting for removing paywalled links from search results",
+    "points": 1216,
+    "author": "speckx",
+    "product_page_url": "https://news.ycombinator.com/item?id=49388154",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Stop Making TUIs",
+    "points": 349,
+    "author": "underdeserver",
+    "product_page_url": "https://news.ycombinator.com/item?id=49384210",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Canada will match US tariffs 'dollar for dollar' as trade talks break down",
+    "points": 156,
+    "author": "tartoran",
+    "product_page_url": "https://news.ycombinator.com/item?id=49397074",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Felony charges for citizen deleting phone data at US Border",
+    "points": 1006,
+    "author": "floathub",
+    "product_page_url": "https://news.ycombinator.com/item?id=49386895",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "There's no reason for software to be slow anymore",
+    "points": 592,
+    "author": "Jach",
+    "product_page_url": "https://news.ycombinator.com/item?id=49395628",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "RF Cafe",
+    "points": 31,
+    "author": "gregsadetsky",
+    "product_page_url": "https://news.ycombinator.com/item?id=49355659",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Ameliorate",
+    "points": 50,
+    "author": "hakkikonu",
+    "product_page_url": "https://news.ycombinator.com/item?id=49380128",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "A Friendly Introduction to Racket",
+    "points": 71,
+    "author": "signa11",
+    "product_page_url": "https://news.ycombinator.com/item?id=49399898",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "What's in a PowerPoint File?",
+    "points": 17,
+    "author": "danielochoa0620",
+    "product_page_url": "https://news.ycombinator.com/item?id=49360643",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Z80 – The 1970s Microprocessor Still Alive (2021)",
+    "points": 88,
+    "author": "asdefghyk",
+    "product_page_url": "https://news.ycombinator.com/item?id=49398158",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "New MCP Roadmap",
+    "points": 128,
+    "author": "pentagrama",
+    "product_page_url": "https://news.ycombinator.com/item?id=49399591",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Kobo can run apps now",
+    "points": 633,
+    "author": "thepoet",
+    "product_page_url": "https://news.ycombinator.com/item?id=49390427",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Why it might be time to rethink the human family tree",
+    "points": 14,
+    "author": "Anon84",
+    "product_page_url": "https://news.ycombinator.com/item?id=49377316",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Anonymous age verification with passkey-powered encryption",
+    "points": 17,
+    "author": "mikeysight",
+    "product_page_url": "https://news.ycombinator.com/item?id=49361478",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Show HN: Rotation via Double Reflection",
+    "points": 36,
+    "author": "laszlokorte",
+    "product_page_url": "https://news.ycombinator.com/item?id=49391168",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Belgian car salesman becomes prince after DNA test proves royal parentage",
+    "points": 38,
+    "author": "MilnerRoute",
+    "product_page_url": "https://news.ycombinator.com/item?id=49401621",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
+    "points": 636,
+    "author": "gavide",
+    "product_page_url": "https://news.ycombinator.com/item?id=49387570",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "MiniageOS: \"Dumbphone\" Version of LineageOS",
+    "points": 15,
+    "author": "ashenke",
+    "product_page_url": "https://news.ycombinator.com/item?id=49370284",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "SalesPatriot (YC W25) Is Hiring Forward Deployed Engineers",
+    "product_page_url": "https://news.ycombinator.com/item?id=49393733",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Everyone says assembly is untyped—everyone is wrong",
+    "points": 137,
+    "author": "adamrezich",
+    "product_page_url": "https://news.ycombinator.com/item?id=49376769",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "People of ACM – Russ Cox",
+    "points": 163,
+    "author": "signa11",
+    "product_page_url": "https://news.ycombinator.com/item?id=49327408",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "How we made a text-to-speech model respond in sub-50 ms",
+    "points": 164,
+    "author": "toebee",
+    "product_page_url": "https://news.ycombinator.com/item?id=49389952",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "A revisit of remote Spectre attacks on Cloudflare Workers",
+    "points": 72,
+    "author": "albertpedersen",
+    "product_page_url": "https://news.ycombinator.com/item?id=49364721",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "How Thailand Resisted Colonization",
+    "points": 107,
+    "author": "karakoram",
+    "product_page_url": "https://news.ycombinator.com/item?id=49392099",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "HN: The Good Parts (2016)",
+    "points": 70,
+    "author": "adletbalzhanov",
+    "product_page_url": "https://news.ycombinator.com/item?id=49395171",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Meteoric – Drones that clear clouds over solar farms",
+    "points": 7,
+    "author": "porridgeraisin",
+    "product_page_url": "https://news.ycombinator.com/item?id=49398651",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Building an (almost) fully self-hosted, sandboxed, agentic software factory",
+    "points": 113,
+    "author": "jakelsaunders94",
+    "product_page_url": "https://news.ycombinator.com/item?id=49390463",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Wildfires across Europe detonate forgotten World War bombs",
+    "points": 11,
+    "author": "geox",
+    "product_page_url": "https://news.ycombinator.com/item?id=49400900",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Initial focus for our partnership with Motorola is a regular non-folding device",
+    "points": 133,
+    "author": "Cider9986",
+    "product_page_url": "https://news.ycombinator.com/item?id=49395605",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "The Lost Treasure of Sid Meier's Pirates",
+    "points": 265,
+    "author": "spankibalt",
+    "product_page_url": "https://news.ycombinator.com/item?id=49384896",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Tumble Forth – from assembly to OS with C compiler (2023)",
+    "points": 84,
+    "author": "vicek22",
+    "product_page_url": "https://news.ycombinator.com/item?id=49392465",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "The coolest anti-surveillance tools at Defcon [video]",
+    "points": 231,
+    "author": "neom",
+    "product_page_url": "https://news.ycombinator.com/item?id=49346444",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
+    "points": 133,
+    "author": "gmays",
+    "product_page_url": "https://news.ycombinator.com/item?id=49380303",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
+    "points": 336,
+    "author": "aakil",
+    "product_page_url": "https://news.ycombinator.com/item?id=49388752",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "I ran Photoshop on a £0.60 computer chip",
+    "points": 144,
+    "author": "colinprince",
+    "product_page_url": "https://news.ycombinator.com/item?id=49389441",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces (2025)",
+    "points": 293,
+    "author": "nunodonato",
+    "product_page_url": "https://news.ycombinator.com/item?id=49360140",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Embedded AI",
+    "points": 30,
+    "author": "0x54MUR41",
+    "product_page_url": "https://news.ycombinator.com/item?id=49397947",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "New Worlds: We are living in the future of J.G. Ballard or William Gibson",
+    "points": 270,
+    "author": "speckx",
+    "product_page_url": "https://news.ycombinator.com/item?id=49387525",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Galactic Compass 2: now with new augmented reality mode",
+    "points": 22,
+    "author": "bobbiechen",
+    "product_page_url": "https://news.ycombinator.com/item?id=49391348",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Kodak's \"pre-invented\" lunar orbiter camera; or, the fate of SAMOS readout",
+    "points": 60,
+    "author": "cainxinth",
+    "product_page_url": "https://news.ycombinator.com/item?id=49388095",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Three important steps in my maturation process",
+    "points": 199,
+    "author": "tdullien",
+    "product_page_url": "https://news.ycombinator.com/item?id=49394496",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "AI boosted homework scores, then exam scores dropped: study",
+    "points": 364,
+    "author": "dash2",
+    "product_page_url": "https://news.ycombinator.com/item?id=49357530",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "I'm becoming AI-blind",
+    "points": 463,
+    "author": "rcymerys",
+    "product_page_url": "https://news.ycombinator.com/item?id=49386699",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+    "points": 591,
+    "author": "Cider9986",
+    "product_page_url": "https://news.ycombinator.com/item?id=49383026",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Optimizing meshoptimizer to process billions of triangles in minutes (2025)",
+    "points": 56,
+    "author": "corysama",
+    "product_page_url": "https://news.ycombinator.com/item?id=49391661",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "Scrap",
+    "points": 3,
+    "author": "tosh",
+    "product_page_url": "https://news.ycombinator.com/item?id=49402189",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "ESP32 Firmware Development with Docker Sandboxes",
+    "points": 44,
+    "author": "mfranzon",
+    "product_page_url": "https://news.ycombinator.com/item?id=49329506",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  },
+  {
+    "title": "OTel isn’t going well",
+    "points": 204,
+    "author": "hn_acker",
+    "product_page_url": "https://news.ycombinator.com/item?id=49391553",
+    "input": {
+      "url": "https://news.ycombinator.com"
+    }
+  }
+]

@@ -1,0 +1,477 @@
+[
+  {
+    "job_title": "Python Developer",
+    "company": "Micro1",
+    "location": "Miami Shores, FL, United States",
+    "job_type": [],
+    "product_page_url": "https://www.python.org/jobs/8118/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Agentic AI Scientist",
+    "company": "AstraZeneca",
+    "location": "Durham, North Carolina, USA",
+    "job_type": [
+      "Cloud",
+      "Machine Learning",
+      "Numeric processing"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8094/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Senior AI-Augmented Full Stack Developer",
+    "company": "SureSwift Capital",
+    "location": "Victoria, Canada",
+    "job_type": [
+      "Back end",
+      "Front end"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8110/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Backend Software Engineer (FastAPI) -Onsite in Katy, Texas",
+    "company": "Off Duty Management",
+    "location": "Katy, TX, United States",
+    "job_type": [
+      "Back end",
+      "Cloud"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8123/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Python + TypeScript Engineers",
+    "company": "Fusionbox",
+    "location": "Remote (US Based), Any US State, US",
+    "job_type": [
+      "Back end",
+      "Database",
+      "Front end",
+      "Web"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8111/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Python Backend Engineer",
+    "company": "Constelli Signals",
+    "location": "Hyderabad, Telangana, India",
+    "job_type": [
+      "Back end",
+      "Database"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8120/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Full-Stack Engineer",
+    "company": "AIDAR",
+    "location": "Hamburg, Germany",
+    "job_type": [
+      "Back end",
+      "Database",
+      "Front end",
+      "Machine Learning"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8108/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Data Acquisition & Infrastructure Engineer",
+    "company": "Iconic Art AI",
+    "location": "Montreal, QC, Canada",
+    "job_type": [
+      "Back end",
+      "Big Data",
+      "Cloud",
+      "Database",
+      "Image Processing",
+      "Machine Learning"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8097/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Agentic Python Engineer",
+    "company": "Evaboot",
+    "location": "Remote, Remote/Worldwide, Remote/Worldwide",
+    "job_type": [
+      "Back end",
+      "Integration",
+      "Machine Learning"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8125/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Senior Data Engineer (100% Remote - USA Only)",
+    "company": "Six Feet Up",
+    "location": "100% Remote, USA",
+    "job_type": [
+      "Back end",
+      "Big Data",
+      "Cloud",
+      "Database",
+      "Machine Learning"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8095/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Lead Python Backend Engineer",
+    "company": "Reef Technologies",
+    "location": "Warsaw (fully remote), Poland",
+    "job_type": [
+      "Back end"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8122/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Senior Python Engineer",
+    "company": "EPAM",
+    "location": "Worldwide, Worldwide, Worldwide",
+    "job_type": [
+      "Back end",
+      "Machine Learning"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8107/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Junior Python Developer - AI & Innovation Team",
+    "company": "Adzuna",
+    "location": "Remote, Remote",
+    "job_type": [
+      "Back end",
+      "Cloud",
+      "Database",
+      "Front end",
+      "Integration",
+      "Machine Learning",
+      "Testing",
+      "Web"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8098/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Senior Python Engineer",
+    "company": "Turing",
+    "location": "Miami Shores, FL, United States",
+    "job_type": [],
+    "product_page_url": "https://www.python.org/jobs/8116/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Senior Python Developer",
+    "company": "Turing",
+    "location": "Remote, Remote, Remote",
+    "job_type": [
+      "Back end",
+      "Front end",
+      "Machine Learning"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8103/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Senior Python/DevOps Engineer (100% Remote - USA Only)",
+    "company": "Six Feet Up",
+    "location": "100% Remote, USA Only",
+    "job_type": [
+      "Back end",
+      "Big Data",
+      "Cloud",
+      "Database",
+      "Evangelism",
+      "Finance",
+      "Front end",
+      "Lead",
+      "Machine Learning"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8113/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Python Developer",
+    "company": "Micro1",
+    "location": "Remote, Remote, Anywhere",
+    "job_type": [
+      "Back end",
+      "Front end"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8101/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Senior Full-Stack Engineer [Full Time; 100% remote; US-only]",
+    "company": "Hive Collective",
+    "location": "Anywhere, Anywhere, USA",
+    "job_type": [
+      "Back end",
+      "Machine Learning",
+      "Web"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8119/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    },
+    "error": "The navigation resulted in a dead page (404 status code)",
+    "error_code": "dead_page"
+  },
+  {
+    "job_title": "Senior Backend Python Engineer",
+    "company": "mindIT HR Agency (on behalf of a confidential client)",
+    "location": "Remote, Argentina",
+    "job_type": [
+      "Back end",
+      "Machine Learning",
+      "Web"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8109/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Computational Photonics Engineer",
+    "company": "LumiAIres Ltd",
+    "location": "Glasgow, Scotland, United Kingdom",
+    "job_type": [
+      "Image Processing",
+      "Integration",
+      "Machine Learning",
+      "Numeric processing",
+      "Systems",
+      "Testing"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8105/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    },
+    "error": "The navigation resulted in a dead page (404 status code)",
+    "error_code": "dead_page"
+  },
+  {
+    "job_title": "Senior Python Backend Engineer",
+    "company": "Reef Technologies",
+    "location": "Warsaw (fully remote), Poland",
+    "job_type": [
+      "Back end"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8121/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Senior Python Engineer",
+    "company": "EPAM",
+    "location": "Miami Shores, FL, United States",
+    "job_type": [],
+    "product_page_url": "https://www.python.org/jobs/8117/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    },
+    "error": "The navigation resulted in a dead page (404 status code)",
+    "error_code": "dead_page"
+  },
+  {
+    "job_title": "Software Engineer (Remote)",
+    "company": "Softech Associate",
+    "location": "Panama City Beach, Florida, United States",
+    "job_type": [
+      "Back end",
+      "Cloud",
+      "Database",
+      "Front end",
+      "Integration",
+      "Machine Learning",
+      "Numeric processing",
+      "Testing",
+      "Text Processing",
+      "Web"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8126/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    },
+    "error": "The navigation resulted in a dead page (404 status code)",
+    "error_code": "dead_page"
+  },
+  {
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    },
+    "error": "The navigation resulted in a dead page (404 status code)",
+    "error_code": "dead_page"
+  },
+  {
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    },
+    "error": "The navigation resulted in a dead page (404 status code)",
+    "error_code": "dead_page"
+  },
+  {
+    "job_title": "Python / DevOps Engineer for Private Voice-AI Setup",
+    "company": "JB Martyn",
+    "location": "Illinois, Chicago, United States",
+    "job_type": [
+      "Back end",
+      "Cloud",
+      "Machine Learning",
+      "Operations",
+      "Text Processing",
+      "Web"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8093/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Python Machine Learning Engineer",
+    "company": "Turing",
+    "location": "Remote, Remote, Remote",
+    "job_type": [
+      "Machine Learning"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8102/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    },
+    "error": "The navigation resulted in a dead page (404 status code)",
+    "error_code": "dead_page"
+  },
+  {
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    },
+    "error": "The navigation resulted in a dead page (404 status code)",
+    "error_code": "dead_page"
+  },
+  {
+    "job_title": "Founding ML/Data Scientist (Remote, UK)",
+    "company": "MyDataValue",
+    "location": "Remote - London UK, United Kingdom",
+    "job_type": [
+      "Back end",
+      "Big Data",
+      "Machine Learning"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8089/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Tech Lead (Python) | Remote – LATAM | Full-time",
+    "company": "Crehana",
+    "location": "LATAM, LATAM, LATAM",
+    "job_type": [
+      "Back end",
+      "Lead"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8088/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Principal Modeler – Model Development",
+    "company": "Metropolitan Transportation Commission (MTC)",
+    "location": "San Francisco, CA, United States",
+    "job_type": [
+      "Database"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8087/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Senior Python AI/ML Engineer| Hybrid| Full-time",
+    "company": "P.R.GLOlinks Consulting Private Limited",
+    "location": "Bangalore, Pune, India",
+    "job_type": [],
+    "product_page_url": "https://www.python.org/jobs/8090/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  },
+  {
+    "job_title": "Python Engineer –  (DevOps/Internal Tools) FULLLY REMOTE",
+    "company": "ActivePrime, Inc.",
+    "location": "REMOTE, REMOTE",
+    "job_type": [
+      "Back end"
+    ],
+    "product_page_url": "https://www.python.org/jobs/8092/",
+    "input": {
+      "url": "https://www.python.org/jobs/"
+    }
+  }
+]
