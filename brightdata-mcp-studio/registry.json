@@ -281,9 +281,21 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T19:59:30.774Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
             }
         ],
-        "last_checked_at": "2026-08-23T19:39:26.606Z"
+        "last_checked_at": "2026-08-23T19:59:30.774Z"
     },
     "lobste.rs": {
         "collector_id": "c_mt10ecsz1x2ve37jkb",
@@ -593,11 +605,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T20:02:20.853Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "fast_check"
             }
         ],
         "last_run_at": "2026-08-23T18:26:05.233Z",
         "last_row_count": 125,
-        "last_checked_at": "2026-08-23T19:41:03.724Z"
+        "last_checked_at": "2026-08-23T20:02:20.853Z"
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -868,11 +892,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T20:04:09.713Z",
+                "rows": 196,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
             }
         ],
         "last_row_count": 196,
         "last_run_at": "2026-08-23T18:27:51.777Z",
-        "last_checked_at": "2026-08-23T19:42:50.940Z"
+        "last_checked_at": "2026-08-23T20:04:09.713Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -1190,11 +1226,24 @@
                     "product_page_url"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T20:05:02.330Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "fast_check"
             }
         ],
         "last_row_count": 38,
         "last_run_at": "2026-08-23T18:28:27.061Z",
-        "last_checked_at": "2026-08-23T19:43:27.028Z"
+        "last_checked_at": "2026-08-23T20:05:02.330Z"
     },
     "producthunt.com": {
         "collector_id": "c_mt5g0w2v22o0ro7nzf",
@@ -1493,10 +1542,22 @@
                     "upvote_count"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T20:05:44.617Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "fast_check"
             }
         ],
         "last_run_at": "2026-08-23T18:28:57.285Z",
         "last_row_count": 3,
-        "last_checked_at": "2026-08-23T19:43:52.877Z"
+        "last_checked_at": "2026-08-23T20:05:44.617Z"
     }
 }
