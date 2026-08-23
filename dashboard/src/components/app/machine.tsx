@@ -46,7 +46,7 @@ export function Machine({ runs, next_run, balance }: MachineProps) {
   const green = runs.filter(r => r.conclusion === 'success').length
 
   return (
-    <section className="rounded-sm bg-ink px-6 py-8 sm:px-8">
+    <section className="rounded-sm bg-paper px-6 py-8 sm:px-8">
       <div className="flex flex-wrap items-baseline justify-between gap-4">
         <h2 className="font-display text-body font-[700] tracking-[0.14em] text-white/45 uppercase">
           Running with nobody watching

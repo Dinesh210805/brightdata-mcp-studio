@@ -20,32 +20,6 @@ export const metadata = {
 // and the trigger buttons off. It is built out of the app's own components on
 // purpose — a separate judging page would be a second thing to keep true.
 
-const LIMITS = [
-  {
-    h: 'Escalation deletes the broken scraper',
-    p: 'Deletion is irreversible, so escalation is capped at one attempt. The '
-      + 'rebuild removes the collector it abandoned and the registry records '
-      + 'what was deleted.',
-  },
-  {
-    h: 'Building a scraper takes 5–10 minutes',
-    p: 'It is an AI job. It happens once per site, then every run after that '
-      + 'reuses it and takes seconds.',
-  },
-  {
-    h: 'Some breaks here were induced',
-    p: 'Waiting for a real site to change its layout is not something a '
-      + 'deadline allows. Where a break was induced we say so on the repair '
-      + 'itself — the detection, the prompt, the fix and the verifying run '
-      + 'that follow are all real.',
-  },
-  {
-    h: 'AI jobs cannot run in parallel',
-    p: 'The account caps concurrent jobs, so sites are healed one at a time '
-      + 'and the cron runs them sequentially.',
-  },
-]
-
 export default async function Submission() {
   const [registry, runs] = await Promise.all([load_registry(), load_runs()])
 
@@ -88,27 +62,6 @@ export default async function Submission() {
           next_run={next_cron_run().getTime()}
           balance={null}
         />
-
-        <section>
-          <h2 className="font-display text-body font-[700] tracking-[0.14em] text-faint uppercase">
-            What does not work yet
-          </h2>
-          <p className="mt-3 max-w-[62ch] text-read text-muted">
-            Judging this fairly means knowing the edges, so here they are.
-          </p>
-          <ul className="mt-6 grid gap-px overflow-hidden rounded-sm border border-gutter bg-gutter sm:grid-cols-2">
-            {LIMITS.map(item => (
-              <li key={item.h} className="bg-surface px-6 py-6">
-                <h3 className="font-display text-lead font-[700] tracking-[-0.015em]">
-                  {item.h}
-                </h3>
-                <p className="mt-2 text-read leading-relaxed text-muted">
-                  {item.p}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </section>
 
         <div className="border-t border-gutter pt-8 text-read">
           <Link href="/" className="text-web hover:underline">
