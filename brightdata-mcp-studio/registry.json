@@ -14,35 +14,35 @@
         ],
         "last_sample": [
             {
-                "title": "Show HN: Public Muscriptor Instance (latest, most powerful Audio-to-MIDI model)",
-                "points": 50,
-                "author": "jardy",
-                "product_page_url": "https://news.ycombinator.com/item?id=49389846",
+                "title": "We must not grant AI agents legal personhood",
+                "points": 18,
+                "author": "andsoitis",
+                "product_page_url": "https://news.ycombinator.com/item?id=49410628",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "I set a trap for a book-marketing scammer (2025)",
-                "points": 56,
-                "author": "rznicolet",
-                "product_page_url": "https://news.ycombinator.com/item?id=49402181",
+                "title": "The Art and Beauty of Blade Runner (2015)",
+                "points": 160,
+                "author": "cocacola1",
+                "product_page_url": "https://news.ycombinator.com/item?id=49405331",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
-                "points": 174,
-                "author": "olalonde",
-                "product_page_url": "https://news.ycombinator.com/item?id=49387959",
+                "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
+                "points": 180,
+                "author": "boilerupnc",
+                "product_page_url": "https://news.ycombinator.com/item?id=49405816",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-23T12:35:20.290Z",
+        "last_run_at": "2026-08-23T18:25:09.528Z",
         "last_row_count": 60,
         "run_history": [
             {
@@ -233,9 +233,21 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T18:25:09.528Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_checked_at": "2026-08-23T17:59:57.465Z"
+        "last_checked_at": "2026-08-23T18:25:09.528Z"
     },
     "lobste.rs": {
         "collector_id": "c_mt10ecsz1x2ve37jkb",
@@ -252,28 +264,28 @@
         ],
         "last_sample": [
             {
-                "title": "Robot comment classifier",
-                "score": 7,
+                "title": "Hister - A private, full content search index that you control",
+                "score": 29,
                 "comment_count": 5,
-                "product_page_url": "https://lobste.rs/s/ilfiqa/robot_comment_classifier",
+                "product_page_url": "https://lobste.rs/s/dyxeyu/hister_private_full_content_search_index",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Linus Torvalds uses AI to debug an Intel GPU driver bug",
-                "score": 24,
-                "comment_count": 18,
-                "product_page_url": "https://lobste.rs/s/eyaz5f/linus_torvalds_uses_ai_debug_intel_gpu",
+                "title": "JIT Compiling Code in 5μs",
+                "score": 7,
+                "comment_count": 1,
+                "product_page_url": "https://lobste.rs/s/aujfn1/jit_compiling_code_5_s",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "A 2026 Survey of Rust GUI Libraries",
-                "score": 28,
-                "comment_count": 21,
-                "product_page_url": "https://lobste.rs/s/83yugk/2026_survey_rust_gui_libraries",
+                "title": "Optimizing memory usage in a markdown parser",
+                "score": 4,
+                "comment_count": 1,
+                "product_page_url": "https://lobste.rs/s/1swh9l/optimizing_memory_usage_markdown_parser",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -497,11 +509,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T18:26:05.233Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-23T12:36:26.974Z",
+        "last_run_at": "2026-08-23T18:26:05.233Z",
         "last_row_count": 125,
-        "last_checked_at": "2026-08-23T18:01:37.510Z"
+        "last_checked_at": "2026-08-23T18:26:05.233Z"
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -518,28 +542,28 @@
         ],
         "last_sample": [
             {
-                "title": "Eloisa : or, A series of original letters by Jean-Jacques Rousseau",
-                "author": "Rousseau, Jean-Jacques, 1712-1778",
-                "download_count": 9312230,
-                "product_page_url": "https://www.gutenberg.org/ebooks/76639",
+                "title": "Alice's Adventures in Wonderland by Lewis Carroll",
+                "author": "Carroll, Lewis, 1832-1898",
+                "download_count": 10706830,
+                "product_page_url": "https://www.gutenberg.org/ebooks/11",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The Love Letters of Mary Wollstonecraft to Gilbert Imlay by Mary Wollstonecraft",
-                "author": "Wollstonecraft, Mary, 1759-1797",
-                "download_count": 10538230,
-                "product_page_url": "https://www.gutenberg.org/ebooks/34413",
+                "title": "The King in Yellow by Robert W. Chambers",
+                "author": "Chambers, Robert W. (Robert William), 1865-1933",
+                "download_count": 9525430,
+                "product_page_url": "https://www.gutenberg.org/ebooks/8492",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Pride and Prejudice by Jane Austen",
-                "author": "Austen, Jane, 1775-1817",
-                "download_count": 21469230,
-                "product_page_url": "https://www.gutenberg.org/ebooks/1342",
+                "title": "Life Blood by Thomas Hoover",
+                "author": "Hoover, Thomas, 1941-",
+                "download_count": 6336630,
+                "product_page_url": "https://www.gutenberg.org/ebooks/34318",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -724,11 +748,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T18:27:51.777Z",
+                "rows": 196,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_row_count": 143,
-        "last_run_at": "2026-08-23T12:38:34.764Z",
-        "last_checked_at": "2026-08-23T18:03:36.508Z"
+        "last_row_count": 196,
+        "last_run_at": "2026-08-23T18:27:51.777Z",
+        "last_checked_at": "2026-08-23T18:27:51.777Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -746,17 +782,36 @@
         ],
         "last_sample": [
             {
-                "job_title": "Senior Data Engineer (100% Remote - USA Only)",
-                "company": "Six Feet Up",
-                "location": "100% Remote, USA",
+                "job_title": "Software Engineer (Remote)",
+                "company": "Softech Associate",
+                "location": "Panama City Beach, Florida, United States",
                 "job_type": [
                     "Back end",
-                    "Big Data",
                     "Cloud",
                     "Database",
-                    "Machine Learning"
+                    "Front end",
+                    "Integration",
+                    "Machine Learning",
+                    "Numeric processing",
+                    "Testing",
+                    "Text Processing",
+                    "Web"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8095/",
+                "product_page_url": "https://www.python.org/jobs/8126/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Senior Full-Stack Engineer [Full Time; 100% remote; US-only]",
+                "company": "Hive Collective",
+                "location": "Anywhere, Anywhere, USA",
+                "job_type": [
+                    "Back end",
+                    "Machine Learning",
+                    "Web"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8119/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -772,18 +827,6 @@
                     "Machine Learning"
                 ],
                 "product_page_url": "https://www.python.org/jobs/8108/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Senior Python Backend Engineer",
-                "company": "Reef Technologies",
-                "location": "Warsaw (fully remote), Poland",
-                "job_type": [
-                    "Back end"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8121/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -987,11 +1030,24 @@
                     "product_page_url"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T18:28:27.061Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-23T12:38:45.522Z",
-        "last_checked_at": "2026-08-23T18:03:42.091Z"
+        "last_run_at": "2026-08-23T18:28:27.061Z",
+        "last_checked_at": "2026-08-23T18:28:27.061Z"
     },
     "producthunt.com": {
         "collector_id": "c_mt5g0w2v22o0ro7nzf",
@@ -1008,10 +1064,10 @@
         ],
         "last_sample": [
             {
-                "product_name": "Aximote",
-                "tagline": "Your car data, finally in your pocket",
-                "upvote_count": 6,
-                "product_page_url": "https://www.producthunt.com/products/aximote",
+                "product_name": "Construct Computer",
+                "tagline": "Your AI coworker gets a computer. You get your day back.",
+                "upvote_count": 13,
+                "product_page_url": "https://www.producthunt.com/products/construct-computer",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -1019,17 +1075,17 @@
             {
                 "product_name": "FetchSandbox",
                 "tagline": "API integration testing that remembers what breaks",
-                "upvote_count": 5,
+                "upvote_count": 9,
                 "product_page_url": "https://www.producthunt.com/products/fetchsandbox",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
             },
             {
-                "product_name": "Construct Computer",
-                "tagline": "Your AI coworker gets a computer. You get your day back.",
-                "upvote_count": 8,
-                "product_page_url": "https://www.producthunt.com/products/construct-computer",
+                "product_name": "Aximote",
+                "tagline": "Your car data, finally in your pocket",
+                "upvote_count": 7,
+                "product_page_url": "https://www.producthunt.com/products/aximote",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -1242,10 +1298,22 @@
                     "upvote_count"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-23T18:28:57.285Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-23T12:39:21.966Z",
+        "last_run_at": "2026-08-23T18:28:57.285Z",
         "last_row_count": 3,
-        "last_checked_at": "2026-08-23T18:04:29.461Z"
+        "last_checked_at": "2026-08-23T18:28:57.285Z"
     }
 }
