@@ -1,0 +1,29 @@
+[
+  {
+    "product_name": "Toplify",
+    "tagline": "Track your App Store ranking worldwide",
+    "upvote_count": 332,
+    "product_page_url": "https://www.producthunt.com/products/toplify",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Open Analytics",
+    "tagline": "AI-Native Google Analytics alternative for the modern web",
+    "upvote_count": 232,
+    "product_page_url": "https://www.producthunt.com/products/open-analytics-2",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "SubtitleGenerator",
+    "tagline": "From video to publish-ready AI subtitles—all in one browser",
+    "upvote_count": 205,
+    "product_page_url": "https://www.producthunt.com/products/subtitlegenerator",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  }
+]

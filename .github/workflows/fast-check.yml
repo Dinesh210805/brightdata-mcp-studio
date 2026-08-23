@@ -1,0 +1,66 @@
+name: Fast Health Check
+
+# The tighter loop from Task 14. scrape.yml runs every six hours and does a
+# full ensure() pass on everything; this checks every active scraper every
+# fifteen minutes with a plain scrape + check_health() - no AI job unless the
+# data actually looks wrong - so a break gets caught in minutes, not hours.
+#
+# ensure()'s own heal lock (scraper/registry.js) is what actually keeps this
+# from colliding with scrape.yml or a manual scraper_check_now call on the
+# same domain: whichever gets there first heals, the other sees it locked and
+# skips instead of racing it.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Two fast-check runs overlapping would both try to write registry.json.
+concurrency:
+  group: fast-health-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: brightdata-mcp-studio
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check every scraper
+        env:
+          API_TOKEN: ${{ secrets.BRIGHTDATA_API_KEY }}
+        run: node scripts/fast-check-all.js
+
+      - name: Commit registry
+        if: always()
+        working-directory: .
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add brightdata-mcp-studio/registry.json
+          if [ -d brightdata-mcp-studio/data ]; then
+            git add brightdata-mcp-studio/data
+          fi
+          if git diff --staged --quiet; then
+            echo "Registry unchanged - nothing to commit"
+            exit 0
+          fi
+          git commit -m "chore: fast health check update [skip ci]"
+          git pull --rebase origin main
+          git push

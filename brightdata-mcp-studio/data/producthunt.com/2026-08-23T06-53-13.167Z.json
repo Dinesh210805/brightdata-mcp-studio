@@ -1,0 +1,250 @@
+[
+  {
+    "product_name": "Zero",
+    "tagline": "Vercel's programming language built for AI agents Vercel's programming language built for AI agents",
+    "upvote_count": 130,
+    "product_page_url": "https://www.producthunt.com/products/zero-15",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Context.dev",
+    "tagline": "One API to scrape, enrich, and understand the web. One API to scrape, enrich, and understand the web.",
+    "product_page_url": "https://www.producthunt.com/products/context-dev",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Pocket by Meta",
+    "tagline": "Vibe-code games, then share them like TikToks Vibe-code games, then share them like TikToks",
+    "upvote_count": 70,
+    "product_page_url": "https://www.producthunt.com/products/pocket-by-meta",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Port Radar for macOS",
+    "tagline": "An AI port manager for your Mac. An AI port manager for your Mac.",
+    "upvote_count": 82,
+    "product_page_url": "https://www.producthunt.com/products/port-radar-for-macos",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "fx (by Vercel)",
+    "tagline": "Vercel's tiny, open-source coding agent Vercel's tiny, open-source coding agent",
+    "upvote_count": 211,
+    "product_page_url": "https://www.producthunt.com/products/fx-by-vercel",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Pawvis",
+    "tagline": "Control your Mac via camera & train gestures, local & FOSS Control your Mac via camera & train gestures, local & FOSS",
+    "upvote_count": 100,
+    "product_page_url": "https://www.producthunt.com/products/pawvis",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Grok",
+    "tagline": "The world’s smartest AI The world’s smartest AI",
+    "product_page_url": "https://www.producthunt.com/products/grok",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Google Antigravity",
+    "tagline": "Run and monitor several coding agents at once in an IDE Run and monitor several coding agents at once in an IDE",
+    "upvote_count": 157,
+    "product_page_url": "https://www.producthunt.com/products/google-antigravity",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "KerasFormers",
+    "tagline": "Keras 3 collection of pretrained models Keras 3 collection of pretrained models",
+    "upvote_count": 92,
+    "product_page_url": "https://www.producthunt.com/products/kerasformers",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Ito",
+    "tagline": "AI code review that runs your code AI code review that runs your code",
+    "upvote_count": 447,
+    "product_page_url": "https://www.producthunt.com/products/ito-ai-code-review-that-runs-code",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Framer",
+    "tagline": "AI website builder for professional sites and teams AI website builder for professional sites and teams",
+    "upvote_count": 1,
+    "product_page_url": "https://www.producthunt.com/products/framer",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "TestMu AI",
+    "tagline": "World's first full-stack Agentic AI QE Platform. World's first full-stack Agentic AI QE Platform.",
+    "product_page_url": "https://www.producthunt.com/products/lambdatest",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Supernova",
+    "tagline": "All your data in Claude and Codex All your data in Claude and Codex",
+    "upvote_count": 322,
+    "product_page_url": "https://www.producthunt.com/products/supernova-ai",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Agents Never Sleep",
+    "tagline": "Agents keep running with the lid closed Agents keep running with the lid closed",
+    "upvote_count": 90,
+    "product_page_url": "https://www.producthunt.com/products/agents-never-sleep",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "OpenSEO",
+    "tagline": "The open source Ahrefs alternative The open source Ahrefs alternative",
+    "upvote_count": 939,
+    "product_page_url": "https://www.producthunt.com/products/openseo",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "VeloFiler",
+    "tagline": "Keyboard-first dual-pane file manager for macOS Keyboard-first dual-pane file manager for macOS",
+    "upvote_count": 70,
+    "product_page_url": "https://www.producthunt.com/products/velofiler",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Tines",
+    "tagline": "Build agents & automations integrated across your workspace Build agents & automations integrated across your workspace",
+    "product_page_url": "https://www.producthunt.com/products/tines",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Dograh",
+    "tagline": "The open source VAPI alternative The open source VAPI alternative",
+    "upvote_count": 559,
+    "product_page_url": "https://www.producthunt.com/products/dograh",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Mindcase",
+    "tagline": "Extract data from anywhere on the web within minutes Extract data from anywhere on the web within minutes",
+    "upvote_count": 237,
+    "product_page_url": "https://www.producthunt.com/products/mindcase",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Toplify",
+    "tagline": "Track your App Store ranking worldwide Track your App Store ranking worldwide",
+    "upvote_count": 332,
+    "product_page_url": "https://www.producthunt.com/products/toplify",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Open Analytics",
+    "tagline": "AI-Native Google Analytics alternative for the modern web AI-Native Google Analytics alternative for the modern web",
+    "upvote_count": 232,
+    "product_page_url": "https://www.producthunt.com/products/open-analytics-2",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "SubtitleGenerator",
+    "tagline": "From video to publish-ready AI subtitles—all in one browser From video to publish-ready AI subtitles—all in one browser",
+    "upvote_count": 205,
+    "product_page_url": "https://www.producthunt.com/products/subtitlegenerator",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Pazi",
+    "tagline": "Vibe code business operations Vibe code business operations",
+    "upvote_count": 960,
+    "product_page_url": "https://www.producthunt.com/products/pazi",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Acti",
+    "tagline": "Agentic keyboard for mobile commands and search Agentic keyboard for mobile commands and search",
+    "upvote_count": 843,
+    "product_page_url": "https://www.producthunt.com/products/acti-2",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Maccess",
+    "tagline": "Your Mac, in your pocket — trackpad, screen, and AI Your Mac, in your pocket — trackpad, screen, and AI",
+    "upvote_count": 179,
+    "product_page_url": "https://www.producthunt.com/products/maccess",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "AnySearch",
+    "tagline": "Real-time structured search trusted by agents and developers Real-time structured search trusted by agents and developers",
+    "upvote_count": 641,
+    "product_page_url": "https://www.producthunt.com/products/anysearch",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Z.ai",
+    "tagline": "Official Playground for High-Performance GLM Models Official Playground for High-Performance GLM Models",
+    "upvote_count": 146,
+    "product_page_url": "https://www.producthunt.com/products/z-ai",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  },
+  {
+    "product_name": "Wizstar",
+    "tagline": "Digital avatars that move and act like professional actors Digital avatars that move and act like professional actors",
+    "upvote_count": 325,
+    "product_page_url": "https://www.producthunt.com/products/wizstar",
+    "input": {
+      "url": "https://www.producthunt.com"
+    }
+  }
+]
