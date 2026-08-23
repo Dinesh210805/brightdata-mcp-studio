@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHaven | Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4f6f8;
+            --surface: #ffffff;
+            --primary: #10b981;
+            --text: #1f2937;
+            --text-secondary: #6b7280;
+            --border: #e5e7eb;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+        /* New Navbar */
+        .site-header {
+            background-color: var(--surface);
+            padding: 20px 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .site-brand { font-size: 2rem; font-weight: 700; color: var(--text); margin-bottom: 15px; }
+        .top-nav a { color: var(--text-secondary); text-decoration: none; margin: 0 15px; text-transform: uppercase; font-size: 0.9rem; font-weight: 700; }
+        .top-nav a:hover { color: var(--primary); }
+
+        /* Main Content - No Sidebar, List Layout */
+        .page-wrapper {
+            max-width: 900px; /* narrower for list layout */
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--text);
+        }
+
+        /* List Layout instead of Grid */
+        .item-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .list-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s;
+        }
+        .list-item:hover { box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
+        .list-item img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 30px;
+        }
+        .item-details {
+            flex-grow: 1;
+        }
+        .item-name {
+            font-size: 1.4rem;
+            margin: 0 0 10px 0;
+            color: var(--text);
+        }
+        .item-features {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0 0 15px 0;
+        }
+        .item-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .item-price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .btn-buy {
+            background: var(--surface);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-buy:hover {
+            background: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="site-brand">TechHaven</div>
+        <nav class="top-nav">
+            <a href="#">Home</a>
+            <a href="#" style="color: var(--primary);">Laptops</a>
+            <a href="#">Accessories</a>
+            <a href="#">Support</a>
+        </nav>
+    </header>
+
+    <div class="page-wrapper">
+        <h1 class="section-title">Available Laptops (4)</h1>
+        
+        <div class="item-list">
+            
+            <div data-product-id="1" class="list-item">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="MacBook Pro">
+                <div class="item-details">
+                    <h3 class="item-name">MacBook Pro 16"</h3>
+                    <div class="item-features">M3 Max chip • 64GB RAM • 2TB SSD • Space Black</div>
+                    <div class="item-actions">
+                        <div class="item-price" data-currency="USD">$3,499.00</div>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div data-product-id="2" class="list-item">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80" alt="Dell XPS 15">
+                <div class="item-details">
+                    <h3 class="item-name">Dell XPS 15</h3>
+                    <div class="item-features">Intel Core i9 • 32GB RAM • RTX 4070 • OLED Display</div>
+                    <div class="item-actions">
+                        <div class="item-price" data-currency="USD">$2,299.00</div>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div data-product-id="3" class="list-item">
+                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80" alt="ThinkPad X1 Carbon">
+                <div class="item-details">
+                    <h3 class="item-name">ThinkPad X1 Carbon</h3>
+                    <div class="item-features">Intel Core i7 • 16GB RAM • 1TB SSD • Gen 11</div>
+                    <div class="item-actions">
+                        <div class="item-price" data-currency="USD">$1,850.00</div>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div data-product-id="4" class="list-item">
+                <img src="https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?auto=format&fit=crop&w=600&q=80" alt="Framework Laptop">
+                <div class="item-details">
+                    <h3 class="item-name">Framework Laptop 13</h3>
+                    <div class="item-features">Ryzen 7 • 32GB RAM • 1TB SSD • DIY Edition</div>
+                    <div class="item-actions">
+                        <div class="item-price" data-currency="USD">$1,399.00</div>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

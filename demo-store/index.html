@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHaven | Pro Hardware</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #121212;
+            --surface: #1e1e1e;
+            --primary: #007bff;
+            --text: #ffffff;
+            --text-secondary: #aaaaaa;
+            --border: #333;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+        /* Navbar */
+        nav {
+            background-color: var(--surface);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; }
+        .nav-links a { color: var(--text); text-decoration: none; margin-left: 20px; font-weight: 500; }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        .hero h1 { margin: 0; font-size: 2.5rem; }
+        .hero p { margin: 10px 0 0 0; color: #e0e0e0; }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            gap: 40px;
+        }
+        /* Sidebar */
+        .sidebar { width: 250px; flex-shrink: 0; }
+        .sidebar h3 { margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        .filter-list { list-style: none; padding: 0; }
+        .filter-list li { padding: 8px 0; color: var(--text-secondary); cursor: pointer; }
+        .filter-list li:hover { color: var(--primary); }
+
+        /* Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-4px); border-color: var(--primary); }
+        .card img { width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid var(--border); }
+        .card-body { padding: 20px; }
+        .product-title { font-size: 1.2rem; margin: 0 0 10px 0; font-weight: 700; }
+        .product-specs { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.4; }
+        .card-footer { display: flex; justify-content: space-between; align-items: center; }
+        .price { font-size: 1.4rem; font-weight: 700; color: var(--text); }
+        .add-btn { background: var(--primary); color: white; border: none; padding: 8px 16px; border-radius: 4px; font-weight: 500; cursor: pointer; }
+        .add-btn:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TechHaven.</div>
+        <div class="nav-links">
+            <a href="#">Laptops</a>
+            <a href="#">Desktops</a>
+            <a href="#">Accessories</a>
+            <a href="#">Cart (0)</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Pro Developer Hardware</h1>
+        <p>Unleash your coding potential with industry-leading performance.</p>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul class="filter-list">
+                <li style="color:var(--primary); font-weight:700;">All Laptops</li>
+                <li>Ultrabooks</li>
+                <li>Workstations</li>
+                <li>Gaming</li>
+            </ul>
+            <h3 style="margin-top: 30px;">Brands</h3>
+            <ul class="filter-list">
+                <li>Apple</li>
+                <li>Dell</li>
+                <li>Lenovo</li>
+                <li>Framework</li>
+            </ul>
+        </aside>
+
+        <main class="product-grid">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="MacBook Pro">
+                <div class="card-body">
+                    <h2 class="product-title">MacBook Pro 16"</h2>
+                    <p class="product-specs">M3 Max chip • 64GB RAM • 2TB SSD<br>Space Black</p>
+                    <div class="card-footer">
+                        <span class="price">$3,499.00</span>
+                        <button class="add-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80" alt="Dell XPS 15">
+                <div class="card-body">
+                    <h2 class="product-title">Dell XPS 15</h2>
+                    <p class="product-specs">Intel Core i9 • 32GB RAM • RTX 4070<br>OLED Display</p>
+                    <div class="card-footer">
+                        <span class="price">$2,299.00</span>
+                        <button class="add-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80" alt="ThinkPad X1 Carbon">
+                <div class="card-body">
+                    <h2 class="product-title">ThinkPad X1 Carbon</h2>
+                    <p class="product-specs">Intel Core i7 • 16GB RAM • 1TB SSD<br>Gen 11</p>
+                    <div class="card-footer">
+                        <span class="price">$1,850.00</span>
+                        <button class="add-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?auto=format&fit=crop&w=600&q=80" alt="Framework Laptop">
+                <div class="card-body">
+                    <h2 class="product-title">Framework Laptop 13</h2>
+                    <p class="product-specs">Ryzen 7 • 32GB RAM • 1TB SSD<br>DIY Edition</p>
+                    <div class="card-footer">
+                        <span class="price">$1,399.00</span>
+                        <button class="add-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+</body>
+</html>
