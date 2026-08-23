@@ -14,35 +14,35 @@
         ],
         "last_sample": [
             {
-                "title": "One night in Uzbekistan: Why was this one data point so influential?",
-                "points": 75,
-                "author": "paulpauper",
-                "product_page_url": "https://news.ycombinator.com/item?id=49392536",
+                "title": "The Art and Beauty of Blade Runner",
+                "points": 52,
+                "author": "cocacola1",
+                "product_page_url": "https://news.ycombinator.com/item?id=49405331",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Hister – A private, full content search index that you control",
-                "points": 225,
-                "author": "auraham",
-                "product_page_url": "https://news.ycombinator.com/item?id=49351802",
+                "title": "Four Years Ago, a Crypto Boss Went Missing. Now His Successor Has",
+                "points": 18,
+                "author": "ilamont",
+                "product_page_url": "https://news.ycombinator.com/item?id=49406069",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Rust Glancer: Rust LSP using 100x less RAM",
-                "points": 394,
-                "author": "matklad",
-                "product_page_url": "https://news.ycombinator.com/item?id=49393052",
+                "title": "Autolith: A programming agent with a live runtime",
+                "points": 121,
+                "author": "vismit2000",
+                "product_page_url": "https://news.ycombinator.com/item?id=49376197",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-23T01:09:29.506Z",
+        "last_run_at": "2026-08-23T06:36:45.624Z",
         "last_row_count": 60,
         "run_history": [
             {
@@ -198,6 +198,17 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-23T06:36:45.623Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ]
     },
@@ -216,28 +227,28 @@
         ],
         "last_sample": [
             {
-                "title": "Roomy is generally available",
-                "score": 8,
-                "comment_count": 5,
-                "product_page_url": "https://lobste.rs/s/zfew3n/roomy_is_generally_available",
+                "title": "InjectionBunny, a NTFS3 SUID injection for privilege escalation",
+                "score": 3,
+                "comment_count": 2,
+                "product_page_url": "https://lobste.rs/s/2mvgzt/injectionbunny_ntfs3_suid_injection_for",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Linus Torvalds uses AI to debug an Intel GPU driver bug",
-                "score": 12,
-                "comment_count": 11,
-                "product_page_url": "https://lobste.rs/s/eyaz5f/linus_torvalds_uses_ai_debug_intel_gpu",
+                "title": "There continue to be reasons for software to be slow",
+                "score": 23,
+                "comment_count": 16,
+                "product_page_url": "https://lobste.rs/s/zibquu/there_continue_be_reasons_for_software_be",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Music theory for programmers",
-                "score": 37,
-                "comment_count": 31,
-                "product_page_url": "https://lobste.rs/s/zcgvtz/music_theory_for_programmers",
+                "title": "KDE Linux experiences",
+                "score": 3,
+                "comment_count": 0,
+                "product_page_url": "https://lobste.rs/s/ate5gb/kde_linux_experiences",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -426,9 +437,20 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-23T06:39:21.019Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ]
             }
         ],
-        "last_run_at": "2026-08-23T01:10:45.879Z",
+        "last_run_at": "2026-08-23T06:39:21.019Z",
         "last_row_count": 125
     },
     "gutenberg.org": {
@@ -446,28 +468,28 @@
         ],
         "last_sample": [
             {
-                "title": "Life Blood by Thomas Hoover",
-                "author": "Hoover, Thomas, 1941-",
-                "download_count": 6598330,
-                "product_page_url": "https://www.gutenberg.org/ebooks/34318",
+                "title": "A Honeymoon in Space by George Chetwynd Griffith",
+                "author": "Griffith, George Chetwynd, 1857-1906",
+                "download_count": 8063430,
+                "product_page_url": "https://www.gutenberg.org/ebooks/19476",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The Dunwich horror by H. P. Lovecraft",
-                "author": "Lovecraft, H. P. (Howard Phillips), 1890-1937",
-                "download_count": 6677230,
-                "product_page_url": "https://www.gutenberg.org/ebooks/50133",
+                "title": "Frankenstein; or, the modern prometheus by Mary Wollstonecraft Shelley",
+                "author": "Shelley, Mary Wollstonecraft, 1797-1851",
+                "download_count": 7327630,
+                "product_page_url": "https://www.gutenberg.org/ebooks/84",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The Adventures of Roderick Random by T. Smollett",
-                "author": "Smollett, T. (Tobias), 1721-1771",
-                "download_count": 4479930,
-                "product_page_url": "https://www.gutenberg.org/ebooks/4085",
+                "title": "Peter the Brazen: A Mystery Story of Modern China by George F. Worts",
+                "author": "Worts, George F. (George Frank), 1892-",
+                "download_count": 6596830,
+                "product_page_url": "https://www.gutenberg.org/ebooks/28780",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -602,10 +624,21 @@
                 "rows": 1,
                 "healthy": false,
                 "fields": []
+            },
+            {
+                "at": "2026-08-23T07:10:19.690Z",
+                "rows": 126,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ]
             }
         ],
-        "last_row_count": 143,
-        "last_run_at": "2026-08-22T18:31:21.009Z"
+        "last_row_count": 126,
+        "last_run_at": "2026-08-23T07:10:19.690Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -625,29 +658,26 @@
         ],
         "last_sample": [
             {
-                "job_title": "Agentic AI Scientist",
-                "company": "AstraZeneca",
-                "location": "Durham, North Carolina, USA",
+                "job_title": "Senior Python Engineer",
+                "company": "EPAM",
+                "location": "Worldwide, Worldwide, Worldwide",
                 "job_type": [
-                    "Cloud",
-                    "Machine Learning",
-                    "Numeric processing"
+                    "Back end",
+                    "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8094/",
+                "product_page_url": "https://www.python.org/jobs/8107/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Agentic Python Engineer",
-                "company": "Evaboot",
-                "location": "Remote, Remote/Worldwide, Remote/Worldwide",
+                "job_title": "Lead Python Backend Engineer",
+                "company": "Reef Technologies",
+                "location": "Warsaw (fully remote), Poland",
                 "job_type": [
-                    "Back end",
-                    "Integration",
-                    "Machine Learning"
+                    "Back end"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8125/",
+                "product_page_url": "https://www.python.org/jobs/8122/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -851,9 +881,23 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-23T07:10:40.982Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "error",
+                    "error_code",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ]
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-23T01:13:02.407Z"
+        "last_run_at": "2026-08-23T07:10:40.982Z"
     }
 }
