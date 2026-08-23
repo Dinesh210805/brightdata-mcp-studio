@@ -13,7 +13,7 @@
 // heal, and rebuild - when check_health() actually reports the data is wrong.
 // Never on a timer, never on a guess.
 import * as api from './api.js';
-import {load_registry, save_registry, get_entry} from './registry.js';
+import {load_registry, save_registry, get_entry, record_run} from './registry.js';
 import {check_health} from './health.js';
 import {ensure} from './ensure.js';
 
@@ -46,7 +46,19 @@ export const fast_check = async (token, url, opts = {})=>{
     const health = check_health(records, entry.schema_baseline);
 
     if (health.healthy)
+    {
+        // Otherwise a healthy tick leaves no trace at all - the dashboard
+        // would have no way to show this scraper was even checked, let alone
+        // that the fast loop is the one doing it every 15 minutes.
+        const updated = record_run(registry, url, {
+            rows: records?.length ?? 0,
+            healthy: true,
+            fields: health.schema,
+            source: 'fast_check',
+        });
+        deps.save(updated);
         return {healthy: true, reasons: [], escalated_to_heal: false};
+    }
 
     // ensure() handles its own lock - if the fast path, a manual trigger and
     // the cron all land here for the same domain, only one actually heals.

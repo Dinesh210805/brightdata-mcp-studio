@@ -81,6 +81,9 @@ Authentication → Providers, add `<your-domain>/auth/callback` as an authorised
 redirect URL, and run [`supabase/schema.sql`](supabase/schema.sql) once in the
 SQL editor.
 
+Deploying this to Vercel specifically (root directory, env vars, and the
+Supabase redirect gotcha) is covered in [`DEPLOY.md`](DEPLOY.md).
+
 ---
 
 ## The routes

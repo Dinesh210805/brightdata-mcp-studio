@@ -26,6 +26,7 @@ const make_deps = overrides=>({
     remove: async ()=>{},
     // Stubbed, or the loop writes real files into data/ on every test run.
     store: ()=>null,
+    alert: async ()=>{},
     ...overrides,
 });
 
@@ -143,6 +144,40 @@ test('a failed deletion is recorded and does not break the rebuild', async ()=>{
 });
 
 const res_trace = res=>res.trace.join(' ');
+
+test('a break alerts once, naming the domain and the reasons', async ()=>{
+    let calls = [];
+    await ensure('token', 'https://a.com', 'title, price', {
+        deps: make_deps({
+            run: async ()=>broken,
+            alert: async (domain, reasons, opts)=>{ calls.push({domain, reasons, opts}); },
+        }),
+    });
+    assert.equal(calls.length, 1);
+    assert.equal(calls[0].domain, 'a.com');
+    assert.match(calls[0].reasons.join(' '), /price/);
+});
+
+test('healthy data never triggers an alert', async ()=>{
+    let called = false;
+    await ensure('token', 'https://a.com', 'title, price', {
+        deps: make_deps({alert: async ()=>{ called = true; }}),
+    });
+    assert.equal(called, false);
+});
+
+test('a fatal, unrepairable result alerts as fatal instead of healing', async ()=>{
+    let calls = [];
+    const res = await ensure('token', 'https://a.com', 'title, price', {
+        deps: make_deps({
+            run: async ()=>[{error: 'account suspended'}],
+            alert: async (domain, reasons, opts)=>{ calls.push({domain, reasons, opts}); },
+        }),
+    });
+    assert.equal(res.healed, false);
+    assert.equal(calls.length, 1);
+    assert.equal(calls[0].opts?.fatal, true);
+});
 
 test('a domain already being healed is skipped, not retried', async ()=>{
     let ran = false;

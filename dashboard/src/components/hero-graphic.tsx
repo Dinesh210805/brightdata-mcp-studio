@@ -81,7 +81,7 @@ export function HeroGraphic() {
             
             {/* Label below */}
             <div className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap opacity-0 transition-opacity group-hover:opacity-100">
-              <span className="rounded bg-ink px-2 py-1 font-mono text-micro text-white">
+              <span className="rounded bg-ink px-2 py-1 font-mono text-micro text-paper">
                 {brand.name}
               </span>
             </div>

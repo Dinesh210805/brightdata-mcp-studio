@@ -27,7 +27,7 @@ export function ApiKeyForm({ has_key }: { has_key: boolean }) {
         <button
           type="submit"
           disabled={pending}
-          className="rounded-full bg-ink px-5 py-2.5 text-read font-medium text-white transition-opacity hover:opacity-85 disabled:opacity-50"
+          className="rounded-full bg-ink px-5 py-2.5 text-read font-medium text-paper transition-opacity hover:opacity-85 disabled:opacity-50"
         >
           {pending ? 'Saving…' : has_key ? 'Replace' : 'Save key'}
         </button>

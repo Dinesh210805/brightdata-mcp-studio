@@ -83,7 +83,7 @@ export default async function Home() {
             <div className="rise mt-9 flex flex-wrap items-center gap-3">
               <Link
                 href="/login"
-                className="rounded-full bg-ink px-6 py-3 text-lead font-medium text-white transition-opacity hover:opacity-85"
+                className="rounded-full bg-ink px-6 py-3 text-lead font-medium text-paper transition-opacity hover:opacity-85"
               >
                 Connect your agent
               </Link>
@@ -197,7 +197,7 @@ export default async function Home() {
         </p>
         <Link
           href="/login"
-          className="mt-8 inline-block rounded-full bg-ink px-6 py-3 text-lead font-medium text-white transition-opacity hover:opacity-85"
+          className="mt-8 inline-block rounded-full bg-ink px-6 py-3 text-lead font-medium text-paper transition-opacity hover:opacity-85"
         >
           Get your config
         </Link>

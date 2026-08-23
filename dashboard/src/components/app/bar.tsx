@@ -19,6 +19,7 @@ interface BarProps {
 const LINKS = [
   { href: '/app', label: 'Overview' },
   { href: '/app/repairs', label: 'Repairs' },
+  { href: '/tools', label: 'Tools' },
   { href: '/app/settings', label: 'Settings' },
 ]
 

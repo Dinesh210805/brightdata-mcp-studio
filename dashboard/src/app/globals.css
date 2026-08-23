@@ -2,12 +2,15 @@
 
 /* Bright Data MCP Studio
    ----------------------
-   Warm off-white, comic-panel structure, and four borrowed devices that each
-   carry exactly one meaning:
+   A dark technical console — near-black surfaces, one sharp accent, data
+   density treated as a feature rather than something to soften. The
+   comic-panel structure and four borrowed devices from the original light
+   build carry over unchanged, because the meaning they carry is independent
+   of theme:
 
      halftone   density = how much data moved
      offset     chromatic aberration = this scraper is drifting
-     gutter     hard white space between panels = hierarchy
+     gutter     hairline space between panels = hierarchy
      web line   the connective spine of anything chronological
 
    A device used decoratively is a bug. Colour is meaning, never ornament:
@@ -15,21 +18,21 @@
    that held. Nothing else on the page is coloured at all. */
 
 @theme {
-    --color-paper:      #faf8f4;
-    --color-surface:    #ffffff;
-    --color-raised:     #f4f1ea;
-    --color-ink:        #0b0b0f;
-    --color-muted:      #55555f;
-    --color-faint:      #8a8a95;
-    --color-gutter:     #edeae3;
-    --color-hairline:   #dcd7cc;
+    --color-paper:      #0a0a0d;
+    --color-surface:    #131317;
+    --color-raised:     #1b1b21;
+    --color-ink:        #f3f2ee;
+    --color-muted:      #a5a4ae;
+    --color-faint:      #706f79;
+    --color-gutter:     #242429;
+    --color-hairline:   #2d2d33;
 
-    --color-web:        #1b4fd8;
-    --color-web-soft:   #e9eefc;
-    --color-venom:      #d6183b;
-    --color-venom-soft: #fdecef;
-    --color-verified:   #0a7a4f;
-    --color-verified-soft: #e6f4ed;
+    --color-web:        #5b8cff;
+    --color-web-soft:   #17203f;
+    --color-venom:      #ff5470;
+    --color-venom-soft: #3a161e;
+    --color-verified:   #34d399;
+    --color-verified-soft: #10281f;
 
     --font-display: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
     --font-sans: var(--font-archivo), -apple-system, BlinkMacSystemFont,
@@ -107,7 +110,7 @@ body {
     background: var(--color-surface);
     border: 1.5px solid var(--color-ink);
     border-radius: var(--radius-panel);
-    box-shadow: 4px 4px 0 var(--color-ink);
+    box-shadow: 4px 4px 0 var(--color-web);
 }
 
 /* ── Halftone ─────────────────────────────────────────────────────────────
@@ -118,7 +121,7 @@ body {
 .halftone {
     --dot-density: clamp(22px, 14.4px + 0.53vw, 28px);
     --dot-size: 1.1px;
-    --dot-ink: rgb(11 11 15 / 0.16);
+    --dot-ink: rgb(243 242 238 / 0.14);
     background-image: radial-gradient(var(--dot-ink) var(--dot-size),
         transparent var(--dot-size));
     background-size: var(--dot-density) var(--dot-density);
@@ -127,6 +130,25 @@ body {
 .halftone-fade {
     mask-image: radial-gradient(ellipse 85% 70% at 50% 0%, #000 30%,
         transparent 76%);
+}
+
+/* ── Grid field ───────────────────────────────────────────────────────────
+   The technical-console backdrop behind a hero: a faint blueprint grid, not
+   decoration but a texture that says "this is infrastructure". Referenced on
+   the hero and the login screen but never previously defined — it rendered
+   as nothing. */
+
+.grid-field {
+    background-image:
+        linear-gradient(var(--color-hairline) 1px, transparent 1px),
+        linear-gradient(90deg, var(--color-hairline) 1px, transparent 1px);
+    background-size: 56px 56px;
+    background-position: center top;
+}
+
+.grid-fade {
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 0%,
+        transparent 78%);
 }
 
 /* ── Chromatic offset ─────────────────────────────────────────────────────

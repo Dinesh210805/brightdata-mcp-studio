@@ -54,7 +54,7 @@ export default async function Submission() {
 
   return (
     <>
-      <div className="flex flex-wrap items-center justify-center gap-2.5 bg-ink px-5 py-2.5 text-center text-body text-white/85">
+      <div className="flex flex-wrap items-center justify-center gap-2.5 bg-ink px-5 py-2.5 text-center text-body text-paper/85">
         <span className="pulse h-1.5 w-1.5 shrink-0 rounded-full bg-venom" />
         Hackathon submission — live data from our own deployment, no account
         needed.

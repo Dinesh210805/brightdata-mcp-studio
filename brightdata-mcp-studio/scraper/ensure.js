@@ -27,6 +27,7 @@ import {
 import {check_health} from './health.js';
 import {save_run} from './store.js';
 import {classify_status} from './requests.js';
+import {notify_break} from './email.js';
 
 // AI builds normally take 5-10 minutes. 15 gives slow ones room without
 // hanging a caller forever.
@@ -96,6 +97,7 @@ const note_run = (registry, url, records, health)=>record_run(registry, url, {
     rows: records?.length ?? 0,
     healthy: health.healthy,
     fields: health.schema,
+    source: 'ensure',
 });
 
 // Swappable so tests can drive the loop without network or disk access.
@@ -107,6 +109,7 @@ const default_deps = {
     heal: heal_and_save,
     remove: api.delete_collector,
     store: save_run,
+    alert: notify_break,
 };
 
 const new_entry = (built, url, description)=>({
@@ -166,11 +169,15 @@ const perform_ensure = async (token, url, description, opts, deps, registry)=>{
     // Rewriting the scraper cannot fix it, and trying would burn an AI job,
     // fail, and escalate - deleting a collector that was never the problem.
     if (health.fatal)
+    {
         trace.push(`Not repairable: ${health.reasons.join('; ')}`);
+        await deps.alert(domain_of(url), health.reasons, {fatal: true});
+    }
     else if (!health.healthy && auto_heal)
     {
         healed = true;
         const prompt = build_heal_prompt(health.reasons);
+        await deps.alert(domain_of(url), health.reasons);
         trace.push(`Data looks wrong: ${health.reasons.join('; ')}`);
         trace.push('Asking Bright Data to repair the scraper');
 

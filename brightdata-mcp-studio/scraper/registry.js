@@ -81,14 +81,25 @@ const RUN_HISTORY_LIMIT = 30;
 // Appends one run to a domain's history - every run, not just the good ones.
 // A broken run is the single most interesting point on the graph, and it is
 // the one the baseline fields below deliberately refuse to record.
-export const record_run = (registry, url, {rows, healthy, fields})=>{
+//
+// `source` tells the dashboard which loop produced this point: 'ensure' is
+// the full reuse/run/heal/verify/escalate pass (the 6-hourly cron, a direct
+// scraper_ensure call, or an escalation triggered from the fast path);
+// 'fast_check' is the cheap scrape-and-check with no AI job (the 15-minute
+// schedule, or a manual scraper_check_now). Without this tag every point
+// looks identical and the two loops are indistinguishable in the history.
+export const record_run = (registry, url,
+    {rows, healthy, fields, source = 'ensure'})=>
+{
     const existing = get_entry(registry, url)?.run_history || [];
     return update_entry(registry, url, {
+        last_checked_at: new Date().toISOString(),
         run_history: [...existing, {
             at: new Date().toISOString(),
             rows,
             healthy,
             fields,
+            source,
         }].slice(-RUN_HISTORY_LIMIT),
     });
 };

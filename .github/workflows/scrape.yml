@@ -50,12 +50,18 @@ jobs:
         if: ${{ github.event.inputs.domain != '' }}
         env:
           API_TOKEN: ${{ secrets.BRIGHTDATA_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
+          ALERT_EMAIL_FROM: ${{ secrets.ALERT_EMAIL_FROM }}
         run: node scripts/check-now.js "${{ github.event.inputs.domain }}"
 
       - name: Run every scraper
         if: ${{ github.event.inputs.domain == '' }}
         env:
           API_TOKEN: ${{ secrets.BRIGHTDATA_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
+          ALERT_EMAIL_FROM: ${{ secrets.ALERT_EMAIL_FROM }}
         run: node scripts/cron.js
 
       - name: Commit registry

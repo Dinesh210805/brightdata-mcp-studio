@@ -77,8 +77,21 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-23T07:36:17.181Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
             }
-        ]
+        ],
+        "last_checked_at": "2026-08-23T07:36:17.179Z"
     },
     "lobste.rs": {
         "collector_id": "c_mt10ecsz1x2ve37jkb",
@@ -184,10 +197,23 @@
                     "score",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-23T07:38:32.861Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "fast_check"
             }
         ],
         "last_run_at": "2026-08-20T11:41:50.653Z",
-        "last_row_count": 125
+        "last_row_count": 125,
+        "last_checked_at": "2026-08-23T07:38:32.861Z"
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -254,10 +280,23 @@
                     "product_page_url",
                     "title"
                 ]
+            },
+            {
+                "at": "2026-08-23T07:43:14.483Z",
+                "rows": 143,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "fast_check"
             }
         ],
         "last_row_count": 103,
-        "last_run_at": "2026-08-20T12:08:00.216Z"
+        "last_run_at": "2026-08-20T12:08:00.216Z",
+        "last_checked_at": "2026-08-23T07:43:14.483Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -348,10 +387,24 @@
                     "location",
                     "product_page_url"
                 ]
+            },
+            {
+                "at": "2026-08-23T07:43:28.310Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "fast_check"
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-20T12:08:11.000Z"
+        "last_run_at": "2026-08-20T12:08:11.000Z",
+        "last_checked_at": "2026-08-23T07:43:28.310Z"
     },
     "producthunt.com": {
         "collector_id": "c_mt5g0w2v22o0ro7nzf",
@@ -368,28 +421,26 @@
         ],
         "last_sample": [
             {
-                "product_name": "Toplify",
-                "tagline": "Track your App Store ranking worldwide",
-                "upvote_count": 332,
-                "product_page_url": "https://www.producthunt.com/products/toplify",
+                "product_name": "KanaSensei",
+                "tagline": "Read Japanese kana in two weeks",
+                "product_page_url": "https://www.producthunt.com/products/kanasensei",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
             },
             {
-                "product_name": "Open Analytics",
-                "tagline": "AI-Native Google Analytics alternative for the modern web",
-                "upvote_count": 232,
-                "product_page_url": "https://www.producthunt.com/products/open-analytics-2",
+                "product_name": "Local Music Organizer for Mac",
+                "tagline": "Ultimate toolkit for local Apple Music library maintenance",
+                "product_page_url": "https://www.producthunt.com/products/local-music-organizer-for-mac",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
             },
             {
-                "product_name": "SubtitleGenerator",
-                "tagline": "From video to publish-ready AI subtitles—all in one browser",
-                "upvote_count": 205,
-                "product_page_url": "https://www.producthunt.com/products/subtitlegenerator",
+                "product_name": "Construct Computer",
+                "tagline": "Your AI coworker gets a computer. You get your day back.",
+                "upvote_count": 6,
+                "product_page_url": "https://www.producthunt.com/products/construct-computer",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -402,6 +453,14 @@
                 "escalated": false,
                 "replaced_by": null,
                 "prompt": "Scope the scraper to the top 3 ranked products only (was returning all 28), fix the duplicated tagline text, and require upvote_count on every returned row.",
+                "status": "resolved"
+            },
+            {
+                "timestamp": "2026-08-23T07:46:34.868Z",
+                "auto_triggered": true,
+                "escalated": false,
+                "replaced_by": null,
+                "prompt": "The scraper is returning bad data. Problems found: Schema drift: missing upvote_count; Field \"upvote_count\" is empty in 100% of records. The page layout has most likely changed and the selectors need updating.",
                 "status": "resolved"
             }
         ],
@@ -427,9 +486,33 @@
                     "tagline",
                     "upvote_count"
                 ]
+            },
+            {
+                "at": "2026-08-23T07:44:28.011Z",
+                "rows": 3,
+                "healthy": false,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline"
+                ],
+                "source": "ensure"
+            },
+            {
+                "at": "2026-08-23T07:46:34.867Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-23T07:01:04.401Z",
-        "last_row_count": 3
+        "last_run_at": "2026-08-23T07:46:34.868Z",
+        "last_row_count": 3,
+        "last_checked_at": "2026-08-23T07:46:34.867Z"
     }
 }

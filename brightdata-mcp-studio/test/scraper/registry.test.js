@@ -185,6 +185,27 @@ test('release_lock is a no-op when there is no entry', ()=>{
     assert.deepEqual(release_lock({}, 'https://new.com', 'active'), {});
 });
 
+test('record_run tags a source, defaulting to ensure', ()=>{
+    let registry = put_entry({}, 'https://a.com',
+        {collector_id: 'c_1', status: 'active'});
+    registry = record_run(registry, 'https://a.com',
+        {rows: 3, healthy: true, fields: ['title']});
+    registry = record_run(registry, 'https://a.com',
+        {rows: 3, healthy: true, fields: ['title'], source: 'fast_check'});
+
+    const history = get_entry(registry, 'https://a.com').run_history;
+    assert.equal(history[0].source, 'ensure');
+    assert.equal(history[1].source, 'fast_check');
+});
+
+test('record_run updates last_checked_at on the entry', ()=>{
+    let registry = put_entry({}, 'https://a.com',
+        {collector_id: 'c_1', status: 'active'});
+    registry = record_run(registry, 'https://a.com',
+        {rows: 3, healthy: true, fields: ['title']});
+    assert.ok(get_entry(registry, 'https://a.com').last_checked_at);
+});
+
 test('record_run caps history so the registry stays readable', ()=>{
     let registry = put_entry({}, 'https://a.com',
         {collector_id: 'c_1', status: 'active'});

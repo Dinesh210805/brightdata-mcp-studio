@@ -33,6 +33,19 @@ test('healthy data returns without ever calling ensure()', async ()=>{
     assert.equal(ensure_calls, 0);
 });
 
+test('a healthy check is recorded in the registry, tagged fast_check', async ()=>{
+    let saved = null;
+    await fast_check('token', 'https://a.com', {
+        deps: make_deps({save: registry=>{ saved = registry; }}),
+    });
+    const domain_entry = saved['a.com'];
+    assert.ok(domain_entry.last_checked_at);
+    const point = domain_entry.run_history.at(-1);
+    assert.equal(point.source, 'fast_check');
+    assert.equal(point.healthy, true);
+    assert.equal(point.rows, 1);
+});
+
 test('unhealthy data calls ensure() exactly once and returns its outcome', async ()=>{
     let ensure_calls = 0;
     const res = await fast_check('token', 'https://a.com', {

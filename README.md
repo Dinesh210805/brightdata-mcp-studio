@@ -4,10 +4,7 @@
 
 # Bright Data MCP Studio
 
-**Give an AI agent the ability to build its own scraper — and repair it when the site changes.**
-
-A fork of [`brightdata/brightdata-mcp`](https://github.com/brightdata/brightdata-mcp)
-that adds the Scraper Studio lifecycle their official server is missing.
+**Scrapers that build themselves, notice when they break, and repair themselves — no human in the loop.**
 
 🕸️ Built for [**Into the Scrape-Verse**](https://www.wemakedevs.org/hackathons/scrape-verse) — WeMakeDevs × Bright Data, August 2026
 
@@ -15,29 +12,27 @@ that adds the Scraper Studio lifecycle their official server is missing.
 
 ---
 
-## The gap this fills
+## What this is
 
-Bright Data's official MCP server gives agents 74 tools: search, scrape, browser
-automation, and ~50 ready-made extractors for sites like Amazon and LinkedIn.
-
-Point it at a site that isn't one of those 50 and the agent is stuck.
-
-Bright Data *can* build a scraper for any public page — you describe what you
-want in plain English and their AI writes it. That's **Scraper Studio**. But it
-is reachable only from a terminal or their web dashboard. An agent in the middle
-of a conversation cannot get to it.
-
-**This fork closes that gap, and then closes the loop.** Scrapers rot. A site
-changes its layout and yesterday's scraper doesn't error — it quietly returns
-rows of blanks, and nothing notices until a human looks. So the tools here
-don't stop at "build a scraper":
+Point a coding agent at any public page and describe what you want. It builds
+a scraper for it, runs it, and keeps watching:
 
 ```
-run it  →  check the data  →  repair it  →  run it AGAIN to confirm
-                                        →  still broken? rebuild from scratch
+create it  →  run it  →  check the data  →  repair it  →  run it AGAIN to confirm
+                                                       →  still broken? rebuild from scratch
 ```
 
-No human in the loop.
+Two schedules watch every scraper without being asked — a full pass every six
+hours, and a cheap health-only check every fifteen minutes — sharing one lock
+so they can never step on each other's repairs. When something breaks, you get
+an email before you'd have noticed yourself. A dashboard shows the whole
+history: every run, every repair, the exact prompt sent to fix it, and whether
+the fix actually held.
+
+This is built on Bright Data's official open-source MCP server as a starting
+point; the lifecycle, health checks, self-healing loop, dashboard, and alerts
+described below are this submission's own work — see [Architecture](#architecture)
+for exactly which files are which.
 
 ---
 
@@ -74,9 +69,9 @@ cd brightdata-mcp-studio/brightdata-mcp-studio
 npm install
 ```
 
-One environment
-variable, no login flow. `PRO_MODE` unlocks all 92 tools; without it you get the
-core 16, which still includes the whole Scraper Studio lifecycle.
+One environment variable, no login flow. `PRO_MODE` unlocks all 93 tools;
+without it you get the core 16, which still includes the whole Scraper Studio
+lifecycle.
 
 Two optional paths are worth setting if you installed with `npx`, because both
 default to the server's own folder — which lives inside `node_modules` and is
@@ -90,6 +85,9 @@ wiped on reinstall:
 Then just ask:
 
 > *"Get me the top stories from news.ycombinator.com — title, points, author."*
+
+Want to see what it can do before installing anything? The full tool catalog
+is browsable at `/tools` on the dashboard — see [Dashboard](#dashboard) below.
 
 ---
 
@@ -115,19 +113,77 @@ Asking Bright Data to repair the scraper
 Repaired and verified - data looks right again
 ```
 
-The request was identical. The agent asked for data and got data. The break and
-the repair happened underneath.
+The request was identical. The agent asked for data and got data. The break
+and the repair happened underneath — this isn't hypothetical: it happened for
+real, unprompted, on a live `producthunt.com` scraper during this project's
+own development, caught by the 15-minute check loop and healed with nobody
+watching.
 
 If the repair doesn't take, it escalates once — throws the scraper away and
 builds a fresh one on the same description.
 
 ---
 
+## Architecture
+
+**Two watch loops, one lock.** A 6-hourly scheduled run (`scrape.yml`) does a
+full `scraper_ensure` pass on everything. A tighter loop (`fast-check.yml`)
+runs every 15 minutes and calls `scraper_check_now` instead — a plain scrape
+and a data check, no AI job — so a break gets caught in minutes rather than
+hours, at a fraction of the cost. Both loops, plus any manual
+`scraper_check_now` call, share one stale-safe lock on the registry:
+escalation deletes the collector it abandons, which is irreversible, so two of
+them can never heal the same site at once. One of them finds the site busy and
+reports that instead of racing it.
+
+**Email alerts, not just logs.** The moment a break is detected and a repair
+starts, an email goes out naming the domain and what looks wrong. A second
+kind of alert flags anything that can't be auto-repaired at all — a suspended
+account or a blocked target, where no scraper rewrite would help. The
+six-hourly full pass also sends one digest per run, not one email per site.
+Optional — no email provider configured means it just logs instead of
+sending, nothing breaks.
+
+**A registry, not a database.** `registry.json` is the only place the mapping
+from site → scraper exists; Bright Data's own API can list your collectors but
+not what each one targets. Every run and every repair attempt is appended to
+it, and the scheduled workflows commit it back to the repo — so the run
+history is a public, verifiable git log, not a private database row nobody
+can check.
+
+**Project layout:**
+
+```
+brightdata-mcp-studio/
+├── server.js, browser_tools.js, ...   ← Bright Data's official server (MIT)
+│
+├── scraper/          the lifecycle
+│   ├── requests.js     API payloads and status vocabulary
+│   ├── api.js          REST client, polling, retry, batch fallback
+│   ├── registry.js     which scraper belongs to which site, plus the heal lock
+│   ├── health.js       breakage detection (schema drift, empty-field ratio)
+│   ├── ensure.js       reuse/run/check/repair/verify/escalate, lock-wrapped
+│   ├── fast_check.js   the cheap 15-minute health check
+│   ├── email.js        break alerts and the scheduled-run digest
+│   └── tools.js        the 8 MCP tools
+├── account/tools.js  zones, budget, page formats
+├── browser/          7 browser actions their server lacks
+└── test/scraper/     unit tests for all of the above
+
+dashboard/            Next.js app — a read-only window onto the registry
+```
+
+Everything under `scraper/`, `account/`, `browser/`, `test/`, and `dashboard/`
+was built for this submission. Bright Data's own files were touched only for
+tool registration — see `git diff upstream/main --stat` for the exact lines.
+
+---
+
 ## The tools
 
-**92 total: 74 from Bright Data, 18 added here.**
+**93 total: 74 from Bright Data, 19 added here.**
 
-### Scraper Studio lifecycle — the reason this fork exists
+### Scraper Studio lifecycle
 
 | Tool | What it does |
 |---|---|
@@ -138,6 +194,7 @@ builds a fresh one on the same description.
 | `scraper_heal` | Repair a broken scraper from a description of what's wrong |
 | `scraper_approve` | Accept or reject a proposed repair |
 | `scraper_registry_list` | Every scraper you own, with health and repair counts |
+| `scraper_check_now` | Fast, on-demand health check — a real scrape and a data check, no AI job — that only escalates to a full repair if the data is actually wrong |
 
 ### Account and page formats
 
@@ -149,10 +206,11 @@ builds a fresh one on the same description.
 `select` · `check` · `uncheck` · `hover` · `reload` · `cookies` · `close_session`
 
 These run on **their** browser session, not a second one — element references
-come from a snapshot of one specific page, so a separate browser would be handed
-references that mean nothing.
+come from a snapshot of one specific page, so a separate browser would be
+handed references that mean nothing.
 
-Full reference: [`brightdata-mcp-studio/assets/Tools.md`](brightdata-mcp-studio/assets/Tools.md)
+Full reference: [`brightdata-mcp-studio/assets/Tools.md`](brightdata-mcp-studio/assets/Tools.md),
+or browse it live at `/tools` on the dashboard.
 
 ---
 
@@ -175,8 +233,8 @@ The REST calls, taken directly from Bright Data's own CLI source:
 
 Three details that shaped the code:
 
-**Creating is two calls, not one.** The first returns a collector ID in about a
-second; the second starts a build that takes 5–10 minutes. That split is why
+**Creating is two calls, not one.** The first returns a collector ID in about
+a second; the second starts a build that takes 5–10 minutes. That split is why
 `scraper_create` can answer immediately instead of holding a tool call open.
 
 **The fast run path refuses large pages.** It answers with an error row rather
@@ -185,39 +243,8 @@ retries on the batch endpoint automatically.
 
 **Repair doesn't check its own work.** Bright Data reports a repair as
 successful when its AI job finishes, not when the data is correct. Verifying
-that is this project's own addition, and it's the difference between "we
-repaired it" and "we know it works."
-
----
-
-## What's ours, what's Bright Data's
-
-Bright Data's code sits at the top level of
-[`brightdata-mcp-studio/`](brightdata-mcp-studio/). Ours is in its own
-directories:
-
-```
-brightdata-mcp-studio/
-├── server.js, browser_tools.js, ...   ← Bright Data (MIT)
-│
-├── scraper/          ← ours: the lifecycle
-│   ├── requests.js     API payloads and status vocabulary
-│   ├── api.js          REST client, polling, retry, batch fallback
-│   ├── registry.js     which scraper belongs to which site
-│   ├── health.js       breakage detection
-│   ├── ensure.js       the reuse/run/check/repair/verify/escalate loop
-│   └── tools.js        the 7 MCP tools
-├── account/tools.js  ← ours: zones, budget, page formats
-├── browser/          ← ours: the 7 missing browser actions
-└── test/scraper/     ← ours: 57 unit tests
-```
-
-We touched **76 lines** across three of their files — imports, tool
-registration, and one option added to `discover`. Everything else is additions:
-
-```bash
-git diff upstream/main --stat
-```
+that — and only trusting a repair once a second run proves it — is this
+project's own addition.
 
 ---
 
@@ -230,13 +257,30 @@ Stated plainly, because they're real:
 - **Escalation deletes the broken collector.** Deletion is irreversible, so
   escalation is capped at one attempt. The rebuild removes the old scraper it
   abandoned, and the registry records what was deleted.
-- **The registry is single-account.** `registry.json` is a local file. It's also
-  the *only* record of which scraper belongs to which site — Bright Data can
-  list your collectors, but not what each one targets — so losing it means
-  losing track of every scraper.
-- **Health detection uses two checks, not three.** Schema drift and empty-field
-  ratio. Row-count anomaly detection was deliberately left out: it needs a
-  baseline of many runs to mean anything and fires spuriously before then.
+- **The registry is single-account.** `registry.json` maps one account's
+  scrapers to their sites. Signing into the dashboard doesn't give you your
+  own fleet — it's one shared registry, one cron schedule, one alert inbox.
+  Real multi-user support is out of scope for this build.
+- **Health detection uses two checks, not three.** Schema drift and
+  empty-field ratio. Row-count anomaly detection was deliberately left out: it
+  needs a baseline of many runs to mean anything and fires spuriously before
+  then.
+- **Email alerts need a provider configured.** Without `RESEND_API_KEY` set as
+  a repo secret, breaks and digests are logged, not emailed.
+
+---
+
+## Dashboard
+
+`dashboard/` is a Next.js app that shows what the registry knows without an
+agent in the loop: which scrapers exist, what's actively monitoring each one
+and when it was last checked, the full repair timeline (the exact prompt sent
+to Bright Data and whether the follow-up run proved it worked), a live cron
+log split by which schedule ran it, and the full MCP tool catalog at `/tools`.
+It reads the same `registry.json` the tools write — it's read-only, nothing in
+it can do anything the MCP tools can't already do.
+
+Deploy notes (Vercel, env vars, the Supabase redirect gotcha): [`dashboard/DEPLOY.md`](dashboard/DEPLOY.md).
 
 ---
 
@@ -244,7 +288,7 @@ Stated plainly, because they're real:
 
 ```bash
 cd brightdata-mcp-studio
-npm test                 # 73 tests: 57 ours, the rest upstream's
+npm test                 # 118 tests: ours plus upstream's
 ```
 
 The full design and task breakdown is in [`PLAN.md`](PLAN.md); conventions are
@@ -259,12 +303,21 @@ The four stateless tools — `scraper_create`, `scraper_run`, `scraper_heal`,
 [`brightdata/brightdata-mcp`](https://github.com/brightdata/brightdata-mcp), so
 the gap is closed for everyone rather than just here.
 
-`scraper_ensure`, the registry and the health checks deliberately stay out of
-that PR. They need memory between calls, and Bright Data's server runs
-multi-tenant across thousands of API tokens — cross-request state there is an
-infrastructure project, not a patch.
+`scraper_ensure`, the registry, the heal lock, and the health checks
+deliberately stay out of that PR. They need memory between calls, and Bright
+Data's server runs multi-tenant across thousands of API tokens — cross-request
+state there is an infrastructure project, not a patch.
 
 *Status: not yet opened. The link will be added here.*
+
+---
+
+## About
+
+Built solo by **Dinesh** for Into the Scrape-Verse (WeMakeDevs × Bright Data),
+August 2026.
+
+Portfolio and social links — coming soon.
 
 ---
 
@@ -281,9 +334,8 @@ explain every part of the codebase.
 
 ## Licence
 
-Upstream code is MIT, © Bright Data — see
-[`LICENSE`](LICENSE). Additions in `scraper/`, `account/`, `browser/` and
-`test/` are released under the same terms.
-
-The Bright Data logo is used for attribution. This is an independent fork and
-is not endorsed by Bright Data.
+Bright Data's original server code is MIT-licensed, © Bright Data — see
+[`LICENSE`](LICENSE). Everything in `scraper/`, `account/`, `browser/`,
+`test/`, and `dashboard/` is this submission's own work, released under the
+same terms. The Bright Data logo is used for attribution only; this project is
+independent and not endorsed by Bright Data.

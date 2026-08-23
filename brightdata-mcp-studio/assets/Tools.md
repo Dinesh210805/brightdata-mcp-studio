@@ -67,3 +67,22 @@
 |scraping_browser_get_html|Return the HTML content of the current page; avoid the full_page option unless head or script tags are required.|
 |scraping_browser_scroll|Scroll to the bottom of the current page in the scraping-browser session.|
 |scraping_browser_scroll_to_ref|Scroll the page until the element referenced in the ARIA snapshot is in view.|
+|scraping_browser_select_ref|Choose an option in a dropdown (select element) by its visible label.|
+|scraping_browser_check_ref|Tick a checkbox or select a radio button. Does nothing if it is already ticked.|
+|scraping_browser_uncheck_ref|Untick a checkbox. Does nothing if it is already unticked.|
+|scraping_browser_hover_ref|Move the mouse over an element, to open hover menus or reveal content that only appears on hover.|
+|scraping_browser_reload|Reload the current page. Useful after an action that changed server-side state, or to retry.|
+|scraping_browser_cookies|List the cookies the current browser session holds, to check session or consent state.|
+|scraping_browser_close_session|Close the browser and end the session. The next browser tool call starts a fresh one.|
+|scraper_ensure|Get structured data from any public page, building a scraper for it first if one does not exist yet. Reuses an existing scraper when there is one, detects when a scraper has broken because the site changed, repairs it, and verifies the repair by running again.|
+|scraper_create|Build a new custom scraper for a public page from a plain-English description, using Bright Data Scraper Studio. Returns a collector_id immediately; generation takes 5-10 minutes.|
+|scraper_status|Check how far along a scraper build is: generating, done, or failed.|
+|scraper_run|Run an existing scraper against a URL and return the extracted records. Falls back to the batch endpoint automatically for pages too large for the fast path.|
+|scraper_heal|Repair a scraper that has stopped returning correct data, from a plain-English description of what looks wrong.|
+|scraper_approve|Accept or reject a repair that is waiting for approval.|
+|scraper_registry_list|List every custom scraper built through this server: site, health, and repair count.|
+|scraper_check_now|Fast, on-demand check for whether a known scraper is still returning good data - a real scrape and a data check, no AI job. Escalates automatically to a full repair if the data looks wrong. Reports if a check or repair is already running for that domain instead of starting a second one.|
+|zones_list|List the proxy zones on this Bright Data account, with the type of each one.|
+|budget_status|Show the Bright Data account balance and what each zone has cost so far.|
+|scrape_screenshot|Capture a page as a PNG image, going through Bright Data's unlocker so it works on sites with bot detection.|
+|scrape_metadata|Fetch a page and return its HTTP status code, response headers and body as structured JSON, rather than converted text.|

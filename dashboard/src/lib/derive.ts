@@ -4,7 +4,9 @@
 // These live apart from registry.ts because they are pure shaping — no disk,
 // no network — which is also what makes them the easy part to be sure about.
 
-import type { Registry, RegistryRow, RunPoint, Stats } from './registry'
+import type {
+  Registry, RegistryRow, RunPoint, RunSource, ScraperState, Stats,
+} from './registry'
 import { to_rows } from './registry'
 
 /* ── Is everything OK? ─────────────────────────────────────────────────── */
@@ -148,6 +150,66 @@ export function to_watch(rows: RegistryRow[]): WatchMatrix {
       }),
     })),
   }
+}
+
+/* ── The two watch loops ───────────────────────────────────────────────── */
+
+export interface CronPoint {
+  domain: string
+  at: string
+  rows: number
+  healthy: boolean
+  source: RunSource | 'unknown'
+}
+
+// run_history flattened across every scraper, tagged by which loop produced
+// each point. This is the only place the two schedules - the 6-hourly full
+// pass and the 15-minute cheap check - are visible as two distinct things
+// rather than one merged timeline.
+export function to_cron_log(registry: Registry, limit = 60): CronPoint[] {
+  const points: CronPoint[] = []
+  for (const [domain, entry] of Object.entries(registry)) {
+    for (const run of entry.run_history ?? []) {
+      points.push({
+        domain,
+        at: run.at,
+        rows: run.rows,
+        healthy: run.healthy,
+        source: run.source ?? 'unknown',
+      })
+    }
+  }
+  return points
+    .sort((a, b) => (b.at ?? '').localeCompare(a.at ?? ''))
+    .slice(0, limit)
+}
+
+export interface MonitoringRow {
+  domain: string
+  state: ScraperState
+  last_checked_at: string | null
+  watched_by: RunSource[]
+}
+
+// What cadence is actually watching a scraper, read from what really ran
+// rather than assumed from the workflow files - if the fast loop has never
+// actually recorded a point for this domain, it isn't watched by it yet,
+// whatever the schedule intends.
+export function to_monitoring(rows: RegistryRow[]): MonitoringRow[] {
+  return rows
+    .filter(r => r.state !== 'abandoned')
+    .map(row => {
+      const recent = row.runs.slice(-8)
+      const watched_by = [...new Set(
+        recent.map(r => r.source).filter((s): s is RunSource => Boolean(s)),
+      )]
+      return {
+        domain: row.domain,
+        state: row.state,
+        last_checked_at: row.last_checked_at,
+        watched_by,
+      }
+    })
 }
 
 /* ── Shared helpers ────────────────────────────────────────────────────── */

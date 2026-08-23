@@ -27,11 +27,19 @@ export interface HealEvent {
 // One run. Written for every run, including the failed ones — the baseline
 // fields below are only updated on a healthy run by design, so without this a
 // break would leave no trace and there would be nothing to plot.
+// 'ensure' is the full reuse/run/heal/verify/escalate pass (the 6-hourly
+// cron, a direct scraper_ensure call, or an escalation the fast path
+// triggered). 'fast_check' is the cheap scrape-and-check with no AI job (the
+// 15-minute schedule, or a manual scraper_check_now). Older points recorded
+// before this distinction existed have no source at all.
+export type RunSource = 'ensure' | 'fast_check'
+
 export interface RunPoint {
   at: string
   rows: number
   healthy: boolean
   fields: string[]
+  source?: RunSource
 }
 
 export interface RegistryEntry {
@@ -45,6 +53,7 @@ export interface RegistryEntry {
   last_sample?: ScrapedRecord[] | null
   last_run_at?: string
   last_row_count?: number
+  last_checked_at?: string
   heal_history?: HealEvent[]
   run_history?: RunPoint[]
 }
@@ -65,6 +74,7 @@ export interface RegistryRow {
   state: ScraperState
   created_at: string
   last_run_at: string | null
+  last_checked_at: string | null
   last_row_count: number | null
   schema_baseline: string[]
   missing_fields: string[]
@@ -156,6 +166,7 @@ export function to_rows(registry: Registry): RegistryRow[] {
       state: state_of(entry, runs),
       created_at: entry.created_at,
       last_run_at: entry.last_run_at ?? runs.at(-1)?.at ?? null,
+      last_checked_at: entry.last_checked_at ?? runs.at(-1)?.at ?? null,
       last_row_count: entry.last_row_count ?? runs.at(-1)?.rows ?? null,
       schema_baseline: baseline,
       missing_fields: missing_on_last_run(baseline, runs),

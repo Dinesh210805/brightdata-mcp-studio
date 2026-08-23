@@ -34,7 +34,7 @@ export function SignInButton() {
         type="button"
         onClick={sign_in}
         disabled={busy}
-        className="flex w-full items-center justify-center gap-3 rounded-full bg-ink px-5 py-3.5 text-lead font-medium text-white transition-opacity hover:opacity-85 disabled:opacity-50"
+        className="flex w-full items-center justify-center gap-3 rounded-full bg-ink px-5 py-3.5 text-lead font-medium text-paper transition-opacity hover:opacity-85 disabled:opacity-50"
       >
         <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true">
           <path fill="#fff" d="M12 11v3.2h5.3a4.6 4.6 0 0 1-1.98 3l3.2 2.5c1.87-1.73 2.95-4.28 2.95-7.3 0-.7-.06-1.38-.18-2.03H12z" />

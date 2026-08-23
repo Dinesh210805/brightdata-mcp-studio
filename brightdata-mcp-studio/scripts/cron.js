@@ -11,6 +11,7 @@
 // wait instead of one.
 import {load_registry, active_entries} from '../scraper/registry.js';
 import {ensure} from '../scraper/ensure.js';
+import {notify_digest} from '../scraper/email.js';
 
 const token = process.env.API_TOKEN;
 if (!token)
@@ -26,6 +27,7 @@ if (!entries.length)
 }
 
 let failures = 0;
+const results = [];
 
 for (const [domain, entry] of entries)
 {
@@ -35,7 +37,9 @@ for (const [domain, entry] of entries)
         // A locked domain means the fast health-check path or a manual
         // trigger is already healing it. That is the lock doing its job, not
         // a fault - counting it as a failure would turn the build red for
-        // exactly the case this exists to prevent.
+        // exactly the case this exists to prevent. It also has no run to
+        // report, so it is left out of the digest rather than reported as
+        // either healthy or broken.
         if (result.skipped)
         {
             console.log(`${domain}: skipped - ${result.reason}`);
@@ -44,6 +48,9 @@ for (const [domain, entry] of entries)
 
         for (const line of result.trace)
             console.log(`${domain}: ${line}`);
+
+        results.push({domain, healthy: result.health.healthy,
+            rows: result.records?.length ?? 0});
 
         // A run that healed itself is a success - that is the feature working,
         // not a fault. Only data that is still wrong after every repair
@@ -55,8 +62,12 @@ for (const [domain, entry] of entries)
         }
     } catch(e){
         failures++;
+        results.push({domain, healthy: false, rows: 0});
         console.error(`${domain}: FAILED - ${e.message}`);
     }
 }
+
+if (results.length)
+    await notify_digest(results);
 
 process.exit(failures ? 1 : 0);

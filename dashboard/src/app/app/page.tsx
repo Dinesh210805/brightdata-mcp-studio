@@ -2,6 +2,8 @@ import { redirect } from 'next/navigation'
 import { Bar } from '@/components/app/bar'
 import { Verdict } from '@/components/app/verdict'
 import { Mosaic } from '@/components/app/mosaic'
+import { Monitoring } from '@/components/app/monitoring'
+import { CronLog } from '@/components/app/cron-log'
 import { Feed } from '@/components/app/feed'
 import { Watch } from '@/components/app/watch'
 import { Machine } from '@/components/app/machine'
@@ -11,7 +13,10 @@ import { get_profile } from '@/lib/profile'
 import { load_registry, to_rows, to_stats, to_owned_collectors } from '@/lib/registry'
 import { load_collectors, to_collector_view } from '@/lib/collectors'
 import { Collectors } from '@/components/app/collectors'
-import { to_verdict, to_feed, to_watch, summarize, total_rows_today } from '@/lib/derive'
+import {
+  to_verdict, to_feed, to_watch, to_cron_log, to_monitoring,
+  summarize, total_rows_today,
+} from '@/lib/derive'
 import { load_runs, next_cron_run } from '@/lib/actions'
 import { load_balance } from '@/lib/balance'
 
@@ -55,36 +60,66 @@ export default async function Overview() {
         base="/app/s"
       />
 
-      <main className="mx-auto max-w-page space-y-16 px-6 py-14 sm:space-y-20">
+      <main className="mx-auto max-w-page px-6 py-14">
         {/* Setup first only while there is setup left to do. Once the agent is
             talking to us this collapses to a single line at the bottom. */}
         {!api_key && (
           <Connect has_key={false} api_key={null} last_sync={null} />
         )}
 
-        {rows.length > 0 && <Mosaic rows={rows} base="/app/s" />}
+        {rows.length > 0 && (
+          <div className={!api_key ? 'mt-16' : ''}>
+            <Mosaic rows={rows} base="/app/s" />
+          </div>
+        )}
 
-        {rows.length > 0 && <Watch matrix={to_watch(rows)} />}
+        {/* Every section from here down gets the same rule-and-eyebrow
+            treatment, so the page reads as a sequence of distinct answers -
+            "what's watching what", "what actually ran", "what got repaired" -
+            rather than one long scroll of loosely related cards. */}
+        {rows.length > 0 && (
+          <div className="mt-16 border-t border-gutter pt-16">
+            <Monitoring monitoring={to_monitoring(rows)} rows={rows} />
+          </div>
+        )}
 
-        <Feed events={to_feed(registry)} />
+        {rows.length > 0 && (
+          <div className="mt-16 border-t border-gutter pt-16">
+            <Watch matrix={to_watch(rows)} />
+          </div>
+        )}
+
+        <div className="mt-16 border-t border-gutter pt-16">
+          <CronLog points={to_cron_log(registry)} />
+        </div>
+
+        <div className="mt-16 border-t border-gutter pt-16">
+          <Feed events={to_feed(registry).filter(e => e.kind === 'heal')} />
+        </div>
 
         {/* Only with a key of their own - this is a live call to Bright Data
             on the signed-in person's behalf, not something we can fake. */}
         {collectors && (
-          <Collectors
-            collectors={to_collector_view(collectors,
-              to_owned_collectors(registry))}
-          />
+          <div className="mt-16 border-t border-gutter pt-16">
+            <Collectors
+              collectors={to_collector_view(collectors,
+                to_owned_collectors(registry))}
+            />
+          </div>
         )}
 
-        <Machine
-          runs={runs}
-          next_run={next_cron_run().getTime()}
-          balance={balance}
-        />
+        <div className="mt-16 border-t border-gutter pt-16">
+          <Machine
+            runs={runs}
+            next_run={next_cron_run().getTime()}
+            balance={balance}
+          />
+        </div>
 
         {api_key && (
-          <Connect has_key api_key={api_key} last_sync={stats.last_run_at} />
+          <div className="mt-16 border-t border-gutter pt-16">
+            <Connect has_key api_key={api_key} last_sync={stats.last_run_at} />
+          </div>
         )}
       </main>
     </>
