@@ -14,35 +14,35 @@
         ],
         "last_sample": [
             {
-                "title": "We must not grant AI agents legal personhood",
-                "points": 18,
-                "author": "andsoitis",
-                "product_page_url": "https://news.ycombinator.com/item?id=49410628",
+                "title": "The Remote Work Challenge: Lessons from 5 Cities",
+                "points": 30,
+                "author": "softwaredoug",
+                "product_page_url": "https://news.ycombinator.com/item?id=49410545",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "The Art and Beauty of Blade Runner (2015)",
-                "points": 160,
-                "author": "cocacola1",
-                "product_page_url": "https://news.ycombinator.com/item?id=49405331",
+                "title": "Google Workspace thinks my domain is an email provider (2025)",
+                "points": 165,
+                "author": "el1s7",
+                "product_page_url": "https://news.ycombinator.com/item?id=49411717",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
-                "points": 180,
-                "author": "boilerupnc",
-                "product_page_url": "https://news.ycombinator.com/item?id=49405816",
+                "title": "The planet now has more trees than it did 35 years ago (2018)",
+                "points": 48,
+                "author": "bookofjoe",
+                "product_page_url": "https://news.ycombinator.com/item?id=49413004",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-23T18:25:09.528Z",
+        "last_run_at": "2026-08-24T01:06:48.990Z",
         "last_row_count": 60,
         "run_history": [
             {
@@ -389,9 +389,21 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T01:06:48.990Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_checked_at": "2026-08-24T00:00:16.831Z"
+        "last_checked_at": "2026-08-24T01:06:48.990Z"
     },
     "lobste.rs": {
         "collector_id": "c_mt10ecsz1x2ve37jkb",
@@ -408,28 +420,28 @@
         ],
         "last_sample": [
             {
-                "title": "Hister - A private, full content search index that you control",
-                "score": 29,
+                "title": "Replicating Reddit's best feature on other forums",
+                "score": 22,
                 "comment_count": 5,
-                "product_page_url": "https://lobste.rs/s/dyxeyu/hister_private_full_content_search_index",
+                "product_page_url": "https://lobste.rs/s/ll6pak/replicating_reddit_s_best_feature_on",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "JIT Compiling Code in 5μs",
-                "score": 7,
-                "comment_count": 1,
-                "product_page_url": "https://lobste.rs/s/aujfn1/jit_compiling_code_5_s",
+                "title": "Amazon kept shutting down my tablet, so I spent $266 on four AI models to own it",
+                "score": 33,
+                "comment_count": 11,
+                "product_page_url": "https://lobste.rs/s/fadbev/amazon_kept_shutting_down_my_tablet_so_i",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Optimizing memory usage in a markdown parser",
-                "score": 4,
-                "comment_count": 1,
-                "product_page_url": "https://lobste.rs/s/1swh9l/optimizing_memory_usage_markdown_parser",
+                "title": "NetBSD and my life (2005)",
+                "score": 43,
+                "comment_count": 16,
+                "product_page_url": "https://lobste.rs/s/a23bk3/netbsd_my_life_2005",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -454,17 +466,6 @@
             }
         ],
         "run_history": [
-            {
-                "at": "2026-08-20T04:17:11.748Z",
-                "rows": 113,
-                "healthy": false,
-                "fields": [
-                    "comment_count",
-                    "product_page_url",
-                    "score",
-                    "title"
-                ]
-            },
             {
                 "at": "2026-08-20T04:24:29.495Z",
                 "rows": 125,
@@ -809,11 +810,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T01:07:44.917Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-23T18:26:05.233Z",
+        "last_run_at": "2026-08-24T01:07:44.917Z",
         "last_row_count": 125,
-        "last_checked_at": "2026-08-24T00:01:39.233Z"
+        "last_checked_at": "2026-08-24T01:07:44.917Z"
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -830,28 +843,28 @@
         ],
         "last_sample": [
             {
-                "title": "Alice's Adventures in Wonderland by Lewis Carroll",
-                "author": "Carroll, Lewis, 1832-1898",
-                "download_count": 10706830,
-                "product_page_url": "https://www.gutenberg.org/ebooks/11",
+                "title": "The Air Pirate by Guy Thorne",
+                "author": "Thorne, Guy, 1875-1923",
+                "download_count": 6365330,
+                "product_page_url": "https://www.gutenberg.org/ebooks/40361",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The King in Yellow by Robert W. Chambers",
-                "author": "Chambers, Robert W. (Robert William), 1865-1933",
-                "download_count": 9525430,
-                "product_page_url": "https://www.gutenberg.org/ebooks/8492",
+                "title": "The Book of the Thousand Nights and a Night — Volume 01 (of 10) by Burton",
+                "author": "Burton, Richard Francis, Sir, 1821-1890",
+                "download_count": 9184130,
+                "product_page_url": "https://www.gutenberg.org/ebooks/51252",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Life Blood by Thomas Hoover",
-                "author": "Hoover, Thomas, 1941-",
-                "download_count": 6336630,
-                "product_page_url": "https://www.gutenberg.org/ebooks/34318",
+                "title": "The Secret Garden by Frances Hodgson Burnett",
+                "author": "Burnett, Frances Hodgson, 1849-1924",
+                "download_count": 3942230,
+                "product_page_url": "https://www.gutenberg.org/ebooks/113",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -1192,11 +1205,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T01:10:26.085Z",
+                "rows": 196,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 196,
-        "last_run_at": "2026-08-23T18:27:51.777Z",
-        "last_checked_at": "2026-08-24T00:04:07.827Z"
+        "last_run_at": "2026-08-24T01:10:26.085Z",
+        "last_checked_at": "2026-08-24T01:10:26.085Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -1214,51 +1239,49 @@
         ],
         "last_sample": [
             {
-                "job_title": "Software Engineer (Remote)",
-                "company": "Softech Associate",
-                "location": "Panama City Beach, Florida, United States",
+                "job_title": "Python + TypeScript Engineers",
+                "company": "Fusionbox",
+                "location": "Remote (US Based), Any US State, US",
                 "job_type": [
                     "Back end",
+                    "Database",
+                    "Front end",
+                    "Web"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8111/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Python Backend Engineer",
+                "company": "Constelli Signals",
+                "location": "Hyderabad, Telangana, India",
+                "job_type": [
+                    "Back end",
+                    "Database"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8120/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Senior Python/DevOps Engineer (100% Remote - USA Only)",
+                "company": "Six Feet Up",
+                "location": "100% Remote, USA Only",
+                "job_type": [
+                    "Back end",
+                    "Big Data",
                     "Cloud",
                     "Database",
+                    "Evangelism",
+                    "Finance",
                     "Front end",
-                    "Integration",
-                    "Machine Learning",
-                    "Numeric processing",
-                    "Testing",
-                    "Text Processing",
-                    "Web"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8126/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Senior Full-Stack Engineer [Full Time; 100% remote; US-only]",
-                "company": "Hive Collective",
-                "location": "Anywhere, Anywhere, USA",
-                "job_type": [
-                    "Back end",
-                    "Machine Learning",
-                    "Web"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8119/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Full-Stack Engineer",
-                "company": "AIDAR",
-                "location": "Hamburg, Germany",
-                "job_type": [
-                    "Back end",
-                    "Database",
-                    "Front end",
+                    "Lead",
                     "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8108/",
+                "product_page_url": "https://www.python.org/jobs/8113/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -1631,11 +1654,24 @@
                     "product_page_url"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T01:10:36.420Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-23T18:28:27.061Z",
-        "last_checked_at": "2026-08-24T00:04:13.190Z"
+        "last_run_at": "2026-08-24T01:10:36.420Z",
+        "last_checked_at": "2026-08-24T01:10:36.420Z"
     },
     "producthunt.com": {
         "collector_id": "c_mt5g0w2v22o0ro7nzf",
@@ -1654,17 +1690,8 @@
             {
                 "product_name": "Construct Computer",
                 "tagline": "Your AI coworker gets a computer. You get your day back.",
-                "upvote_count": 13,
+                "upvote_count": 14,
                 "product_page_url": "https://www.producthunt.com/products/construct-computer",
-                "input": {
-                    "url": "https://www.producthunt.com"
-                }
-            },
-            {
-                "product_name": "FetchSandbox",
-                "tagline": "API integration testing that remembers what breaks",
-                "upvote_count": 9,
-                "product_page_url": "https://www.producthunt.com/products/fetchsandbox",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -1674,6 +1701,15 @@
                 "tagline": "Your car data, finally in your pocket",
                 "upvote_count": 7,
                 "product_page_url": "https://www.producthunt.com/products/aximote",
+                "input": {
+                    "url": "https://www.producthunt.com"
+                }
+            },
+            {
+                "product_name": "FetchSandbox",
+                "tagline": "API integration testing that remembers what breaks",
+                "upvote_count": 10,
+                "product_page_url": "https://www.producthunt.com/products/fetchsandbox",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -2042,10 +2078,22 @@
                     "upvote_count"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T01:11:22.443Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-23T18:28:57.285Z",
+        "last_run_at": "2026-08-24T01:11:22.443Z",
         "last_row_count": 3,
-        "last_checked_at": "2026-08-24T00:05:09.990Z"
+        "last_checked_at": "2026-08-24T01:11:22.443Z"
     }
 }
