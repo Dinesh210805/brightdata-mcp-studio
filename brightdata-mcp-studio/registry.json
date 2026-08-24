@@ -14,49 +14,37 @@
         ],
         "last_sample": [
             {
-                "title": "Former OC actor Ben McKenzie on crusade to take down 'stupid' cryptocurrency",
-                "points": 44,
-                "author": "billybuckwheat",
-                "product_page_url": "https://news.ycombinator.com/item?id=49414556",
+                "title": "SeL4 security proofs now complete on AArch64",
+                "points": 31,
+                "author": "snvzz",
+                "product_page_url": "https://news.ycombinator.com/item?id=49418255",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Decoding silent reading from non-invasive EEG",
-                "points": 47,
-                "author": "root-parent",
-                "product_page_url": "https://news.ycombinator.com/item?id=49412176",
+                "title": "The Future Belongs to the Weird",
+                "points": 43,
+                "author": "georgestrakhov",
+                "product_page_url": "https://news.ycombinator.com/item?id=49416953",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "How Complex Systems Fail (1998)",
-                "points": 295,
-                "author": "shortcrct",
-                "product_page_url": "https://news.ycombinator.com/item?id=49409473",
+                "title": "Agent Is Not the Model",
+                "points": 8,
+                "author": "joejag",
+                "product_page_url": "https://news.ycombinator.com/item?id=49418163",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-24T06:54:30.426Z",
+        "last_run_at": "2026-08-24T12:43:22.132Z",
         "last_row_count": 60,
         "run_history": [
-            {
-                "at": "2026-08-23T17:10:13.032Z",
-                "rows": 60,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "points",
-                    "product_page_url",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-23T17:38:30.588Z",
                 "rows": 60,
@@ -404,9 +392,21 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T12:43:22.132Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_checked_at": "2026-08-24T12:04:55.755Z"
+        "last_checked_at": "2026-08-24T12:43:22.132Z"
     },
     "lobste.rs": {
         "collector_id": "c_mt10ecsz1x2ve37jkb",
@@ -423,28 +423,28 @@
         ],
         "last_sample": [
             {
-                "title": "Amazon kept shutting down my tablet, so I spent $266 on four AI models to own it",
-                "score": 45,
-                "comment_count": 12,
-                "product_page_url": "https://lobste.rs/s/fadbev/amazon_kept_shutting_down_my_tablet_so_i",
+                "title": "My DIY DEF CON Choker Has a Screen On It",
+                "score": 21,
+                "comment_count": 1,
+                "product_page_url": "https://lobste.rs/s/ft1wfv/my_diy_def_con_choker_has_screen_on_it",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "It's OK. Do Your Thing",
-                "score": 30,
-                "comment_count": 3,
-                "product_page_url": "https://lobste.rs/s/ek0aqp/it_s_ok_do_your_thing",
+                "title": "How To Report A Bug So It Actually Gets Fixed",
+                "score": 12,
+                "comment_count": 0,
+                "product_page_url": "https://lobste.rs/s/tc2em9/how_report_bug_so_it_actually_gets_fixed",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "touch - A lightweight implementation of the Unix touch command for Windows",
+                "title": "Control and complexity: tension in systems design",
                 "score": 1,
                 "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/lcbq86/touch_lightweight_implementation_unix",
+                "product_page_url": "https://lobste.rs/s/3vg7ts/control_complexity_tension_systems",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -469,18 +469,6 @@
             }
         ],
         "run_history": [
-            {
-                "at": "2026-08-23T17:12:05.896Z",
-                "rows": 125,
-                "healthy": true,
-                "fields": [
-                    "comment_count",
-                    "product_page_url",
-                    "score",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-23T17:43:18.832Z",
                 "rows": 124,
@@ -828,11 +816,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T12:44:32.580Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-24T06:56:52.899Z",
+        "last_run_at": "2026-08-24T12:44:32.580Z",
         "last_row_count": 125,
-        "last_checked_at": "2026-08-24T12:07:04.789Z"
+        "last_checked_at": "2026-08-24T12:44:32.580Z"
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -849,28 +849,28 @@
         ],
         "last_sample": [
             {
-                "title": "That Girl Montana by Marah Ellis Ryan",
-                "author": "Ryan, Marah Ellis, 1866-1934",
-                "download_count": 6453530,
-                "product_page_url": "https://www.gutenberg.org/ebooks/27475",
+                "title": "A Study in Scarlet by Arthur Conan Doyle",
+                "author": "Doyle, Arthur Conan, 1859-1930",
+                "download_count": 7922730,
+                "product_page_url": "https://www.gutenberg.org/ebooks/244",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The libertine; vol. 1 [of 4] by Charlotte Dacre",
-                "author": "Dacre, Charlotte, 1782?-1825",
-                "download_count": 47430,
-                "product_page_url": "https://www.gutenberg.org/ebooks/79424",
+                "title": "Eloisa : or, A series of original letters by Jean-Jacques Rousseau",
+                "author": "Rousseau, Jean-Jacques, 1712-1778",
+                "download_count": 8763630,
+                "product_page_url": "https://www.gutenberg.org/ebooks/76639",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Arsène Lupin, gentleman-cambrioleur by Maurice Leblanc",
-                "author": "Leblanc, Maurice, 1864-1941",
-                "download_count": 6493630,
-                "product_page_url": "https://www.gutenberg.org/ebooks/32854",
+                "title": "The Lady of the Lake by Walter Scott",
+                "author": "Scott, Walter, 1771-1832",
+                "download_count": 8057230,
+                "product_page_url": "https://www.gutenberg.org/ebooks/3011",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -878,18 +878,6 @@
         ],
         "heal_history": [],
         "run_history": [
-            {
-                "at": "2026-08-23T17:14:59.567Z",
-                "rows": 196,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "download_count",
-                    "product_page_url",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-23T17:45:36.058Z",
                 "rows": 196,
@@ -1237,11 +1225,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T12:46:01.246Z",
+                "rows": 136,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_row_count": 196,
-        "last_run_at": "2026-08-24T06:59:22.129Z",
-        "last_checked_at": "2026-08-24T12:09:34.305Z"
+        "last_row_count": 136,
+        "last_run_at": "2026-08-24T12:46:01.246Z",
+        "last_checked_at": "2026-08-24T12:46:01.246Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -1259,46 +1259,44 @@
         ],
         "last_sample": [
             {
-                "job_title": "Senior Python/DevOps Engineer (100% Remote - USA Only)",
-                "company": "Six Feet Up",
-                "location": "100% Remote, USA Only",
+                "job_title": "Python + TypeScript Engineers",
+                "company": "Fusionbox",
+                "location": "Remote (US Based), Any US State, US",
                 "job_type": [
                     "Back end",
-                    "Big Data",
-                    "Cloud",
                     "Database",
-                    "Evangelism",
-                    "Finance",
                     "Front end",
-                    "Lead",
+                    "Web"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8111/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Senior Python Developer",
+                "company": "Turing",
+                "location": "Remote, Remote, Remote",
+                "job_type": [
+                    "Back end",
+                    "Front end",
                     "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8113/",
+                "product_page_url": "https://www.python.org/jobs/8103/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Lead Python Backend Engineer",
-                "company": "Reef Technologies",
-                "location": "Warsaw (fully remote), Poland",
-                "job_type": [
-                    "Back end"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8122/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Backend Software Engineer (FastAPI) -Onsite in Katy, Texas",
-                "company": "Off Duty Management",
-                "location": "Katy, TX, United States",
+                "job_title": "Senior Backend Python Engineer",
+                "company": "mindIT HR Agency (on behalf of a confidential client)",
+                "location": "Remote, Argentina",
                 "job_type": [
                     "Back end",
-                    "Cloud"
+                    "Machine Learning",
+                    "Web"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8123/",
+                "product_page_url": "https://www.python.org/jobs/8109/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -1306,19 +1304,6 @@
         ],
         "heal_history": [],
         "run_history": [
-            {
-                "at": "2026-08-23T17:15:31.623Z",
-                "rows": 38,
-                "healthy": true,
-                "fields": [
-                    "company",
-                    "job_title",
-                    "job_type",
-                    "location",
-                    "product_page_url"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-23T17:46:01.838Z",
                 "rows": 38,
@@ -1695,11 +1680,24 @@
                     "product_page_url"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T12:46:26.574Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-24T06:59:43.260Z",
-        "last_checked_at": "2026-08-24T12:09:45.100Z"
+        "last_run_at": "2026-08-24T12:46:26.574Z",
+        "last_checked_at": "2026-08-24T12:46:26.574Z"
     },
     "producthunt.com": {
         "collector_id": "c_mt5g0w2v22o0ro7nzf",
@@ -1716,28 +1714,28 @@
         ],
         "last_sample": [
             {
-                "product_name": "Aximote",
-                "tagline": "Your car data, finally in your pocket",
-                "upvote_count": 7,
-                "product_page_url": "https://www.producthunt.com/products/aximote",
-                "input": {
-                    "url": "https://www.producthunt.com"
-                }
-            },
-            {
-                "product_name": "Construct Computer",
-                "tagline": "Your AI coworker gets a computer. You get your day back.",
-                "upvote_count": 14,
-                "product_page_url": "https://www.producthunt.com/products/construct-computer",
-                "input": {
-                    "url": "https://www.producthunt.com"
-                }
-            },
-            {
-                "product_name": "FetchSandbox",
-                "tagline": "API integration testing that remembers what breaks",
+                "product_name": "PaymentKit",
+                "tagline": "Billing that survives a processor shutdown",
                 "upvote_count": 10,
-                "product_page_url": "https://www.producthunt.com/products/fetchsandbox",
+                "product_page_url": "https://www.producthunt.com/products/paymentkit",
+                "input": {
+                    "url": "https://www.producthunt.com"
+                }
+            },
+            {
+                "product_name": "Navigara",
+                "tagline": "Connect Your AI Spend Directly to Your Roadmap",
+                "upvote_count": 4,
+                "product_page_url": "https://www.producthunt.com/products/navigara",
+                "input": {
+                    "url": "https://www.producthunt.com"
+                }
+            },
+            {
+                "product_name": "Decawork",
+                "tagline": "Control your company's internal AI agents and tools",
+                "upvote_count": 4,
+                "product_page_url": "https://www.producthunt.com/products/decawork",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -1762,18 +1760,6 @@
             }
         ],
         "run_history": [
-            {
-                "at": "2026-08-23T17:16:03.493Z",
-                "rows": 3,
-                "healthy": true,
-                "fields": [
-                    "product_name",
-                    "product_page_url",
-                    "tagline",
-                    "upvote_count"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-23T17:47:18.633Z",
                 "rows": 3,
@@ -2121,10 +2107,22 @@
                     "upvote_count"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T12:46:52.007Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-24T07:00:20.103Z",
+        "last_run_at": "2026-08-24T12:46:52.007Z",
         "last_row_count": 3,
-        "last_checked_at": "2026-08-24T12:10:22.013Z"
+        "last_checked_at": "2026-08-24T12:46:52.007Z"
     }
 }
