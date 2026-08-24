@@ -14,49 +14,37 @@
         ],
         "last_sample": [
             {
-                "title": "SeL4 security proofs now complete on AArch64",
-                "points": 31,
-                "author": "snvzz",
-                "product_page_url": "https://news.ycombinator.com/item?id=49418255",
+                "title": "Peppermint oil reduces blood pressure by 8.48 mmHg in small study",
+                "points": 19,
+                "author": "brandonb",
+                "product_page_url": "https://news.ycombinator.com/item?id=49420530",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "The Future Belongs to the Weird",
-                "points": 43,
-                "author": "georgestrakhov",
-                "product_page_url": "https://news.ycombinator.com/item?id=49416953",
+                "title": "The entire city of San Francisco as a video game",
+                "points": 73,
+                "author": "centrosphere",
+                "product_page_url": "https://news.ycombinator.com/item?id=49422784",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Agent Is Not the Model",
-                "points": 8,
-                "author": "joejag",
-                "product_page_url": "https://news.ycombinator.com/item?id=49418163",
+                "title": "Jabber/XMPP: 25 Years of Digital Independence",
+                "points": 54,
+                "author": "inputmice",
+                "product_page_url": "https://news.ycombinator.com/item?id=49421536",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-24T12:43:22.132Z",
+        "last_run_at": "2026-08-24T18:36:44.205Z",
         "last_row_count": 60,
         "run_history": [
-            {
-                "at": "2026-08-23T20:35:19.017Z",
-                "rows": 60,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "points",
-                    "product_page_url",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-23T21:01:55.145Z",
                 "rows": 60,
@@ -404,9 +392,21 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T18:36:44.205Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_checked_at": "2026-08-24T18:15:56.361Z"
+        "last_checked_at": "2026-08-24T18:36:44.205Z"
     },
     "lobste.rs": {
         "collector_id": "c_mt10ecsz1x2ve37jkb",
@@ -424,7 +424,7 @@
         "last_sample": [
             {
                 "title": "My DIY DEF CON Choker Has a Screen On It",
-                "score": 21,
+                "score": 35,
                 "comment_count": 1,
                 "product_page_url": "https://lobste.rs/s/ft1wfv/my_diy_def_con_choker_has_screen_on_it",
                 "input": {
@@ -432,19 +432,19 @@
                 }
             },
             {
-                "title": "How To Report A Bug So It Actually Gets Fixed",
-                "score": 12,
-                "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/tc2em9/how_report_bug_so_it_actually_gets_fixed",
+                "title": "Control and complexity: tension in systems design",
+                "score": 4,
+                "comment_count": 1,
+                "product_page_url": "https://lobste.rs/s/3vg7ts/control_complexity_tension_systems",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Control and complexity: tension in systems design",
-                "score": 1,
-                "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/3vg7ts/control_complexity_tension_systems",
+                "title": "Perspec 1.0: A Haskell desktop app for perspective correction of document photos",
+                "score": 13,
+                "comment_count": 2,
+                "product_page_url": "https://lobste.rs/s/plmwzl/perspec_1_0_haskell_desktop_app_for",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -469,18 +469,6 @@
             }
         ],
         "run_history": [
-            {
-                "at": "2026-08-23T20:36:45.318Z",
-                "rows": 125,
-                "healthy": true,
-                "fields": [
-                    "comment_count",
-                    "product_page_url",
-                    "score",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-23T21:04:15.616Z",
                 "rows": 125,
@@ -828,11 +816,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T18:37:51.888Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-24T12:44:32.580Z",
+        "last_run_at": "2026-08-24T18:37:51.888Z",
         "last_row_count": 125,
-        "last_checked_at": "2026-08-24T18:17:03.642Z"
+        "last_checked_at": "2026-08-24T18:37:51.888Z"
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -849,28 +849,28 @@
         ],
         "last_sample": [
             {
-                "title": "A Study in Scarlet by Arthur Conan Doyle",
-                "author": "Doyle, Arthur Conan, 1859-1930",
-                "download_count": 7922730,
-                "product_page_url": "https://www.gutenberg.org/ebooks/244",
+                "title": "Meditations by Emperor of Rome Marcus Aurelius",
+                "author": "Marcus Aurelius, Emperor of Rome, 121-180",
+                "download_count": 8803530,
+                "product_page_url": "https://www.gutenberg.org/ebooks/2680",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Eloisa : or, A series of original letters by Jean-Jacques Rousseau",
-                "author": "Rousseau, Jean-Jacques, 1712-1778",
-                "download_count": 8763630,
-                "product_page_url": "https://www.gutenberg.org/ebooks/76639",
+                "title": "Arsène Lupin, gentleman-cambrioleur by Maurice Leblanc",
+                "author": "Leblanc, Maurice, 1864-1941",
+                "download_count": 6456930,
+                "product_page_url": "https://www.gutenberg.org/ebooks/32854",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "The Lady of the Lake by Walter Scott",
-                "author": "Scott, Walter, 1771-1832",
-                "download_count": 8057230,
-                "product_page_url": "https://www.gutenberg.org/ebooks/3011",
+                "title": "Space Station 1 by Frank Belknap Long",
+                "author": "Long, Frank Belknap, 1903-1994",
+                "download_count": 6301030,
+                "product_page_url": "https://www.gutenberg.org/ebooks/50290",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -878,18 +878,6 @@
         ],
         "heal_history": [],
         "run_history": [
-            {
-                "at": "2026-08-23T20:38:11.597Z",
-                "rows": 119,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "download_count",
-                    "product_page_url",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-23T21:06:35.827Z",
                 "rows": 196,
@@ -1237,11 +1225,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T18:39:30.201Z",
+                "rows": 136,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 136,
-        "last_run_at": "2026-08-24T12:46:01.246Z",
-        "last_checked_at": "2026-08-24T18:20:25.681Z"
+        "last_run_at": "2026-08-24T18:39:30.201Z",
+        "last_checked_at": "2026-08-24T18:39:30.201Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -1274,29 +1274,28 @@
                 }
             },
             {
-                "job_title": "Senior Python Developer",
-                "company": "Turing",
-                "location": "Remote, Remote, Remote",
+                "job_title": "Python Developer",
+                "company": "Micro1",
+                "location": "Remote, Remote, Anywhere",
                 "job_type": [
                     "Back end",
-                    "Front end",
-                    "Machine Learning"
+                    "Front end"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8103/",
+                "product_page_url": "https://www.python.org/jobs/8101/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Senior Backend Python Engineer",
-                "company": "mindIT HR Agency (on behalf of a confidential client)",
-                "location": "Remote, Argentina",
+                "job_title": "Agentic Python Engineer",
+                "company": "Evaboot",
+                "location": "Remote, Remote/Worldwide, Remote/Worldwide",
                 "job_type": [
                     "Back end",
-                    "Machine Learning",
-                    "Web"
+                    "Integration",
+                    "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8109/",
+                "product_page_url": "https://www.python.org/jobs/8125/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -1304,19 +1303,6 @@
         ],
         "heal_history": [],
         "run_history": [
-            {
-                "at": "2026-08-23T20:38:42.233Z",
-                "rows": 38,
-                "healthy": true,
-                "fields": [
-                    "company",
-                    "job_title",
-                    "job_type",
-                    "location",
-                    "product_page_url"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-23T21:07:07.626Z",
                 "rows": 38,
@@ -1693,11 +1679,24 @@
                     "product_page_url"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T18:39:51.466Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-24T12:46:26.574Z",
-        "last_checked_at": "2026-08-24T18:20:36.349Z"
+        "last_run_at": "2026-08-24T18:39:51.466Z",
+        "last_checked_at": "2026-08-24T18:39:51.466Z"
     },
     "producthunt.com": {
         "collector_id": "c_mt5g0w2v22o0ro7nzf",
@@ -1716,17 +1715,8 @@
             {
                 "product_name": "PaymentKit",
                 "tagline": "Billing that survives a processor shutdown",
-                "upvote_count": 10,
+                "upvote_count": 15,
                 "product_page_url": "https://www.producthunt.com/products/paymentkit",
-                "input": {
-                    "url": "https://www.producthunt.com"
-                }
-            },
-            {
-                "product_name": "Navigara",
-                "tagline": "Connect Your AI Spend Directly to Your Roadmap",
-                "upvote_count": 4,
-                "product_page_url": "https://www.producthunt.com/products/navigara",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -1734,8 +1724,17 @@
             {
                 "product_name": "Decawork",
                 "tagline": "Control your company's internal AI agents and tools",
-                "upvote_count": 4,
+                "upvote_count": 9,
                 "product_page_url": "https://www.producthunt.com/products/decawork",
+                "input": {
+                    "url": "https://www.producthunt.com"
+                }
+            },
+            {
+                "product_name": "Navigara",
+                "tagline": "Connect Your AI Spend Directly to Your Roadmap",
+                "upvote_count": 8,
+                "product_page_url": "https://www.producthunt.com/products/navigara",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -1760,18 +1759,6 @@
             }
         ],
         "run_history": [
-            {
-                "at": "2026-08-23T20:39:33.274Z",
-                "rows": 3,
-                "healthy": true,
-                "fields": [
-                    "product_name",
-                    "product_page_url",
-                    "tagline",
-                    "upvote_count"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-23T21:08:00.261Z",
                 "rows": 3,
@@ -2119,10 +2106,22 @@
                     "upvote_count"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-24T18:40:17.990Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-24T12:46:52.007Z",
+        "last_run_at": "2026-08-24T18:40:17.990Z",
         "last_row_count": 3,
-        "last_checked_at": "2026-08-24T18:21:38.887Z"
+        "last_checked_at": "2026-08-24T18:40:17.990Z"
     }
 }
