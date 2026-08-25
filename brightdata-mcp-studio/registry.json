@@ -14,49 +14,35 @@
         ],
         "last_sample": [
             {
-                "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
-                "points": 511,
-                "author": "K7PJP",
-                "product_page_url": "https://news.ycombinator.com/item?id=49426564",
+                "title": "A new ceiling for Λ: the de Bruijn–Newman constant",
+                "points": 24,
+                "author": "judegomila",
+                "product_page_url": "https://news.ycombinator.com/item?id=49437165",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Training AI to Paint with Code",
-                "points": 125,
-                "author": "Tiberium",
-                "product_page_url": "https://news.ycombinator.com/item?id=49411800",
+                "title": "Clara (YC P26) is hiring a growth engineer to bring AI doctors to market",
+                "product_page_url": "https://news.ycombinator.com/item?id=49437566",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Don't Wordle",
-                "points": 21,
-                "author": "Hbruz0",
-                "product_page_url": "https://news.ycombinator.com/item?id=49432319",
+                "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
+                "points": 36,
+                "author": "bmulholland",
+                "product_page_url": "https://news.ycombinator.com/item?id=49434378",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-25T12:44:28.613Z",
-        "last_row_count": 59,
+        "last_run_at": "2026-08-25T18:36:21.984Z",
+        "last_row_count": 60,
         "run_history": [
-            {
-                "at": "2026-08-24T20:39:52.756Z",
-                "rows": 60,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "points",
-                    "product_page_url",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T21:13:53.314Z",
                 "rows": 60,
@@ -404,9 +390,21 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T18:36:21.984Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_checked_at": "2026-08-25T18:16:22.346Z"
+        "last_checked_at": "2026-08-25T18:36:21.984Z"
     },
     "lobste.rs": {
         "collector_id": "c_mt10ecsz1x2ve37jkb",
@@ -423,28 +421,28 @@
         ],
         "last_sample": [
             {
-                "title": "Hunting Down a Go Runtime Bug on 32-bit Embedded Systems",
-                "score": 2,
-                "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/apjhyj/hunting_down_go_runtime_bug_on_32_bit",
+                "title": "AI Coding will Prevent Expertise",
+                "score": 53,
+                "comment_count": 14,
+                "product_page_url": "https://lobste.rs/s/gzddgr/ai_coding_will_prevent_expertise",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "POP-2000, a lingua-franca POP-2 dialect",
-                "score": 11,
-                "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/w0d3um/pop_2000_lingua_franca_pop_2_dialect",
+                "title": "IPython is All You Need",
+                "score": 18,
+                "comment_count": 10,
+                "product_page_url": "https://lobste.rs/s/oqv9np/ipython_is_all_you_need",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Hot Chips 2026: CUDA targets RISC-V",
-                "score": 7,
-                "comment_count": 0,
-                "product_page_url": "https://lobste.rs/s/nfmlwp/hot_chips_2026_cuda_targets_risc_v",
+                "title": "An interactive introduction to the spanning tree protocol",
+                "score": 20,
+                "comment_count": 3,
+                "product_page_url": "https://lobste.rs/s/ivr1bw/interactive_introduction_spanning_tree",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -469,18 +467,6 @@
             }
         ],
         "run_history": [
-            {
-                "at": "2026-08-24T20:41:18.979Z",
-                "rows": 125,
-                "healthy": true,
-                "fields": [
-                    "comment_count",
-                    "product_page_url",
-                    "score",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T21:14:49.376Z",
                 "rows": 125,
@@ -828,11 +814,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T18:37:49.139Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-25T12:45:44.453Z",
-        "last_row_count": 124,
-        "last_checked_at": "2026-08-25T18:18:51.712Z"
+        "last_run_at": "2026-08-25T18:37:49.139Z",
+        "last_row_count": 125,
+        "last_checked_at": "2026-08-25T18:37:49.139Z"
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -849,28 +847,28 @@
         ],
         "last_sample": [
             {
-                "title": "The Misplaced Battleship by Harry Harrison",
-                "author": "Harrison, Harry, 1925-2012",
-                "download_count": 8686030,
-                "product_page_url": "https://www.gutenberg.org/ebooks/22541",
+                "title": "The Valley of Fear by Arthur Conan Doyle",
+                "author": "Doyle, Arthur Conan, 1859-1930",
+                "download_count": 6779530,
+                "product_page_url": "https://www.gutenberg.org/ebooks/3289",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Eloisa : or, A series of original letters by Jean-Jacques Rousseau",
-                "author": "Rousseau, Jean-Jacques, 1712-1778",
-                "download_count": 8878930,
-                "product_page_url": "https://www.gutenberg.org/ebooks/76639",
+                "title": "The Mysteries of London, v. 4/4 by George W. M. Reynolds",
+                "author": "Reynolds, George W. M. (George William MacArthur), 1814-1879",
+                "download_count": 6508430,
+                "product_page_url": "https://www.gutenberg.org/ebooks/51649",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Library of the World's Best Mystery and Detective Stories by Julian Hawthorne et al.",
-                "author": "Hawthorne, Julian, 1846-1934",
-                "download_count": 6615830,
-                "product_page_url": "https://www.gutenberg.org/ebooks/12758",
+                "title": "A farewell to arms by Ernest Hemingway",
+                "author": "Hemingway, Ernest, 1899-1961",
+                "download_count": 8223530,
+                "product_page_url": "https://www.gutenberg.org/ebooks/75201",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -878,18 +876,6 @@
         ],
         "heal_history": [],
         "run_history": [
-            {
-                "at": "2026-08-24T20:43:35.615Z",
-                "rows": 136,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "download_count",
-                    "product_page_url",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T21:16:42.411Z",
                 "rows": 136,
@@ -1237,11 +1223,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T18:39:26.143Z",
+                "rows": 136,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 136,
-        "last_run_at": "2026-08-25T12:51:02.195Z",
-        "last_checked_at": "2026-08-25T18:20:19.610Z"
+        "last_run_at": "2026-08-25T18:39:26.143Z",
+        "last_checked_at": "2026-08-25T18:39:26.143Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -1259,44 +1257,41 @@
         ],
         "last_sample": [
             {
-                "job_title": "Python Developer",
-                "company": "Micro1",
-                "location": "Remote, Remote, Anywhere",
+                "job_title": "Python Backend Engineer",
+                "company": "Constelli Signals",
+                "location": "Hyderabad, Telangana, India",
                 "job_type": [
                     "Back end",
-                    "Front end"
+                    "Database"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8101/",
+                "product_page_url": "https://www.python.org/jobs/8120/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Python / DevOps Engineer for Private Voice-AI Setup",
-                "company": "JB Martyn",
-                "location": "Illinois, Chicago, United States",
+                "job_title": "Senior Python Backend Engineer",
+                "company": "Reef Technologies",
+                "location": "Warsaw (fully remote), Poland",
+                "job_type": [
+                    "Back end"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8121/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Python + TypeScript Engineers",
+                "company": "Fusionbox",
+                "location": "Remote (US Based), Any US State, US",
                 "job_type": [
                     "Back end",
-                    "Cloud",
-                    "Machine Learning",
-                    "Operations",
-                    "Text Processing",
+                    "Database",
+                    "Front end",
                     "Web"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8093/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Senior AI-Augmented Full Stack Developer",
-                "company": "SureSwift Capital",
-                "location": "Victoria, Canada",
-                "job_type": [
-                    "Back end",
-                    "Front end"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8110/",
+                "product_page_url": "https://www.python.org/jobs/8111/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -1304,19 +1299,6 @@
         ],
         "heal_history": [],
         "run_history": [
-            {
-                "at": "2026-08-24T20:43:40.840Z",
-                "rows": 38,
-                "healthy": true,
-                "fields": [
-                    "company",
-                    "job_title",
-                    "job_type",
-                    "location",
-                    "product_page_url"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T21:16:57.867Z",
                 "rows": 38,
@@ -1693,11 +1675,24 @@
                     "product_page_url"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T18:39:57.167Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-25T12:51:07.327Z",
-        "last_checked_at": "2026-08-25T18:21:01.485Z"
+        "last_run_at": "2026-08-25T18:39:57.167Z",
+        "last_checked_at": "2026-08-25T18:39:57.167Z"
     },
     "producthunt.com": {
         "collector_id": "c_mt5g0w2v22o0ro7nzf",
@@ -1714,28 +1709,28 @@
         ],
         "last_sample": [
             {
-                "product_name": "akta.pro",
-                "tagline": "Private company data and signals API for the agent economy",
-                "upvote_count": 19,
-                "product_page_url": "https://www.producthunt.com/products/akta-pro",
-                "input": {
-                    "url": "https://www.producthunt.com"
-                }
-            },
-            {
                 "product_name": "Diet Claude",
                 "tagline": "Never get blindsided by Claude's usage limits again",
-                "upvote_count": 4,
+                "upvote_count": 8,
                 "product_page_url": "https://www.producthunt.com/products/diet-claude",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
             },
             {
-                "product_name": "Jotform",
-                "tagline": "Easy-to-use online form builder for every business",
-                "upvote_count": 6,
-                "product_page_url": "https://www.producthunt.com/products/jotform",
+                "product_name": "akta.pro",
+                "tagline": "Private company data and signals API for the agent economy",
+                "upvote_count": 21,
+                "product_page_url": "https://www.producthunt.com/products/akta-pro",
+                "input": {
+                    "url": "https://www.producthunt.com"
+                }
+            },
+            {
+                "product_name": "Agnost AI",
+                "tagline": "Catch agent failures your evals miss",
+                "upvote_count": 4,
+                "product_page_url": "https://www.producthunt.com/products/agnost-ai",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -1760,18 +1755,6 @@
             }
         ],
         "run_history": [
-            {
-                "at": "2026-08-24T20:44:16.404Z",
-                "rows": 3,
-                "healthy": true,
-                "fields": [
-                    "product_name",
-                    "product_page_url",
-                    "tagline",
-                    "upvote_count"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T21:17:54.125Z",
                 "rows": 3,
@@ -2119,10 +2102,22 @@
                     "upvote_count"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T18:40:38.381Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-25T12:51:47.921Z",
+        "last_run_at": "2026-08-25T18:40:38.381Z",
         "last_row_count": 3,
-        "last_checked_at": "2026-08-25T18:21:53.956Z"
+        "last_checked_at": "2026-08-25T18:40:38.381Z"
     }
 }
