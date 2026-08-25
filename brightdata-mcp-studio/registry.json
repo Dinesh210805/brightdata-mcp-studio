@@ -14,49 +14,37 @@
         ],
         "last_sample": [
             {
-                "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
-                "points": 195,
-                "author": "K7PJP",
-                "product_page_url": "https://news.ycombinator.com/item?id=49426564",
+                "title": "Walgit – a Git server that is one binary in front of an object store",
+                "points": 63,
+                "author": "matallo",
+                "product_page_url": "https://news.ycombinator.com/item?id=49420598",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "What Is a Syslog Server?",
-                "points": 51,
-                "author": "theanonymousone",
-                "product_page_url": "https://news.ycombinator.com/item?id=49423799",
+                "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
+                "points": 75,
+                "author": "arbayi",
+                "product_page_url": "https://news.ycombinator.com/item?id=49427001",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
-                "points": 550,
-                "author": "ComputerGuru",
-                "product_page_url": "https://news.ycombinator.com/item?id=49421158",
+                "title": "Nostr is an inclusive communication commons",
+                "points": 89,
+                "author": "Bluestein",
+                "product_page_url": "https://news.ycombinator.com/item?id=49399722",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-25T01:06:14.418Z",
+        "last_run_at": "2026-08-25T06:41:35.229Z",
         "last_row_count": 60,
         "run_history": [
-            {
-                "at": "2026-08-24T09:08:03.057Z",
-                "rows": 60,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "points",
-                    "product_page_url",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T10:07:22.840Z",
                 "rows": 60,
@@ -404,9 +392,21 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T06:41:35.229Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_checked_at": "2026-08-25T06:17:52.815Z"
+        "last_checked_at": "2026-08-25T06:41:35.229Z"
     },
     "lobste.rs": {
         "collector_id": "c_mt10ecsz1x2ve37jkb",
@@ -423,28 +423,28 @@
         ],
         "last_sample": [
             {
-                "title": "IPython is All You Need",
-                "score": 7,
-                "comment_count": 2,
-                "product_page_url": "https://lobste.rs/s/oqv9np/ipython_is_all_you_need",
+                "title": "3 constraints before I build anything",
+                "score": 20,
+                "comment_count": 5,
+                "product_page_url": "https://lobste.rs/s/xlorxi/3_constraints_before_i_build_anything",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Building certgrep.sh: a free certificate transparency search engine",
-                "score": 6,
-                "comment_count": 3,
-                "product_page_url": "https://lobste.rs/s/ihethb/building_certgrep_sh_free_certificate",
+                "title": "Emacs 31.1 released",
+                "score": 86,
+                "comment_count": 10,
+                "product_page_url": "https://lobste.rs/s/rehaa3/emacs_31_1_released",
                 "input": {
                     "url": "https://lobste.rs"
                 }
             },
             {
-                "title": "Your executable is a SQLite database",
-                "score": 167,
-                "comment_count": 14,
-                "product_page_url": "https://lobste.rs/s/8ttu5n/your_executable_is_sqlite_database",
+                "title": "Control and complexity: tension in systems design",
+                "score": 8,
+                "comment_count": 1,
+                "product_page_url": "https://lobste.rs/s/3vg7ts/control_complexity_tension_systems",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -469,18 +469,6 @@
             }
         ],
         "run_history": [
-            {
-                "at": "2026-08-24T09:09:12.937Z",
-                "rows": 125,
-                "healthy": true,
-                "fields": [
-                    "comment_count",
-                    "product_page_url",
-                    "score",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T10:08:40.375Z",
                 "rows": 125,
@@ -828,11 +816,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T06:44:15.058Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-25T01:07:35.192Z",
+        "last_run_at": "2026-08-25T06:44:15.058Z",
         "last_row_count": 125,
-        "last_checked_at": "2026-08-25T06:19:49.170Z"
+        "last_checked_at": "2026-08-25T06:44:15.058Z"
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -849,28 +849,28 @@
         ],
         "last_sample": [
             {
-                "title": "A Honeymoon in Space by George Chetwynd Griffith",
-                "author": "Griffith, George Chetwynd, 1857-1906",
-                "download_count": 7461230,
-                "product_page_url": "https://www.gutenberg.org/ebooks/19476",
+                "title": "The Mystery of Edwin Drood by Charles Dickens",
+                "author": "Dickens, Charles, 1812-1870",
+                "download_count": 8871830,
+                "product_page_url": "https://www.gutenberg.org/ebooks/564",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Terminal Compromise by Winn Schwartau",
-                "author": "Schwartau, Winn, 1952-",
-                "download_count": 6446930,
-                "product_page_url": "https://www.gutenberg.org/ebooks/79",
+                "title": "The Cask of Amontillado by Edgar Allan Poe",
+                "author": "Poe, Edgar Allan, 1809-1849",
+                "download_count": 6487230,
+                "product_page_url": "https://www.gutenberg.org/ebooks/1063",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Carmen by Prosper Mérimée",
-                "author": "Mérimée, Prosper, 1803-1870",
-                "download_count": 12306530,
-                "product_page_url": "https://www.gutenberg.org/ebooks/2465",
+                "title": "Little Women; Or, Meg, Jo, Beth, and Amy by Louisa May Alcott",
+                "author": "Alcott, Louisa May, 1832-1888",
+                "download_count": 8163630,
+                "product_page_url": "https://www.gutenberg.org/ebooks/37106",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -878,18 +878,6 @@
         ],
         "heal_history": [],
         "run_history": [
-            {
-                "at": "2026-08-24T09:10:55.717Z",
-                "rows": 196,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "download_count",
-                    "product_page_url",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T10:10:45.126Z",
                 "rows": 196,
@@ -1237,11 +1225,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T06:45:43.121Z",
+                "rows": 136,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 136,
-        "last_run_at": "2026-08-25T01:08:57.835Z",
-        "last_checked_at": "2026-08-25T06:21:05.604Z"
+        "last_run_at": "2026-08-25T06:45:43.121Z",
+        "last_checked_at": "2026-08-25T06:45:43.121Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -1259,39 +1259,52 @@
         ],
         "last_sample": [
             {
-                "job_title": "Senior Python Developer",
-                "company": "Turing",
-                "location": "Remote, Remote, Remote",
+                "job_title": "Senior Data Engineer (100% Remote - USA Only)",
+                "company": "Six Feet Up",
+                "location": "100% Remote, USA",
                 "job_type": [
                     "Back end",
-                    "Front end",
+                    "Big Data",
+                    "Cloud",
+                    "Database",
                     "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8103/",
+                "product_page_url": "https://www.python.org/jobs/8095/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Python Developer",
-                "company": "Micro1",
-                "location": "Miami Shores, FL, United States",
-                "job_type": [],
-                "product_page_url": "https://www.python.org/jobs/8118/",
-                "input": {
-                    "url": "https://www.python.org/jobs/"
-                }
-            },
-            {
-                "job_title": "Senior Full-Stack Engineer [Full Time; 100% remote; US-only]",
-                "company": "Hive Collective",
-                "location": "Anywhere, Anywhere, USA",
+                "job_title": "Senior Backend Python Engineer",
+                "company": "mindIT HR Agency (on behalf of a confidential client)",
+                "location": "Remote, Argentina",
                 "job_type": [
                     "Back end",
                     "Machine Learning",
                     "Web"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8119/",
+                "product_page_url": "https://www.python.org/jobs/8109/",
+                "input": {
+                    "url": "https://www.python.org/jobs/"
+                }
+            },
+            {
+                "job_title": "Software Engineer (Remote)",
+                "company": "Softech Associate",
+                "location": "Panama City Beach, Florida, United States",
+                "job_type": [
+                    "Back end",
+                    "Cloud",
+                    "Database",
+                    "Front end",
+                    "Integration",
+                    "Machine Learning",
+                    "Numeric processing",
+                    "Testing",
+                    "Text Processing",
+                    "Web"
+                ],
+                "product_page_url": "https://www.python.org/jobs/8126/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -1299,19 +1312,6 @@
         ],
         "heal_history": [],
         "run_history": [
-            {
-                "at": "2026-08-24T09:11:17.707Z",
-                "rows": 38,
-                "healthy": true,
-                "fields": [
-                    "company",
-                    "job_title",
-                    "job_type",
-                    "location",
-                    "product_page_url"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T10:11:06.212Z",
                 "rows": 38,
@@ -1688,11 +1688,24 @@
                     "product_page_url"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T06:46:14.818Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-25T01:09:34.809Z",
-        "last_checked_at": "2026-08-25T06:21:26.028Z"
+        "last_run_at": "2026-08-25T06:46:14.818Z",
+        "last_checked_at": "2026-08-25T06:46:14.818Z"
     },
     "producthunt.com": {
         "collector_id": "c_mt5g0w2v22o0ro7nzf",
@@ -1709,9 +1722,18 @@
         ],
         "last_sample": [
             {
+                "product_name": "Offloop",
+                "tagline": "A shared workspace where people and AI agents get work done",
+                "upvote_count": 11,
+                "product_page_url": "https://www.producthunt.com/products/offloop",
+                "input": {
+                    "url": "https://www.producthunt.com"
+                }
+            },
+            {
                 "product_name": "Decawork",
                 "tagline": "Control your company's internal AI agents and tools",
-                "upvote_count": 13,
+                "upvote_count": 17,
                 "product_page_url": "https://www.producthunt.com/products/decawork",
                 "input": {
                     "url": "https://www.producthunt.com"
@@ -1720,17 +1742,8 @@
             {
                 "product_name": "PaymentKit",
                 "tagline": "Billing that survives a processor shutdown",
-                "upvote_count": 18,
+                "upvote_count": 21,
                 "product_page_url": "https://www.producthunt.com/products/paymentkit",
-                "input": {
-                    "url": "https://www.producthunt.com"
-                }
-            },
-            {
-                "product_name": "Navigara",
-                "tagline": "Connect Your AI Spend Directly to Your Roadmap",
-                "upvote_count": 10,
-                "product_page_url": "https://www.producthunt.com/products/navigara",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -1755,18 +1768,6 @@
             }
         ],
         "run_history": [
-            {
-                "at": "2026-08-24T09:11:52.070Z",
-                "rows": 3,
-                "healthy": true,
-                "fields": [
-                    "product_name",
-                    "product_page_url",
-                    "tagline",
-                    "upvote_count"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T10:12:08.819Z",
                 "rows": 3,
@@ -2114,10 +2115,22 @@
                     "upvote_count"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T06:47:07.447Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-25T01:10:22.615Z",
+        "last_run_at": "2026-08-25T06:47:07.447Z",
         "last_row_count": 3,
-        "last_checked_at": "2026-08-25T06:22:21.823Z"
+        "last_checked_at": "2026-08-25T06:47:07.447Z"
     }
 }
