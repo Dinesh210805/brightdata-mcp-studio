@@ -14,49 +14,37 @@
         ],
         "last_sample": [
             {
-                "title": "Peppermint oil reduces blood pressure by 8.48 mmHg in small study",
-                "points": 19,
-                "author": "brandonb",
-                "product_page_url": "https://news.ycombinator.com/item?id=49420530",
+                "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
+                "points": 195,
+                "author": "K7PJP",
+                "product_page_url": "https://news.ycombinator.com/item?id=49426564",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "The entire city of San Francisco as a video game",
-                "points": 73,
-                "author": "centrosphere",
-                "product_page_url": "https://news.ycombinator.com/item?id=49422784",
+                "title": "What Is a Syslog Server?",
+                "points": 51,
+                "author": "theanonymousone",
+                "product_page_url": "https://news.ycombinator.com/item?id=49423799",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             },
             {
-                "title": "Jabber/XMPP: 25 Years of Digital Independence",
-                "points": 54,
-                "author": "inputmice",
-                "product_page_url": "https://news.ycombinator.com/item?id=49421536",
+                "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
+                "points": 550,
+                "author": "ComputerGuru",
+                "product_page_url": "https://news.ycombinator.com/item?id=49421158",
                 "input": {
                     "url": "https://news.ycombinator.com"
                 }
             }
         ],
         "heal_history": [],
-        "last_run_at": "2026-08-24T18:36:44.205Z",
+        "last_run_at": "2026-08-25T01:06:14.418Z",
         "last_row_count": 60,
         "run_history": [
-            {
-                "at": "2026-08-24T03:12:07.592Z",
-                "rows": 60,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "points",
-                    "product_page_url",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T04:10:14.556Z",
                 "rows": 60,
@@ -404,9 +392,21 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T01:06:14.418Z",
+                "rows": 60,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "points",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_checked_at": "2026-08-25T00:02:08.438Z"
+        "last_checked_at": "2026-08-25T01:06:14.418Z"
     },
     "lobste.rs": {
         "collector_id": "c_mt10ecsz1x2ve37jkb",
@@ -423,28 +423,28 @@
         ],
         "last_sample": [
             {
-                "title": "My DIY DEF CON Choker Has a Screen On It",
-                "score": 35,
-                "comment_count": 1,
-                "product_page_url": "https://lobste.rs/s/ft1wfv/my_diy_def_con_choker_has_screen_on_it",
-                "input": {
-                    "url": "https://lobste.rs"
-                }
-            },
-            {
-                "title": "Control and complexity: tension in systems design",
-                "score": 4,
-                "comment_count": 1,
-                "product_page_url": "https://lobste.rs/s/3vg7ts/control_complexity_tension_systems",
-                "input": {
-                    "url": "https://lobste.rs"
-                }
-            },
-            {
-                "title": "Perspec 1.0: A Haskell desktop app for perspective correction of document photos",
-                "score": 13,
+                "title": "IPython is All You Need",
+                "score": 7,
                 "comment_count": 2,
-                "product_page_url": "https://lobste.rs/s/plmwzl/perspec_1_0_haskell_desktop_app_for",
+                "product_page_url": "https://lobste.rs/s/oqv9np/ipython_is_all_you_need",
+                "input": {
+                    "url": "https://lobste.rs"
+                }
+            },
+            {
+                "title": "Building certgrep.sh: a free certificate transparency search engine",
+                "score": 6,
+                "comment_count": 3,
+                "product_page_url": "https://lobste.rs/s/ihethb/building_certgrep_sh_free_certificate",
+                "input": {
+                    "url": "https://lobste.rs"
+                }
+            },
+            {
+                "title": "Your executable is a SQLite database",
+                "score": 167,
+                "comment_count": 14,
+                "product_page_url": "https://lobste.rs/s/8ttu5n/your_executable_is_sqlite_database",
                 "input": {
                     "url": "https://lobste.rs"
                 }
@@ -469,18 +469,6 @@
             }
         ],
         "run_history": [
-            {
-                "at": "2026-08-24T03:13:25.742Z",
-                "rows": 125,
-                "healthy": true,
-                "fields": [
-                    "comment_count",
-                    "product_page_url",
-                    "score",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T04:11:20.610Z",
                 "rows": 125,
@@ -828,11 +816,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T01:07:35.192Z",
+                "rows": 125,
+                "healthy": true,
+                "fields": [
+                    "comment_count",
+                    "product_page_url",
+                    "score",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-24T18:37:51.888Z",
+        "last_run_at": "2026-08-25T01:07:35.192Z",
         "last_row_count": 125,
-        "last_checked_at": "2026-08-25T00:03:26.254Z"
+        "last_checked_at": "2026-08-25T01:07:35.192Z"
     },
     "gutenberg.org": {
         "collector_id": "c_mt10nqeb2bc4m2jl53",
@@ -849,28 +849,28 @@
         ],
         "last_sample": [
             {
-                "title": "Meditations by Emperor of Rome Marcus Aurelius",
-                "author": "Marcus Aurelius, Emperor of Rome, 121-180",
-                "download_count": 8803530,
-                "product_page_url": "https://www.gutenberg.org/ebooks/2680",
+                "title": "A Honeymoon in Space by George Chetwynd Griffith",
+                "author": "Griffith, George Chetwynd, 1857-1906",
+                "download_count": 7461230,
+                "product_page_url": "https://www.gutenberg.org/ebooks/19476",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Arsène Lupin, gentleman-cambrioleur by Maurice Leblanc",
-                "author": "Leblanc, Maurice, 1864-1941",
-                "download_count": 6456930,
-                "product_page_url": "https://www.gutenberg.org/ebooks/32854",
+                "title": "Terminal Compromise by Winn Schwartau",
+                "author": "Schwartau, Winn, 1952-",
+                "download_count": 6446930,
+                "product_page_url": "https://www.gutenberg.org/ebooks/79",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
             },
             {
-                "title": "Space Station 1 by Frank Belknap Long",
-                "author": "Long, Frank Belknap, 1903-1994",
-                "download_count": 6301030,
-                "product_page_url": "https://www.gutenberg.org/ebooks/50290",
+                "title": "Carmen by Prosper Mérimée",
+                "author": "Mérimée, Prosper, 1803-1870",
+                "download_count": 12306530,
+                "product_page_url": "https://www.gutenberg.org/ebooks/2465",
                 "input": {
                     "url": "https://www.gutenberg.org/browse/scores/top"
                 }
@@ -878,18 +878,6 @@
         ],
         "heal_history": [],
         "run_history": [
-            {
-                "at": "2026-08-24T03:16:25.196Z",
-                "rows": 196,
-                "healthy": true,
-                "fields": [
-                    "author",
-                    "download_count",
-                    "product_page_url",
-                    "title"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T04:14:07.390Z",
                 "rows": 196,
@@ -1237,11 +1225,23 @@
                     "title"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T01:08:57.835Z",
+                "rows": 136,
+                "healthy": true,
+                "fields": [
+                    "author",
+                    "download_count",
+                    "product_page_url",
+                    "title"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 136,
-        "last_run_at": "2026-08-24T18:39:30.201Z",
-        "last_checked_at": "2026-08-25T00:05:05.040Z"
+        "last_run_at": "2026-08-25T01:08:57.835Z",
+        "last_checked_at": "2026-08-25T01:08:57.835Z"
     },
     "python.org": {
         "collector_id": "c_mt10q9i21ucjl06trq",
@@ -1259,16 +1259,15 @@
         ],
         "last_sample": [
             {
-                "job_title": "Python + TypeScript Engineers",
-                "company": "Fusionbox",
-                "location": "Remote (US Based), Any US State, US",
+                "job_title": "Senior Python Developer",
+                "company": "Turing",
+                "location": "Remote, Remote, Remote",
                 "job_type": [
                     "Back end",
-                    "Database",
                     "Front end",
-                    "Web"
+                    "Machine Learning"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8111/",
+                "product_page_url": "https://www.python.org/jobs/8103/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -1276,26 +1275,23 @@
             {
                 "job_title": "Python Developer",
                 "company": "Micro1",
-                "location": "Remote, Remote, Anywhere",
-                "job_type": [
-                    "Back end",
-                    "Front end"
-                ],
-                "product_page_url": "https://www.python.org/jobs/8101/",
+                "location": "Miami Shores, FL, United States",
+                "job_type": [],
+                "product_page_url": "https://www.python.org/jobs/8118/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
             },
             {
-                "job_title": "Agentic Python Engineer",
-                "company": "Evaboot",
-                "location": "Remote, Remote/Worldwide, Remote/Worldwide",
+                "job_title": "Senior Full-Stack Engineer [Full Time; 100% remote; US-only]",
+                "company": "Hive Collective",
+                "location": "Anywhere, Anywhere, USA",
                 "job_type": [
                     "Back end",
-                    "Integration",
-                    "Machine Learning"
+                    "Machine Learning",
+                    "Web"
                 ],
-                "product_page_url": "https://www.python.org/jobs/8125/",
+                "product_page_url": "https://www.python.org/jobs/8119/",
                 "input": {
                     "url": "https://www.python.org/jobs/"
                 }
@@ -1303,19 +1299,6 @@
         ],
         "heal_history": [],
         "run_history": [
-            {
-                "at": "2026-08-24T03:16:35.938Z",
-                "rows": 38,
-                "healthy": true,
-                "fields": [
-                    "company",
-                    "job_title",
-                    "job_type",
-                    "location",
-                    "product_page_url"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T04:14:12.604Z",
                 "rows": 38,
@@ -1692,11 +1675,24 @@
                     "product_page_url"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T01:09:34.809Z",
+                "rows": 38,
+                "healthy": true,
+                "fields": [
+                    "company",
+                    "job_title",
+                    "job_type",
+                    "location",
+                    "product_page_url"
+                ],
+                "source": "ensure"
             }
         ],
         "last_row_count": 38,
-        "last_run_at": "2026-08-24T18:39:51.466Z",
-        "last_checked_at": "2026-08-25T00:05:57.709Z"
+        "last_run_at": "2026-08-25T01:09:34.809Z",
+        "last_checked_at": "2026-08-25T01:09:34.809Z"
     },
     "producthunt.com": {
         "collector_id": "c_mt5g0w2v22o0ro7nzf",
@@ -1713,19 +1709,19 @@
         ],
         "last_sample": [
             {
-                "product_name": "PaymentKit",
-                "tagline": "Billing that survives a processor shutdown",
-                "upvote_count": 15,
-                "product_page_url": "https://www.producthunt.com/products/paymentkit",
+                "product_name": "Decawork",
+                "tagline": "Control your company's internal AI agents and tools",
+                "upvote_count": 13,
+                "product_page_url": "https://www.producthunt.com/products/decawork",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
             },
             {
-                "product_name": "Decawork",
-                "tagline": "Control your company's internal AI agents and tools",
-                "upvote_count": 9,
-                "product_page_url": "https://www.producthunt.com/products/decawork",
+                "product_name": "PaymentKit",
+                "tagline": "Billing that survives a processor shutdown",
+                "upvote_count": 18,
+                "product_page_url": "https://www.producthunt.com/products/paymentkit",
                 "input": {
                     "url": "https://www.producthunt.com"
                 }
@@ -1733,7 +1729,7 @@
             {
                 "product_name": "Navigara",
                 "tagline": "Connect Your AI Spend Directly to Your Roadmap",
-                "upvote_count": 8,
+                "upvote_count": 10,
                 "product_page_url": "https://www.producthunt.com/products/navigara",
                 "input": {
                     "url": "https://www.producthunt.com"
@@ -1759,18 +1755,6 @@
             }
         ],
         "run_history": [
-            {
-                "at": "2026-08-24T03:17:23.072Z",
-                "rows": 3,
-                "healthy": true,
-                "fields": [
-                    "product_name",
-                    "product_page_url",
-                    "tagline",
-                    "upvote_count"
-                ],
-                "source": "fast_check"
-            },
             {
                 "at": "2026-08-24T04:14:43.113Z",
                 "rows": 3,
@@ -2118,10 +2102,22 @@
                     "upvote_count"
                 ],
                 "source": "fast_check"
+            },
+            {
+                "at": "2026-08-25T01:10:22.615Z",
+                "rows": 3,
+                "healthy": true,
+                "fields": [
+                    "product_name",
+                    "product_page_url",
+                    "tagline",
+                    "upvote_count"
+                ],
+                "source": "ensure"
             }
         ],
-        "last_run_at": "2026-08-24T18:40:17.990Z",
+        "last_run_at": "2026-08-25T01:10:22.615Z",
         "last_row_count": 3,
-        "last_checked_at": "2026-08-25T00:06:40.015Z"
+        "last_checked_at": "2026-08-25T01:10:22.615Z"
     }
 }
